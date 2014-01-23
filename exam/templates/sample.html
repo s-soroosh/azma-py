@@ -1,0 +1,10 @@
+{% if all_exams %}
+    <ul>
+        {% for exam in all_exams %}
+            {{ exam.name}}
+            <br/>
+            {{ exam.start_date}}
+            <br />
+        {% endfor %}
+    </ul>
+{% endif %}
