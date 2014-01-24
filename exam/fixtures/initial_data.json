@@ -1,0 +1,19 @@
+[
+    {
+        "model": "exam.exam",
+        "pk":"1",
+        "fields": {
+            "name": "JAVA Elementary",
+            "start_date": "2012-10-10 00:00:00"
+
+        }
+    },
+    {
+        "model": "exam.exam",
+        "pk":"2",
+        "fields": {
+            "name": "JAVA Generics",
+            "start_date": "2012-10-10 00:00:00"
+        }
+    }
+]
