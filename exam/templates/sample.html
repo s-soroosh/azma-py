@@ -1,10 +1,15 @@
-{% if all_exams %}
-    <ul>
-        {% for exam in all_exams %}
-            {{ exam.name}}
-            <br/>
-            {{ exam.start_date}}
-            <br />
-        {% endfor %}
-    </ul>
-{% endif %}
+{% extends 'base.html' %}
+{% block title %} OH OH {% endblock %}
+{#{% block css %} {% endblock %}#}
+{% block content %}
+    {% if all_exams %}
+        <ul>
+            {% for exam in all_exams %}
+                {{ exam.name }}
+                <br/>
+                {{ exam.start_date }}
+                <br/>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
