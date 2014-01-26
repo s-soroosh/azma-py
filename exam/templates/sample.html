@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block title %} OH OH {% endblock %}
 {#{% block css %} {% endblock %}#}
+
 {% block content %}
+<h1>
+آزمونها
+</h1>
     {% if all_exams %}
         <ul>
             {% for exam in all_exams %}

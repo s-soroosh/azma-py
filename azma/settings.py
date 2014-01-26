@@ -88,4 +88,39 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'queries_above_300ms': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda record: record.duration > 0.3  # output slow queries only
+        },
+    },
+    'formatters': {
+        'standard': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+    },
+    'handlers': {
+        'logfile': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "log", "logfile"),
+            'maxBytes': 50000,
+            'backupCount': 2,
+            'formatter': 'standard',
+            'filters': ['queries_above_300ms'],
+        },
+    },
+    'loggers': {
+        'django.db': {
+            'handlers': ['logfile'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    }
+}
+
 
