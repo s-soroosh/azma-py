@@ -3,10 +3,10 @@
 {% block content %}
 
     <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
         {% if error_message %}
             <div class="has-error">error_message</div>
         {% endif %}
-        {% csrf_token %}
         <input type="text" name="name" placeholder="نام">
         <br/>
         <input type="text" name="lastName" placeholder="نام خانوادگی">

@@ -124,4 +124,4 @@ LOGGING = {
     }
 }
 
-
+DEFAULT_LOGIN_URL = "/"

@@ -4,14 +4,14 @@
 
     <form action="{% url 'login' %}" method="post">
         {% if error_message %}
-            <div class="has-error">error_message</div>
+            <div class="alert-danger has-error">{{ error_message }}</div>
         {% endif %}
         {% csrf_token %}
         <input type="text" name="username" placeholder="نام کاربری"/>
-        <br />
+        <br/>
         <input type="password" name="password" placeholder="رمز عبور">
-        <br />
-        <input class="btn btn-success" type="submit"  value="ورود"/>
+        <br/>
+        <input class="btn btn-success" type="submit" value="ورود"/>
     </form>
 
 {% endblock %}
