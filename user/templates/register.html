@@ -5,7 +5,17 @@
     <form id="frmRegister" action="{% url 'register' %}" method="post">
         {% csrf_token %}
         {% if error_message %}
-            <div class="has-error">error_message</div>
+                {% for  a, b in error_message.message_dict.items %}
+
+                     <div class="has-error alert-danger">{{ a }} </div>
+
+                        {% for msg in b %}
+
+                        <div class="has-error alert-danger"> {{ msg }}</div>
+
+                {% endfor %}
+
+            {% endfor %}
         {% endif %}
         <div class="form-group">
                 <label>

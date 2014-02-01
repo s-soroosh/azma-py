@@ -1,14 +1,10 @@
-import logging
 from django.db import models
-
-l = logging.getLogger('django.db.backends')
-l.setLevel(logging.DEBUG)
-l.addHandler(logging.StreamHandler())
 
 
 class Exam(models.Model):
     name = models.CharField(max_length=200)
     start_date = models.DateTimeField()
+
 
     def __str__(self):
         return str(self.pk) + " " + self.name
@@ -32,3 +28,5 @@ class Choice(models.Model):
 
 class MultipleChoice(Choice):
     valid = models.BooleanField()
+
+
