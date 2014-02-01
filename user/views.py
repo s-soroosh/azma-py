@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader, RequestContext
@@ -33,6 +34,15 @@ def user_register(request):
         password = request.POST["password"]
 
         u = User(username=username, password=password, first_name=name, last_name=last_name, email=email)
+        try:
+            print(u.full_clean())
+        except ValidationError as e:
+            for a, b in e.message_dict.items():
+                print('id: ' + str(a) + '  msg: ' + str(b))
+
+            template = loader.get_template('register.html')
+            context = RequestContext(request, {'error_message': e})
+            return HttpResponse(template.render(context))
         u.save()
         return HttpResponse("User has been registered!")
     else:
