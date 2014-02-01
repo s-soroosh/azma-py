@@ -1,3 +1,36 @@
 .content{
     margin-top:60px;
+    padding:25px;
+}
+
+#frmRegister .form-group
+{
+  width:320px;
+  background-color:#444444;
+  border-radius: 10px 10px;
+  padding-top:7px;
+  padding-right:17px;
+  padding-left:17px;
+  padding-bottom:5px;
+  
+}
+#frmRegister .form-group input
+{
+    border-radius: 5px 5px;
+       padding-left:1px;
+    padding-right:17px;
+}
+#txtEmailAddress,#txtUsername,#txtPassword,#txtConfirmPassword
+{
+    direction:ltr;
+    text-align:left;
+    
+    padding-right:1px;
+}
+
+
+#frmRegister .form-group:hover
+{
+
+  
 }
