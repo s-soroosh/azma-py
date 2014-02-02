@@ -8,8 +8,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# Build paths inside the project like this: os.path.jonin(BASE_DIR, ...)
 import os
+from django.conf.urls import include
+from django.core.urlresolvers import reverse
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -71,7 +73,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-ir'
 
 TIME_ZONE = 'UTC'
 
@@ -87,6 +89,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, "locale"),  # Assuming BASE_DIR is where your manage.py file is
+)
+
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 LOGGING = {
@@ -100,14 +106,14 @@ LOGGING = {
     },
     'formatters': {
         'standard': {
-            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
-            'datefmt' : "%d/%b/%Y %H:%M:%S"
+            'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%b/%Y %H:%M:%S"
         },
     },
     'handlers': {
         'logfile': {
-            'level':'DEBUG',
-            'class':'logging.handlers.RotatingFileHandler',
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "log", "logfile"),
             'maxBytes': 50000,
             'backupCount': 2,
@@ -124,4 +130,4 @@ LOGGING = {
     }
 }
 
-DEFAULT_LOGIN_URL = "/"
+DEFAULT_LOGIN_URL = '/exam'

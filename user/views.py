@@ -1,10 +1,14 @@
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader, RequestContext
+from azma import settings
 from user.login import auth_user
+from django.utils.translation import ugettext_lazy as _
 
 
 def user_login(request):
@@ -26,6 +30,7 @@ def user_logout(request):
 
 
 def user_register(request):
+    registerTemplate = loader.get_template('register.html')
     if request.method == "POST":
         name = request.POST["name"]
         last_name = request.POST["lastName"]
@@ -35,17 +40,15 @@ def user_register(request):
 
         u = User(username=username, password=password, first_name=name, last_name=last_name, email=email)
         try:
-            print(u.full_clean())
+            u.full_clean()
         except ValidationError as e:
-            for a, b in e.message_dict.items():
-                print('id: ' + str(a) + '  msg: ' + str(b))
-
-            template = loader.get_template('register.html')
             context = RequestContext(request, {'error_message': e})
-            return HttpResponse(template.render(context))
+            return HttpResponse(registerTemplate.render(context))
         u.save()
-        return HttpResponse("User has been registered!")
+        context = RequestContext(request,
+                                 {'redirect_url': settings.DEFAULT_LOGIN_URL,
+                                  'message': _("You have been registered successfully")})
+        return HttpResponse(registerTemplate.render(context))
     else:
-        template = loader.get_template('register.html')
         context = RequestContext(request)
-        return HttpResponse(template.render(context))
+        return HttpResponse(registerTemplate.render(context))

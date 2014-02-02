@@ -9,6 +9,6 @@ def index(request):
 
     template = loader.get_template('sample.html')
     context = RequestContext(request, {'all_exams': all_exams})
-    return HttpResponse (template.render(context))
+    return HttpResponse(template.render(context))
 
 

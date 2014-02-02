@@ -39,21 +39,30 @@
     </div>
 </div>
 <div class="space"></div>
-<div class="container message" style="display: none;">
-    {% if error_message %}
+{% if error_message %}
+    <div class="container error_message" style="display: none;">
+
         {% for  a, b in error_message.message_dict.items %}
 
-            <div class="has-error alert-danger">{{ a }} </div>
+            <ul class="has-error alert-danger"><b>{{ a }}</b>
 
-            {% for msg in b %}
+                {% for msg in b %}
 
-                <div class="has-error alert-danger"> {{ msg }}</div>
+                    <li class="has-error alert-danger">{{ msg }}</li>
 
-            {% endfor %}
+                {% endfor %}
+            </ul>
 
         {% endfor %}
-    {% endif %}
-</div>
+
+    </div>
+{% endif %}
+{% if message %}
+    <div class="has-success alert-info container message" style="display: none;">
+        {{ message }}
+    </div>
+{% endif %}
+
 <div class="container content">
     {% block content %}
     {% endblock %}
@@ -62,9 +71,18 @@
 <script src="{% static "js/jquery-1.11.0.js" %}"></script>
 <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function () {
         {% if error_message %}
+            $('.error_message').fadeIn('slow');
+        {% endif %}
+        {% if message %}
             $('.message').fadeIn('slow');
+            {% if redirect_url %}
+                setTimeout(function () {
+                            window.location = '{{ redirect_url }}';
+                        }
+                        , 1500);
+            {% endif %}
         {% endif %}
     })
 </script>
