@@ -9,7 +9,7 @@ urlpatterns = patterns('',
                        # Examples:
                        # url(r'^$', 'azma.views.home', name='home'),
                        # url(r'^blog/', include('blog.urls')),
-
                        url(r'^admin/', include(admin.site.urls)),
-                       url(r'^exam/', include('exam.urls')),
+                       url(r'^exam/', include('exam.urls', namespace='exam')),
                        url(r'^user/', include('user.urls')))
+
