@@ -4,51 +4,39 @@
 
     <form id="frmRegister" action="{% url 'register' %}" method="post">
         {% csrf_token %}
-                {% for  a, b in error_message.message_dict.items %}
-
-                <div class="has-error alert-danger">{{ a }} </div>
-
-                {% for msg in b %}
-
-                    <div class="has-error alert-danger"> {{ msg }}</div>
-
-                {% endfor %}
-
-            {% endfor %}
-
         <div class="form-group">
                 <label>
                     نام
                 </label>
-                <input type="text" class="form-control" id="txtFirstname" name="Firstname" placeholder="نام" />
+                <input type="text" class="form-control" id="txtFirstname" name="name" placeholder="نام" />
             </div>
 
             <div class="form-group">
                 <label>
                     نام خانوادگی
                 </label>
-                <input type="text" class="form-control" id="txtLastname" name="Lastname" placeholder="نام خانوادگی" />
+                <input type="text" class="form-control" id="txtLastname" name="lastName" placeholder="نام خانوادگی" />
             </div>
 
             <div class="form-group">
                 <label>
                     آدرس ایمیل
                 </label>
-                <input type="email" class="form-control" id="txtEmailAddress" name="EmailAddress" placeholder="Email Address" />
+                <input type="email" class="form-control" id="txtEmailAddress" name="email" placeholder="Email Address" />
             </div>
 
             <div class="form-group">
                 <label>
                     نام کاربری
                 </label>
-                <input type="text" class="form-control" id="txtUsername" name="Username" placeholder="Username" />
+                <input type="text" class="form-control" id="txtUsername" name="username" placeholder="Username" />
             </div>
 
             <div class="form-group">
                 <label>
                    گذرواژه
                 </label>
-                <input type="password" class="form-control" id="txtPassword" name="Password" />
+                <input type="password" class="form-control" id="txtPassword" name="password" />
             </div>
 
             <div class="form-group">
@@ -65,9 +53,6 @@
                 </div>
             <button type="submit" class="btn btn-success btn-lg">
                 ثبت</button>
-
-
-
     </form>
 
 {% endblock %}
