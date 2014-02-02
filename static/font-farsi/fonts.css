@@ -1,0 +1,50 @@
+﻿@font-face {
+    font-family: "Bardiya";
+    font-style: normal;
+    font-weight: 400;
+    src: url("BBardiya.eot") format("embedded-opentype"),           
+          url("BBardiya.woff") format("woff"), 
+          url("BBardiya.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Yekan";
+    font-style: normal;
+    font-weight: 400;
+    src: url("BYekan.eot") format("embedded-opentype"),           
+          url("BYekan.woff") format("woff"), 
+          url("BYekan.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Titr";
+    font-style: normal;
+    font-weight: 400;
+    src: url("BTitrBold.eot") format("embedded-opentype"),           
+          url("BTitrBold.woff") format("woff"), 
+          url("BTitrBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roya";
+    font-style: normal;
+    font-weight: 400;
+    src: url("BRoya.eot") format("embedded-opentype"),           
+          url("BRoya.woff") format("woff"), 
+          url("BRoya.ttf") format("truetype");
+}
+
+
+.BardiyaFont
+{
+    font-family:Bardiya;
+}
+.YekanFont
+{
+    font-family:Yekan;
+}
+.TitrFont
+{
+    font-family:Titr;
+}
+.RoyaFont
+{
+    font-family:Roya;
+}
