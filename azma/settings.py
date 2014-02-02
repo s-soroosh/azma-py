@@ -93,6 +93,7 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, "locale"),  # Assuming BASE_DIR is where your manage.py file is
 )
 
+
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 LOGGING = {
