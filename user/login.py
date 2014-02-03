@@ -1,8 +1,10 @@
 from django.contrib.auth import authenticate, login
-from django.http import HttpRequest, HttpResponse
+from django.core.exceptions import ValidationError
+from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.template import loader, RequestContext
 from azma import settings
+from django.utils.translation import ugettext_lazy as _
 
 __author__ = 'soroosh'
 
@@ -22,6 +24,6 @@ def auth_user(request):
 
     else:
         template = loader.get_template('login.html')
-        context = RequestContext(request, {'error_message': 'User does not exist'})
+        context = RequestContext(request, {'error_message': _('Username or password is wrong')})
         return HttpResponse(template.render(context))
 

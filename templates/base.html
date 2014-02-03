@@ -40,22 +40,20 @@
     </div>
 </div>
 <div class="space"></div>
-{% if error_message %}
-    <div class="container error_message" style="display: none;">
-
-        {% for  a, b in error_message.message_dict.items %}
-
-            <ul class="has-error alert-danger"><b>{% trans a %} </b>
-
+{% if validation_error %}
+    <div class="container validation_error form-group center-block alert-danger" style="display: none;">
+        {% for  a, b in validation_error.message_dict.items %}
+            <ul class="has-error"><b>{% trans a %} </b>
                 {% for msg in b %}
-
-                    <li class="has-error alert-danger">{{ msg }}</li>
-
+                    <li class="has-error">{{ msg }}</li>
                 {% endfor %}
             </ul>
-
         {% endfor %}
-
+    </div>
+{% endif %}
+{% if error_message %}
+    <div class="container error_message form-group center-block alert-danger" style="display: none;">
+        {% trans error_message %}
     </div>
 {% endif %}
 {% if message %}
@@ -73,6 +71,9 @@
 <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
 <script type="text/javascript">
     $(document).ready(function () {
+        {% if validation_error %}
+            $('.validation_error').fadeIn('slow');
+        {%  endif %}
         {% if error_message %}
             $('.error_message').fadeIn('slow');
         {% endif %}

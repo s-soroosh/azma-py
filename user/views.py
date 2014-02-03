@@ -42,7 +42,7 @@ def user_register(request):
         try:
             u.full_clean()
         except ValidationError as e:
-            context = RequestContext(request, {'error_message': e})
+            context = RequestContext(request, {'validation_error': e})
             return HttpResponse(registerTemplate.render(context))
         u.save()
         context = RequestContext(request,

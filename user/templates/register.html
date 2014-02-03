@@ -1,58 +1,50 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
 
     <form id="frmRegister" action="{% url 'register' %}" method="post">
         {% csrf_token %}
-        <div class="form-group">
-                <label>
-                    نام
+        <div class="form-group center-block">
+            <label class="form-label">
+                نام
+            </label>
+            <input type="text" class="form-control" id="txtFirstname" name="name"/>
+
+            <label class="form-label">
+                نام خانوادگی
+            </label>
+            <input type="text" class="form-control" id="txtLastname" name="lastName"/>
+            <label class="form-label">
+                آدرس ایمیل
+            </label>
+            <input type="email" class="form-control" id="txtEmailAddress" name="email"/>
+            <label class="form-label">
+                نام کاربری
+            </label>
+            <input type="text" class="form-control" id="txtUsername" name="username"/>
+
+            <label class="form-label">
+                گذرواژه
+            </label>
+            <input type="password" class="form-control" id="txtPassword" name="password"/>
+
+            <label class="form-label">
+                تکرار گذرواژه
+            </label>
+            <input type="password" class="form-control" id="txtConfirmPassword"/>
+
+            <div class="checkbox">
+                <label class="form-label">
+                    <input type="checkbox">
+                    من تمام قوانین و حقوقم را خواندم و متعهد به انجام آنها میباشم.
                 </label>
-                <input type="text" class="form-control" id="txtFirstname" name="name" placeholder="نام" />
             </div>
 
-            <div class="form-group">
-                <label>
-                    نام خانوادگی
-                </label>
-                <input type="text" class="form-control" id="txtLastname" name="lastName" placeholder="نام خانوادگی" />
-            </div>
-
-            <div class="form-group">
-                <label>
-                    آدرس ایمیل
-                </label>
-                <input type="email" class="form-control" id="txtEmailAddress" name="email" placeholder="Email Address" />
-            </div>
-
-            <div class="form-group">
-                <label>
-                    نام کاربری
-                </label>
-                <input type="text" class="form-control" id="txtUsername" name="username" placeholder="Username" />
-            </div>
-
-            <div class="form-group">
-                <label>
-                   گذرواژه
-                </label>
-                <input type="password" class="form-control" id="txtPassword" name="password" />
-            </div>
-
-            <div class="form-group">
-                <label>
-                   تکرار گذرواژه
-                </label>
-                <input type="password" class="form-control" id="txtConfirmPassword"/>
-            </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">
-                        من تمام قوانین و حقوقم را خواندم و متعهد به انجام آنها میباشم.
-                    </label>
-                </div>
-            <button type="submit" class="btn btn-success btn-lg">
-                ثبت</button>
+            <button type="submit" class="btn btn-success btn-lg ">
+                ثبت
+            </button>
+        </div>
     </form>
 
 {% endblock %}

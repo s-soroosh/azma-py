@@ -1,33 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
- <div class="col-lg-6 col-lg-offset-3">
+ <div class="center-block form-group">
     <form action="{% url 'login' %}" method="post">
-        {% if error_message %}
+{% comment %}        {% if error_message %}
             <div class="alert-danger has-error">{{ error_message }}</div>
-        {% endif %}
+        {% endif %}{% endcomment %}
         {% csrf_token %}
-            <div class="form-group">
-                <label>
+                <label class="form-label">
                     نام کاربری
                 </label>
-                <input type="text" class="form-control" id="txtUsername" placeholder="Username">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">
+                <input type="text" class="form-control" id="txtUsername" name="username" >
+                <label class="form-label">
                     گذرواژه
                 </label>
-                <input type="password" class="form-control" id="txtPassword" placeholder="Password">
-            </div>
+                <input type="password" class="form-control" id="txtPassword" name="password" >
             <div class="checkbox">
                 <label>
-                    <input name="Remember" type="checkbox">
+                    <input name="remember" type="checkbox" >
 مرا به خاطر بسپار
 
                 </label>
             </div>
             <button type="submit" class="btn btn-default">
-                Submit</button>
+                ورود</button>
     </form>
 </div>
 
