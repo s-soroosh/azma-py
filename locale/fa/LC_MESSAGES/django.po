@@ -1316,3 +1316,9 @@ msgstr "ثبت نام شما با موفقیت انجام شد"
 msgid "username"
 msgstr "نام کاربری"
 
+msgid "email"
+msgstr "ایمیل"
+
+msgid "Username or password is wrong"
+msgstr "نام کاربری و یا گذرواژه اشتباه است!"
+
