@@ -1,0 +1,34 @@
+<style>
+#envelope
+{}
+#letter
+{}
+#letter
+{}
+#header
+{}
+#body
+{}
+#footer
+{}
+</style>
+<div id="envelope">
+    <div id="letter">
+        <div id="header">
+            { % block MailHeader % }
+            { % endblock % }
+        </div>
+        <div id="body">
+            { % block MailBody % }
+            { % endblock % }
+        </div>
+        <div id="footer">
+            { % block MailFooter % }
+
+            { % endblock % }
+            <p>
+                       Azmaweb :-)
+            </p>
+        </div>
+    </div>
+</div>

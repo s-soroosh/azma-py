@@ -27,6 +27,7 @@ def is_user_anon(login_url=None):
 
 @is_user_anon(login_url=settings.DEFAULT_LOGIN_URL)
 def user_login(request):
+
     if request.method == "POST":
         return auth_user(request)
 
