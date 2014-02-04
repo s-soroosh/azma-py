@@ -4,9 +4,9 @@ from user import views
 __author__ = 'soroosh'
 
 urlpatterns = patterns('',
-                       url(r'^login$', views.user_login, name='login'),
-                       url(r'^logout$', views.user_logout, name='logout'),
-                       url(r'^register$', views.user_register, name='register'),
-                       url(r'^pending', views.show_pending, name='pending'),
-                       url(r'^pending', views.show_pending, name='confirm_again'),
+                       url(r'^(?i)login$', views.user_login, name='login'),
+                       url(r'^(?i)logout$', views.user_logout, name='logout'),
+                       url(r'^(?i)register$', views.user_register, name='register'),
+                       url(r'^(?i)pending', views.show_pending, name='pending'),
+                       url(r'^(?i)pending', views.show_pending, name='confirm_again'),
                        )
