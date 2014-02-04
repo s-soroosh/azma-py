@@ -1,15 +1,31 @@
+from functools import wraps
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
 from django.template import loader, RequestContext
 from azma import settings
 from user.login import auth_user
-from django.utils.translation import ugettext_lazy as _
 
 
+
+def is_user_anon(login_url=None):
+
+    def decorator(view_func):
+        @wraps(view_func)
+        def _wrapped_view(request, *args, **kwargs):
+            if request.user.is_authenticated():
+                return HttpResponseRedirect(settings.DEFAULT_LOGIN_URL)
+            else:
+                return view_func(request, *args, **kwargs)
+
+        return _wrapped_view
+
+    return decorator
+
+
+@is_user_anon(login_url=settings.DEFAULT_LOGIN_URL)
 def user_login(request):
     if request.method == "POST":
         return auth_user(request)
@@ -26,8 +42,10 @@ def user_login(request):
 
 def user_logout(request):
     logout(request)
+    return HttpResponseRedirect(settings.DEFAULT_LOGIN_URL)
 
 
+@is_user_anon(login_url=settings.DEFAULT_LOGIN_URL)
 def user_register(request):
     register_template = loader.get_template('register.html')
 
@@ -51,6 +69,7 @@ def user_register(request):
         return HttpResponse(register_template.render(context))
 
 
+@is_user_anon(login_url=settings.DEFAULT_LOGIN_URL)
 def show_pending(request):
     pending_template = loader.get_template('pending_for_confirm.html')
     context = RequestContext(request)
