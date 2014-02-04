@@ -30,8 +30,13 @@
             <a class="navbar-brand YekanFont" href="#">آزماوب</a>
         </div>
         <div class="collapse navbar-collapse ">
-            <ul class="nav navbar-nav BardiyaFont">
+            <ul class="nav navbar-nav YekanFont">
                 <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>
+                {% if categories %}
+                    {% for category in categories %}
+                        <li><a class="" href="#">{% trans category.name %}</a></li>
+                    {% endfor %}
+                {% endif %}
                 {% if user.is_authenticated %}
                     <li><a class="" href="#">پروفایل من</a></li>
                     <li><a class="" href="#">داشبورد</a></li>
@@ -70,8 +75,7 @@
 {% endif %}
 
 <div class="container content">
-    {% block content %}
-    {% endblock %}
+
 </div>
 
 <script src="{% static "js/jquery-1.11.0.js" %}"></script>

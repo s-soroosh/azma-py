@@ -1322,3 +1322,5 @@ msgstr "ایمیل"
 msgid "Username or password is wrong"
 msgstr "نام کاربری و یا گذرواژه اشتباه است!"
 
+msgid "JAVA"
+msgstr "جاوا"
