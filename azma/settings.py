@@ -30,6 +30,17 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),)
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'exam.context_processor.categories',
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    #'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+)
 
 
 # Application definition
@@ -47,12 +58,14 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'exam.middleware.CommonObjectsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 )
 
 ROOT_URLCONF = 'azma.urls'
@@ -92,7 +105,6 @@ STATIC_URL = '/static/'
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, "locale"),  # Assuming BASE_DIR is where your manage.py file is
 )
-
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
