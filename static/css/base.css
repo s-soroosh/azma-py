@@ -1,3 +1,10 @@
+h1 {
+    font-family: "Yekan";
+}
+
+a{
+    color: #5080f0;
+}
 .space {
     margin-top: 61px;
     /*padding-top: 25px;*/
@@ -28,7 +35,7 @@
 }
 
 .form-group {
-    width: 570px;
+    width: 50%;
 
     background-image: linear-gradient(#777777, #666666 60%, #333333);
     /*background-color: #C8C8C8;*/

@@ -1,9 +1,8 @@
-
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.template import loader, RequestContext
 from azma import settings
@@ -30,7 +29,8 @@ def user_logout(request):
 
 
 def user_register(request):
-    registerTemplate = loader.get_template('register.html')
+    register_template = loader.get_template('register.html')
+
     if request.method == "POST":
         name = request.POST["name"]
         last_name = request.POST["lastName"]
@@ -43,12 +43,15 @@ def user_register(request):
             u.full_clean()
         except ValidationError as e:
             context = RequestContext(request, {'validation_error': e})
-            return HttpResponse(registerTemplate.render(context))
+            return HttpResponse(register_template.render(context))
         u.save()
-        context = RequestContext(request,
-                                 {'redirect_url': settings.DEFAULT_LOGIN_URL,
-                                  'message': _("You have been registered successfully")})
-        return HttpResponse(registerTemplate.render(context))
+        return HttpResponseRedirect(reverse('pending'))
     else:
         context = RequestContext(request)
-        return HttpResponse(registerTemplate.render(context))
+        return HttpResponse(register_template.render(context))
+
+
+def show_pending(request):
+    pending_template = loader.get_template('pending_for_confirm.html')
+    context = RequestContext(request)
+    return HttpResponse(pending_template.render(context))
