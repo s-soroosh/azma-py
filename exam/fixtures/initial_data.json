@@ -1,11 +1,18 @@
 [
     {
+        "model":"exam.examcategory",
+        "pk":"1",
+        "fields":{
+            "name":"JAVA"
+        }
+    },
+    {
         "model": "exam.exam",
         "pk":"1",
         "fields": {
             "name": "JAVA Elementary",
-            "start_date": "2012-10-10 00:00:00"
-
+            "start_date": "2012-10-10 00:00:00",
+            "category":1
         }
     },
     {
@@ -13,7 +20,8 @@
         "pk":"2",
         "fields": {
             "name": "JAVA Generics",
-            "start_date": "2012-10-10 00:00:00"
+            "start_date": "2012-10-10 00:00:00",
+            "category":1
         }
     }
 ]
