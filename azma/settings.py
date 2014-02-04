@@ -133,6 +133,11 @@ LOGGING = {
 
 DEFAULT_LOGIN_URL = '/exam'
 
-
+DEFAULT_FROM_EMAIL = 'noReply@zareie.net'
+EMAIL_HOST = 'mail.zareie.net'
+EMAIL_HOST_PASSWORD = '123123'
+EMAIL_HOST_USER = 'azmaweb@zareie.net'
+EMAIL_PORT = 25
+EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
 
