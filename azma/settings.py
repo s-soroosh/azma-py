@@ -114,7 +114,7 @@ LOGGING = {
     'filters': {
         'queries_above_300ms': {
             '()': 'django.utils.log.CallbackFilter',
-            'callback': lambda record: record.duration > 0.3  # output slow queries only
+            'callback': lambda record: record.duration > 0.0  # output slow queries only
         },
     },
     'formatters': {
@@ -138,7 +138,7 @@ LOGGING = {
         'django.db': {
             'handlers': ['logfile'],
             'level': 'DEBUG',
-            'propagate': False,
+            'propagate': True,
         },
     }
 }
