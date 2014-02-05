@@ -31,6 +31,7 @@
             "name": "JAVA Elementary",
             "local_name": "جاوا مقدماتی",
             "start_date": "2012-10-10 00:00:00",
+            "description": "",
             "category": 1
         }
     },
@@ -41,6 +42,7 @@
             "name": "JAVA Generics",
             "local_name": "JAVA Generics",
             "start_date": "2012-10-10 00:00:00",
+            "description": "",
             "category": 1
         }
     },
@@ -51,6 +53,7 @@
             "name": "Python Elementary",
             "local_name": "پایتون مقدماتی",
             "start_date": "2012-10-10 00:00:00",
+            "description": "",
             "category": 2
         }
     },
@@ -61,6 +64,7 @@
             "name": "Django",
             "local_name": "Django",
             "start_date": "2012-10-10 00:00:00",
+            "description": "",
             "category": 2
         }
     },
@@ -71,6 +75,7 @@
             "name": "Bash Scripting",
             "local_name": "اسکربپت نویسی Bash",
             "start_date": "2012-10-10 00:00:00",
+            "description": "",
             "category": 3
         }
     },
@@ -81,6 +86,7 @@
             "name": "Administration I",
             "local_name": "مدیریت ۱",
             "start_date": "2012-10-10 00:00:00",
+            "description": "",
             "category": 3
         }
     },
@@ -91,6 +97,7 @@
             "name": "Administration II",
             "local_name": "مدیریت ۲",
             "start_date": "2012-10-10 00:00:00",
+            "description": "",
             "category": 3
         }
     },
@@ -101,7 +108,9 @@
             "name": "Services",
             "local_name": "سرویس",
             "start_date": "2012-10-10 00:00:00",
+            "description": "",
             "category": 3
+
         }
     }
 

@@ -13,6 +13,7 @@ class Exam(models.Model):
     name = models.CharField(max_length=200)
     local_name = models.CharField(max_length=200)
     start_date = models.DateTimeField()
+    description = models.CharField(max_length=2000)
 
     category = models.ForeignKey(ExamCategory)
 
