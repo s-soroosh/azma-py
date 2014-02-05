@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block js %}
+    <script type="text/javascript" src="{% static "js/jquery.plugin.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.countdown.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.countdown-fa.js" %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.countdown.setDefaults({description: 'تا شروع آزمون'});
+            $('#timer').countdown({until: new Date({{ exam.start_date.year}}, {{ exam.start_date.month}}-1, {{ exam.start_date.day}})});
+        });
+    </script>
+{% endblock %}
+
+{% block css %}
+    <link href="{% static "css/jquery.countdown.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    {{ exam }}
+    <div id="timer" class="container form-group timer"></div>
+{% endblock %}
