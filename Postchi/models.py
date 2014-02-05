@@ -1,11 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
-class Mail(models.Model):
+
+class ConfirmMail(models.Model):
     user = models.ForeignKey(User)
-    send_date= models.DateTimeField()
-    mail_type=models.ForeignKey(MailType)
-    mail_status=models.SmallIntegerField()
+    send_date = models.DateTimeField()
+    confirm_key = models.CharField(max_length=20)
 
-class MailType(models.Model):
-    name = models.CharField(max_length=50)
-
+class WelcomeMail(models.Model):
+    user = models.ForeignKey(User)
+    send_date = models.DateTimeField()

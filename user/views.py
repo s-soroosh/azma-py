@@ -64,6 +64,10 @@ def user_register(request):
             context = RequestContext(request, {'validation_error': e})
             return HttpResponse(register_template.render(context))
         u.save()
+
+        from Postchi.Mail import send_confirm_mail
+        send_confirm_mail(u)  # Send Confirmation Link
+
         return HttpResponseRedirect(reverse('pending'))
     else:
         context = RequestContext(request)
