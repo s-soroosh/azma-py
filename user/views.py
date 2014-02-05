@@ -57,7 +57,8 @@ def user_register(request):
         username = request.POST["username"]
         password = request.POST["password"]
 
-        u = User(username=username, password=password, first_name=name, last_name=last_name, email=email)
+        u = User(username=username, first_name=name, last_name=last_name, email=email)
+        u.set_password(password)
         try:
             u.full_clean()
         except ValidationError as e:
