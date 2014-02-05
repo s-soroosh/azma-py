@@ -8,8 +8,22 @@
     <script type="text/javascript" src="{% static "js/jquery.countdown-fa.js" %}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $.countdown.setDefaults({description: 'تا شروع آزمون'});
-            $('#timer').countdown({until: new Date({{ exam.start_date.year}}, {{ exam.start_date.month}}-1, {{ exam.start_date.day}})});
+            {%  if exam.start_date > current_date %}
+                $.countdown.setDefaults({description: 'تا شروع آزمون'});
+                $('#timer').fadeIn('slow');
+                $('#timer').countdown({onTick: function (periods) {
+                    var secs = $.countdown.periodsToSeconds(periods);
+                    if (secs == 0)
+                        $('#timer').fadeOut('slow', function () {
+                            $('#enter').fadeIn('slow');
+                        });
+
+                }, until: new Date({{ exam.start_date.year}}, {{ exam.start_date.month}}-1, {{ exam.start_date.day}})});
+            {% else %}
+                $('#enter').fadeIn('slow');
+            {% endif %}
+
+
         });
     </script>
 {% endblock %}
@@ -20,5 +34,6 @@
 
 {% block content %}
     {{ exam }}
-    <div id="timer" class="container form-group timer"></div>
+    <div id="timer" class="container form-group timer" style="display: none;"></div>
+    <div id="enter" class="container form-group enter" style="display: none;">Enter to Exam</div>
 {% endblock %}

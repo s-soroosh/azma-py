@@ -41,8 +41,8 @@
 	float: left;
 	font-size: 75%;
 	text-align: center;
-    border: double #FF6600 thin;
-    margin-right: 3px;
+    border: solid #FF6600 thin;
+    /*margin-right: 3px;*/
 }
 .countdown-amount {
     font-size: 24pt;

@@ -45,27 +45,12 @@
                     {% for category in categories %}
                         <li class="nav-header"> {% trans category.local_name %}</li>
                         {% for e in category.exam_set.all %}
-                            <li><a href="#">{% trans e.local_name %}</a></li>
+                            <li><a href="{% url 'exam:intro' e.id %}">{% trans e.local_name %}</a></li>
                         {% endfor %}
                         <li class="divider"></li>
                     {% endfor %}
                 {% endif %}
                 </ul>
-
-
-                {% comment %}   <li class="nav-header">دوره های آغاز شده</li>
-                <li><a href="product.html">ASP.NET</a></li>
-                <li><a href="product.html">C Sharp</a></li>
-                <li><a href="product.html">Entity Framework</a></li>
-                <li><a href="all_products.html">Linq</a></li>
-
-                <li class="nav-header">دوره های در حال ثبت نام</li>
-                <li><a href="service.html">Java مقدماتی</a></li>
-                <li><a href="service.html">Scala مقدماتی</a></li>
-                <li><a href="service.html"> آشنایی با Fortran</a></li>
-                <li><a href="service.html"> برنامه نویسی تحت وب با QBasic</a></li>
-                <li><a href="service.html">کارگاه سیستم های خبره یا Expert Systems </a></li>
-                </ul> {% endcomment %}
 
                 {% if user.is_authenticated %}
                     <li><a class="" href="#">پروفایل من</a></li>
