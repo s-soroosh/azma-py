@@ -1,16 +1,17 @@
 h1 {
 
-font-family: "yekan";
+    font-family: "yekan";
 }
 
-a{
+a {
     color: #5080f0;
 }
 
-.nav-header{
+.nav-header {
     font-family: Bardiya;
     padding-right: 6px;
 }
+
 .space {
     margin-top: 61px;
     /*padding-top: 25px;*/
@@ -23,6 +24,10 @@ a{
 
 .content {
 
+}
+
+.timer {
+    background-image: linear-gradient(#555555, #eeeeee 80%, #aaaaaa) !important;
 }
 
 .form-label {
