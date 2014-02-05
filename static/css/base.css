@@ -6,6 +6,11 @@ font-family: "yekan";
 a{
     color: #5080f0;
 }
+
+.nav-header{
+    font-family: Bardiya;
+    padding-right: 6px;
+}
 .space {
     margin-top: 61px;
     /*padding-top: 25px;*/

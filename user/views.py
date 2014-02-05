@@ -9,7 +9,6 @@ from azma import settings
 from user.login import auth_user
 
 
-
 def is_user_anon(login_url=None):
 
     def decorator(view_func):

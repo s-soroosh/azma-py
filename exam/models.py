@@ -3,6 +3,7 @@ from django.db import models
 
 class ExamCategory(models.Model):
     name = models.CharField(max_length=200)
+    local_name = models.CharField(max_length=200)
 
     def number_of_exams(self):
         return self.exam_set.count()
@@ -10,7 +11,9 @@ class ExamCategory(models.Model):
 
 class Exam(models.Model):
     name = models.CharField(max_length=200)
+    local_name = models.CharField(max_length=200)
     start_date = models.DateTimeField()
+
     category = models.ForeignKey(ExamCategory)
 
 
