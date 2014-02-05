@@ -30,6 +30,7 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),)
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     'exam.context_processor.categories',
     'django.contrib.auth.context_processors.auth',
@@ -55,6 +56,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'exam',
     'user',
+    'Postchi'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -145,6 +147,7 @@ LOGGING = {
 
 DEFAULT_LOGIN_URL = '/exam'
 
+#Mail Setting
 DEFAULT_FROM_EMAIL = 'noReply@zareie.net'
 EMAIL_HOST = 'mail.zareie.net'
 EMAIL_HOST_PASSWORD = '123123'
@@ -153,3 +156,4 @@ EMAIL_PORT = 25
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
 
+SERVER_BASE_ADDRESS = 'http://127.0.0.1:8000/'
