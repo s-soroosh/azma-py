@@ -6,3 +6,6 @@ class ConfirmMail(models.Model):
     send_date = models.DateTimeField()
     confirm_key = models.CharField(max_length=20)
 
+class WelcomeMail(models.Model):
+    user = models.ForeignKey(User)
+    send_date = models.DateTimeField()
