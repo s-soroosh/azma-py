@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
-
+{% load staticfiles %}
 {% block content %}
 
     <form id="frmRegister" action="{% url 'register' %}" method="post">
@@ -12,15 +12,15 @@
             <input type="text" class="form-control" id="txtFirstname" name="name" autofocus=""/>
 
             <label class="form-label">
-                نام خانوادگی
+                نام خانوادگ?
             </label>
             <input type="text" class="form-control" id="txtLastname" name="lastName"/>
             <label class="form-label">
-                آدرس ایمیل
+                آدرس ا?م?ل
             </label>
             <input type="email" class="form-control" id="txtEmailAddress" name="email"/>
             <label class="form-label">
-                نام کاربری
+                نام کاربر?
             </label>
             <input type="text" class="form-control" id="txtUsername" name="username"/>
 
@@ -37,7 +37,7 @@
             <div class="checkbox">
                 <label class="form-label">
                     <input type="checkbox">
-                    من تمام قوانین و حقوقم را خواندم و متعهد به انجام آنها میباشم.
+                    من تمام قوان?ن و حقوقم را خواندم و متعهد به انجام آنها م?باشم.
                 </label>
             </div>
 
@@ -47,4 +47,31 @@
         </div>
     </form>
 
+{% endblock %}
+
+{% block js %}
+<script src="{% static "js/nod.min.js" %}"></script>
+    <script type="text/javascript">
+$(window).load(function(){
+    var validation_options = [
+      [ '#txtFirstname,#txtLastname', 'presence', 'پر کردن ا?ن گز?نه الزام? است' ],
+      [ '#txtFirstname,#txtLastname', 'max-length:40', 'ا?ن گز?نه نبا?د ب?ش از 40 کاراکتر طول داشته باشد' ],
+      [ '#txtFirstname,#txtLastname', 'min-length:2', 'ا?ن گز?نه ب?ش از اندازه کوتاه است'],
+      [ '#txtFirstname,#txtLastname',/^[ضصثقفغعهخحجچشس?بلاتنمکگظطزرذدئژپ]{0,100}$/, 'لطفا فارس? وارد کن?د'],
+
+      [ '#txtUsername', 'max-length:20','نام کاربر? ب?ش از اندازه طولان? است'],
+      [ '#txtUsername', 'min-length:3','نام کاربر? ب?ش از اندازه کوتاه است'],
+
+      [ '#txtPassword', 'max-length:20', 'حداکثر طول گذرواژه 20 کاراکتر است .' ],
+
+      [ '#txtPassword', 'min-length:6','حداقل طول گذرواژه 6 کاراکتر است .'],
+
+      [ '#txtUsername', 'min-length:3','حداقل طول نام کاربر? 3 کاراکتر است .'],
+
+      [ '#txtPassword', 'min-length:6','حداقل طول گذرواژه 6 کاراکتر است .'],
+      [ '#txtConfirmPassword', 'same-as:#txtPassword','تکرار کلمه عبور با کلمه عبور یکسان نیست']
+    ];
+    $("#frmRegister").nod( validation_options  ,{helpSpanDisplay:'help-block'});
+});
+</script>
 {% endblock %}

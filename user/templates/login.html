@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
  <div class="center-block form-group">
-    <form action="{% url 'login' %}" method="post">
+    <form id="login_form" action="{% url 'login' %}" method="post">
 {% comment %}        {% if error_message %}
             <div class="alert-danger has-error">{{ error_message }}</div>
         {% endif %}{% endcomment %}
@@ -27,4 +28,27 @@
     </form>
 </div>
 
+{% endblock %}
+
+
+{% block js %}
+<script src='{% static "js/nod.min.js" %}'></script>
+
+<script type="text/javascript">
+$(window).load(function(){
+    var validation_options = [
+      [ '#txtUsername,#txtPassword', 'presence', 'پر کردن این گزینه الزامی است' ],
+
+      [ '#txtUsername', 'max-length:20', 'حداکثر طول نام کاربری 20 کاراکتر است .' ],
+
+
+      [ '#txtUsername', 'min-length:3','حداقل طول نام کاربری 3 کاراکتر است .'],
+      [ '#txtPassword', 'max-length:20', 'حداکثر طول گذرواژه 20 کاراکتر است .' ],
+
+      [ '#txtPassword', 'min-length:6','حداقل طول گذرواژه 6 کاراکتر است .']
+
+    ];
+    $("#login_form").nod( validation_options  ,{helpSpanDisplay:'help-block'});
+});
+</script>
 {% endblock %}
