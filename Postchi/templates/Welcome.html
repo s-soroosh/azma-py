@@ -1,10 +1,10 @@
 {% extends 'BasePayam.html' %}
-{ % block MailHeader % }
+{% block MailHeader %}
 پیام خوش آمد گویی عضویت :-)
-{ % endblock % }
+{% endblock %}
 
-{ % block MailBody % }
+{% block MailBody %}
 شما با موفقیت به جمع خانواده ی بزرگ آزماوب پیوستید ....!
 برای ورود به پروفایل و تکمیل اطلاعاتتون به این لینک برید:
 <a href="{{ profile_link }}">Profile</a>
-{ % endblock % }
+{% endblock %}
