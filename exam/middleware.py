@@ -14,6 +14,4 @@ class CommonObjectsMiddleware(object):
         request.categories = list(all_categories)
         return None
 
-    def process_template_response(self, request, response):
-        response.context['new_message_count'] = '2'
 

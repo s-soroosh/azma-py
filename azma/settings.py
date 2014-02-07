@@ -80,9 +80,17 @@ WSGI_APPLICATION = 'azma.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'AZMA',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1'
+
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 # Internationalization
@@ -154,6 +162,5 @@ EMAIL_HOST_PASSWORD = '123123'
 EMAIL_HOST_USER = 'azmaweb@zareie.net'
 EMAIL_PORT = 25
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
-
 
 SERVER_BASE_ADDRESS = 'http://127.0.0.1:8000/'
