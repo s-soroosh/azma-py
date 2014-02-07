@@ -160,7 +160,7 @@ DEFAULT_FROM_EMAIL = 'azmaweb@zareie.net'
 EMAIL_HOST = 'mail.zareie.net'
 EMAIL_HOST_PASSWORD = '123123'
 EMAIL_HOST_USER = 'azmaweb@zareie.net'
-EMAIL_PORT = 25
+EMAIL_PORT = 587
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
 SERVER_BASE_ADDRESS = 'http://127.0.0.1:8000/'
