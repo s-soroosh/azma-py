@@ -33,7 +33,10 @@
 {% endblock %}
 
 {% block content %}
-    {{ exam }}
+    <h1>آزمون     {{ exam.local_name }} </h1>
+    <h3>
+        {{ exam.description }}
+    </h3>
     <div id="timer" class="container form-group timer" style="display: none;"></div>
     <div id="enter" class="container form-group enter" style="display: none;">Enter to Exam</div>
 {% endblock %}

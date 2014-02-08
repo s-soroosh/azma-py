@@ -19,8 +19,8 @@ def auth_user(request):
             return redirect(settings.DEFAULT_LOGIN_URL)
         else:
             template = loader.get_template('login.html')
-            context = RequestContext(request)
-            return HttpResponse(template.render(context, {'error_message': 'User is disabled'}))
+            context = RequestContext(request, {'error_message': 'User is disabled'})
+            return HttpResponse(template.render(context))
 
     else:
         template = loader.get_template('login.html')

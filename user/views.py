@@ -1,16 +1,17 @@
 from functools import wraps
+import logging
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader, RequestContext
+from Postchi.models import ConfirmMail
 from azma import settings
 from user.login import auth_user
 
 
 def is_user_anon(login_url=None):
-
     def decorator(view_func):
         @wraps(view_func)
         def _wrapped_view(request, *args, **kwargs):
@@ -26,7 +27,6 @@ def is_user_anon(login_url=None):
 
 @is_user_anon(login_url=settings.DEFAULT_LOGIN_URL)
 def user_login(request):
-
     if request.method == "POST":
         return auth_user(request)
 
@@ -63,9 +63,11 @@ def user_register(request):
         except ValidationError as e:
             context = RequestContext(request, {'validation_error': e})
             return HttpResponse(register_template.render(context))
+        u.is_active = False
         u.save()
 
         from Postchi.Mail import send_confirm_mail
+
         send_confirm_mail(u)  # Send Confirmation Link
 
         return HttpResponseRedirect(reverse('pending'))
@@ -79,3 +81,31 @@ def show_pending(request):
     pending_template = loader.get_template('pending_for_confirm.html')
     context = RequestContext(request)
     return HttpResponse(pending_template.render(context))
+
+
+def confirm(request, user_id, confirm_code):
+    try:
+        user = User.objects.get(id=user_id)
+        is_valid = is_confim_valid(user_id, confirm_code)
+        if is_valid:
+            user.is_active = True
+            user.save()
+            template = loader.get_template('confirm.html')
+            context=RequestContext(request)
+            return HttpResponse(template.render(context))
+
+        else:
+            return HttpResponse("confirm code is wrong")
+
+    except ObjectDoesNotExist as e:
+        logging.info('Error: ' + e.message)
+        return HttpResponse("User does not exist")
+
+
+def is_confim_valid(user_id, confirm_code):
+    try:
+        confirmation = ConfirmMail.objects.get(confirm_key=confirm_code, user_id=user_id)
+        return True
+    except ObjectDoesNotExist as e:
+        logging.info('Error: ' + e.message)
+        return False

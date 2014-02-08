@@ -38,10 +38,10 @@ def send_confirm_mail(targetUser):
     mail_vars = Context(# mail body variables
         {
             'username': targetUser.username,
-            'activate_key': user_key,
+            'activate_link': projSetting.SERVER_BASE_ADDRESS+'user/confirm/'+str(targetUser.id)+'-'+user_key,
         }
     )
-    confirm_template = loader.get_template('confirm.html')
+    confirm_template = loader.get_template('confirm_mail.html')
     mail_content = confirm_template.render(mail_vars)
     try:
         msg = EmailMessage('{}Confirm Your Azma-Web Account'.format(projSetting.EMAIL_SUBJECT_PREFIX),
