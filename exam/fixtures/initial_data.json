@@ -6,6 +6,7 @@
             "name": "JAVA",
             "local_name": "جاوا"
 
+
         }
     },
     {
@@ -31,8 +32,10 @@
             "name": "JAVA Elementary",
             "local_name": "جاوا مقدماتی",
             "start_date": "2014-02-06 00:00:00",
-            "description": "dfjoie doiwjdio dfcvhfdeh vhdrevuih vfhu v <br /> dhuei cshcc cfeuiwchfeuc udecdewuv hvdevh",
-            "category": 1
+            "description": "در این آزمون میزان آشنایی شما با زبان جاوا سنجیده می شود.  <br  />برای شرکت در این آزمون تنها داشتن آشنایی اولیه با این زبان کافی است.",
+            "category": 1,
+            "duration":100
+
         }
     },
     {
@@ -43,7 +46,8 @@
             "local_name": "JAVA Generics",
             "start_date": "2014-02-04 00:00:00",
             "description": "",
-            "category": 1
+            "category": 1,
+            "duration":100
         }
     },
     {
@@ -54,7 +58,8 @@
             "local_name": "پایتون مقدماتی",
             "start_date": "2014-10-10 00:00:00",
             "description": "",
-            "category": 2
+            "category": 2,
+            "duration":100
         }
     },
     {
@@ -65,7 +70,8 @@
             "local_name": "Django",
             "start_date": "2014-10-10 00:00:00",
             "description": "",
-            "category": 2
+            "category": 2,
+            "duration":100
         }
     },
     {
@@ -76,7 +82,8 @@
             "local_name": "اسکربپت نویسی Bash",
             "start_date": "2014-10-10 00:00:00",
             "description": "",
-            "category": 3
+            "category": 3,
+            "duration":100
         }
     },
     {
@@ -87,7 +94,8 @@
             "local_name": "مدیریت ۱",
             "start_date": "2014-10-10 00:00:00",
             "description": "",
-            "category": 3
+            "category": 3,
+            "duration":100
         }
     },
     {
@@ -98,7 +106,8 @@
             "local_name": "مدیریت ۲",
             "start_date": "2014-10-10 00:00:00",
             "description": "",
-            "category": 3
+            "category": 3,
+            "duration":100
         }
     },
     {
@@ -109,8 +118,19 @@
             "local_name": "سرویس",
             "start_date": "2014-10-10 00:00:00",
             "description": "",
-            "category": 3
+            "category": 3,
+            "duration":100
 
         }
+    },
+    {
+        "model": "exam.requiredknowledge",
+        "pk": "1",
+        "fields": {
+            "name": "متغیرها",
+            "exams": [1,2,3]
+        }
     }
+
+
 ]
