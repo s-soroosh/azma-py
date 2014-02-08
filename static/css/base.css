@@ -16,6 +16,12 @@ p {
     font-family: Yekan;
     padding-bottom: 10px;
 }
+.navbar ul li{
+    font-size: 16px;
+}
+.navbar ul li a {
+    font-size: 16px;
+}
 
 .nav-header {
     font-family: Bardiya;
