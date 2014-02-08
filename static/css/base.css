@@ -1,4 +1,8 @@
-h1,h2,h3 {
+body {
+    font-family: Yekan;
+}
+
+h1, h2, h3 {
 
     font-family: "yekan";
     padding-bottom: 20px;
@@ -8,9 +12,8 @@ a {
     color: #5080f0;
 }
 
-
 p {
-    font-family: tahoma;
+    font-family: Yekan;
     padding-bottom: 10px;
 }
 
@@ -37,11 +40,14 @@ p {
     background-image: linear-gradient(#555555, #eeeeee 80%, #aaaaaa) !important;
 }
 
+.duration {
+    color: #CC5533;
+}
+
 .form-label {
     padding-top: 5px;
     padding-bottom: 2px;
 }
-
 
 .btn-success {
     background-image: linear-gradient(#777777, #227733 40%, #333333);
