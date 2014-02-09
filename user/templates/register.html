@@ -50,28 +50,5 @@
 {% endblock %}
 
 {% block js %}
-<script src="{% static "js/nod.min.js" %}"></script>
-    <script type="text/javascript">
-$(window).load(function(){
-    var validation_rules = [
-      [ '#txtFirstname,#txtLastname', 'presence', 'پر کردن این گزینه الزامی است' ],
-      [ '#txtFirstname,#txtLastname', 'max-length:40', 'این گزینه نباید بیش از 40 کاراکتر طول داشته باشد' ],
-      [ '#txtFirstname,#txtLastname', 'min-length:2', 'این گزینه بیش از اندازه کوتاه است'],
-      [ '#txtFirstname,#txtLastname',/^[ضصثقفغعهخحجچشسیبلاتنمکگظطزرذدئژپ]{0,100}$/, 'لطفا فارسی وارد کنید'],
 
-      [ '#txtUsername', 'max-length:20','نام کاربری بیش از اندازه طولانی است'],
-      [ '#txtUsername', 'min-length:3','نام کاربری بیش از اندازه کوتاه است'],
-
-      [ '#txtPassword', 'max-length:20', 'حداکثر طول گذرواژه 20 کاراکتر است .' ],
-
-      [ '#txtPassword', 'min-length:6','حداقل طول گذرواژه 6 کاراکتر است .'],
-
-      [ '#txtUsername', 'min-length:3','حداقل طول نام کاربری 3 کاراکتر است .'],
-
-      [ '#txtPassword', 'min-length:6','حداقل طول گذرواژه 6 کاراکتر است .'],
-      [ '#txtConfirmPassword', 'same-as:#txtPassword','تکرار کلمه عبور با کلمه عبور یکسان نیست']
-    ];
-    $("#frmRegister").nod( validation_rules ,nod_options);
-});
-</script>
 {% endblock %}
