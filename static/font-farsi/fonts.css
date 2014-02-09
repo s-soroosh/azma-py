@@ -2,49 +2,56 @@
     font-family: "Bardiya";
     font-style: normal;
     font-weight: 400;
-    src: url("BBardiya.eot") format("embedded-opentype"),           
-          url("BBardiya.woff") format("woff"), 
-          url("BBardiya.ttf") format("truetype");
+    src: url("BBardiya.eot") format("embedded-opentype"), url("BBardiya.woff") format("woff"), url("BBardiya.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "BKourosh";
+    font-style: normal;
+    font-weight: 400;
+    src: url("BKourosh.eot") format("embedded-opentype"), url("BKourosh.woff") format("woff"), url("BKourosh.ttf") format("truetype");
+}
+
 @font-face {
     font-family: "Yekan";
     font-style: normal;
     font-weight: 400;
-    src: url("BYekan.eot") format("embedded-opentype"),           
-          url("BYekan.woff") format("woff"), 
-          url("BYekan.ttf") format("truetype");
+    src: url("BYekan.eot") format("embedded-opentype"), url("BYekan.woff") format("woff"), url("BYekan.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "Vahid";
+    font-style: normal;
+    font-weight: 400;
+    src: url("BVahidBold.eot") format("embedded-opentype"), url("BVahidBold.woff") format("woff"), url("BVahidBold.ttf") format("truetype");
+}
+
 @font-face {
     font-family: "Titr";
     font-style: normal;
     font-weight: 400;
-    src: url("BTitrBold.eot") format("embedded-opentype"),           
-          url("BTitrBold.woff") format("woff"), 
-          url("BTitrBold.ttf") format("truetype");
+    src: url("BTitrTGEBold.eot") format("embedded-opentype"), url("BTitrTGEBold.woff") format("woff"), url("BTitrTGEBold.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "Roya";
     font-style: normal;
     font-weight: 400;
-    src: url("BRoya.eot") format("embedded-opentype"),           
-          url("BRoya.woff") format("woff"), 
-          url("BRoya.ttf") format("truetype");
+    src: url("BRoya.eot") format("embedded-opentype"), url("BRoya.woff") format("woff"), url("BRoya.ttf") format("truetype");
 }
 
+.BardiyaFont {
+    font-family: Bardiya;
+}
 
-.BardiyaFont
-{
-    font-family:Bardiya;
+.YekanFont {
+    font-family: Yekan;
 }
-.YekanFont
-{
-    font-family:Yekan;
+
+.TitrFont {
+    font-family: Titr;
 }
-.TitrFont
-{
-    font-family:Titr;
-}
-.RoyaFont
-{
-    font-family:Roya;
+
+.RoyaFont {
+    font-family: Roya;
 }

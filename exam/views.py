@@ -14,7 +14,7 @@ from exam.models import Exam
 def index(request):
     all_exams = Exam.objects.all()
 
-    template = loader.get_template('sample.html')
+    template = loader.get_template('home.html')
     context = RequestContext(request, {'all_exams': all_exams})
     return HttpResponse(template.render(context))
 

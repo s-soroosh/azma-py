@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render_to_response
 from django.template import loader, RequestContext
 from Postchi.Mail import send_confirm_mail
 from Postchi.models import ConfirmMail
@@ -42,6 +43,7 @@ def user_login(request):
         context = RequestContext(request)
         return HttpResponse(template.render(context))
 
+    render_to_response
     return HttpResponse("Wrong Method!")
 
 
