@@ -3,7 +3,7 @@
 {% load staticfiles %}
 {% block content %}
 
-    <form id="frmRegister" action="{% url 'register' %}" method="post" novalidate>
+    <form id="frmRegister" action="{% url 'register' %}" method="post" novalidate="">
         {% csrf_token %}
         <div class="form-group center-block">
 
@@ -13,10 +13,10 @@
                 </label>
                  <div class="controls">
                     <input type="text" class="form-control" id="txtFirstname" name="name" autofocus=""
-                             pattern="^[a-z]{0,100}$"
+                             pattern="^[a-zA-Z]{0,100}$"
                              maxlength="30"
                              minlength="2"
-                             data-validation-pattern-message="لطفا فارسی وارد کنید"
+                             data-validation-pattern-message="لطفا نام را صحیح وارد کنید"
                              data-validation-required-message="وارد کردن نام الزامی است"
                              data-validation-maxlength-message="بیش از اندازه بلند است"
                              data-validation-minlength-message="بیش از اندازه کوتاه است"
@@ -29,10 +29,10 @@
                 </label>
                 <div class="controls">
                     <input type="text" class="form-control" id="txtLastname" name="lastName"
-                             pattern="^[a-z]{0,100}$"
+                             pattern="^[a-zA-Z]{0,100}$"
                              maxlength="30"
                              minlength="2"
-                             data-validation-pattern-message="لطفا فارسی وارد کنید"
+                             data-validation-pattern-message="لطفا نام خانوادگی را صحیح وارد کنید"
                              data-validation-required-message="وارد کردن نام خانوادگی الزامی است"
                              data-validation-maxlength-message="بیش از اندازه بلند است"
                              data-validation-minlength-message="بیش از اندازه کوتاه است"
@@ -91,9 +91,13 @@
 
             <div class="checkbox">
                 <label class="form-label">
-                    <input type="checkbox">
                     من تمام قوانین و حقوقم را خواندم و متعهد به انجام آنها میباشم.
                 </label>
+                    <input
+                      type="checkbox"
+                      id="chkrights"
+                      name="terms-and-conditions"
+                    />
             </div>
 
             <button type="submit" class="btn btn-success btn-lg ">
@@ -107,7 +111,22 @@
 {% block js %}
 <script src="{% static "js/jqBootstrapValidation.js" %}"></script>
 <script type="text/javascript">
-var g;
+$('#frmRegister').submit(function(){
+
+$(chkrights).parent().removeClass('has-error').removeClass('has-success');
+$(chkrights).tooltip('destroy');
+
+if(chkrights.checked)
+  return true;
+else
+{
+      $(chkrights).addClass('has-error');
+      $(chkrights).tooltip({title:'پذیرش تعهدات الزامی است',placement:'right',html:true});
+      $(chkrights).tooltip('show');
+
+    return false;
+}
+});
 $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation({autoAdd: {helpBlocks: false}}); } );
 $("input,select,textarea").not("[type=submit]").blur(function(){
     $(this).parent().removeClass('has-error').removeClass('has-success');
@@ -130,7 +149,7 @@ $("input,select,textarea").not("[type=submit]").blur(function(){
 
         $(this).parent().addClass('has-error');
         $(this).tooltip({title:txt,placement:'left',html:true});
-        console.log(txt);
+
 
     }
     else{
