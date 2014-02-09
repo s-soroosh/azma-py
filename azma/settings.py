@@ -143,6 +143,14 @@ LOGGING = {
             'formatter': 'standard',
             'filters': ['queries_above_300ms'],
         },
+        'error_logfile': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "log", "error"),
+            'maxBytes': 50000,
+            'backupCount': 2,
+            'formatter': 'standard',
+        }
     },
     'loggers': {
         'django.db': {
@@ -150,6 +158,11 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
+        'error': {
+            'handlers': ['error_logfile'],
+            'level': 'ERROR',
+            'propagate': True,
+        }
     }
 }
 
