@@ -6,9 +6,13 @@ from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader, RequestContext
+from Postchi.Mail import send_confirm_mail
 from Postchi.models import ConfirmMail
 from azma import settings
 from user.login import auth_user
+
+
+errorLogger = logging.getLogger('error')
 
 
 def is_user_anon(login_url=None):
@@ -27,6 +31,7 @@ def is_user_anon(login_url=None):
 
 @is_user_anon(login_url=settings.DEFAULT_LOGIN_URL)
 def user_login(request):
+
     if request.method == "POST":
         return auth_user(request)
 
@@ -91,7 +96,7 @@ def confirm(request, user_id, confirm_code):
             user.is_active = True
             user.save()
             template = loader.get_template('confirm.html')
-            context=RequestContext(request)
+            context = RequestContext(request)
             return HttpResponse(template.render(context))
 
         else:
@@ -100,6 +105,23 @@ def confirm(request, user_id, confirm_code):
     except ObjectDoesNotExist as e:
         logging.info('Error: ' + e.message)
         return HttpResponse("User does not exist")
+
+
+def confirm_again(request):
+    if request.method == "POST":
+        try:
+            email = request.POST["email"]
+            user = User.objects.get(email=email.strip())
+            ConfirmMail.objects.filter(user_id=user.id).delete()
+            send_confirm_mail(user)
+            return HttpResponseRedirect(reverse('pending'))
+        except Exception as e:
+            return HttpResponseRedirect(reverse('exam:home'))
+    else:
+
+        template = loader.get_template('confirm_again.html')
+        context = RequestContext(request)
+        return HttpResponse(template.render(context))
 
 
 def is_confim_valid(user_id, confirm_code):

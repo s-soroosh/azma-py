@@ -4,9 +4,6 @@
 {% block content %}
  <div class="center-block form-group">
     <form id="login_form" action="{% url 'login' %}" method="post">
-{% comment %}        {% if error_message %}
-            <div class="alert-danger has-error">{{ error_message }}</div>
-        {% endif %}{% endcomment %}
         {% csrf_token %}
                 <label class="form-label">
                     نام کاربری
