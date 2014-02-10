@@ -11,11 +11,9 @@ from Postchi.models import ConfirmMail
 from exam.models import Exam
 
 
-def index(request):
-    all_exams = Exam.objects.all()
-
-    template = loader.get_template('home.html')
-    context = RequestContext(request, {'all_exams': all_exams})
+def what(request):
+    template = loader.get_template('intro.html')
+    context = RequestContext(request)
     return HttpResponse(template.render(context))
 
 
@@ -32,7 +30,7 @@ def intro(request, exam_id):
             return HttpResponseRedirect(reverse('exam:home'))
 
 
-
-
-
-
+def index(request):
+    template = loader.get_template('home.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
