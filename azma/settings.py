@@ -43,6 +43,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
 )
 
+AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
 
 # Application definition
 
@@ -56,7 +57,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'exam',
     'user',
-    'Postchi'
+    'Postchi',
+    'user_profile'
 )
 
 MIDDLEWARE_CLASSES = (

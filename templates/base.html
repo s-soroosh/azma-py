@@ -62,7 +62,7 @@
                 </ul>
 
                 {% if user.is_authenticated %}
-                    <li><a class="" href="#">پروفایل من</a></li>
+                    <li><a class="" href="{% url 'profile:show_profile' %}">پروفایل من</a></li>
                     <li><a class="" href="#">داشبورد</a></li>
                     <li><a class="" href="{% url 'logout' %}">خروج</a></li>
                 {% else %}

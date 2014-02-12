@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-3" id="profile-menu">
+            <div class="profile-item profile-item-selected" id="info">
+                اطلاعات من
+            </div>
+            <div class="profile-item" id="exam">
+                آزمونها
+            </div>
+
+        </div>
+        <div class="col-lg-9 profile-content" style="height: 400px;">
+            <div class="visible" id="info-container">
+                <div class="row">
+                    <div class="col-lg-2">نام</div>
+                    <div class="col-lg-10">{{ user.first_name }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">نام خانوادگی</div>
+                    <div class="col-lg-10">{{ user.last_name }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">نام کاربری</div>
+                    <div class="col-lg-10">{{ user.username }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"> تاریخ عضویت</div>
+                    <div class="col-lg-10">{{ user.date_joined }}</div>
+                </div>
+            </div>
+            <div class="c hidden" id="exam-container">
+                {% if user.profile.registered_exams.exists %}
+                    {% for exam in user.profile.registered_exams.all %}
+                        <div class="row">
+                            {#                            <div class="col-lg-1 "></div>#}
+                            <div class="col-lg-12 exam-header">{{ exam.exam.local_name }}</div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-3">وضعیت شما در این آزمون</div>
+                            <div class="col-lg-8">
+                                {% if exam.is_done %}
+                                    <p style="color: greenyellow;">شما این آزمون را به پایان رسانده اید
+                                    <button type="button" class="btn btn-success">جزییات</button>
+                                    </p>
+
+                                {% else %}
+                                    <p style="color: red;">شما هنوز این آزمون را به پایان نرسانده اید.
+                                    <a href="{% url 'exam:intro' exam.exam_id %}" class="btn btn-success">شرکت در آزمون</a>
+                                    </p>
+                                {% endif %}
+
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.profile-item').click(
+                    function (item) {
+                        var item_id = item.target.id;
+                        var container_name = item_id + '-container';
+                        var visible_object = $('.visible')[0];
+                        if (visible_object.id == container_name) {
+                            return;
+                        }
+
+                        $('.visible').fadeOut('slow', function () {
+                            $('.visible').removeClass('visible').addClass('hidden');
+                            $('#' + container_name).removeClass('hidden').addClass('visible');
+                            $('#' + container_name).fadeIn('slow');
+
+                        });
+
+                    }
+            )
+        });
+    </script>
+{% endblock %}

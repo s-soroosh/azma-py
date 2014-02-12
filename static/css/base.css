@@ -174,3 +174,37 @@ p.thought:after {
     -moz-border-radius: 18px;
     border-radius: 18px;
 }
+
+/* for profile page (we will move them to a specific file */
+
+#profile-menu {
+
+
+}
+
+
+.profile-item {
+    padding-right: 3px;
+    border: thin solid #AAAAAA;
+    margin-bottom: 1px;
+    background-color: #3e444c;
+}
+
+.profile-item:hover {
+    padding-right: 3px;
+    border: thin solid #AAAAAA;
+    margin-bottom: 1px;
+    background-color: #00444c;
+}
+
+.profile-item-selected {
+    background-color: #AA444c ;
+}
+
+.profile-content {
+    padding-top: 10px;
+}
+
+.exam-header{
+    font-size: 18pt;
+}
