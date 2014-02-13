@@ -40,16 +40,21 @@
                         <div class="row">
 
                             <div class="col-lg-1"></div>
-                            <div class="col-lg-3">وضعیت شما در این آزمون</div>
+                            <div class="col-lg-3">
+                                <p>
+                                    وضعیت شما در این آزمون
+                                </p>
+                            </div>
                             <div class="col-lg-8">
                                 {% if exam.is_done %}
                                     <p style="color: greenyellow;">شما این آزمون را به پایان رسانده اید
-                                    <button type="button" class="btn btn-success">جزییات</button>
+                                        <button type="button" class="btn btn-success">جزییات</button>
                                     </p>
 
                                 {% else %}
                                     <p style="color: red;">شما هنوز این آزمون را به پایان نرسانده اید.
-                                    <a href="{% url 'exam:intro' exam.exam_id %}" class="btn btn-success">شرکت در آزمون</a>
+                                        <a href="{% url 'exam:intro' exam.exam_id %}" class="btn btn-success">شرکت در
+                                            آزمون</a>
                                     </p>
                                 {% endif %}
 
@@ -69,6 +74,8 @@
         $(document).ready(function () {
             $('.profile-item').click(
                     function (item) {
+                        $('.profile-item').removeClass('profile-item-selected');
+                        $(item.target).addClass('profile-item-selected');
                         var item_id = item.target.id;
                         var container_name = item_id + '-container';
                         var visible_object = $('.visible')[0];

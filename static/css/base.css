@@ -188,6 +188,9 @@ p.thought:after {
     border: thin solid #AAAAAA;
     margin-bottom: 1px;
     background-color: #3e444c;
+    height: 30px;
+    font-size: 14pt;
+    vertical-align: middle;
 }
 
 .profile-item:hover {
@@ -207,4 +210,11 @@ p.thought:after {
 
 .exam-header{
     font-size: 18pt;
+}
+
+.navbar .container {
+    width:100%;
+    padding-right: 40px;
+    max-width: 100%;
+    padding-left: 0px;
 }

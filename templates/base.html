@@ -40,6 +40,14 @@
         </form>{% endcomment %}
         <div class="collapse navbar-collapse ">
             <ul class="nav navbar-nav YekanFont">
+                {% comment %}                {% if user.is_authenticated %}
+                    <li class="pull-left navbar-left" style="max-height:30px;width:auto;vertical-align:middle;">
+                        <a style="padding-top: 8px; padding-bottom: 10px;" href="{% url 'profile:show_profile' %}">
+                            <img src="{% static 'image/user/profile.png' %}"/>
+                        </a>
+                    </li>
+                    <li><a class="" href="#">داشبورد</a></li>
+                {% endif %}{% endcomment %}
                 <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>
                 {% if categories %}
                     <li class="dropdown">
@@ -61,20 +69,32 @@
                 {% endif %}
                 </ul>
 
-                {% if user.is_authenticated %}
-                    <li><a class="" href="{% url 'profile:show_profile' %}">پروفایل من</a></li>
-                    <li><a class="" href="#">داشبورد</a></li>
-                    <li><a class="" href="{% url 'logout' %}">خروج</a></li>
-                {% else %}
+                {% if not user.is_authenticated %}
                     <li><a class="" href="{% url 'login' %}">ورود </a></li>
                     <li><a class="" href="{% url 'register' %}">ثبت نام </a></li>
                 {% endif %}
                 <li><a class="" href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
 
 
+
+            </ul>
+            <ul class="nav navbar-nav navbar-collapse pull-left navbar-left YekanFont">
+                {% if user.is_authenticated %}
+                    <li class="pull-ri navbar-left" style="max-height:30px;width:auto;vertical-align:middle;">
+                        <a style="padding-top: 8px; padding-bottom: 10px;" href="{% url 'profile:show_profile' %}">
+                            <img src="{% static 'image/user/profile.png' %}"/>
+                        </a>
+                    </li>
+                    <li><a style="padding-top: 8px; padding-bottom: 10px;"  class="" href="{% url 'logout' %}">
+                         <img src="{% static 'image/user/logout.png' %}"/>
+                    </a></li>
+{#                    <li><a class="" href="#">داشبورد</a></li>#}
+                    </span>
+                {% endif %}
             </ul>
         </div>
         <!--/.nav-collapse -->
+
     </div>
 </div>
 <div class="space"></div>

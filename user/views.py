@@ -50,7 +50,7 @@ def user_login(request):
 
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(settings.DEFAULT_LOGIN_URL)
+    return HttpResponseRedirect(settings.DEFAULT_LOGOUT_URL)
 
 
 @is_user_anon(login_url=settings.DEFAULT_LOGIN_URL)
