@@ -58,7 +58,8 @@ INSTALLED_APPS = (
     'exam',
     'user',
     'Postchi',
-    'user_profile'
+    'user_profile',
+    'wage_meter'
 )
 
 MIDDLEWARE_CLASSES = (
