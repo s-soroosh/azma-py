@@ -218,3 +218,7 @@ p.thought:after {
     max-width: 100%;
     padding-left: 0px;
 }
+
+.navbar .glyphicon {
+    top:0px;
+}

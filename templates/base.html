@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<div class="navbar navbar-inverse navbar-fixed-top pull-right" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top center-block round" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -76,19 +76,17 @@
                 <li><a class="" href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
 
 
-
             </ul>
             <ul class="nav navbar-nav navbar-collapse pull-left navbar-left YekanFont">
                 {% if user.is_authenticated %}
-                    <li class="pull-ri navbar-left" style="max-height:30px;width:auto;vertical-align:middle;">
-                        <a style="padding-top: 8px; padding-bottom: 10px;" href="{% url 'profile:show_profile' %}">
-                            <img src="{% static 'image/user/profile.png' %}"/>
+                    <li class="navbar-left">
+                        <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
                         </a>
                     </li>
-                    <li><a style="padding-top: 8px; padding-bottom: 10px;"  class="" href="{% url 'logout' %}">
-                         <img src="{% static 'image/user/logout.png' %}"/>
-                    </a></li>
-{#                    <li><a class="" href="#">داشبورد</a></li>#}
+                    <li>
+                        <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
+                    </a>
+                    </li>
                     </span>
                 {% endif %}
             </ul>
