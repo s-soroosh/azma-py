@@ -60,10 +60,13 @@ INSTALLED_APPS = (
     'user',
     'Postchi',
     'user_profile',
-    'wage_meter'
+    'wage_meter',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
+
+    'django.middleware.gzip.GZipMiddleware',
     'exam.middleware.CommonObjectsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -182,3 +185,17 @@ EMAIL_PORT = 587
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
 SERVER_BASE_ADDRESS = 'http://127.0.0.1:8000/'
+
+
+REST_FRAMEWORK = {
+    # Use hyperlinked styles by default.
+    # Only used if the `serializer_class` attribute is not set on a view.
+    'DEFAULT_MODEL_SERIALIZER_CLASS':
+        'rest_framework.serializers.HyperlinkedModelSerializer',
+
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

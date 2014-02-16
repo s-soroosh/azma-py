@@ -1,0 +1,10 @@
+[
+    {
+        "model": "wage_meter.island",
+        "pk": 1,
+        "fields": {
+            "name": "name",
+            "description": "desc"
+        }
+    }
+]
