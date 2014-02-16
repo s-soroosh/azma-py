@@ -48,6 +48,7 @@ AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
 # Application definition
 
 INSTALLED_APPS = (
+    'south',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
