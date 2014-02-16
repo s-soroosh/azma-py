@@ -87,11 +87,10 @@ WSGI_APPLICATION = 'azma.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'AZMA',
+        'NAME': os.environ.get('DB_NAME', 'AZMA'),
         'USER': os.environ.get('MYSQL_USER', 'root'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'root'),
         'HOST': '127.0.0.1'
-
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
