@@ -65,7 +65,6 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
-
     'django.middleware.gzip.GZipMiddleware',
     'exam.middleware.CommonObjectsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -74,7 +73,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
 )
 
 ROOT_URLCONF = 'azma.urls'
@@ -85,12 +83,13 @@ WSGI_APPLICATION = 'azma.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'AZMA',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': os.environ.get('MYSQL_USER', 'root'),
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'root'),
         'HOST': '127.0.0.1'
 
     }
@@ -185,7 +184,6 @@ EMAIL_PORT = 587
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
 SERVER_BASE_ADDRESS = 'http://127.0.0.1:8000/'
-
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.
