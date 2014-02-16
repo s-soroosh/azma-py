@@ -179,15 +179,14 @@ p.thought:after {
 
 #profile-menu {
 
-
 }
 
-
 .profile-item {
+    color: #555555;
     padding-right: 3px;
     border: thin solid #AAAAAA;
     margin-bottom: 1px;
-    background-color: #3e444c;
+    background-color: #E0E0E0;
     height: 30px;
     font-size: 14pt;
     vertical-align: middle;
@@ -197,28 +196,31 @@ p.thought:after {
     padding-right: 3px;
     border: thin solid #AAAAAA;
     margin-bottom: 1px;
-    background-color: #00444c;
+    background-color: #22444c;
+    color:white;
 }
 
 .profile-item-selected {
-    background-color: #AA444c ;
+    border: thin solid #AA774c;
+    background-color: #AA774c;
 }
 
 .profile-content {
-    padding-top: 10px;
+    font-size: 14pt;
+    padding-top: 30px;
 }
 
-.exam-header{
+.exam-header {
     font-size: 18pt;
 }
 
 .navbar .container {
-    width:100%;
+    width: 100%;
     padding-right: 40px;
     max-width: 100%;
     padding-left: 0px;
 }
 
 .navbar .glyphicon {
-    top:0px;
+    top: 0px;
 }

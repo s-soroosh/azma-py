@@ -2,12 +2,15 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-lg-3" id="profile-menu">
+        <div style="padding-top:40px;" class="col-lg-3" id="profile-menu">
             <div class="profile-item profile-item-selected" id="info">
                 اطلاعات من
             </div>
             <div class="profile-item" id="exam">
                 آزمونها
+            </div>
+            <div class="profile-item" id="password">
+                تغییر رمز عبور
             </div>
 
         </div>
@@ -64,7 +67,44 @@
                     {% endfor %}
                 {% endif %}
             </div>
-        </div>
+            <div class="c hidden col-lg-10" id="password-container">
+                <form method="post">
+                    <div class="control-group">
+                        <label class="form-label">
+                            رمز عبور کنونی
+                        </label>
+
+                        <div class="controls">
+                            <label></label>
+                            <input type="password" class="form-control" name="oldPass"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="form-label">
+                            رمز عبور جدید
+                        </label>
+
+                        <div class="controls">
+                            <label></label>
+                            <input type="password" class="form-control" name="newPass"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="form-label">
+                            تکرار رمز عبور
+                        </label>
+
+                        <div class="controls">
+                            <label></label>
+                            <input type="password" class="form-control"/>
+                        </div>
+                    </div>
+                    <button style="margin-top: 10px;" type="submit" class="btn btn-success btn-lg">
+                        ثبت
+                    </button>
+                </form>
+                </div>
+            </div>
     </div>
 
 {% endblock %}
