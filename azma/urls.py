@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from azma import views
 
 
@@ -17,5 +18,7 @@ urlpatterns = patterns('',
                        url(r'^(?i)profile/', include('user_profile.urls', namespace='profile')),
                        url(r'^(?i)wage_meter/', include('wage_meter.urls', namespace='wages')),
 )
+
+urlpatterns += staticfiles_urlpatterns()
 
 
