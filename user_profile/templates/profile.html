@@ -68,7 +68,8 @@
                 {% endif %}
             </div>
             <div class="c hidden col-lg-10" id="password-container">
-                <form method="post">
+                <form method="post" action="{% url 'profile:change_password' %}">
+                    {% csrf_token %}
                     <div class="control-group">
                         <label class="form-label">
                             رمز عبور کنونی

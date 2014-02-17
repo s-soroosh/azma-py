@@ -1324,3 +1324,6 @@ msgstr "نام کاربری و یا گذرواژه اشتباه است!"
 
 msgid "JAVA"
 msgstr "جاوا"
+
+msgid "password has been changed"
+msgstr "گذر واژه با موفقیت تغییر کرد"
