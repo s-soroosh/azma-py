@@ -74,8 +74,7 @@
                     <li><a class="" href="{% url 'register' %}">ثبت نام </a></li>
                 {% endif %}
                 <li><a class="" href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
-
-
+                <li><a class="" href="{% url 'about' %}">درباره ما</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-collapse pull-left navbar-left YekanFont">
                 {% if user.is_authenticated %}
@@ -85,7 +84,7 @@
                     </li>
                     <li>
                         <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
-                    </a>
+                        </a>
                     </li>
                     </span>
                 {% endif %}
