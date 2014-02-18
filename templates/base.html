@@ -10,7 +10,8 @@
 
     <title>{% block title %}{% endblock %}</title>
     <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
-    <link href="{% static "bootstrap/css/bootstrap-theme.min.slate.css" %}" rel="stylesheet">
+
+    <link href="{% static "bootstrap/css/bootstrap-theme.min.yeti.css" %}" rel="stylesheet">
     <link href="{% static "bootstrap/css/bootstrap-rtl.css" %}" rel="stylesheet">
 
     <link href="{% static "css/base.css" %}" rel="stylesheet">
@@ -59,24 +60,23 @@
                     </a>
                     <ul class="dropdown-menu">
 
-                    {% for category in categories %}
-                        <li class="nav-header"> {% trans category.local_name %}</li>
-                        {% for e in category.exam_set.all %}
-                            <li><a href="{% url 'exam:intro' e.id %}">{% trans e.local_name %}</a></li>
+                        {% for category in categories %}
+                            <li class="nav-header"> {% trans category.local_name %}</li>
+                            {% for e in category.exam_set.all %}
+                                <li><a href="{% url 'exam:intro' e.id %}">{% trans e.local_name %}</a></li>
+                            {% endfor %}
+                            <li class="divider"></li>
                         {% endfor %}
-                        <li class="divider"></li>
-                    {% endfor %}
-                {% endif %}
-                </ul>
 
+                    </ul>
+                {% endif %}
                 {% if not user.is_authenticated %}
                     <li><a class="" href="{% url 'login' %}">ورود </a></li>
                     <li><a class="" href="{% url 'register' %}">ثبت نام </a></li>
                 {% endif %}
                 <li><a class="" href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
                 <li><a class="" href="{% url 'about' %}">درباره ما</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-collapse pull-left navbar-left YekanFont">
+
                 {% if user.is_authenticated %}
                     <li class="navbar-left">
                         <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
