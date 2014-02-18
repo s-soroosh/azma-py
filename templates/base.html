@@ -23,14 +23,17 @@
 
 <div class="navbar navbar-inverse navbar-fixed-top center-block round" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
-                    class="icon-bar"></span><span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand YekanFont" href="{% url 'exam:home' %}">آزماوب</a>
-        </div>
-        {% comment %}     <form class="navbar-form navbar-left">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand YekanFont" href="{% url 'exam:home' %}">آزماوب</a>
+                </div>
+            </div>
+            {% comment %}     <form class="navbar-form navbar-left">
             <div class="input-group-btn">
                 <input type="text" class="input-group-lg"/>
                 <button class="btn btn-info">
@@ -39,59 +42,68 @@
             </div>
 
         </form>{% endcomment %}
-        <div class="collapse navbar-collapse ">
-            <ul class="nav navbar-nav YekanFont">
-                {% comment %}                {% if user.is_authenticated %}
+            <div class="col-md-8">
+                <div class="collapse navbar-collapse ">
+                    <ul class="nav navbar-nav YekanFont">
+                        {% comment %}                {% if user.is_authenticated %}
                     <li class="pull-left navbar-left" style="max-height:30px;width:auto;vertical-align:middle;">
                         <a style="padding-top: 8px; padding-bottom: 10px;" href="{% url 'profile:show_profile' %}">
                             <img src="{% static 'image/user/profile.png' %}"/>
                         </a>
-                    </li>
+                          </li>
                     <li><a class="" href="#">داشبورد</a></li>
                 {% endif %}{% endcomment %}
-                <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>
-                {% if categories %}
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        آزمونها
-                        <b class="caret">
+                        <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>
+                        {% if categories %}
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                آزمونها
+                                <b class="caret">
 
-                        </b>
-                    </a>
-                    <ul class="dropdown-menu">
+                                </b>
+                            </a>
+                            <ul class="dropdown-menu">
 
-                        {% for category in categories %}
-                            <li class="nav-header"> {% trans category.local_name %}</li>
-                            {% for e in category.exam_set.all %}
-                                <li><a href="{% url 'exam:intro' e.id %}">{% trans e.local_name %}</a></li>
-                            {% endfor %}
-                            <li class="divider"></li>
-                        {% endfor %}
+                                {% for category in categories %}
+                                    <li class="nav-header"> {% trans category.local_name %}</li>
+                                    {% for e in category.exam_set.all %}
+                                        <li><a href="{% url 'exam:intro' e.id %}">{% trans e.local_name %}</a></li>
+                                    {% endfor %}
+                                    <li class="divider"></li>
+                                {% endfor %}
 
+                            </ul>
+                        {% endif %}
+                        {% if not user.is_authenticated %}
+                            <li><a class="" href="{% url 'login' %}">ورود </a></li>
+                            <li><a class="" href="{% url 'register' %}">ثبت نام </a></li>
+                        {% endif %}
+                        <li><a class="" href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
+                        <li><a class="" href="{% url 'about' %}">درباره ما</a></li>
                     </ul>
-                {% endif %}
-                {% if not user.is_authenticated %}
-                    <li><a class="" href="{% url 'login' %}">ورود </a></li>
-                    <li><a class="" href="{% url 'register' %}">ثبت نام </a></li>
-                {% endif %}
-                <li><a class="" href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
-                <li><a class="" href="{% url 'about' %}">درباره ما</a></li>
+                </div>
+            </div>
+            <div class="col-md-2">
+
 
                 {% if user.is_authenticated %}
-                    <li class="navbar-left">
-                        <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
-                        </a>
-                    </li>
-                    <li>
-                        <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
-                        </a>
-                    </li>
-                    </span>
-                {% endif %}
-            </ul>
-        </div>
-        <!--/.nav-collapse -->
+                    <ul class="nav navbar-nav navbar-left YekanFont">
+                        <li class="navbar-left">
+                            <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
+                            </a>
+                        </li>
+                    </ul>
 
+                {% endif %}
+
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
     </div>
 </div>
 <div class="space"></div>
