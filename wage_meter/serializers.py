@@ -7,4 +7,4 @@ __author__ = 'soroosh'
 class IslandSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Island
-        fields = ('name', 'description')
+        fields = ('id','name', 'description')
