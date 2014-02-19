@@ -5,13 +5,20 @@ from django.core import serializers
 from django.forms.models import model_to_dict
 from django.http import HttpResponse,HttpResponseNotFound
 from django.views.decorators.csrf import csrf_exempt  # # @csrf_exempt it can disable CSRF checking for debug purposes
-from wage_meter.models import Island
-from wage_meter.serializers import IslandSerializer
-
+from wage_meter.models import Island,Technology
+from wage_meter.serializers import IslandSerializer,TechnologySerializer
+from django.template import RequestContext, loader
 
 class IslandViewSet(viewsets.ModelViewSet):
     queryset = Island.objects.all()
     serializer_class = IslandSerializer
+
+
+def main(request):
+    template = loader.get_template('main.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+
 
 def _convert_for_json(objects):
     if(len(objects)>1):

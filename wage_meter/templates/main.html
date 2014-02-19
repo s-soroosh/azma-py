@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block css %}
+
+
+
+    <style>
+        #panel {
+
+            background-color: #fafafa;
+
+            border: solid 6px #efefef;
+
+            border-radius: 8px 8px;
+
+            padding-top: 3px;
+            padding-left: 6px;
+            padding-right: 6px;
+            padding-bottom: 3px;
+
+            min-height: 500px;
+            max-height: 500px;
+
+            position: relative;
+        }
+
+        .Cash {
+            position: absolute;
+            bottom: 0px;
+            text-align: right;
+            direction: rtl;
+
+        }
+
+        .SliderItem {
+            font-family: Tahoma;
+            text-align: right;
+            font-size: 8pt;
+        }
+
+        .SliderItem input {
+            margin: 0px;
+        }
+
+        #Panel_Container {
+            text-align: right;
+            direction: rtl;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div id="Panel_Container">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" id="panel">
+                <div>
+                    <h3>
+                        لطفا یکی از گزینه های زیر را انتخاب کنید :
+                    </h3>
+                    <select id="worlds">
+                        <option value="-1">اهل کدام دنیا هستید ؟</option>
+
+                    </select>
+                </div>
+                <div id="items">
+                </div>
+                <div class="Cash">
+
+                    حداقل حق ماهیانه شما از بازار کار ایران :
+                    <label id="value">
+                    </label>
+
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+
+        var wageConfig = {
+            debug: true,
+            URLs: {
+                getIslands: "tt/islands/?format=json",
+                getTechnologies:""
+            },
+            Templates: {
+                eachIsland: "templates/sliderItem.tmpl"
+            },
+            UI: {
+                mainPanelId: "Panel_Container",
+                islandsSelectId: "worlds"
+            }
+        };
+
+        ///using for log in debug mode
+        function debug(txt, arg) {
+            if (wageConfig.debug) {
+                console.log(txt);
+                console.log(arg);
+            }
+        }
+
+        function on_select_island(selected) {
+            if(selected>-1){
+
+            }
+        }
+        function load_islands() {
+            $.ajax({
+                url: wageConfig.URLs.getIslands
+            }).done(function (data) {
+                        var islands = data;
+                        debug("islands Objects array expected : ", islands);
+                        for (var i = 0; i < islands.length; i++) {
+                            $("#" + wageConfig.UI.islandsSelectId)
+                                    .append(
+                                            $('<option></option>').
+                                                    val(islands[i].id).
+                                                    html(islands[i].name)
+                                    );
+                        }
+                    });
+        }
+
+        $(window).ready(function () {
+            load_islands();
+            $("#" + wageConfig.UI.islandsSelectId).change(function (arg) {
+                on_select_island(arg.target.value);
+            });
+
+        });
+
+
+    </script>
+
+{% endblock %}

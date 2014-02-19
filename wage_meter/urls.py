@@ -11,4 +11,5 @@ urlpatterns = patterns('',
                        # url(r'^(?i)islands$', views.get_islands, name='islands'),
                        # url(r'^(?i)techByIsland$', views.get_technology_by_island, name='tech_by_island'),
                        # url(r'^(?i)techByTech$', views.get_technology_by_parent_technology, name='tech_by_tech'),
+                       url(r'^(?i)main$', views.main, name='main_view'),
                        url(r'tt/', include(router.urls)), )
