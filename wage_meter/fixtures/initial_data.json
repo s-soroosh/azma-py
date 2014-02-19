@@ -3,7 +3,87 @@
         "model": "wage_meter.island",
         "pk": 1,
         "fields": {
-            "name": "name",
+            "name": "PHP",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 2,
+        "fields": {
+            "name": "Python",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 3,
+        "fields": {
+            "name": ".Net",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 4,
+        "fields": {
+            "name": "Java",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 5,
+        "fields": {
+            "name": "C++",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 6,
+        "fields": {
+            "name": "C",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 7,
+        "fields": {
+            "name": "ruby",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 8,
+        "fields": {
+            "name": "VisualBasic",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 9,
+        "fields": {
+            "name": "Delphi",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 10,
+        "fields": {
+            "name": "perl",
+            "description": "desc"
+        }
+    },
+        {
+        "model": "wage_meter.island",
+        "pk": 11,
+        "fields": {
+            "name": "Web Design",
             "description": "desc"
         }
     }
