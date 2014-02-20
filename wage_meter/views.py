@@ -6,7 +6,7 @@ from django.forms.models import model_to_dict
 from django.http import HttpResponse,HttpResponseNotFound
 from django.views.decorators.csrf import csrf_exempt  # # @csrf_exempt it can disable CSRF checking for debug purposes
 from wage_meter.models import Island,Technology
-from wage_meter.serializers import IslandSerializer,TechnologySerializer
+from wage_meter.serializers import IslandSerializer
 from django.template import RequestContext, loader
 
 class IslandViewSet(viewsets.ModelViewSet):
