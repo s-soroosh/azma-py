@@ -112,7 +112,7 @@ p.bubble {
     line-height: 100px;
     margin-right: 30px;
     margin-bottom: 60px;
-    background-color: #fff;
+    background-color: #008AEA;
     border: 8px solid #666;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -120,7 +120,7 @@ p.bubble {
     -webkit-box-shadow: 2px 2px 4px #888;
     -moz-box-shadow: 2px 2px 4px #888;
     box-shadow: 2px 2px 4px #888;
-    color: #000000;
+    color: #ffffff;
 }
 
 p.thought {
@@ -154,7 +154,7 @@ p.speech:after {
     left: 38px;
     top: 100px;
     border: 15px solid;
-    border-color: #fff transparent transparent #fff;
+    border-color: #008AEA transparent transparent #008AEA;
 }
 
 p.thought:before, p.thought:after {
@@ -162,7 +162,7 @@ p.thought:before, p.thought:after {
     top: 60px;
     width: 60px;
     height: 60px;
-    background-color: #fff;
+    background-color: #008AEA;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
