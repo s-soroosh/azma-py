@@ -101,6 +101,10 @@ label {
     font-family: Roya;
     font-size: 12pt;
     font-weight: bold;
+
+}
+
+.form-group label {
     color:white;
 }
 
