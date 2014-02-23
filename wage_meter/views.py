@@ -3,10 +3,10 @@ from rest_framework import viewsets
 from wage_meter import models
 from django.core import serializers
 from django.forms.models import model_to_dict
-from django.http import HttpResponse,HttpResponseNotFound
+from django.http import HttpResponse,HttpResponseNotFound,HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt  # # @csrf_exempt it can disable CSRF checking for debug purposes
 from wage_meter.models import Island,Technology
-from wage_meter.serializers import IslandSerializer
+from wage_meter.serializers import IslandSerializer,TechnologySerializer
 from django.template import RequestContext, loader
 
 class IslandViewSet(viewsets.ModelViewSet):
@@ -20,56 +20,19 @@ def main(request):
     return HttpResponse(template.render(context))
 
 
-def _convert_for_json(objects):
-    if(len(objects)>1):
-        items = "[ "
-        items += objects[0].json_format()
-        for obj in objects:
-            items += ','
-            items += obj.json_format()
-        items += " ]"
-        return items
-    if(len(objects)==1):
-        return objects[0].json_format()
-    if(len(objects)==0):
-        return '{}'
 
+# it's not nice but i spend a lot of time for it :-|
+# i can't use django methods like extra or select_related very well yet but i will keep trying :)
 @csrf_exempt
-def get_islands(request):
-    islands = models.Island.objects.all()
-    res = _convert_for_json(islands)
-    response_result = HttpResponse("", content_type='application/json; charset=utf-8')
-    response_result.write(res)
-    response_result['Content-Length'] = len(res)
-    return HttpResponse(response_result)
-
-
-@csrf_exempt
-def get_technology_by_island(request):
-    selected_island = request.POST['island']
-    print(selected_island)
-    if selected_island is None:
-        return HttpResponseNotFound()
-    technologies = models.Technology.objects.filter(island=selected_island)
-    res = _convert_for_json(technologies)
-    response_result = HttpResponse("", content_type='application/json; charset=utf-8')
-    response_result.write(res)
-    response_result['Content-Length'] = len(res)
-    return HttpResponse(response_result)
-
-
-@csrf_exempt
-def get_technology_by_parent_technology(request):
-    selected_technology = request.POST['technology']
-    if selected_technology is None:
-        return HttpResponseNotFound()
-    technologies = models.Technology.objects.filter(parent=selected_technology)
-    res = _convert_for_json(technologies)
-    response_result = HttpResponse("", content_type='application/json; charset=utf-8')
-    response_result.write(res)
-    response_result['Content-Length'] = len(res)
-    return HttpResponse(response_result)
-
-
-
-
+def tech(request):
+    if('island' in request.POST):  # # load Technologies by Islands
+        t = list(Technology.objects.raw('SELECT * FROM wage_meter_technology WHERE island_id=%s',[request.POST["island"]]))
+    elif('tech' in request.POST):  # # load Technologies by related Technologies
+        t = list(Technology.objects.
+        raw('SELECT * FROM `wage_meter_technology` WHERE `id` in (SELECT `to_technology_id` from `wage_meter_technology_parent` where `from_technology_id` = %s)',
+            [request.POST["tech"]]))
+    else: return HttpResponseBadRequest()
+    s = TechnologySerializer(t, many=True)
+    response_obj = HttpResponse(s.data)
+    response_obj['Content-Type'] = 'application/json'
+    return response_obj
