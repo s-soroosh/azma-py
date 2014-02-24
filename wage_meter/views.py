@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets,renderers
 from wage_meter import models
 from django.core import serializers
 from django.forms.models import model_to_dict
@@ -20,19 +20,14 @@ def main(request):
     return HttpResponse(template.render(context))
 
 
-
-# it's not nice but i spend a lot of time for it :-|
-# i can't use django methods like extra or select_related very well yet but i will keep trying :)
 @csrf_exempt
 def tech(request):
-    if('island' in request.POST):  # # load Technologies by Islands
-        t = list(Technology.objects.raw('SELECT * FROM wage_meter_technology WHERE island_id=%s',[request.POST["island"]]))
-    elif('tech' in request.POST):  # # load Technologies by related Technologies
-        t = list(Technology.objects.
-        raw('SELECT * FROM `wage_meter_technology` WHERE `id` in (SELECT `to_technology_id` from `wage_meter_technology_parent` where `from_technology_id` = %s)',
-            [request.POST["tech"]]))
+    if 'island' in request.POST:  # # load Technologies by Islands
+        t = all_technologies = Technology.objects.all().extra(where=['island_id=%s'], params=[request.POST['island']])
+    elif 'tech' in request.POST:  # # load Technologies by related Technologies
+        t = Technology.objects.filter(parent__id=request.POST['tech'])
     else: return HttpResponseBadRequest()
     s = TechnologySerializer(t, many=True)
-    response_obj = HttpResponse(s.data)
+    response_obj = HttpResponse(renderers.JSONRenderer().render(s.data))
     response_obj['Content-Type'] = 'application/json'
     return response_obj
