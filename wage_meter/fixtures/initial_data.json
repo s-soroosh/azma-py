@@ -3,7 +3,7 @@
         "model": "wage_meter.island",
         "pk": 1,
         "fields": {
-            "name": "PHP",
+            "name": "Web Design",
             "description": "desc"
         }
     },
@@ -11,7 +11,7 @@
         "model": "wage_meter.island",
         "pk": 2,
         "fields": {
-            "name": "Python",
+            "name": "Web Application",
             "description": "desc"
         }
     },
@@ -19,7 +19,7 @@
         "model": "wage_meter.island",
         "pk": 3,
         "fields": {
-            "name": ".Net",
+            "name": "Windows Applications",
             "description": "desc"
         }
     },
@@ -27,64 +27,409 @@
         "model": "wage_meter.island",
         "pk": 4,
         "fields": {
-            "name": "Java",
+            "name": "Game Development",
             "description": "desc"
         }
     },
         {
-        "model": "wage_meter.island",
+        "model": "wage_meter.technology",
+        "pk": 1,
+        "fields": {
+            "name": "HTML",
+            "description": "test",
+            "ratio": 0.1,
+            "island": 1
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 2,
+        "fields": {
+            "name": "CSS",
+            "description": "test",
+            "ratio": 0.2,
+            "island": 1
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 3,
+        "fields": {
+            "name": "CSS 3 Animations",
+            "description": "test",
+            "ratio": 0.4,
+            "island": 1,
+            "parent":[2]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 4,
+        "fields": {
+            "name": "Javascript",
+            "description": "test",
+            "ratio": 0.4,
+            "island": 1
+        }
+    },
+        {
+        "model": "wage_meter.technology",
         "pk": 5,
         "fields": {
-            "name": "C++",
-            "description": "desc"
+            "name": "Jquery",
+            "description": "test",
+            "ratio": 0.5,
+            "island": 1,
+            "parent":[4]
         }
     },
         {
-        "model": "wage_meter.island",
+        "model": "wage_meter.technology",
         "pk": 6,
         "fields": {
-            "name": "C",
-            "description": "desc"
+            "name": "Mootools",
+            "description": "test",
+            "ratio": 0.4,
+            "island": 1,
+            "parent":[4]
         }
     },
         {
-        "model": "wage_meter.island",
+        "model": "wage_meter.technology",
         "pk": 7,
         "fields": {
-            "name": "ruby",
-            "description": "desc"
+            "name": "YUI",
+            "description": "test",
+            "ratio": 0.4,
+            "island": 1,
+            "parent":[4]
         }
     },
         {
-        "model": "wage_meter.island",
+        "model": "wage_meter.technology",
         "pk": 8,
         "fields": {
-            "name": "VisualBasic",
-            "description": "desc"
+            "name": "AngularJs",
+            "description": "test",
+            "ratio": 0.6,
+            "island": 1,
+            "parent":[4]
         }
     },
         {
-        "model": "wage_meter.island",
+        "model": "wage_meter.technology",
         "pk": 9,
         "fields": {
-            "name": "Delphi",
-            "description": "desc"
+            "name": "Mustache",
+            "description": "test",
+            "ratio": 0.6,
+            "island": 1,
+            "parent":[4]
         }
     },
         {
-        "model": "wage_meter.island",
+        "model": "wage_meter.technology",
         "pk": 10,
         "fields": {
-            "name": "perl",
-            "description": "desc"
+            "name": "Backbone",
+            "description": "test",
+            "ratio": 0.6,
+            "island": 1,
+            "parent":[4]
         }
     },
         {
-        "model": "wage_meter.island",
+        "model": "wage_meter.technology",
         "pk": 11,
         "fields": {
-            "name": "Web Design",
-            "description": "desc"
+            "name": "PHP",
+            "description": "test",
+            "ratio": 0.5,
+            "island": 2
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 12,
+        "fields": {
+            "name": "YII",
+            "description": "test",
+            "ratio": 0.8,
+            "island": 2,
+            "parent":[11]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 13,
+        "fields": {
+            "name": "CodeIgniter",
+            "description": "test",
+            "ratio": 0.7,
+            "island": 2,
+            "parent":[11]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 14,
+        "fields": {
+            "name": "CakePhp",
+            "description": "test",
+            "ratio": 0.6,
+            "island": 2,
+            "parent":[11]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 15,
+        "fields": {
+            "name": "Java",
+            "description": "test",
+            "ratio": 0.7,
+            "island": 2
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 16,
+        "fields": {
+            "name": "Play!",
+            "description": "test",
+            "ratio": 0.7,
+            "island": 2,
+            "parent":[15]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 17,
+        "fields": {
+            "name": "Spring",
+            "description": "test",
+            "ratio": 0.8,
+            "island": 2,
+            "parent":[15]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 18,
+        "fields": {
+            "name": "Hibernate",
+            "description": "test",
+            "ratio": 0.8,
+            "island": 2,
+            "parent":[15]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 19,
+        "fields": {
+            "name": "ORMlite",
+            "description": "test",
+            "ratio": 0.4,
+            "island": 2,
+            "parent":[15]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 20,
+        "fields": {
+            "name": "Asp.net",
+            "description": "test",
+            "ratio": 0.7,
+            "island": 2
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 21,
+        "fields": {
+            "name": "Asp.net Webforms",
+            "description": "test",
+            "ratio": 0.5,
+            "island": 2,
+            "parent":[20]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 22,
+        "fields": {
+            "name": "Asp.net MVC",
+            "description": "test",
+            "ratio": 0.5,
+            "island": 2,
+            "parent":[20]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 23,
+        "fields": {
+            "name": "Entity Framework",
+            "description": "test",
+            "ratio": 0.7,
+            "island": 2,
+            "parent":[20]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 24,
+        "fields": {
+            "name": "NHibernate",
+            "description": "test",
+            "ratio": 0.8,
+            "island": 2,
+            "parent":[20]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 25,
+        "fields": {
+            "name": "Python",
+            "description": "test",
+            "ratio": 0.6,
+            "island": 2
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 26,
+        "fields": {
+            "name": "Django",
+            "description": "test",
+            "ratio": 0.8,
+            "island": 2,
+            "parent":[25]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 27,
+        "fields": {
+            "name": "TurboGears",
+            "description": "test",
+            "ratio": 0.8,
+            "island": 2,
+            "parent":[25]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 28,
+        "fields": {
+            "name": "Tornado",
+            "description": "test",
+            "ratio": 0.5,
+            "island": 2,
+            "parent":[25]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 29,
+        "fields": {
+            "name": "Ruby",
+            "description": "test",
+            "ratio": 0.7,
+            "island": 2
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 30,
+        "fields": {
+            "name": "Ruby On Rails",
+            "description": "test",
+            "ratio": 0.8,
+            "island": 2,
+            "parent":[29]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 31,
+        "fields": {
+            "name": "Camping",
+            "description": "test",
+            "ratio": 0.5,
+            "island": 2,
+            "parent":[29]
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 32,
+        "fields": {
+            "name": "C#",
+            "description": "test",
+            "ratio": 0.4,
+            "island": 3
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 33,
+        "fields": {
+            "name": "WPF",
+            "description": "test",
+            "ratio": 0.6,
+            "island": 3,
+            "parent":[32]
+
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 34,
+        "fields": {
+            "name": "EntityFramework",
+            "description": "test",
+            "ratio": 0.6,
+            "island": 3,
+            "parent":[32]
+
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 35,
+        "fields": {
+            "name": "NHibernate",
+            "description": "test",
+            "ratio": 0.9,
+            "island": 3,
+            "parent":[32]
+
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 36,
+        "fields": {
+            "name": "Python",
+            "description": "test",
+            "ratio": 0.5,
+            "island": 3
+        }
+    },
+        {
+        "model": "wage_meter.technology",
+        "pk": 37,
+        "fields": {
+            "name": "Kivy",
+            "description": "test",
+            "ratio": 0.7,
+            "island": 3,
+            "parent":[36]
+
         }
     }
 ]
