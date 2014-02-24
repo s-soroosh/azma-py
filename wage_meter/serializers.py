@@ -13,4 +13,4 @@ class IslandSerializer(serializers.HyperlinkedModelSerializer):
 class TechnologySerializer(serializers.ModelSerializer):
     class Meta:
         model = Technology
-        fields = ('id','name', 'description')
+        fields = ('id','name', 'description','ratio')
