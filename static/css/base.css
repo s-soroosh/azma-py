@@ -18,10 +18,13 @@ p {
 }
 
 .navbar ul li {
+    font-family: Tahoma;
+    color :#102E37;
     font-size: 16px;
 }
 
 .navbar ul li a {
+    font-family: Yekan;
     font-size: 16px;
 }
 
@@ -58,19 +61,20 @@ p {
 }
 
 .btn-success {
-    background-image: linear-gradient(#777777, #227733 40%, #333333);
-    background-color: #445500 !important;
+    /*background-image: linear-gradient(#aaaaaa, #336688 40%, #336644background-color);*/
+    /*background-image: linear-gradient(#99ACAA,#008CFF 60%,#99ACAA);*/
+    /*background-color: #445500 !important;*/
 }
 
 .btn-success:hover {
-    background-image: linear-gradient(#777777, #22aa33 40%, #333333);
-    background-color: #445500 !important;
+    /*background-image: linear-gradient(#777777, #22aa33 40%, #333333);*/
+    /*background-color: #445500 !important;*/
 }
 
 .form-group {
     width: 50%;
 
-    background-image: linear-gradient(#008CBA, #008CBA 60%, #33AFFF);
+    background-image: linear-gradient(#E8EDE0, #E8EDE0 60%, #E8EDE0);
     /*background-color: #C8C8C8;*/
     border-radius: 10px 10px;
     padding: 7px 17px 5px;
@@ -85,27 +89,27 @@ p {
     padding-right: 17px;
 }
 
+.form-group label {
+    color: #888888;
+}
+
 #txtEmailAddress, #txtUsername, #txtPassword, #txtConfirmPassword {
-    direction: ltr;
-    text-align: left;
-    padding-right: 1px;
+direction: ltr;
+text-align: left;
+padding-right: 1px;
 }
 
 .alert-danger {
-    background-image: linear-gradient(#f29e9e, #f2dede 90%, #f2dede);
-    color: #a94442;
-    border-color: #ebccd1;
+background-image: linear-gradient(#f29e9e, #f2dede 90%, #f2dede);
+color: #a94442;
+border-color: #ebccd1;
 }
 
 label {
-    font-family: Roya;
-    font-size: 12pt;
-    font-weight: bold;
+font-family: Roya;
+font-size: 12pt;
+font-weight: bold;
 
-}
-
-.form-group label {
-    color:white;
 }
 
 p.bubble {
@@ -230,4 +234,8 @@ p.thought:after {
 
 .navbar .glyphicon {
     top: 0px;
+}
+
+.navbar-inverse .navbar-nav li  a {
+    color:#FCD271;
 }
