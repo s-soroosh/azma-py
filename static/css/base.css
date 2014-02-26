@@ -20,12 +20,18 @@ p {
 .navbar ul li {
     font-family: Tahoma;
     color :#102E37;
-    font-size: 16px;
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 .navbar ul li a {
     font-family: Yekan;
-    font-size: 16px;
+    font-size: 13pt;
+}
+
+.navbar .dropdown-menu > li > a {
+    font-family: Yekan;
+    font-size: 15pt;
 }
 
 .nav-header {
@@ -208,7 +214,7 @@ p.thought:after {
     border: thin solid #AAAAAA;
     margin-bottom: 1px;
     background-color: #22444c;
-    color:white;
+    color: white;
 }
 
 .profile-item-selected {

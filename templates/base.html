@@ -30,7 +30,10 @@
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
                             class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand YekanFont" href="{% url 'exam:home' %}">آزماوب</a>
+
+                    <a style="padding-top: 2px;" class="navbar-brand YekanFont" href="{% url 'exam:home' %}">
+                        <img src="{% static 'image/logo/logo.png' %}" />
+                    </a>
                 </div>
             </div>
             {% comment %}     <form class="navbar-form navbar-left">
