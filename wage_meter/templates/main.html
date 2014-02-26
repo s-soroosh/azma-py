@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block css %}
 
 
-
+    <link href="{% static "css/ui.dropdownchecklist.standalone.css" %}" rel="stylesheet">
+    <link href="{% static "css/ui.dropdownchecklist.themeroller.css" %}" rel="stylesheet">
     <style>
         #panel {
 
@@ -31,10 +33,21 @@
 
         }
 
-        .SliderItem {
+        .Technology_item {
             font-family: Tahoma;
             text-align: right;
             font-size: 8pt;
+            margin: auto;
+            margin-top: 3px;
+            margin-bottom: 23px;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+            background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+            height: 24px;
+
+        }
+
+        #items {
+            padding-top: 15px;
         }
 
         .SliderItem input {
@@ -45,13 +58,32 @@
             text-align: right;
             direction: rtl;
         }
+
+        ul.dropdown-menu-form {
+            padding: 5px 10px 0;
+            max-height: 100px;
+            overflow-y: scroll;
+        }
+
+        .btn_old {
+            background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+            border-color: #CCCCCC #CCCCCC #B3B3B3;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+            color: #333333;
+            background-repeat: repeat-x;
+            border-radius: 4px;
+            padding: 4px;
+        }
+
     </style>
 {% endblock %}
 {% block content %}
     <div class="row" style="padding-bottom: 40px;">
         <div class="col-md-2"></div>
         <div class=" col-md-8 center-block ">
-An introduction about the wage meter and trying to make a temptation for user.            Currently user if fully confused about the wage meter (I put it just as a remember hint )
+            An introduction about the wage meter and trying to make a temptation for user. Currently user if fully
+            confused about the wage meter (I put it just as a remember hint )
         </div>
         <div class="col-md-2"></div>
     </div>
@@ -59,16 +91,26 @@ An introduction about the wage meter and trying to make a temptation for user.  
         <div id="Panel_Container">
             <div class="col-md-3"></div>
             <div class="col-md-6" id="panel">
-                <div>
+                <div class="row">
                     <h3>
                         لطفا یکی از گزینه های زیر را انتخاب کنید :
                     </h3>
-                    <select id="worlds">
-                        <option value="-1">اهل کدام دنیا هستید ؟</option>
 
-                    </select>
+                    <div class="col-md-3">
+                        <select id="worlds">
+                            <option value="-1">اهل کدام دنیا هستید ؟</option>
+
+                        </select>
+                    </div>
+                    <div class="col-md-1">
+
+                    </div>
+                    <div id="select_techs" class="col-md-3">
+
+                    </div>
                 </div>
                 <div id="items">
+
                 </div>
                 <div class="Cash">
 
@@ -83,22 +125,38 @@ An introduction about the wage meter and trying to make a temptation for user.  
     </div>
 {% endblock %}
 {% block js %}
+    <script src="{% static "js/jquery-ui-1.8.13.custom.min.js" %}"></script>
+    <script src="{% static "js/ui.dropdownchecklist-1.4-min.js" %}"></script>
+
+
     <script type="text/javascript">
 
         var wageConfig = {
             debug: true,
             URLs: {
                 getIslands: "tt/islands/?format=json",
-                getTechnologies:""
+                getTechnologiesByIsland: "tech"
             },
             Templates: {
-                eachIsland: "templates/sliderItem.tmpl"
+
+                Drop_down_Menu: '<div class="dropdown">    <a class="dropdown-toggle btn btn_old" data-toggle="dropdown" href="#">        لیست تکنولوژی ها        <b class="caret"></b>    </a>    <ul class="dropdown-menu dropdown-menu-form" role="menu">    {@{items}}    </ul></div>',
+                Drop_down_Item: '<li>    <label class="checkbox">        <input type="checkbox" name="{@{item_name}}" onchange="select_technology({@{item_value}},this);" value="{@{item_value}}">        {@{item_name}}    </label></li>',
+                Technology_Mark:' <div class="row Technology_item"> <div class="col-md-1"> <img src="{@{item_icon}}"> </div> <div class="col-md-3"> <label>{@{item_name}}</label> </div> <div class="col-md-2"> <p class="status"> Not Good </p> </div> <div class="col-md-6"> <input type="range" name="{@{item_value}}"/> </div> </div>'
             },
             UI: {
                 mainPanelId: "Panel_Container",
                 islandsSelectId: "worlds"
+            },
+            Ajx: {
+                LoadTechnologies: null,
+                LoadIslands: null
+
             }
+
         };
+        var islands_objects=null;
+        var technologies_objects=null;
+
 
         ///using for log in debug mode
         function debug(txt, arg) {
@@ -108,16 +166,61 @@ An introduction about the wage meter and trying to make a temptation for user.  
             }
         }
 
-        function on_select_island(selected) {
-            if(selected>-1){
+        function select_technology(tech_id,element){
+            if($(element).prop('checked'))
+            {
+                $('#items').append(wageConfig.Templates.Technology_Mark.
+                        replace('{@{item_icon}}','http://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico').
+                        replace('{@{item_name}}',element.getAttribute('name')).replace('{@{item_value}}',element.getAttribute('id')));
+
+            }
+            else
+            {
+
 
             }
         }
+        function on_select_island(selected) {
+            if (selected > -1) {
+                wageConfig.Ajx.LoadTechnologies = $.post(wageConfig.URLs.getTechnologiesByIsland, {"island": selected});
+                wageConfig.Ajx.LoadTechnologies.success(function (incoming_data) {
+                    var techs = incoming_data;
+                    technologies_objects=techs;
+                    var items = new String();
+                    for (var i = 0; i < techs.length; i++) {
+                        var new_item = wageConfig.Templates.Drop_down_Item;
+                        new_item = new_item.replace('{@{item_name}}', techs[i].name);
+                        new_item = new_item.replace('{@{item_name}}', techs[i].name);
+                        new_item = new_item.replace('{@{item_value}}', techs[i].id);
+                        new_item = new_item.replace('{@{item_value}}', techs[i].id);
+                        items += new_item;
+                    }
+                    var template = wageConfig.Templates.Drop_down_Menu;
+                    template = template.replace('{@{items}}', items);
+                    $("#select_techs").html(template);
+                    $('.dropdown-menu').on('click', function (e) {
+                        if ($(this).hasClass('dropdown-menu-form')) {
+                            e.stopPropagation();
+                        }
+                    });
+                });
+
+            }
+        }
+
+        function replaceAll(text, old_word, new_word) {
+            while (text.indexOf(old_word) != -1)
+                text = text.replace(old_word, new_word);
+            return text;
+        }
+
+
         function load_islands() {
             $.ajax({
                 url: wageConfig.URLs.getIslands
             }).done(function (data) {
                         var islands = data;
+                        islands_objects=islands;
                         debug("islands Objects array expected : ", islands);
                         for (var i = 0; i < islands.length; i++) {
                             $("#" + wageConfig.UI.islandsSelectId)
@@ -129,10 +232,11 @@ An introduction about the wage meter and trying to make a temptation for user.  
                         }
                     });
         }
-
         $(window).ready(function () {
+
             load_islands();
             $("#" + wageConfig.UI.islandsSelectId).change(function (arg) {
+                $("#select_techs").html(' ');
                 on_select_island(arg.target.value);
             });
 
