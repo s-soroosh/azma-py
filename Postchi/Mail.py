@@ -56,5 +56,6 @@ def send_confirm_mail(targetUser):
         #     projSetting.DEFAULT_FROM_EMAIL, # From
         #     [targetUser.email]    # To
         # )
-    except:
+    except Exception as e:
+        print (e.message)
         print("MAIL NOT SENT :-( ")

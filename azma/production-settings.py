@@ -176,7 +176,7 @@ DEFAULT_LOGIN_URL = '/profile'
 DEFAULT_LOGOUT_URL = '/exam'
 
 #Mail Setting
-DEFAULT_FROM_EMAIL = 'azmaweb@onlinecademy.com'
+DEFAULT_FROM_EMAIL = 'admin@onlinecademy.com'
 EMAIL_HOST = 'smtp.onlinecademy.com'
 EMAIL_HOST_PASSWORD = 'sorooshMAHDI123'
 EMAIL_HOST_USER = 'admin@onlinecademy.com'
