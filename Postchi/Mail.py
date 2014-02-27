@@ -1,5 +1,5 @@
 import Postchi.models
-from azma import settings as projSetting
+from django.conf import settings as projSetting
 from Postchi import settings as appSetting
 from django.template import Context, Template
 from django.template import loader
