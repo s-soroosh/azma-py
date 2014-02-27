@@ -176,14 +176,14 @@ DEFAULT_LOGIN_URL = '/profile'
 DEFAULT_LOGOUT_URL = '/exam'
 
 #Mail Setting
-DEFAULT_FROM_EMAIL = 'azmaweb@zareie.net'
-EMAIL_HOST = 'mail.zareie.net'
-EMAIL_HOST_PASSWORD = '123123'
-EMAIL_HOST_USER = 'azmaweb@zareie.net'
+DEFAULT_FROM_EMAIL = 'azmaweb@onlinecademy.com'
+EMAIL_HOST = 'smtp.onlinecademy.com'
+EMAIL_HOST_PASSWORD = 'sorooshMAHDI123'
+EMAIL_HOST_USER = 'admin@onlinecademy.com'
 EMAIL_PORT = 587
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
-SERVER_BASE_ADDRESS = 'http://127.0.0.1:8000/'
+SERVER_BASE_ADDRESS = 'http://onlinecademy.com/'
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.
