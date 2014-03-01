@@ -5,6 +5,6 @@ __author__ = 'soroosh'
 
 urlpatterns = patterns('',
                        url(r'^(?i)$', views.show_profile, name='show_profile'),
-                       url(r'^(?i)changepass$', views.change_password, name='change_password'),
+                       url(r'^(?i)/changepass$', views.change_password, name='change_password'),
                        )
 

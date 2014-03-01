@@ -183,7 +183,7 @@ LOGGING = {
 }
 
 DEFAULT_LOGIN_URL = '/profile'
-DEFAULT_LOGOUT_URL = '/exam'
+DEFAULT_LOGOUT_URL = '/'
 
 #Mail Setting
 DEFAULT_FROM_EMAIL = 'azmaweb@zareie.net'
