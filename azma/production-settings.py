@@ -14,7 +14,14 @@ from django.conf.urls import include
 from django.core.urlresolvers import reverse
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-COMPRESS_ROOT = os.path.join(BASE_DIR,'static')
+COMPRESS_ROOT = os.path.join(BASE_DIR, 'static')
+
+COMPRESS_CSS_FILTERS = [
+    #creates absolute urls from relative ones
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    #css minimizer
+    'compressor.filters.cssmin.CSSMinFilter'
+]
 
 
 # Quick-start development settings - unsuitable for production
