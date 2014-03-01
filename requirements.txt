@@ -4,5 +4,6 @@ South
 djangorestframework
 django-filter
 MarkDown
+django_compressor
 
 
