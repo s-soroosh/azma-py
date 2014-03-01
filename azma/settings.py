@@ -25,6 +25,7 @@ SECRET_KEY = '#mmm(c*ezo)q(!z3@7xdcrgv88960a5ryvz2+8n1i235tr2r4d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['*']
 
 TEMPLATE_DEBUG = True
@@ -49,6 +50,7 @@ AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
 
 INSTALLED_APPS = (
     'south',
+    'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,6 +64,13 @@ INSTALLED_APPS = (
     'user_profile',
     'wage_meter',
     'rest_framework',
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
 )
 
 MIDDLEWARE_CLASSES = (

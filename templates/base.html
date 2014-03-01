@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load staticfiles %}
+{% load compress %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +10,17 @@
     <meta name="author" content="">
 
     <title>{% block title %}{% endblock %}</title>
-    <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
+    {% compress css %}
+        <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
 
-    <link href="{% static "bootstrap/css/bootstrap-theme.min.yeti.css" %}" rel="stylesheet">
-    <link href="{% static "bootstrap/css/bootstrap-rtl.css" %}" rel="stylesheet">
+        <link href="{% static "bootstrap/css/bootstrap-theme.min.yeti.css" %}" rel="stylesheet">
+        <link href="{% static "bootstrap/css/bootstrap-rtl.css" %}" rel="stylesheet">
 
-    <link href="{% static "css/base.css" %}" rel="stylesheet">
-    <link href="{% static "font-farsi/fonts.css" %}" rel="stylesheet">
+        <link href="{% static "css/base.css" %}" rel="stylesheet">
+        <link href="{% static "font-farsi/fonts.css" %}" rel="stylesheet">
 
-    {% block css %}{% endblock %}
+        {% block css %}{% endblock %}
+    {% endcompress %}
 </head>
 <body>
 
@@ -32,7 +35,7 @@
                     </button>
 
                     <a style="padding-top: 2px;" class="navbar-brand YekanFont" href="{% url 'exam:home' %}">
-                        <img src="{% static 'image/logo/logo.png' %}" />
+                        <img src="{% static 'image/logo/logo.png' %}"/>
                     </a>
                 </div>
             </div>
@@ -126,27 +129,29 @@
     {% endblock %}
 </div>
 
-<script src="{% static "js/jquery-1.11.0.js" %}"></script>
-<script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        {% if validation_error %}
-            $('.validation_error').fadeIn('slow');
-        {%  endif %}
-        {% if error_message %}
-            $('.error_message').fadeIn('slow');
-        {% endif %}
-        {% if message %}
-            $('.message').fadeIn('slow');
-            {% if redirect_url %}
-                setTimeout(function () {
-                            window.location = '{{ redirect_url }}';
-                        }
-                        , 1500);
+{% compress js %}
+    <script src="{% static "js/jquery-1.11.0.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            {% if validation_error %}
+                $('.validation_error').fadeIn('slow');
+            {%  endif %}
+            {% if error_message %}
+                $('.error_message').fadeIn('slow');
             {% endif %}
-        {% endif %}
-    })
-</script>
+            {% if message %}
+                $('.message').fadeIn('slow');
+                {% if redirect_url %}
+                    setTimeout(function () {
+                                window.location = '{{ redirect_url }}';
+                            }
+                            , 1500);
+                {% endif %}
+            {% endif %}
+        })
+    </script>
+{% endcompress %}
 {% block js %}
 {% endblock %}
 
