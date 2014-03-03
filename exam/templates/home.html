@@ -2,6 +2,60 @@
 {% block title %}آزما وب{% endblock %}
 {% load staticfiles %}
 
+{% block css %}
+    <style>
+        #Main_Carousel .item {
+
+            background-repeat: no-repeat;
+        }
+
+        #div1 {
+            background-image: url('http://placehold.it/850x350/a1a1df/');
+            background-repeat: no-repeat;
+            min-height: 350px;
+        }
+
+        #div2 {
+            background-repeat: no-repeat;
+            background-image: url('http://placehold.it/850x350/a1a1ef/');
+            min-height: 350px;
+        }
+
+        #div3 {
+            background-repeat: no-repeat;
+            background-image: url('http://placehold.it/850x350/a1a1ff/');
+            min-height: 350px;
+        }
+
+        .item div {
+            margin: auto;
+            width: 850px;
+            padding-right:35px;
+            padding-top:35px;
+        }
+
+        .carousel-indicators li {
+            background-color: #AEAEFF;
+            border: 1px solid #1A1AEE;
+        }
+
+        .carousel-control.right {
+            background-image:none;/* linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 100, 0.1) 100%);*/
+            background-repeat: repeat-x;
+
+        }
+
+        .carousel-control.left {
+            background-image:  none;/* linear-gradient(to left, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 100, 0.1) 100%);*/
+            background-repeat: repeat-x;
+
+        }
+
+    </style>
+
+{% endblock %}
+
+
 {% block content %}
 
     <div class="container" style="padding-top: 50px;">
@@ -10,28 +64,45 @@
             <div class="col-lg-1">
             </div>
             <div class="col-md-10">
-                <div class="text-center"
-                     style="vertical-align: middle;min-width: 1000;min-height: 200px; background-image: url('{% static 'image/home-banner.jpg' %}')">
-                   <h1 style="padding-top: 80px;margin-top: 0px;">
-                        آینده ای متفاوت
-                   </h1>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <div id="Main_Carousel" class="carousel-inner">
+                        <div class="item active">
+                            <div id="div1">
+
+                            </div>
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div id="div2">
+
+                            </div>
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div id="div2">
+
+                            </div>
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="center-block">آزما وب چه کمکی به شما می کند؟</h1>
-
-                <p>
-                    آزما وب یک سرویس رایگان برای سنجش دانش و مهارت های شما است. شما با استفاده از این سرویس می توانید در
-                    آزمون هایی که با مهارت ها و دانش شما همخوانی دارند شرکت کنید و در واقع خود را نسبت به دیگران محک
-                    بزنید.
-                </p>
-
-                <p>
-                    شما می توانید نتایج آزمون خود را با دیگران به اشتراک بگذارید و به عنوان بخشی از رزومه خود به آنها
-                    ارجاع دهید.
-                </p>
-
-                <p>
-                    ما امیدواریم که این سرویس بتواند قدم مثبتی در افزایش مهارت و دانش هم میهنان عزیزمان بردارد.
-                </p>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                                                                                 href="#carousel-example-generic"
+                                                                                 data-slide="next"><span
+                    class="glyphicon glyphicon-chevron-right">
+                </span></a>
             </div>
             <div class="col-lg-1">
             </div>
@@ -46,4 +117,5 @@
             </div>
         </div>
     </div>
+
 {% endblock %}
