@@ -6,32 +6,37 @@
     <style>
         #Main_Carousel .item {
 
+        }
+
+        .item {
+
+            height: 450px;
+            position: relative;
+
+        }
+
+        #heaven {
+            text-align: center;
             background-repeat: no-repeat;
         }
 
-        #div1 {
-            background-image: url('http://placehold.it/850x350/a1a1df/');
-            background-repeat: no-repeat;
-            min-height: 350px;
-        }
-
-        #div2 {
-            background-repeat: no-repeat;
-            background-image: url('http://placehold.it/850x350/a1a1ef/');
-            min-height: 350px;
-        }
-
-        #div3 {
-            background-repeat: no-repeat;
-            background-image: url('http://placehold.it/850x350/a1a1ff/');
-            min-height: 350px;
-        }
-
-        .item div {
+        .item-bottom {
+            position: absolute;
+            bottom: 1px;
+            padding-right: 91px;
+            padding-top: 20px;
+            height: 50%;
             margin: auto;
-            width: 850px;
-            padding-right:35px;
-            padding-top:35px;
+            width: 100%;
+        }
+
+        .item-top {
+            position: absolute;
+            top: 1px;
+
+            height: 50%;
+            margin: auto;
+            width: 100%;
         }
 
         .carousel-indicators li {
@@ -40,13 +45,13 @@
         }
 
         .carousel-control.right {
-            background-image:none;/* linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 100, 0.1) 100%);*/
+            background-image: none; /* linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 100, 0.1) 100%);*/
             background-repeat: repeat-x;
 
         }
 
         .carousel-control.left {
-            background-image:  none;/* linear-gradient(to left, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 100, 0.1) 100%);*/
+            background-image: none; /* linear-gradient(to left, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 100, 0.1) 100%);*/
             background-repeat: repeat-x;
 
         }
@@ -72,26 +77,39 @@
                     </ol>
                     <div id="Main_Carousel" class="carousel-inner">
                         <div class="item active">
-                            <div id="div1">
-
+                            <div id="heaven" class="item-top">
+                                <img src='{% static "image/Heaven.jpg" %}' alt="Heaven"/>
                             </div>
-                            <div class="carousel-caption">
+                            <div class="item-bottom">
+                                <h1>بهشت کجاست ؟</h1>
+                                <p>
+                                    به نظرم بهشت جائیه که هیچ کارفرمایی از نبود نیروی متخصص در رنج نیست .
+                                    <br>
+                                    جائی که هیچ نیروی متخصصی وقت و مهارتش برای امور سطح پائین تر هدر نمیره .
 
+                                    <br>
+                                    و قطعا تا زمانی که متخصص مرتبط با امری وجود دارد نیروی نامجرب استخدام نمیشود .
+
+                                </p>
                             </div>
                         </div>
-                        <div class="item">
-                            <div id="div2">
-
+                        <div class="item container">
+                            <div class="item-top">
+                                <img src='{% static "image/professionals.jpg" %}' alt="Professionals"/>
                             </div>
-                            <div class="carousel-caption">
-
+                            <div class="item-bottom">
+                                <h1>
+                                    این حداقل حق شماست !
+                                </h1>
+                                یک تیم حرفه ای ، انتظارات به جا ، مهارت کافی...خواسته های زیادیست ؟
                             </div>
                         </div>
-                        <div class="item">
-                            <div id="div2">
+                        <div class="item container">
+                            <div class="item-top">
 
                             </div>
-                            <div class="carousel-caption">
+                            <div class="item-bottom">
+
 
                             </div>
                         </div>
@@ -117,5 +135,12 @@
             </div>
         </div>
     </div>
+    <script>
+        $(window).load(function () {
 
+                    $('.carousel').carousel('pause');
+                }
+        );
+
+    </script>
 {% endblock %}
