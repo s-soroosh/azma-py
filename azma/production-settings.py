@@ -14,7 +14,7 @@ from django.conf.urls import include
 from django.core.urlresolvers import reverse
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'stat')
 COMPRESS_ROOT = os.path.join(BASE_DIR, 'static')
 
 COMPRESS_CSS_FILTERS = [
