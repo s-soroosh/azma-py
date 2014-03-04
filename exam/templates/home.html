@@ -65,16 +65,18 @@
         }
 
     </style>
-    <link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block nocompress_css %}
     <link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
 {% endblock %}
 
+{% block nocompress_js %}
+    <script type="text/javascript" src="{% static "js/jquery.countdown.js" %}"></script>
+{% endblock %}
 {% block js %}
     <script type="text/javascript" src="{% static "js/jquery.plugin.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/jquery.countdown.js" %}"></script>
+
 
     <script type="text/javascript">
         $(document).ready(function () {

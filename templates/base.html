@@ -129,10 +129,11 @@
     {% block content %}
     {% endblock %}
 </div>
-
-{% compress js %}
-    <script src="{% static "js/jquery-1.11.0.js" %}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+{#    <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap-editable/js/bootstrap-editable.min.js"></script>#}
+{% compress js %}
+
     <script type="text/javascript">
         $(document).ready(function () {
             {% if validation_error %}
@@ -152,8 +153,13 @@
             {% endif %}
         })
     </script>
+    {% block js %}
+    {% endblock %}
 {% endcompress %}
-{% block js %}
+
+{% block nocompress_js %}
+
 {% endblock %}
+
 
 </body>
