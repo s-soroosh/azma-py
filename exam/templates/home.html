@@ -65,7 +65,11 @@
         }
 
     </style>
-<link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
+    <link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block nocompress_css %}
+    <link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block js %}

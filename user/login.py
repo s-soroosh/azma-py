@@ -5,11 +5,13 @@ from django.shortcuts import redirect
 from django.template import loader, RequestContext
 from azma import settings
 from django.utils.translation import ugettext_lazy as _
+import multiprocessing
 
 __author__ = 'soroosh'
 
 
 def auth_user(request):
+    multiprocessing.cpu_count()
     username = request.POST["username"]
     password = request.POST["password"]
     user = authenticate(username=username, password=password)
