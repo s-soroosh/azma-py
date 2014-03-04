@@ -3,6 +3,7 @@
 {% load staticfiles %}
 
 {% block css %}
+    <link href="{% static "css/jquery.countdown.css" %}" rel="stylesheet">
     <style>
         #Main_Carousel .item {
 
@@ -65,6 +66,26 @@
 
     </style>
 
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{% static "js/jquery.plugin.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.countdown.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.countdown-fa.js" %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.countdown.setDefaults({description: 'تا آغاز کار آزما وب'});
+            $('#timer').fadeIn('slow');
+            $('#timer').countdown({onTick: function (periods) {
+                var secs = $.countdown.periodsToSeconds(periods);
+                if (secs == 0)
+                    $('#timer').fadeOut('slow', function () {
+                        $('#enter').fadeIn('slow');
+                    });
+
+            }, until: new Date(2014, 3, 7)});
+        });
+    </script>
 {% endblock %}
 
 
@@ -151,26 +172,56 @@
 
                             </div>
                         </div>
+                        <div class="item container">
+                            <div id="technologies" class=" item-top">
+                                <div id="timer" class="container form-group timer" style="display: none;"></div>
+                            </div>
+                            <div class="item-bottom">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h1>
+                                            همین الان شروع کن
+                                        </h1>
+
+                                        <p>
+                                           آزما وب از ۱۸ فروردین کار خود را آغاز خواهد کرد.
+                                            <br />
+                                            ولی شما هم اکنون می توانید در آزما وب
+                                            <a href="{% url 'register' %}">ثبت نام</a>
+                                            کنید و با استقبال خود ما را مورد حمایت قرار دهید.
+
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
                 </div>
-                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span style="font-size: 50pt;" class="glyphicon glyphicon-chevron-left"></span></a>
-                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                    <span style="font-size: 50pt;" class="glyphicon glyphicon-chevron-right"></span>
-                </a>
+
             </div>
-            {#            <div class="col-lg-1">#}
-            {#            </div>#}
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span style="font-size: 50pt;" class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span style="font-size: 50pt;" class="glyphicon glyphicon-chevron-right"></span>
+            </a>
         </div>
-        {#        <div class="row">#}
         {#            <div class="col-lg-1">#}
         {#            </div>#}
-        {#            <div class="col-md-10">#}
-        {#                <h1 class="center-block"></h1>#}
-        {#            </div>#}
-        {#            <div class="col-lg-1">#}
-        {#            </div>#}
-        {#        </div>#}
+    </div>
+    {#        <div class="row">#}
+    {#            <div class="col-lg-1">#}
+    {#            </div>#}
+    {#            <div class="col-md-10">#}
+    {#                <h1 class="center-block"></h1>#}
+    {#            </div>#}
+    {#            <div class="col-lg-1">#}
+    {#            </div>#}
+    {#        </div>#}
     </div>
 
 {% endblock %}

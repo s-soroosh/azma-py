@@ -41,7 +41,7 @@
 	float: left;
 	font-size: 75%;
 	text-align: center;
-    border: solid #FF6600 thin;
+    border: double #6AA83A thin;
     /*margin-right: 3px;*/
 }
 .countdown-amount {

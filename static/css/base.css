@@ -63,7 +63,8 @@ p {
 }
 
 .timer {
-    background-image: linear-gradient(#555555, #eeeeee 80%, #aaaaaa) !important;
+    color: #004b63 !important;
+    background-image: linear-gradient(#EAA83A, #FEC56B 80%, #FEC56B) !important;
 }
 
 .duration {
@@ -250,3 +251,5 @@ p.thought:after {
 .navbar-inverse .navbar-nav li a {
     color: #FCD271;
 }
+
+
