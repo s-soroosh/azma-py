@@ -20,9 +20,14 @@
             background-repeat: no-repeat;
         }
 
-        #Technologies{
+        #Technologies {
             text-align: center;
         }
+
+        #Professionals {
+            text-align: center;
+        }
+
         .item-bottom {
             position: absolute;
             bottom: 1px;
@@ -36,7 +41,6 @@
         .item-top {
             position: absolute;
             top: 1px;
-
             height: 50%;
             margin: auto;
             width: 100%;
@@ -69,88 +73,104 @@
     <div class="container" style="padding-top: 50px;">
 
         <div class="row">
-            <div class="col-lg-1">
-            </div>
-            <div class="col-md-10">
+            {#            <div class="col-lg-1">#}
+            {#            </div>#}
+            <div class="col-lg-12">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
+                    {#                    <ol class="carousel-indicators">#}
+                    {#                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
+                    {#                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
+                    {#                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
+                    {#                    </ol>#}
                     <div id="Main_Carousel" class="carousel-inner">
                         <div class="item active">
                             <div id="heaven" class="item-top">
                                 <img src='{% static "image/Heaven.jpg" %}' alt="Heaven"/>
                             </div>
                             <div class="item-bottom">
-                                <h1>بهشت کجاست ؟</h1>
-                                <p>
-                                    به نظرم بهشت جائیه که هیچ کارفرمایی از نبود نیروی متخصص در رنج نیست .
-                                    <br>
-                                    جائی که هیچ نیروی متخصصی وقت و مهارتش برای امور سطح پائین تر هدر نمیره .
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h1>بهشت کجاست ؟</h1>
 
-                                    <br>
-                                    و قطعا تا زمانی که متخصص مرتبط با امری وجود دارد نیروی نامجرب استخدام نمیشود .
+                                        <p>
+                                            به نظرم بهشت جائیه که هیچ کارفرمایی از نبود نیروی متخصص در رنج نیست .
+                                            <br>
+                                            جائی که هیچ نیروی متخصصی وقت و مهارتش برای امور سطح پائین تر هدر نمیره .
 
-                                </p>
+                                            <br>
+                                            و قطعا تا زمانی که متخصص مرتبط با امری وجود دارد نیروی نامجرب استخدام نمیشود
+                                            .
+
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="item container">
-                            <div class="item-top">
+                            <div id="Professionals" class="item-top">
                                 <img src='{% static "image/professionals.jpg" %}' alt="Professionals"/>
                             </div>
                             <div class="item-bottom">
-                                <h1>
-                                    این حداقل حق شماست !
-                                </h1>
-                                یک تیم حرفه ای ، انتظارات به جا ، مهارت کافی...خواسته های زیادیست ؟
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h1>
+                                            این حداقل حق شماست !
+                                        </h1>
+                                        یک تیم حرفه ای ، انتظارات به جا ، مهارت کافی...خواسته های زیادیست ؟
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="item container">
-                            <div id="Technologies" class="item-top">
+                            <div id="technologies" class=" item-top">
                                 <img src='{% static "image/Technologies.gif" %}' alt="Technologies"/>
                             </div>
                             <div class="item-bottom">
-                                <h1>
-خشتِ اول گر نهد معمار کج ...!
-</h1>
-<p>
-هنوز انتخاب نکردید ؟ قبل از برداشتن اولین قدم حرف های ما را هم گوش کنید<br>
-حواستان باشد ، درست است که شروع کردن خیلی مهم است اما قبل از بالا رفتن از نردبان موفقیت <br>
-مطمئن شوید نردبان را در جای درستی گذاشته اید .<br>
-</p>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <h1>
+                                            خشتِ اول گر نهد معمار کج ...!
+                                        </h1>
+
+                                        <p>
+                                            هنوز انتخاب نکردید ؟ قبل از برداشتن اولین قدم حرف های ما را هم گوش کنید<br>
+                                            حواستان باشد ، درست است که شروع کردن خیلی مهم است اما قبل از بالا رفتن از
+                                            نردبان
+                                            موفقیت <br>
+                                            مطمئن شوید نردبان را در جای درستی گذاشته اید .<br>
+                                        </p>
+
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
                 <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
-                                                                                 href="#carousel-example-generic"
-                                                                                 data-slide="next"><span
-                    class="glyphicon glyphicon-chevron-right">
-                </span></a>
+                    <span style="font-size: 50pt;" class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span style="font-size: 50pt;" class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
-            <div class="col-lg-1">
-            </div>
+            {#            <div class="col-lg-1">#}
+            {#            </div>#}
         </div>
-        <div class="row">
-            <div class="col-lg-1">
-            </div>
-            <div class="col-md-10">
-                <h1 class="center-block"></h1>
-            </div>
-            <div class="col-lg-1">
-            </div>
-        </div>
+        {#        <div class="row">#}
+        {#            <div class="col-lg-1">#}
+        {#            </div>#}
+        {#            <div class="col-md-10">#}
+        {#                <h1 class="center-block"></h1>#}
+        {#            </div>#}
+        {#            <div class="col-lg-1">#}
+        {#            </div>#}
+        {#        </div>#}
     </div>
-    <script>
-        $(window).load(function () {
 
-                    $('.carousel').carousel('pause');
-                }
-        );
-
-    </script>
 {% endblock %}
