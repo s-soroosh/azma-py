@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        {% for cat in sub_categories %}
+            <div class="row" style="font-size: 20px;min-height: 100px; vertical-align: middle; border-radius: 8px; background-color: #afafaf;border: solid 2px #bbbbbb;">
+                <div class="col-lg-1">
+                    {{ cat.local_name }}
+                </div>
+                <div class="col-lg-9"></div>
+                <div class="col-lg-2">
+                    تعداد آزمونها:
+                    {{ cat.number_of_exams }}
+                </div>
+            </div>
+            <div class="row center-block text-center" style="text-align: center; justify-content: center;">
+
+                {% for exam in cat.exam_set.all %}
+                    <div class="col-lg-3 center-block" style="text-align:center;background-color: #e0e0e0;border-radius: 8px; padding-top: 10px; padding-bottom: 10px; margin: 20px; min-height: 200px;">
+                        <p style="font-weight: bold; font-size:17px;"> {{ exam.local_name }}</p>
+                        <div style="min-height: 100px;">
+                            <p> {{ exam.description }} </p>
+                        </div>
+                        <a class="btn btn-success">شرکت در آزمون</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

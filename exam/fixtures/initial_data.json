@@ -11,6 +11,28 @@
     },
     {
         "model": "exam.examcategory",
+        "pk": "10",
+        "fields": {
+            "name": "Spring",
+            "local_name": "Spring",
+            "parent": 1
+
+
+        }
+    },
+        {
+        "model": "exam.examcategory",
+        "pk": "11",
+        "fields": {
+            "name": "JPA",
+            "local_name": "JPA",
+            "parent": 1
+
+
+        }
+    },
+    {
+        "model": "exam.examcategory",
         "pk": "2",
         "fields": {
             "name": "Python",
@@ -121,6 +143,90 @@
             "category": 3,
             "duration": 100
 
+        }
+    },
+    {
+        "model": "exam.exam",
+        "pk": "9",
+        "fields": {
+            "name": "BeanFactory",
+            "local_name": "Bean Factory",
+            "start_date": "2014-10-10 00:00:00",
+            "description": "یه مقدار اطلاعات فارسی در مورد اسپرینگ و اینکه در این بهش چه چیزی مورد امتحان قرار میگیرهق",
+            "category": 10,
+            "duration": 100
+        }
+    },
+    {
+        "model": "exam.exam",
+        "pk": "10",
+        "fields": {
+            "name": "IOC",
+            "local_name": "Inversion Of Control",
+            "start_date": "2014-10-10 00:00:00",
+            "description": "",
+            "category": 10,
+            "duration": 100
+        }
+    },
+        {
+        "model": "exam.exam",
+        "pk": "11",
+        "fields": {
+            "name": "Spring JDBC",
+            "local_name": "Spring JDBC",
+            "start_date": "2014-10-10 00:00:00",
+            "description": "ذتفذ رقترلق تقرت ربتر لقتر  رقت لرت لرلرتر لت رلرت برت  لرت ر تر رت رلرتر ",
+            "category": 10,
+            "duration": 100
+        }
+    },
+        {
+        "model": "exam.exam",
+        "pk": "12",
+        "fields": {
+            "name": "Spring MVC",
+            "local_name": "Spring MVC",
+            "start_date": "2014-10-10 00:00:00",
+            "description": "بی یتیت ییتی یت یثتز شیدززد بتث ه یتصیهی تیضخ تصح بتبصت",
+            "category": 10,
+            "duration": 100
+        }
+    },
+        {
+        "model": "exam.exam",
+        "pk": "13",
+        "fields": {
+            "name": "Spring Data",
+            "local_name": "Spring Data",
+            "start_date": "2014-10-10 00:00:00",
+            "description": "لاط تین بتی تب بتص بتثقهث زدزپی راثخ زثخهتز تخهث بهخثصتب تبثق ثخهتر",
+            "category": 10,
+            "duration": 100
+        }
+    },
+            {
+        "model": "exam.exam",
+        "pk": "14",
+        "fields": {
+            "name": "Hibernate Elementary",
+            "local_name": "Hibernate Elementary",
+            "start_date": "2014-10-10 00:00:00",
+            "description": "لاط تین بتی تب بتص بتثقهث زدزپی راثخ زثخهتز تخهث بهخثصتب تبثق ثخهتر",
+            "category": 11,
+            "duration": 100
+        }
+    },
+            {
+        "model": "exam.exam",
+        "pk": "15",
+        "fields": {
+            "name": "Toplink Elementary",
+            "local_name": "Toplink Elementary",
+            "start_date": "2014-10-10 00:00:00",
+            "description": "لاط تین بتی تب بتص بتثقهث زدزپی راثخ زثخهتز تخهث بهخثصتب تبثق ثخهتر",
+            "category": 11,
+            "duration": 100
         }
     },
     {

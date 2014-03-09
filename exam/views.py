@@ -8,7 +8,7 @@ from datetime import datetime
 import logging
 from Postchi.models import ConfirmMail
 
-from exam.models import Exam
+from exam.models import Exam, ExamCategory
 
 
 def what(request):
@@ -28,6 +28,13 @@ def intro(request, exam_id):
             return HttpResponse(template.render(context))
         except ObjectDoesNotExist as e:
             return HttpResponseRedirect(reverse('exam:home'))
+
+
+def sub_categories(request, category_id):
+    sub_categories = ExamCategory.objects.filter(parent__id=category_id)
+    template = loader.get_template('sub_categories.html')
+    context = RequestContext(request, {'sub_categories': sub_categories})
+    return HttpResponse(template.render(context))
 
 
 def index(request):
