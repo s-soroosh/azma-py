@@ -33,6 +33,7 @@ COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '#mmm(c*ezo)q(!z3@7xdcrgv88960a5ryvz2+8n1i235tr2r4d'
+INTERNAL_IPS = ['localhost', '127.0.0.1']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
