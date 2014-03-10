@@ -50,7 +50,8 @@ def start(request, exam_id):
         for q in exam.question_set.all():
             if str(q.id) in request.POST.keys():
                 print(q.text)
-                print("result: %s" % q.choice_set.get(id=request.POST[str(q.id)]))
+                for answer in request.POST.getlist(str(q.id)):
+                    print("result: %s" % q.choice_set.get(id=str(answer)))
 
 
 def index(request):
