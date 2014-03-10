@@ -38,10 +38,19 @@ def sub_categories(request, category_id):
 
 
 def start(request, exam_id):
-    exam = Exam.objects.get(id=exam_id)
-    template = loader.get_template('start.html')
-    context = RequestContext(request, {'exam': exam})
-    return HttpResponse(template.render(context))
+    if (request.method == "GET"):
+        exam = Exam.objects.get(id=exam_id)
+        template = loader.get_template('start.html')
+        context = RequestContext(request, {'exam': exam})
+        return HttpResponse(template.render(context))
+    else:
+        print("phohdj cedioj ")
+
+        exam = Exam.objects.get(id=exam_id)
+        for q in exam.question_set.all():
+            if str(q.id) in request.POST.keys():
+                print(q.text)
+                print("result: %s" % q.choice_set.get(id=request.POST[str(q.id)]))
 
 
 def index(request):
