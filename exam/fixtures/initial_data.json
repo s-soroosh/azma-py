@@ -20,7 +20,7 @@
 
         }
     },
-        {
+    {
         "model": "exam.examcategory",
         "pk": "11",
         "fields": {
@@ -169,7 +169,7 @@
             "duration": 100
         }
     },
-        {
+    {
         "model": "exam.exam",
         "pk": "11",
         "fields": {
@@ -181,7 +181,7 @@
             "duration": 100
         }
     },
-        {
+    {
         "model": "exam.exam",
         "pk": "12",
         "fields": {
@@ -193,7 +193,7 @@
             "duration": 100
         }
     },
-        {
+    {
         "model": "exam.exam",
         "pk": "13",
         "fields": {
@@ -205,7 +205,7 @@
             "duration": 100
         }
     },
-            {
+    {
         "model": "exam.exam",
         "pk": "14",
         "fields": {
@@ -217,7 +217,7 @@
             "duration": 100
         }
     },
-            {
+    {
         "model": "exam.exam",
         "pk": "15",
         "fields": {
@@ -235,6 +235,76 @@
         "fields": {
             "name": "متغیرها",
             "exams": [1, 2, 3]
+        }
+    },
+    {
+        "model": "exam.Question",
+        "pk": "1",
+        "fields": {
+            "text": "کدام یک از گزینه ها کلمه کلیدی در جاوا نیست؟‎‎",
+            "exam": 1
+        }
+    },
+        {
+        "model": "exam.Question",
+        "pk": "2",
+        "fields": {
+            "text": "آیا بدون استفاده از جاوا میتوان نفس کشید؟‎‎",
+            "exam": 1
+        }
+    },
+    {
+        "model": "exam.Choice",
+        "pk": "1",
+        "fields": {
+            "text": "if",
+            "question": 1,
+            "answer": false
+        }
+    },
+    {
+        "model": "exam.Choice",
+        "pk": "2",
+        "fields": {
+            "text": "while",
+            "question": 1,
+            "answer": false
+        }
+    },
+    {
+        "model": "exam.Choice",
+        "pk": "3",
+        "fields": {
+            "text": "goto",
+            "question": 1,
+            "answer": false
+        }
+    },
+    {
+        "model": "exam.Choice",
+        "pk": "4",
+        "fields": {
+            "text": "sealed",
+            "question": 1,
+            "answer": true
+        }
+    },
+      {
+        "model": "exam.Choice",
+        "pk": "5",
+        "fields": {
+            "text": "خیر",
+            "question": 2,
+            "answer": false
+        }
+    },
+      {
+        "model": "exam.Choice",
+        "pk": "6",
+        "fields": {
+            "text": "بله",
+            "question": 2,
+            "answer": true
         }
     },
     {

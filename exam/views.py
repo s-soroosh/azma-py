@@ -37,6 +37,13 @@ def sub_categories(request, category_id):
     return HttpResponse(template.render(context))
 
 
+def start(request, exam_id):
+    exam = Exam.objects.get(id=exam_id)
+    template = loader.get_template('start.html')
+    context = RequestContext(request, {'exam': exam})
+    return HttpResponse(template.render(context))
+
+
 def index(request):
     template = loader.get_template('home.html')
     context = RequestContext(request)

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post" action="{% url 'exam:start' exam.id %}">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10 table-bordered" style="padding-bottom: 20px;padding-top: 20px;">
+                {% for q in exam.question_set.all %}
+                    <div style="margin-bottom: 10px;">
+                        <li>  {{ q.text }} </li>
+                    </div>
+                    <div class="row">
+                        {% for ch in q.choice_set.all %}
+                            <div class="col-lg-10" style="padding-bottom: 10px;">
+                                <div class="input-group">
+                                    <input name="{{ q.id }}" type="checkbox" value="{{ch.id}}"/>
+                                    {{ ch.text }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+                <input type="submit" class="btn btn-success btn-lg center-block" value="ثبت"/>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -19,7 +19,7 @@
                         });
 
                 }, until: new Date({{ exam.start_date.year}}, {{ exam.start_date.month}}-1, {{ exam.start_date.day}})});
-            {% else %}
+                {#            {% else %}#}
                 $('#enter').fadeIn('slow');
             {% endif %}
 
@@ -34,37 +34,39 @@
 
 {% block content %}
 
-        <h1>آزمون {{ exam.local_name }} </h1>
+    <h1>آزمون {{ exam.local_name }} </h1>
 
-        <div class="container">
-            <p>
-                {{ exam.description | safe }}
+    <div class="container">
+        <p>
+            {{ exam.description | safe }}
 
-            </p>
-        </div>
-        <div class="container duration">مدت زمان آزمون:
-            {{ exam.duration }}
-            دقیقه
-        </div>
-        <br/>
+        </p>
+    </div>
+    <div class="container duration">مدت زمان آزمون:
+        {{ exam.duration }}
+        دقیقه
+    </div>
+    <br/>
 
-        <div class="container">
-            دانش مورد نیاز این آزمون
-            <ul>
-                {% if exam.required_knowledge.exists %}
-                    {% for k in exam.required_knowledge.all %}
-                        <li>{{ k.name }}</li>
-                    {% endfor %}
-                {% else %}
-                    <li>دانش خاصی برای این آزمون مشخص نگردیده است
-                    </li>
-                {% endif %}
-            </ul>
-        </div>
+    <div class="container">
+        دانش مورد نیاز این آزمون
+        <ul>
+            {% if exam.required_knowledge.exists %}
+                {% for k in exam.required_knowledge.all %}
+                    <li>{{ k.name }}</li>
+                {% endfor %}
+            {% else %}
+                <li>دانش خاصی برای این آزمون مشخص نگردیده است
+                </li>
+            {% endif %}
+        </ul>
+    </div>
 
 
-        <div id="timer" class="container form-group timer" style="display: none;"></div>
-        <div id="enter" class="container enter" style="display: none;">
-            <input type="button" class="btn btn-success center-block" value="ورود به آزمون"/>
-        </div>
+    <div id="timer" class="container form-group timer" style="display: none;"></div>
+    <div id="enter" class="container enter" style="display: none;">
+        <a class="btn btn-success " href="{% url 'exam:start' exam.id %}">
+            ورود به آزمون
+        </a>
+    </div>
 {% endblock %}
