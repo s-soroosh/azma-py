@@ -43,6 +43,10 @@ p {
     font-family: Yekan;
     font-size: 15pt;
 }
+.navbar .dropdown-menu > li > a:focus {
+    font-family: Yekan;
+    font-size: 15pt;
+}
 
 .nav-header {
     font-family: Bardiya;
