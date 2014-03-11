@@ -16,8 +16,8 @@ urlpatterns = patterns('',
                        url(r'^(?i)user/', include('user.urls')),
                        url(r'^(?i)profile', include('user_profile.urls', namespace='profile')),
                        url(r'^(?i)wage_meter/', include('wage_meter.urls', namespace='wages')),
+                       url(r'^(?i)answer/', include('answer.urls', namespace='answer')),
                        url(r'^', include('exam.urls', namespace='exam')),
-
 )
 
 urlpatterns += staticfiles_urlpatterns()

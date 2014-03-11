@@ -74,6 +74,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'exam',
     'user',
+    'answer',
     'Postchi',
     'user_profile',
     'wage_meter',

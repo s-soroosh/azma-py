@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form method="post" action="{% url 'exam:start' exam.id %}">
+    <form method="post" action="{% url 'answer:analyze' exam.id %}">
         {% csrf_token %}
         <div class="row">
             <div class="col-lg-2"></div>

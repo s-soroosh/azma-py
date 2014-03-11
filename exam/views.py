@@ -1,12 +1,7 @@
-from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
-from django.shortcuts import render
 from django.template import RequestContext, loader
 from django.http import HttpResponse, HttpResponseRedirect
-from datetime import datetime
-import logging
-from Postchi.models import ConfirmMail
 
 from exam.models import Exam, ExamCategory
 

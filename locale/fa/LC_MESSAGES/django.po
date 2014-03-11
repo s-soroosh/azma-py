@@ -1327,3 +1327,6 @@ msgstr "جاوا"
 
 msgid "password has been changed"
 msgstr "گذر واژه با موفقیت تغییر کرد"
+
+msgid "You have done this exam"
+msgstr "شما قبلا در این أزمون شرکت کرده اید!"
