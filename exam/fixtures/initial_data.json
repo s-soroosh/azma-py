@@ -255,6 +255,15 @@
     },
     {
         "model": "exam.Choice",
+        "pk": "-1",
+        "fields": {
+            "text": "بدون پاسخ",
+            "question": 1,
+            "answer": false
+        }
+    },
+    {
+        "model": "exam.Choice",
         "pk": "1",
         "fields": {
             "text": "if",

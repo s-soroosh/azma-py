@@ -12,12 +12,14 @@
                     </div>
                     <div class="row">
                         {% for ch in q.choice_set.all %}
-                            <div class="col-lg-10" style="padding-bottom: 10px;">
-                                <div class="input-group">
-                                    <input name="{{ q.id }}" type="checkbox" value="{{ch.id}}"/>
-                                    {{ ch.text }}
+                            {% if ch.id != -1 %}
+                                <div class="col-lg-10" style="padding-bottom: 10px;">
+                                    <div class="input-group">
+                                        <input name="{{ q.id }}" type="checkbox" value="{{ ch.id }}"/>
+                                        {{ ch.text }}
+                                    </div>
                                 </div>
-                            </div>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 {% endfor %}

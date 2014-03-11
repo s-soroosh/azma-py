@@ -2,6 +2,20 @@
 
 {% block content %}
     <div class="row">
-            {{ answer.id }}
+        {% for a in answer.answers.all %}
+            <div>
+                {{ a.question.text }}
+            </div>
+            <div>
+                پاسخ شما:
+            </div>
+            <div>
+            {{ a.is_true }}
+            </div>
+            {% for ch in a.selected_choices.all %}
+                {{ ch.text }}
+                <br />
+            {% endfor %}
+        {% endfor %}
     </div>
 {% endblock %}
