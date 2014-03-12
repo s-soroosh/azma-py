@@ -7,7 +7,7 @@
     <script type="text/javascript" src="{% static "js/jquery.countdown.js" %}"></script>
     <script type="text/javascript" src="{% static "js/jquery.countdown-fa.js" %}"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function() {
             {%  if exam.start_date > current_date %}
                 $.countdown.setDefaults({description: 'تا شروع آزمون'});
                 $('#timer').fadeIn('slow');
@@ -20,8 +20,9 @@
 
                 }, until: new Date({{ exam.start_date.year}}, {{ exam.start_date.month}}-1, {{ exam.start_date.day}})});
                 {#            {% else %}#}
-                $('#enter').fadeIn('slow');
+
             {% endif %}
+            $('#enter').fadeIn('slow');
 
 
         });
