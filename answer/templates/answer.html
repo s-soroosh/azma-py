@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
     <div style="padding-right: 10px;" class="row alert-success">
         شما با موفقیت در این آزمون شرکت کرده اید
@@ -11,17 +13,24 @@
     </div>
 
     <div class="row">
-        <div class="col-md-1"></div>
+        <div class="col-md-1">
+        </div>
         <div class="col-md-9">
             {% for a in answer.answers.all %}
-                <div>
-                    {{ a.question.text }}
+                <div class="row">
+                    <div class="col-md-5">
+                        {{ a.question.text }}
+                    </div>
+                    <div class="col-md-1">
+                        {% if a.is_true %}
+                            <img src="{% static 'image/true.png' %}"/>
+                        {% else %}
+                            <img src="{% static 'image/false.png' %}"/>
+                        {% endif %}
+                    </div>
                 </div>
                 <div>
                     پاسخ شما:
-                </div>
-                <div>
-                    {{ a.is_true }}
                 </div>
                 {% for ch in a.selected_choices.all %}
                     {{ ch.text }}
