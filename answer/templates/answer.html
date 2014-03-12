@@ -1,21 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div style="padding-right: 10px;" class="row alert-success">
+        شما با موفقیت در این آزمون شرکت کرده اید
+        <br/>
+        امتیاز شما:
+        {{ answer.score }}
+        &nbsp;از&nbsp;
+        {{ answer.exam.score }}
+    </div>
+
     <div class="row">
-        {% for a in answer.answers.all %}
-            <div>
-                {{ a.question.text }}
-            </div>
-            <div>
-                پاسخ شما:
-            </div>
-            <div>
-            {{ a.is_true }}
-            </div>
-            {% for ch in a.selected_choices.all %}
-                {{ ch.text }}
-                <br />
+        <div class="col-md-1"></div>
+        <div class="col-md-9">
+            {% for a in answer.answers.all %}
+                <div>
+                    {{ a.question.text }}
+                </div>
+                <div>
+                    پاسخ شما:
+                </div>
+                <div>
+                    {{ a.is_true }}
+                </div>
+                {% for ch in a.selected_choices.all %}
+                    {{ ch.text }}
+                    <br/>
+                {% endfor %}
             {% endfor %}
-        {% endfor %}
+        </div>
     </div>
 {% endblock %}

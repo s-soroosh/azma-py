@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Sum
 
 
 class ExamCategory(models.Model):
@@ -17,8 +18,11 @@ class Exam(models.Model):
     start_date = models.DateTimeField()
     description = models.CharField(max_length=2000)
     duration = models.IntegerField()
-
     category = models.ForeignKey(ExamCategory)
+
+
+    def score(self):
+        return self.question_set.aggregate(Sum('score'))['score__sum']
 
 
     def __str__(self):
@@ -36,6 +40,7 @@ class RequiredKnowledge(models.Model):
 class Question(models.Model):
     text = models.CharField(max_length=500)
     exam = models.ForeignKey(Exam)
+    score = models.IntegerField(default=1)
 
     def __str__(self):
         return self.text
