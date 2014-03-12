@@ -34,48 +34,28 @@
                 </div>
             </div>
             <div class="c hidden" id="exam-container">
-                {% if user.profile.registered_exams.exists %}
-                    {% for exam in user.profile.registered_exams.all %}
-                        <div class="row">
-                            {#                            <div class="col-lg-1 "></div>#}
-                            <div class="col-lg-12 exam-header">{{ exam.exam.local_name }}</div>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-lg-1"></div>
-                            <div class="col-lg-3">
-                                <p>
-                                    وضعیت شما در این آزمون
-                                </p>
-                            </div>
-                            <div class="col-lg-8">
-                                {% if exam.is_done %}
-                                    <p style="color: greenyellow;">شما این آزمون را به پایان رسانده اید
-                                        <button type="button" class="btn btn-success">جزییات</button>
-                                    </p>
-
-                                {% else %}
-                                    <p style="color: red;">شما هنوز این آزمون را به پایان نرسانده اید.
-                                        <a href="{% url 'exam:intro' exam.exam_id %}" class="btn btn-success">شرکت در
-                                            آزمون</a>
-                                    </p>
-                                {% endif %}
-
-                            </div>
-                        </div>
-
+                    {% for answer in exam_answers %}
+                        {{ answer.exam.local_name }}
+                        <br />
+                        {{ answer.score }}
+                        از
+                        {{ answer.exam.score }}
                     {% endfor %}
-                {% endif %}
+            <div>
+                نمره کل:
+                {{ sum_score }}
+            </div>
+
             </div>
             <div class="c hidden col-lg-10" id="password-container">
                 <form method="post" action="{% url 'profile:change_password' %}">
                     {% csrf_token %}
 
-                    <div class="control-group">  <label class="form-label">
+                    <div class="control-group"><label class="form-label">
 
-                                                        رمز عبور کنونی
+                        رمز عبور کنونی
 
-                        </label>
+                    </label>
 
                         <div class="controls">
                             <label></label>
@@ -106,8 +86,8 @@
                         ثبت
                     </button>
                 </form>
-                </div>
             </div>
+        </div>
     </div>
 
 {% endblock %}
