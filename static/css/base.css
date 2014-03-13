@@ -203,7 +203,8 @@ p.thought:after {
 }
 
 /* for profile page (we will move them to a specific file */
-
+/* i move these styles to <style> tag for easier designing*/
+/*
 #profile-menu {
 
 }
@@ -236,7 +237,7 @@ p.thought:after {
     font-size: 14pt;
     padding-top: 30px;
 }
-
+*/
 .exam-header {
     font-size: 18pt;
 }

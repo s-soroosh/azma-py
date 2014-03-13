@@ -1,98 +1,353 @@
 {% extends 'base.html' %}
 
+
+{% block css %}
+    <style>
+
+        #profile-menu {
+
+        }
+
+        .profile-item {
+            color: #555555;
+            padding-right: 3px;
+            border: thin solid #AAAAAA;
+            margin-bottom: 1px;
+            background-color: #E0E0E0;
+            height: 30px;
+            font-size: 14pt;
+            vertical-align: middle;
+        }
+
+        .profile-item:hover {
+            padding-right: 3px;
+            border: thin solid #AAAAAA;
+            margin-bottom: 1px;
+            background-color: #22444c;
+            color: white;
+        }
+
+        .profile-item-selected {
+            border: thin solid #AA774c;
+            background-color: #AA774c;
+        }
+
+        .profile-content {
+            font-size: 14pt;
+            padding-top: 30px;
+        }
+
+        .user-panel {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background-color: #0e0e0e; /*TODO : Colors are not suitable    */
+            right: 0;
+            top: 30%;
+
+            border-top-left-radius: 35px;
+            border-bottom-left-radius: 35px;
+        }
+
+        /* Chrome, Safari, Opera */
+
+        .panel-handle {
+            position: relative;
+            float: left;
+            background-color: red; /*TODO : Colors are not suitable    */
+            margin-left: -10px;
+            width: 30px;
+            height: 90px;
+
+            margin-top: 105px;
+
+        }
+
+        .panel-handle-opened {
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .panel-handle-closed {
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .panel-handle-arm {
+            position: relative;
+            background-color: blue; /*TODO : Colors are not suitable    */
+            width: 16px;
+            height: 39px;
+            margin-top: 85%;
+
+        }
+
+        .panel-handle-opened .panel-handle-arm {
+
+            float: right;
+            margin-right: -13px;
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .panel-handle-closed .panel-handle-arm {
+
+            float: left;
+
+            margin-left: -13px;
+
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .arm-pointer {
+            position: relative;
+
+            margin-top: 70%;
+        }
+
+        .panel-handle-opened .arm-pointer {
+            float: right;
+        }
+
+        .panel-handle-closed .arm-pointer {
+
+            float: left;
+
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
-    <div class="row">
-        <div style="padding-top:40px;" class="col-lg-3" id="profile-menu">
-            <div class="profile-item profile-item-selected" id="info">
-                اطلاعات من
+
+
+    <div class="user-panel">
+        <div class="panel-handle panel-handle-opened">
+            <div class="panel-handle-arm ">
+                <div class="arm-pointer glyphicon glyphicon-chevron-right"></div>
             </div>
-            <div class="profile-item" id="exam">
-                آزمونها
-            </div>
-            <div class="profile-item" id="password">
-                تغییر رمز عبور
+        </div>
+        <div class="panel-content">
+            <div style="padding-top:40px;" id="profile-menu">
+                <div class="profile-item profile-item-selected" id="info">
+                    اطلاعات من
+                </div>
+                <div class="profile-item" id="exam">
+                    آزمونها
+                </div>
+                <div class="profile-item" id="password">
+                    تغییر رمز عبور
+                </div>
+
             </div>
 
         </div>
-        <div class="col-lg-9 profile-content" style="height: 400px;">
-            <div class="visible" id="info-container">
-                <div class="row">
-                    <div class="col-lg-2">نام</div>
-                    <div class="col-lg-10">{{ user.first_name }}</div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2">نام خانوادگی</div>
-                    <div class="col-lg-10">{{ user.last_name }}</div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2">نام کاربری</div>
-                    <div class="col-lg-10">{{ user.username }}</div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2"> تاریخ عضویت</div>
-                    <div class="col-lg-10">{{ user.date_joined }}</div>
-                </div>
+    </div>
+
+    <!-- these lines moved in to the user Panel
+       <div class="row">
+           <div style="padding-top:40px;" class="col-lg-3" id="profile-menu">
+               <div class="profile-item profile-item-selected" id="info">
+                   اطلاعات من
+               </div>
+               <div class="profile-item" id="exam">
+                   آزمونها
+               </div>
+               <div class="profile-item" id="password">
+                   تغییر رمز عبور
+               </div>
+
+           </div>
+
+           -->
+    <div class="col-lg-9 profile-content" style="height: 400px;float:left;">
+        <div class="visible" id="info-container">
+            <div class="row">
+                <div class="col-lg-2">نام</div>
+                <div class="col-lg-10">{{ user.first_name }}</div>
             </div>
-            <div class="c hidden" id="exam-container">
-                    {% for answer in exam_answers %}
-                        {{ answer.exam.local_name }}
-                        <br />
-                        {{ answer.score }}
-                        از
-                        {{ answer.exam.score }}
-                    {% endfor %}
+            <div class="row">
+                <div class="col-lg-2">نام خانوادگی</div>
+                <div class="col-lg-10">{{ user.last_name }}</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">نام کاربری</div>
+                <div class="col-lg-10">{{ user.username }}</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"> تاریخ عضویت</div>
+                <div class="col-lg-10">{{ user.date_joined }}</div>
+            </div>
+        </div>
+        <div class="c hidden" id="exam-container">
+            {% for answer in exam_answers %}
+                {{ answer.exam.local_name }}
+                <br/>
+                {{ answer.score }}
+                از
+                {{ answer.exam.score }}
+            {% endfor %}
             <div>
                 نمره کل:
                 {{ sum_score }}
             </div>
 
-            </div>
-            <div class="c hidden col-lg-10" id="password-container">
-                <form method="post" action="{% url 'profile:change_password' %}">
-                    {% csrf_token %}
+        </div>
+        <div class="c hidden col-lg-10" id="password-container">
+            <form method="post" action="{% url 'profile:change_password' %}">
+                {% csrf_token %}
 
-                    <div class="control-group"><label class="form-label">
+                <div class="control-group"><label class="form-label">
 
-                        رمز عبور کنونی
+                    رمز عبور کنونی
 
+                </label>
+
+                    <div class="controls">
+                        <label></label>
+                        <input type="password" class="form-control" name="oldPass"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="form-label">
+                        رمز عبور جدید
                     </label>
 
-                        <div class="controls">
-                            <label></label>
-                            <input type="password" class="form-control" name="oldPass"/>
-                        </div>
+                    <div class="controls">
+                        <label></label>
+                        <input type="password" class="form-control" name="newPass"/>
                     </div>
-                    <div class="control-group">
-                        <label class="form-label">
-                            رمز عبور جدید
-                        </label>
+                </div>
+                <div class="control-group">
+                    <label class="form-label">
+                        تکرار رمز عبور
+                    </label>
 
-                        <div class="controls">
-                            <label></label>
-                            <input type="password" class="form-control" name="newPass"/>
-                        </div>
+                    <div class="controls">
+                        <label></label>
+                        <input type="password" class="form-control"/>
                     </div>
-                    <div class="control-group">
-                        <label class="form-label">
-                            تکرار رمز عبور
-                        </label>
-
-                        <div class="controls">
-                            <label></label>
-                            <input type="password" class="form-control"/>
-                        </div>
-                    </div>
-                    <button style="margin-top: 10px;" type="submit" class="btn btn-success btn-lg">
-                        ثبت
-                    </button>
-                </form>
-            </div>
+                </div>
+                <button style="margin-top: 10px;" type="submit" class="btn btn-success btn-lg">
+                    ثبت
+                </button>
+            </form>
         </div>
     </div>
+    </div>
+
+
+
+
+
 
 {% endblock %}
 
 {% block js %}
+
+
+
+    <script type="text/javascript">
+        var user_panel = {
+            close: function () {
+                $('.user-panel').animate(
+                        {
+                            right: '-280'
+                        }
+                        , 500, function () {
+                            /* $('.panel-handle').addClass('panel-handle-closed').removeClass('panel-handle-opened');
+                             $('.arm-pointer').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-left');
+                             */
+                            $('.panel-handle-arm').css('float', 'none');
+                            $('.panel-handle').animate({
+                                borderBottomRightRadius: '5px',
+                                borderTopRightRadius: '5px',
+                                borderTopLeftRadius: '15px',
+                                borderBottomLeftRadius: '15px'
+
+                            }, 10, function () {
+
+                                $('.arm-pointer').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-left');
+
+                            });
+                            $('.panel-handle-arm').animate({
+                                float: 'left',
+                                marginLeft: '-13px',
+                                marginRight: '+22px',
+
+                                borderBottomRightRadius: '5px',
+                                borderTopRightRadius: '5px',
+                                borderTopLeftRadius: '15px',
+                                borderBottomLeftRadius: '15px'
+                            });
+
+
+                        }
+                );
+            },
+            open: function () {
+                $('.user-panel').animate(
+                        {
+                            right: '0'
+                        }
+                        , 500, function () {
+                            /*  $('.panel-handle').removeClass('panel-handle-closed').addClass('panel-handle-opened');
+                             //<div class="arm-pointer glyphicon glyphicon-chevron-right"></div>
+                             $('.arm-pointer').addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-left');
+                             */
+
+                            $('.panel-handle-arm').css('float', 'none');
+                            $('.panel-handle').animate({
+                                borderBottomRightRadius: '15px',
+                                borderTopRightRadius: '15px',
+                                borderTopLeftRadius: '5px',
+                                borderBottomLeftRadius: '5px'
+                            }, 10, function () {
+
+                                $('.arm-pointer').addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-left');
+                            });
+
+                            $('.panel-handle-arm').animate({
+                                float: 'right',
+                                marginRight: '-13px',
+                                marginLeft: '0px',
+                                borderBottomRightRadius: '15px',
+                                borderTopRightRadius: '15px',
+                                borderTopLeftRadius: '5px',
+                                borderBottomLeftRadius: '5px'
+                            });
+                        }
+                );
+            },
+            toggle: function () {
+                console.log("ASD");
+                var right_distance = $('.user-panel').css('right');
+                console.log($('.user-panel').css('right'));
+                if (right_distance == '0px')
+                    user_panel.close();
+                else
+                    user_panel.open();
+            }
+
+
+        };
+
+        $(window).ready(function () {
+            $('.panel-handle').click(function () {
+                user_panel.toggle();
+            });
+        });
+    </script>
+
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('.profile-item').click(
