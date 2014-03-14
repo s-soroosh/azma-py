@@ -39,14 +39,14 @@
 
         .user-panel {
             position: fixed;
-            width: 300px;
-            height: 300px;
-            background-color: #0e0e0e; /*TODO : Colors are not suitable    */
+            width: 240px;
+            height: 260px;
+            background-image: linear-gradient(#cccccc, #888888 80%, #bbbbbb) ; /*TODO : Colors are not suitable    */
             right: 0;
-            top: 30%;
+            top: 20%;
 
-            border-top-left-radius: 35px;
-            border-bottom-left-radius: 35px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
         }
 
         /* Chrome, Safari, Opera */
@@ -54,18 +54,18 @@
         .panel-handle {
             position: relative;
             float: left;
-            background-color: red; /*TODO : Colors are not suitable    */
-            margin-left: -10px;
-            width: 30px;
-            height: 90px;
+            background-color: #6f6f6f; /*TODO : Colors are not suitable    */
+            margin-left: 0px;
+            width: 10px;
+            height: 70px;
 
-            margin-top: 105px;
+            margin-top: 80px;
 
         }
 
         .panel-handle-opened {
-            border-bottom-right-radius: 15px;
-            border-top-right-radius: 15px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
         }
@@ -73,27 +73,27 @@
         .panel-handle-closed {
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
         }
 
         .panel-handle-arm {
             position: relative;
-            background-color: blue; /*TODO : Colors are not suitable    */
-            width: 16px;
-            height: 39px;
-            margin-top: 85%;
+            background-color: #cccccc; /*TODO : Colors are not suitable    */
+            width: 12px;
+            height: 30px;
+            margin-top: 20px;
 
         }
 
         .panel-handle-opened .panel-handle-arm {
 
             float: right;
-            margin-right: -13px;
-            border-bottom-right-radius: 15px;
-            border-top-right-radius: 15px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
+            margin-right: -8px;
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
         }
 
         .panel-handle-closed .panel-handle-arm {
@@ -102,8 +102,8 @@
 
             margin-left: -13px;
 
-            border-bottom-left-radius: 15px;
-            border-top-left-radius: 15px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
         }
@@ -111,7 +111,7 @@
         .arm-pointer {
             position: relative;
 
-            margin-top: 70%;
+            margin-top: 50%;
         }
 
         .panel-handle-opened .arm-pointer {
@@ -136,7 +136,7 @@
             </div>
         </div>
         <div class="panel-content">
-            <div style="padding-top:40px;" id="profile-menu">
+            <div class="col-md-11" style="padding-right: 3px; padding-left: 0; padding-top:32px;" id="profile-menu">
                 <div class="profile-item profile-item-selected" id="info">
                     اطلاعات من
                 </div>
@@ -260,7 +260,7 @@
             close: function () {
                 $('.user-panel').animate(
                         {
-                            right: '-280'
+                            right: '-230'
                         }
                         , 500, function () {
                             /* $('.panel-handle').addClass('panel-handle-closed').removeClass('panel-handle-opened');
@@ -281,7 +281,7 @@
                             $('.panel-handle-arm').animate({
                                 float: 'left',
                                 marginLeft: '-13px',
-                                marginRight: '+22px',
+                                marginRight: '+5px',
 
                                 borderBottomRightRadius: '5px',
                                 borderTopRightRadius: '5px',
@@ -317,7 +317,7 @@
 
                             $('.panel-handle-arm').animate({
                                 float: 'right',
-                                marginRight: '-13px',
+                                marginRight: '-8px',
                                 marginLeft: '0px',
                                 borderBottomRightRadius: '15px',
                                 borderTopRightRadius: '15px',
