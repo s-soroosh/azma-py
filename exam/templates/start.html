@@ -34,7 +34,8 @@
                 {% for q in exam.question_set.all %}
                     <div class="well" style="margin-bottom: 25px;box-shadow:3px 3px #F3F3F3;">
                         <div style="margin-bottom: 10px;">
-                            <li>  {{ q.text }} </li>
+                            <li>  {{ q.text | safe  }} </li>
+
                         </div>
                         <div class="row ">
                             {% for ch in q.choice_set.all %}
@@ -43,7 +44,7 @@
                                         <div class="checkbox">
                                             <label for="opt{{ ch.id }}">
                                                 <input id="opt{{ ch.id }}" name="{{ q.id }}" type="checkbox" value="{{ ch.id }}"/>
-                                                {{ ch.text }}
+                                                {{ ch.text | safe }}
                                             </label>
                                         </div>
                                     </div>
