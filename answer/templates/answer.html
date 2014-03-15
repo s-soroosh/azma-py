@@ -19,7 +19,8 @@
             {% for a in answer.answers.all %}
                 <div class="row">
                     <div class="col-md-5">
-                        {{ a.question.text }}
+                        {{ a.question.text |safe }}
+
                     </div>
                     <div class="col-md-1">
                         {% if a.is_true %}
@@ -33,7 +34,7 @@
                     پاسخ شما:
                 </div>
                 {% for ch in a.selected_choices.all %}
-                    {{ ch.text }}
+                    {{ ch.text | safe }}
                     <br/>
                 {% endfor %}
             {% endfor %}

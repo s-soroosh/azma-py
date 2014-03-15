@@ -243,12 +243,28 @@
             "exam": 1
         }
     },
-        {
+    {
         "model": "exam.Question",
         "pk": "2",
         "fields": {
             "text": "آیا بدون استفاده از جاوا میتوان نفس کشید؟‎‎",
             "exam": 1
+        }
+    },
+    {
+        "model": "exam.Question",
+        "pk": "3",
+        "fields": {
+            "text": "در نسخ مختلف جاوا امکانات مختلفی به این زبان اضافه شده است. <br /> یکی از این امکانات Generic است. <br /> کدام گزینه ها در مورد Generic صحیح است.",
+            "exam": 1
+        }
+    },
+    {
+        "model" : "exam.Question",
+        "pk":"4",
+        "fields":{
+            "text":"فرض کنید که متد زیر synchronized تعریف شده است و توسط آبجکت B از نخ A صدا زده شده است <br /> wait(2000); <br /> بعد از فراخوانی این متد  چه زمانی نخ A میتواند کاندید استفاده از پردازشگر باشد؟",
+            "exam":"1"
         }
     },
     {
@@ -296,7 +312,7 @@
             "answer": true
         }
     },
-      {
+    {
         "model": "exam.Choice",
         "pk": "5",
         "fields": {
@@ -305,7 +321,7 @@
             "answer": false
         }
     },
-      {
+    {
         "model": "exam.Choice",
         "pk": "6",
         "fields": {
@@ -314,6 +330,79 @@
             "answer": true
         }
     },
+    {
+        "model": "exam.Choice",
+        "pk": "7",
+        "fields": {
+            "text": "این امکان در نسخه ۴ به جاوا اضافه شده است.",
+            "question": 3,
+            "answer": false
+        }
+    },
+    {
+        "model": "exam.Choice",
+        "pk": "8",
+        "fields": {
+            "text": "از این امکان تنها میتوان در تعریف کلاسها استفاده نمود و در مواردی مانند تعریف متغیر و یا تعریف متد کاربرد ندارد",
+            "question": 3,
+            "answer": false
+        }
+    },
+    {
+        "model": "exam.Choice",
+        "pk": "9",
+        "fields": {
+            "text": "این امکان میتواند در افزایش قابلیت استفاده مجدد کدها بسیار مفید باشد",
+            "question": 3,
+            "answer": true
+        }
+    },
+    {
+        "model": "exam.Choice",
+        "pk": "10",
+        "fields": {
+            "text": "کلاسها را میتوان به گونه ای طراحی کرد بتوان از آنها در دوحالت Generic و غیر Generic استفاده نمود.",
+            "question": 3,
+            "answer": true
+        }
+    },
+        {
+        "model": "exam.Choice",
+        "pk": "11",
+        "fields": {
+            "text": "بعد از اینکه نخ A notify شود و یا پس از گذشت ۲ ثانیه",
+            "question": 4,
+            "answer": true
+        }
+    },
+        {
+        "model": "exam.Choice",
+        "pk": "12",
+        "fields": {
+            "text": "پس از آزاد شدن قفل درون B و یا گذشت ۲ ثانیه",
+            "question": 4,
+            "answer": false
+        }
+    },
+        {
+        "model": "exam.Choice",
+        "pk": "13",
+        "fields": {
+            "text": "۲ ثانیه پس از notify شدن نخ A",
+            "question": 4,
+            "answer": false
+        }
+    },
+        {
+        "model": "exam.Choice",
+        "pk": "14",
+        "fields": {
+            "text": "۲ ثانیه پس از آزاد شدن قفل آبجکت B",
+            "question": 4,
+            "answer": false
+        }
+    },
+
     {
         "model": "user_profile.registeredexam",
         "pk": "1",
