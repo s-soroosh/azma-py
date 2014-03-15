@@ -24,9 +24,6 @@ class Exam(models.Model):
     def score(self):
         return self.question_set.aggregate(Sum('score'))['score__sum']
 
-    def number_of_answers(self):
-        return self.question_set.filter(answer=True).aggregate(Count('score'))['score__count']
-
 
     def __str__(self):
         return str(self.pk) + " " + self.name
@@ -44,6 +41,10 @@ class Question(models.Model):
     text = models.CharField(max_length=500)
     exam = models.ForeignKey(Exam)
     score = models.IntegerField(default=1)
+
+    def number_of_answers(self):
+        return self.choice_set.filter(answer=True).aggregate(Count('answer'))['answer__count']
+
 
     def __str__(self):
         return self.text
