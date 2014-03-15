@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import Sum
+from django.db.models import Sum, Count
 
 
 class ExamCategory(models.Model):
@@ -23,6 +23,9 @@ class Exam(models.Model):
 
     def score(self):
         return self.question_set.aggregate(Sum('score'))['score__sum']
+
+    def number_of_answers(self):
+        return self.question_set.filter(answer=True).aggregate(Count('score'))['score__count']
 
 
     def __str__(self):
