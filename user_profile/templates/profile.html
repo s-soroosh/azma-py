@@ -41,7 +41,7 @@
             position: fixed;
             width: 240px;
             height: 260px;
-            background-image: linear-gradient(#cccccc, #888888 80%, #bbbbbb) ; /*TODO : Colors are not suitable    */
+            background-image: linear-gradient(#FCD271, #FCD271 80%, #FCD271); /*TODO : Colors are not suitable    */
             right: 0;
             top: 20%;
 
@@ -54,11 +54,11 @@
         .panel-handle {
             position: relative;
             float: left;
-            background-color: #6f6f6f; /*TODO : Colors are not suitable    */
+            border: solid thin #000000;
+            background-color: #cccccc; /*TODO : Colors are not suitable    */
             margin-left: 0px;
             width: 10px;
             height: 70px;
-
             margin-top: 80px;
 
         }
@@ -79,6 +79,8 @@
 
         .panel-handle-arm {
             position: relative;
+            border-right: solid thin #000000;
+            border-left: solid 0px #000000;
             background-color: #cccccc; /*TODO : Colors are not suitable    */
             width: 12px;
             height: 30px;
@@ -89,11 +91,11 @@
         .panel-handle-opened .panel-handle-arm {
 
             float: right;
-            margin-right: -8px;
-            border-bottom-right-radius: 4px;
-            border-top-right-radius: 4px;
-            border-top-left-radius: 1px;
-            border-bottom-left-radius: 1px;
+            margin-right: -5px;
+            border-bottom-right-radius: 6px;
+            border-top-right-radius: 6px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
         }
 
         .panel-handle-closed .panel-handle-arm {
@@ -136,7 +138,7 @@
             </div>
         </div>
         <div class="panel-content">
-            <div class="col-md-11" style="padding-right: 3px; padding-left: 0; padding-top:32px;" id="profile-menu">
+            <div class="col-md-11" style="padding-right: 2px; padding-left: 0; padding-top:32px;" id="profile-menu">
                 <div class="profile-item profile-item-selected" id="info">
                     اطلاعات من
                 </div>
@@ -275,18 +277,21 @@
 
                             }, 10, function () {
 
-                                $('.arm-pointer').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-left');
+                                $('.arm-pointer').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-left')
+                                        .css({left: '2px' });
 
                             });
                             $('.panel-handle-arm').animate({
                                 float: 'left',
-                                marginLeft: '-13px',
-                                marginRight: '+5px',
 
-                                borderBottomRightRadius: '5px',
-                                borderTopRightRadius: '5px',
-                                borderTopLeftRadius: '15px',
-                                borderBottomLeftRadius: '15px'
+                                marginLeft: '-13px',
+                                marginRight: '+3px',
+                                borderRightWidth: '0px',
+                                borderLeftWidth: '1px',
+                                borderBottomRightRadius: '2px',
+                                borderTopRightRadius: '2px',
+                                borderTopLeftRadius: '6px',
+                                borderBottomLeftRadius: '6px'
                             });
 
 
@@ -312,17 +317,20 @@
                                 borderBottomLeftRadius: '5px'
                             }, 10, function () {
 
-                                $('.arm-pointer').addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-left');
+                                $('.arm-pointer').addClass('glyphicon-chevron-right').removeClass('glyphicon-chevron-left')
+                                        .css({left:'0px',right:'0px'});
                             });
 
                             $('.panel-handle-arm').animate({
                                 float: 'right',
-                                marginRight: '-8px',
+                                marginRight: '-5px',
                                 marginLeft: '0px',
-                                borderBottomRightRadius: '15px',
-                                borderTopRightRadius: '15px',
-                                borderTopLeftRadius: '5px',
-                                borderBottomLeftRadius: '5px'
+                                borderRightWidth: '1px',
+                                borderLeftWidth: '0px',
+                                borderBottomRightRadius: '6px',
+                                borderTopRightRadius: '6px',
+                                borderTopLeftRadius: '2px',
+                                borderBottomLeftRadius: '2px'
                             });
                         }
                 );
