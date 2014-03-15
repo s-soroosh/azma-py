@@ -11,6 +11,33 @@
             background-color: #e9e9e9;
 
         }
+
+        .exam-panel {
+            position: fixed;
+            right: 30px;
+            width: 300px;
+            height: 50%;
+
+        }
+
+        .exam-panel-row {
+            border-color: rgb(70, 110, 190);
+            border-style: solid;
+            border-width: 5px;
+            margin-top: 15px;
+            height: 50px;
+            padding: 5px;
+            border-radius: 7px 7px;;
+
+            vertical-align: middle;
+        }
+
+        .exam-panel-row .glyphicon {
+            font-size: 30px;
+            color: rgb(70, 110, 190);
+        }
+
+
     </style>
     <link href="{% static "UI/checkbox/input.checkbox.css" %}" rel="stylesheet">
 {% endblock %}
@@ -20,6 +47,24 @@
 
 
 {% block content %}
+    <div class="well exam-panel">
+        <div class="exam-panel-row">
+            <span class="glyphicon glyphicon-time"></span>
+
+        </div>
+        <div class="exam-panel-row">
+            <span class="glyphicon glyphicon-question-sign"></span>
+        </div>
+        <div class="exam-panel-row">
+            <span class="glyphicon glyphicon-stats"></span>
+        </div>
+        <div class="exam-panel-row">
+
+            <span class="glyphicon glyphicon-flash"></span>
+        </div>
+
+
+    </div>
     <form method="post" action="{% url 'answer:analyze' exam.id %}">
         {% csrf_token %}
         <div class="row ">
