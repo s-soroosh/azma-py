@@ -36,7 +36,7 @@
                             <p style="font-weight: bold; font-size:17px;"> {{ exam.local_name }}</p>
 
                             <div style="min-height: 80px;">
-                                <p style="font-size: 13px; font-weight: normal;"> {{ exam.description }} </p>
+                                <p style="font-size: 13px; font-weight: normal;"> {{ exam.description | safe }} </p>
                             </div>
                             <div class="badge" style="margin-bottom: 20px;">
                                 {{ exam.duration }}

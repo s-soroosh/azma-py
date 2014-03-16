@@ -11,6 +11,9 @@ class ExamCategory(models.Model):
     def number_of_exams(self):
         return self.exam_set.count()
 
+    def __str__(self):
+        return self.name
+
 
 class Exam(models.Model):
     name = models.CharField(max_length=200)
@@ -47,7 +50,7 @@ class Question(models.Model):
 
 
     def __str__(self):
-        return self.text
+        return str(self.id)
 
 
 class Choice(models.Model):
@@ -56,7 +59,7 @@ class Choice(models.Model):
     answer = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(self.pk) + " " + self.text
+        return str(self.pk)
 
 
 
