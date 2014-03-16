@@ -36,7 +36,11 @@
                     <div class="well" style="margin-bottom: 25px;box-shadow:3px 3px #F3F3F3;">
                         <div style="margin-bottom: 10px;">
                             <li>  {{ q.text | safe }} </li>
-
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            {% if q.image %}
+                                <img src="{{ q.image.url }}" />
+                            {% endif %}
                         </div>
                         <div class="row ">
                             {% for ch in q.choice_set.all %}
