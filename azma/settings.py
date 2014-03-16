@@ -15,6 +15,8 @@ from django.core.urlresolvers import reverse
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'stat')
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'upload')
+MEDIA_URL = '/static/upload/'
 COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 
 
@@ -171,7 +173,7 @@ LOGGING = {
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'standard',
-            'filters': ['queries_above_300ms'],
+            # 'filters': ['queries_above_300ms'],
         },
         'error_logfile': {
             'level': 'ERROR',
@@ -183,7 +185,7 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django.db': {
+        '*': {
             'handlers': ['logfile'],
             'level': 'DEBUG',
             'propagate': True,

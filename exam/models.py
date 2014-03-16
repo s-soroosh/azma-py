@@ -1,5 +1,8 @@
+import os
+import datetime
 from django.db import models
 from django.db.models import Sum, Count
+from django.utils.encoding import force_text, force_str
 
 
 class ExamCategory(models.Model):
@@ -40,10 +43,19 @@ class RequiredKnowledge(models.Model):
         return self.name
 
 
+def update_image_name(instance, filename):
+    return os.path.join(
+        os.path.join(os.path.normpath(force_text(datetime.datetime.now().strftime(force_str('question/images')))),
+                     str(instance.id)) + '.png')
+
+
 class Question(models.Model):
     text = models.CharField(max_length=500)
     exam = models.ForeignKey(Exam)
     score = models.IntegerField(default=1)
+    code = models.CharField(max_length=2000, null=True, blank=True)
+    image = models.FileField(upload_to=update_image_name)
+
 
     def number_of_answers(self):
         return self.choice_set.filter(answer=True).aggregate(Count('answer'))['answer__count']
