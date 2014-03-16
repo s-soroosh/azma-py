@@ -11,6 +11,17 @@
         "model": "exam.examcategory",
         "pk": "10",
         "fields": {
+            "name": "BeginningJAVA",
+            "local_name": "جاوا مقدماتی",
+            "parent": 1
+
+
+        }
+    },
+    {
+        "model": "exam.examcategory",
+        "pk": "11",
+        "fields": {
             "name": "Spring",
             "local_name": "Spring",
             "parent": 1
@@ -20,7 +31,7 @@
     },
     {
         "model": "exam.examcategory",
-        "pk": "11",
+        "pk": "12",
         "fields": {
             "name": "JPA",
             "local_name": "JPA",
@@ -53,7 +64,7 @@
             "local_name": "جاوا مقدماتی",
             "start_date": "2014-02-06 00:00:00",
             "description": "در این آزمون میزان آشنایی شما با زبان جاوا سنجیده می شود.  <br  />برای شرکت در این آزمون تنها داشتن آشنایی اولیه با این زبان کافی است.",
-            "category": 1,
+            "category": 10,
             "duration": 100
 
         }
@@ -66,7 +77,7 @@
             "local_name": "JAVA Generics",
             "start_date": "2014-02-04 00:00:00",
             "description": "",
-            "category": 1,
+            "category": 10,
             "duration": 100
         }
     },
@@ -151,7 +162,7 @@
             "local_name": "Bean Factory",
             "start_date": "2014-10-10 00:00:00",
             "description": "یه مقدار اطلاعات فارسی در مورد اسپرینگ و اینکه در این بهش چه چیزی مورد امتحان قرار میگیرهق",
-            "category": 10,
+            "category": 11,
             "duration": 100
         }
     },
@@ -163,7 +174,7 @@
             "local_name": "Inversion Of Control",
             "start_date": "2014-10-10 00:00:00",
             "description": "",
-            "category": 10,
+            "category": 11,
             "duration": 100
         }
     },
@@ -175,7 +186,7 @@
             "local_name": "Spring JDBC",
             "start_date": "2014-10-10 00:00:00",
             "description": "ذتفذ رقترلق تقرت ربتر لقتر  رقت لرت لرلرتر لت رلرت برت  لرت ر تر رت رلرتر ",
-            "category": 10,
+            "category": 11,
             "duration": 100
         }
     },
@@ -187,7 +198,7 @@
             "local_name": "Spring MVC",
             "start_date": "2014-10-10 00:00:00",
             "description": "بی یتیت ییتی یت یثتز شیدززد بتث ه یتصیهی تیضخ تصح بتبصت",
-            "category": 10,
+            "category": 11,
             "duration": 100
         }
     },
@@ -199,7 +210,7 @@
             "local_name": "Spring Data",
             "start_date": "2014-10-10 00:00:00",
             "description": "لاط تین بتی تب بتص بتثقهث زدزپی راثخ زثخهتز تخهث بهخثصتب تبثق ثخهتر",
-            "category": 10,
+            "category": 11,
             "duration": 100
         }
     },
@@ -211,7 +222,7 @@
             "local_name": "Hibernate Elementary",
             "start_date": "2014-10-10 00:00:00",
             "description": "لاط تین بتی تب بتص بتثقهث زدزپی راثخ زثخهتز تخهث بهخثصتب تبثق ثخهتر",
-            "category": 11,
+            "category": 12,
             "duration": 100
         }
     },
@@ -223,7 +234,7 @@
             "local_name": "Toplink Elementary",
             "start_date": "2014-10-10 00:00:00",
             "description": "لاط تین بتی تب بتص بتثقهث زدزپی راثخ زثخهتز تخهث بهخثصتب تبثق ثخهتر",
-            "category": 11,
+            "category": 12,
             "duration": 100
         }
     },
@@ -260,11 +271,11 @@
         }
     },
     {
-        "model" : "exam.Question",
-        "pk":"4",
-        "fields":{
-            "text":"فرض کنید که متد زیر synchronized تعریف شده است و توسط آبجکت B از نخ A صدا زده شده است <br /> wait(2000); <br /> بعد از فراخوانی این متد  چه زمانی نخ A میتواند کاندید استفاده از پردازشگر باشد؟",
-            "exam":"1",
+        "model": "exam.Question",
+        "pk": "4",
+        "fields": {
+            "text": "فرض کنید که متد زیر synchronized تعریف شده است و توسط آبجکت B از نخ A صدا زده شده است <br /> wait(2000); <br /> بعد از فراخوانی این متد  چه زمانی نخ A میتواند کاندید استفاده از پردازشگر باشد؟",
+            "exam": "1",
             "image": "question/images/4.png"
         }
     },
@@ -367,7 +378,7 @@
             "answer": true
         }
     },
-        {
+    {
         "model": "exam.Choice",
         "pk": "11",
         "fields": {
@@ -376,7 +387,7 @@
             "answer": true
         }
     },
-        {
+    {
         "model": "exam.Choice",
         "pk": "12",
         "fields": {
@@ -385,7 +396,7 @@
             "answer": false
         }
     },
-        {
+    {
         "model": "exam.Choice",
         "pk": "13",
         "fields": {
@@ -394,7 +405,7 @@
             "answer": false
         }
     },
-        {
+    {
         "model": "exam.Choice",
         "pk": "14",
         "fields": {
