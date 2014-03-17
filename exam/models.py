@@ -54,7 +54,7 @@ class Question(models.Model):
     exam = models.ForeignKey(Exam)
     score = models.IntegerField(default=1)
     code = models.CharField(max_length=2000, null=True, blank=True)
-    image = models.FileField(upload_to=update_image_name)
+    image = models.FileField(upload_to=update_image_name, null=True, blank=True)
 
 
     def number_of_answers(self):

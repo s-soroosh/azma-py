@@ -1,5 +1,7 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
+from django.db.models import Count
+from django.db.models.aggregates import Avg
 from django.template import RequestContext, loader
 from django.http import HttpResponse, HttpResponseRedirect
 
@@ -33,20 +35,14 @@ def sub_categories(request, category_id):
 
 
 def start(request, exam_id):
-    if (request.method == "GET"):
+    if request.method == "GET":
         exam = Exam.objects.get(id=exam_id)
         template = loader.get_template('start.html')
-        context = RequestContext(request, {'exam': exam})
+        participates_count = exam.examanswer_set.aggregate(Count('id'))['id__count']
+        context = RequestContext(request, {'exam': exam, 'participates_count': participates_count})
         return HttpResponse(template.render(context))
     else:
-        print("phohdj cedioj ")
-
-        exam = Exam.objects.get(id=exam_id)
-        for q in exam.question_set.all():
-            if str(q.id) in request.POST.keys():
-                print(q.text)
-                for answer in request.POST.getlist(str(q.id)):
-                    print("result: %s" % q.choice_set.get(id=str(answer)))
+        return HttpResponse('% method is not permitted', request.method)
 
 
 def index(request):

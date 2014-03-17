@@ -287,6 +287,10 @@ p.thought:after {
     vertical-align: middle;
 }
 
+.big-exam-panel{
+    height: 70px;
+}
+
 .exam-panel-row .glyphicon {
     font-size: 30px;
     color: rgb(70, 110, 190);
