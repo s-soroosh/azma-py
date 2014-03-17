@@ -56,8 +56,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
-    #'django.core.context_processors.request',
+    'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
+    'cms.context_processors.media',
+    'zinnia.context_processors.version',
 )
 
 AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
@@ -69,6 +71,7 @@ INSTALLED_APPS = (
     'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.comments',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -81,6 +84,12 @@ INSTALLED_APPS = (
     'user_profile',
     'wage_meter',
     'rest_framework',
+    'django.contrib.sites',
+    'tagging',
+    'mptt',
+    'zinnia_template',
+    'pytz',
+    'zinnia',
 )
 
 STATICFILES_FINDERS = (
@@ -99,7 +108,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.doc.XViewMiddleware',
 )
+
+SITE_ID = 1
 
 ROOT_URLCONF = 'azma.urls'
 
@@ -136,7 +148,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -223,3 +235,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+TEMPLATE_LOADERS = [
+    'django.template.loaders.eggs.Loader',
+    'app_namespace.Loader',
+]

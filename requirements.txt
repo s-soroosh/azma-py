@@ -5,5 +5,7 @@ djangorestframework
 django-filter
 MarkDown
 django_compressor
-
-
+PIL
+django-mptt
+django-tagging
+beautifulsoup4
