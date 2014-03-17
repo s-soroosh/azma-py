@@ -237,6 +237,7 @@ REST_FRAMEWORK = {
 }
 
 TEMPLATE_LOADERS = [
+    'django.template.loaders.filesystem.Loader',
     'django.template.loaders.eggs.Loader',
     'app_namespace.Loader',
 ]
