@@ -202,10 +202,10 @@ DEFAULT_LOGIN_URL = '/profile'
 DEFAULT_LOGOUT_URL = '/'
 
 #Mail Setting
-DEFAULT_FROM_EMAIL = 'azmaweb@zareie.net'
-EMAIL_HOST = 'mail.zareie.net'
-EMAIL_HOST_PASSWORD = '123123'
-EMAIL_HOST_USER = 'azmaweb@zareie.net'
+DEFAULT_FROM_EMAIL = 'noreply@onlinecademy.com'
+EMAIL_HOST = 'smtp.onlinecademy.com'
+EMAIL_HOST_PASSWORD = 'sorooshMAHDI123'
+EMAIL_HOST_USER = 'admin'
 EMAIL_PORT = 587
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
