@@ -1,33 +1,163 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block content %}
- <div class="center-block form-group">
-    <form id="login_form" action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-                <label class="form-label">
-                    نام کاربری
-                </label>
-                <input type="text" class="form-control" id="txtUsername" name="username" autofocus="" >
-                <label class="form-label">
-                    گذرواژه
-                </label>
-                <input type="password" class="form-control" id="txtPassword" name="password" >
-            <div class="checkbox">
-                <label>
-                    <input name="remember" type="checkbox" >
-مرا به خاطر بسپار
 
-                </label>
-            </div>
-            <button type="submit" class="btn btn-success">
-                ورود</button>
-    </form>
-</div>
+{% block css %}
+    <style>
+        #login_form .row {
+            margin-bottom: 15px;
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <div class="center-block form-group">
+        <div class="col-md-offset-3">
+            <form id="login_form" action="{% url 'login' %}" method="post" novalidate="">
+                {% csrf_token %}
+
+                <div class="row">
+
+                    <div class="col-md-2">
+                        <label class="form-label">
+                            نام کاربری
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="control-group">
+
+
+                            <div class="controls">
+                                <input type="text" class="form-control" id="txtUsername" name="username"
+                                       required
+                                       maxlength="30"
+                                       minlength="5"
+                                       data-validation-required-message="وارد کردن نام کاربری الزامی است"
+                                       data-validation-maxlength-message="بیش از اندازه بلند است"
+                                       data-validation-minlength-message="بیش از اندازه کوتاه است"
+                                        />
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="error-plate">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-label">
+                            گذرواژه
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="control-group">
+
+
+                            <div class="controls">
+                                <input type="password" class="form-control" id="txtPassword" name="password"
+                                       minlength="6"
+                                       data-validation-minlength-message="حداقل شش کاراکتر لازم است"
+                                       data-validation-required-message="وارد کردن این فیلد ضروری است"
+                                       required/>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="error-plate">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="checkbox">
+                            <label class="form-label">
+                                من تمام قوانین و حقوقم را خواندم و متعهد به انجام آنها میباشم.
+                            </label>
+                            <input
+                                    type="checkbox"
+                                    id="chkrights"
+                                    name="remember"
+                                    checked
+                                    />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="error-plate">
+
+                        </div>
+                    </div>
+                </div>
+
+                <button id="btnSubmit" type="submit" class="btn btn-success">
+                    ورود
+                </button>
+            </form>
+        </div>
+    </div>
 
 {% endblock %}
 
 
 {% block js %}
+    <script type="text/javascript" src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script>
 
+
+        $(function () {
+
+            $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(
+                    {
+                        autoAdd: {helpBlocks: false},
+                        submitError: function ($form, event, errors) {
+                            $(".has-error input").tooltip('show');
+                        }
+
+                    }
+            );
+
+            $("input,select,textarea").not("[type=submit]").blur(function () {
+                $(this).parent().removeClass('has-error').removeClass('has-success');
+                $(this).tooltip('destroy');
+
+                if ($(this).jqBootstrapValidation("hasErrors")) {
+                    var errors = $(this).jqBootstrapValidation("collectErrors");
+
+                    var txt = new String();
+                    txt = txt.concat('<ul style="list-style:none;padding-right:1px">');
+                    for (var value in errors) {
+                        for (var i = 0; i < errors[value].length; i++) {
+                            txt = txt.concat('<li>', errors[value][i], '</li>');
+
+                        }
+
+                    }
+                    txt = txt.concat('</ul>');
+
+                    $(this).parent().addClass('has-error');
+                    $(this).tooltip({title: txt, placement: 'left', html: true});
+
+
+                }
+                else {
+                    $(this).parent().addClass('has-success');
+
+                }
+
+            });
+
+        })
+
+    </script>
 {% endblock %}
