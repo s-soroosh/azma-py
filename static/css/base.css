@@ -89,12 +89,16 @@ p {
 }
 
 .form-group {
-    width: 50%;
+    /*
 
-    background-image: linear-gradient(#E8EDE0, #E8EDE0 60%, #E8EDE0);
-    /*background-color: #C8C8C8;*/
-    border-radius: 10px 10px;
-    padding: 7px 17px 5px;
+       width: 50%;
+
+       background-image: linear-gradient(#E8EDE0, #E8EDE0 60%, #E8EDE0);
+       /*background-color: #C8C8C8;*//*
+       border-radius: 10px 10px;
+       padding: 7px 17px 5px;
+       */
+
 }
 
 .form-group:hover {
@@ -287,7 +291,7 @@ p.thought:after {
     vertical-align: middle;
 }
 
-.big-exam-panel{
+.big-exam-panel {
     height: 70px;
 }
 
