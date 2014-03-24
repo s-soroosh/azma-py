@@ -45,7 +45,7 @@
             background-image: linear-gradient(#FCD271, #FCD271 80%, #FCD271); /*TODO : Colors are not suitable    */
             right: 0;
             top: 20%;
-
+            z-index: 9000;
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
         }
@@ -61,6 +61,7 @@
             width: 10px;
             height: 70px;
             margin-top: 80px;
+            cursor: pointer;
 
         }
 
@@ -117,6 +118,10 @@
             margin-top: 50%;
         }
 
+        .arm-pointer:hover {
+            color: #a3a3a3;
+        }
+
         .panel-handle-opened .arm-pointer {
             float: right;
         }
@@ -137,6 +142,7 @@
             <div class="panel-handle-arm ">
                 <div class="arm-pointer glyphicon glyphicon-chevron-right"></div>
             </div>
+
         </div>
         <div class="panel-content">
             <div class="col-md-11" style="padding-right: 2px; padding-left: 0; padding-top:32px;" id="profile-menu">
@@ -261,6 +267,7 @@
     <script type="text/javascript">
         var user_panel = {
             close: function () {
+
                 $('.user-panel').animate(
                         {
                             right: '-230'
@@ -349,8 +356,10 @@
 
         };
 
-        $(window).ready(function () {
+        $(document).ready(function () {
+
             $('.panel-handle').click(function () {
+
                 user_panel.toggle();
             });
         });
