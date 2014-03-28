@@ -17,6 +17,15 @@ p {
     padding-bottom: 10px;
 }
 
+.navbar .glyphicon {
+    font-size: 16pt;
+}
+
+
+.navbar {
+    min-height: 50px;
+}
+
 .navbar ul li {
     font-family: Tahoma;
     color: #102E37;
@@ -27,6 +36,7 @@ p {
 .navbar ul li a {
     font-family: Yekan;
     font-size: 13pt;
+    height: 50px;
 }
 
 .navbar-left .glyphicon {

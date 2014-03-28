@@ -9,3 +9,5 @@ PIL
 django-mptt
 django-tagging
 beautifulsoup4
+django-blog-zinnia
+django-app-namespace-template-loader
