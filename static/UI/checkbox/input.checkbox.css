@@ -30,3 +30,8 @@
 .checkbox-mine-inside:hover {
     opacity: 0.3;
 }
+
+.checkbox label {
+    display: block;
+
+}
