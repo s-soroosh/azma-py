@@ -18,25 +18,39 @@ p {
 }
 
 .navbar .glyphicon {
-    font-size: 16pt;
+    font-size: 13pt;
+    padding-bottom: 10px;
 }
 
-
 .navbar {
-    min-height: 50px;
+    min-height: 20px;
+    height: 40px;
 }
 
 .navbar ul li {
     font-family: Tahoma;
     color: #102E37;
-    font-size: 14pt;
+    font-size: 12pt;
     font-weight: bold;
 }
 
 .navbar ul li a {
     font-family: Yekan;
-    font-size: 13pt;
-    height: 50px;
+    font-size: 12pt;
+    padding-bottom: 6px;
+
+    /*height: 50px;*/
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+
+    background-color: #ff6600;
+
+}
+
+.navbar ul li a:hover {
+    color: red;
+    background-color: blue;
 }
 
 .navbar-left .glyphicon {
