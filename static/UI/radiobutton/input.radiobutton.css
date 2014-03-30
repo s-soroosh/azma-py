@@ -1,0 +1,31 @@
+.radio-mine {
+
+    font-size: 15pt;
+
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 50px;
+
+    margin-left: 20px;
+
+    background-color: #0079a1;
+    border-color: #004b63;
+    border-width: 2px;
+    border-style: solid;
+    display: inline;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.radio-mine-inside {
+    opacity: 0.0;
+    margin: auto;
+    font-size: 25px;
+    color: white;
+    position: relative;
+    top: 7px;
+}
+
+.radio-mine-inside:hover {
+    opacity: 0.3;
+}
