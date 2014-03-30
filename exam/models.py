@@ -28,11 +28,15 @@ class Exam(models.Model):
 
 
     def score(self):
-        return self.question_set.aggregate(Sum('score'))['score__sum']
+        score = self.question_set.aggregate(Sum('score'))['score__sum']
+        if score == None:
+            return 0
+        else:
+            return score
 
 
-    def __str__(self):
-        return str(self.pk) + " " + self.name
+def __str__(self):
+    return str(self.pk) + " " + self.name
 
 
 class RequiredKnowledge(models.Model):

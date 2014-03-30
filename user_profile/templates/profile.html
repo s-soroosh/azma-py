@@ -1,165 +1,6 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-    <style>
-
-        #profile-menu {
-            font-size: 18pt;
-
-        }
-
-        .profile-item {
-            padding-right: 5%;
-            border: thin solid rgba(3, 18, 104, 0.22);
-            height: 30px;
-            font-size: 18pt;
-            padding-top: 2%;
-            padding-bottom: 20%;
-            margin-bottom: 15px;
-            box-shadow: rgba(22, 41, 75, 0.29) 4px 2px 9px;
-            cursor: pointer;
-            text-align: justify;
-            margin-right: 5%;
-            color: white;
-            border-right: thick solid rgba(0, 0, 0, 0);
-            background-color: rgba(181, 196, 255, 0.44);
-        }
-
-        .profile-item:not(.profile-item-selected):hover {
-            border-right: thick solid #FFFFFF;
-            border-left: thick solid #FFFFFF;
-            border-bottom-right-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-left-radius: 5px;
-            color: white;
-        }
-
-        .profile-item-selected {
-            border-right: thick solid #CCCCFF;
-            border-left: thick solid #CCCCFF;
-            border-bottom-right-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-left-radius: 5px;
-            background-color: rgba(181, 196, 255, 0.66);
-
-            cursor: default;
-        }
-
-        .profile-content {
-            font-size: 14pt;
-            padding-top: 30px;
-            float: left;;
-        }
-
-        .user-panel {
-            position: fixed;
-            right: 0px;
-            width: 240px;
-            height: 260px;
-            top: 20%;
-            z-index: 9000;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-            background-color: #006687;
-
-        }
-
-        /* Chrome, Safari, Opera */
-
-        .panel-handle {
-            position: relative;
-
-            float: left;
-
-            background-color: rgba(181, 196, 255, 0.66); /*TODO : Colors are not suitable    */
-            margin-left: 0px;
-            width: 10px;
-            height: 70px;
-            margin-top: 80px;
-            cursor: pointer;
-
-        }
-
-        .panel-handle-opened {
-            border-bottom-right-radius: 10px;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-
-        .panel-handle-closed {
-            border-bottom-right-radius: 5px;
-            border-top-right-radius: 5px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
-
-        .panel-handle-arm {
-            position: relative;
-
-            background-color: rgba(139, 158, 231, 1);
-            width: 12px;
-            height: 30px;
-            margin-top: 20px;
-
-        }
-
-        .panel-handle-opened .panel-handle-arm {
-
-            float: right;
-            margin-right: -5px;
-            border-bottom-right-radius: 6px;
-            border-top-right-radius: 6px;
-            border-top-left-radius: 2px;
-            border-bottom-left-radius: 2px;
-        }
-
-        .panel-handle-closed .panel-handle-arm {
-
-            float: left;
-
-            margin-left: -13px;
-
-            border-bottom-left-radius: 10px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-
-        .arm-pointer {
-            position: relative;
-
-            margin-top: 50%;
-        }
-
-        .arm-pointer:hover {
-            color: #a3a3a3;
-        }
-
-        .panel-handle-opened .arm-pointer {
-            float: right;
-        }
-
-        .panel-handle-closed .arm-pointer {
-
-            float: left;
-
-        }
-
-        .profile-content {
-            padding-right: 5%;
-
-            border-radius: 19px 19px;
-            border: solid thin rgba(200, 200, 255, 0.23);
-            min-height: 500px;
-            max-height: 500px;
-
-        }
-    </style>
-{% endblock %}
 
 {% block content %}
 
@@ -187,7 +28,7 @@
 
         </div>
     </div>
-    <div class="col-lg-9 profile-content">
+    <div class="col-lg-10  profile-content">
         <div class="visible" id="info-container">
             <div class="row">
                 <div class="col-lg-2">نام</div>
@@ -207,15 +48,47 @@
             </div>
         </div>
         <div class="c hidden" id="exam-container">
-            {% for answer in exam_answers %}
-                {{ answer.exam.local_name }}
-                <br/>
-                {{ answer.score }}
-                از
-                {{ answer.exam.score }}
-            {% endfor %}
+            {#            {% for answer in exam_answers %}#}
+            {#                {{ answer.exam.local_name }}#}
+            {#                <br/>#}
+            {#                {{ answer.score }}#}
+            {#                از#}
+            {#                {{ answer.exam.score }}#}
+            {#            {% endfor %}#}
+            <div class="panel-group">
+                {% for category in exam_categories %}
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            {{ category.local_name }}
+                        </div>
+                        <div class="panel-body">
+                            {% for answer in category.answers %}
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        {{ answer.exam.local_name }}
+                                    </div>
+                                    <div class="col-md-2">
+                                        <span class="badge">
+                                            {{ answer.score }}
+                                        از
+                                            {{ answer.exam.score }}
+                                        </span>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="panel-footer">
+                            امتیاز این بخش:
+                            {{ category.sum_score }}
+                        </div>
+                    </div>
+
+
+                    <br/>
+                {% endfor %}
+            </div>
             <div>
-                نمره کل:
+                امتیاز کل:
                 {{ sum_score }}
             </div>
 
