@@ -50,7 +50,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
-    #'django.core.context_processors.request',
+    'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
 )
 
@@ -68,12 +68,19 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'answer',
     'exam',
     'user',
     'Postchi',
     'user_profile',
     'wage_meter',
     'rest_framework',
+    'django.contrib.sites',
+    'tagging',
+    'mptt',
+    'zinnia_template',
+    'pytz',
+    'zinnia'
 )
 
 STATICFILES_FINDERS = (
@@ -192,7 +199,7 @@ LOGGING = {
 }
 
 DEFAULT_LOGIN_URL = '/profile'
-DEFAULT_LOGOUT_URL = '/exam'
+DEFAULT_LOGOUT_URL = '/'
 
 #Mail Setting
 DEFAULT_FROM_EMAIL = 'noreply@onlinecademy.com'
@@ -216,3 +223,12 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+
+
+# MEDIA config
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'upload')
+MEDIA_URL = '/static/upload/'
+
+# weblog config
+SITE_ID = 1
