@@ -30,6 +30,7 @@ COMPRESS_CSS_FILTERS = [
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '#mmm(c*ezo)q(!z3@7xdcrgv88960a5ryvz2+8n1i235tr2r4d'
+INTERNAL_IPS = ['localhost', '127.0.0.1']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -52,7 +53,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
-        'zinnia.context_processors.version',
+    'zinnia.context_processors.version',
 )
 
 AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
@@ -60,18 +61,19 @@ AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
 # Application definition
 
 INSTALLED_APPS = (
-    'compressor',
     'south',
+    'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.comments',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'answer',
     'exam',
     'user',
+    'answer',
     'Postchi',
     'user_profile',
     'wage_meter',
@@ -102,6 +104,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.doc.XViewMiddleware',
 )
+
 
 ROOT_URLCONF = 'azma.urls'
 
@@ -175,7 +178,7 @@ LOGGING = {
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'standard',
-            'filters': ['queries_above_300ms'],
+            # 'filters': ['queries_above_300ms'],
         },
         'error_logfile': {
             'level': 'ERROR',

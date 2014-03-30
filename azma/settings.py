@@ -15,8 +15,6 @@ from django.core.urlresolvers import reverse
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'stat')
-MEDIA_ROOT = os.path.join(STATIC_ROOT, 'upload')
-MEDIA_URL = '/static/upload/'
 COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 
 
@@ -110,7 +108,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.doc.XViewMiddleware',
 )
 
-SITE_ID = 1
 
 ROOT_URLCONF = 'azma.urls'
 
@@ -240,3 +237,10 @@ TEMPLATE_LOADERS = [
     'django.template.loaders.eggs.Loader',
     'app_namespace.Loader',
 ]
+
+# MEDIA config
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'upload')
+MEDIA_URL = '/static/upload/'
+
+# weblog config
+SITE_ID = 1
