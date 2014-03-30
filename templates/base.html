@@ -141,27 +141,26 @@
 
 {% endif %}
 <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        {% if validation_error %}
+            $('.validation_error').fadeIn('slow');
+        {%  endif %}
+        {% if error_message %}
+            $('.error_message').fadeIn('slow');
+        {% endif %}
+        {% if message %}
+            $('.message').fadeIn('slow');
+            {% if redirect_url %}
+                setTimeout(function () {
+                            window.location = '{{ redirect_url }}';
+                        }
+                        , 1500);
+            {% endif %}
+        {% endif %}
+    });
+</script>
 {% compress js %}
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            {% if validation_error %}
-                $('.validation_error').fadeIn('slow');
-            {%  endif %}
-            {% if error_message %}
-                $('.error_message').fadeIn('slow');
-            {% endif %}
-            {% if message %}
-                $('.message').fadeIn('slow');
-                {% if redirect_url %}
-                    setTimeout(function () {
-                                window.location = '{{ redirect_url }}';
-                            }
-                            , 1500);
-                {% endif %}
-            {% endif %}
-        });
-    </script>
     {% block js %}
     {% endblock %}
 {% endcompress %}
