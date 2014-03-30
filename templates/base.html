@@ -133,13 +133,13 @@
     {% endblock %}
 </div>
 
-{% if debug == True %}
-    <script src="{% static 'js/jquery-1.11.0.js' %}"></script>
+{#{% if debug == True %}#}
+    <script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
 
-{% else %}
+{% comment %}{% else %}
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-{% endif %}
+{% endif %}{% endcomment %}
 <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
 {% compress js %}
 
