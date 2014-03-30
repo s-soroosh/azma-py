@@ -52,6 +52,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
+        'zinnia.context_processors.version',
 )
 
 AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
@@ -80,7 +81,7 @@ INSTALLED_APPS = (
     'mptt',
     'zinnia_template',
     'pytz',
-    'zinnia'
+    'zinnia',
 )
 
 STATICFILES_FINDERS = (
@@ -99,6 +100,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.doc.XViewMiddleware',
 )
 
 ROOT_URLCONF = 'azma.urls'
@@ -224,7 +226,11 @@ REST_FRAMEWORK = {
     ]
 }
 
-
+TEMPLATE_LOADERS = [
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.eggs.Loader',
+    'app_namespace.Loader',
+]
 
 # MEDIA config
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'upload')
