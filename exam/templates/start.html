@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block css %}
+
     <link href="{% static "UI/checkbox/input.checkbox.css" %}" rel="stylesheet">
     <link href="{% static "UI/radiobutton/input.radiobutton.css" %}" rel="stylesheet">
+    <link href="{% static "UI/img/img.css" %}" rel="stylesheet">
+    <style>
+
+    </style>
 {% endblock %}
 {% block content %}
     <div class="well exam-panel">
@@ -40,13 +45,16 @@
             <div class="col-lg-9  table-bordered" style="padding-bottom: 20px;padding-top: 20px;float:left;">
                 {% for q in exam.question_set.all %}
                     <div class="well" style="margin-bottom: 25px;box-shadow:3px 3px #F3F3F3;">
-                        <div style="margin-bottom: 10px;">
-                            <li>  {{ q.text | safe }} </li>
-                        </div>
-                        <div style="margin-bottom: 10px;">
-                            {% if q.image %}
-                                <img src="{{ q.image.url }}"/>
-                            {% endif %}
+                        <div class="row">
+                            <div class="col-lg-8" style="margin-bottom: 10px;">
+                                <li>  {{ q.text | safe }} </li>
+                            </div>
+                            <div class="col-lg-4" style="margin-bottom: 10px;">
+                                {% if q.image %}
+                                    <img class="img-thumbnail exam-img" src="http://placehold.it/400x400"
+                                            {# src="{{ q.image.url }}" #}/>
+                                {% endif %}
+                            </div>
                         </div>
                         <div class="row ">
                             {% for ch in q.choice_set.all %}
@@ -81,5 +89,6 @@
 {% block js %}
     <script src="{% static 'UI/checkbox/input.checkbox.js' %}" type="text/javascript"></script>
     <script src="{% static 'UI/radiobutton/input.radiobutton.js' %}" type="text/javascript"></script>
+    <script src="{% static 'UI/img/img.js' %}" type="text/javascript"></script>
 
 {% endblock %}
