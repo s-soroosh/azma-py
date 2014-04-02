@@ -56,13 +56,14 @@
                                 {% endif %}
                             </div>
                         </div>
-                        <div class="row ">
+                        <div class="row">
                             {% for ch in q.choice_set.all %}
                                 {% if ch.id != -1 %}
                                     <div class="col-lg-10 answer-option" style="padding-bottom: 10px;">
                                         <div class='checkbox'>
                                             <label for="opt{{ ch.id }}">
                                                 <input id="opt{{ ch.id }}"
+                                                       value="{{ ch.id }}"
                                                        name="{{ q.id }}"
                                                        type={% if q.number_of_answers > 1 %}'checkbox' {% else %}
                                                            'radio'{% endif %}/>
