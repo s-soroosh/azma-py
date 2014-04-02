@@ -59,6 +59,16 @@ class Question(models.Model):
     score = models.IntegerField(default=1)
     code = models.CharField(max_length=2000, null=True, blank=True)
     image = models.FileField(upload_to=update_image_name, null=True, blank=True)
+    #according to this doc : https://docs.djangoproject.com/en/1.7/ref/models/fields/
+    JAVA = "java"
+    JS = "javascript"
+    PHP = "PHP"
+    LANGUAGES = (
+        (JAVA, "Java"),
+        (JS, "Javascript"),
+        (PHP, "PHP")
+    )
+    code_type = models.CharField(max_length=15, choices=LANGUAGES, default=JAVA)
 
 
     def number_of_answers(self):
