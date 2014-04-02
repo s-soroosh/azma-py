@@ -4,7 +4,7 @@ $(window).load(function () {
         $item.hide();
         $item.after('<div class="radio-mine"><span class="radio-mine-inside glyphicon glyphicon-pushpin"></span></div>');
         $item.change(function () {
-            console.log(this);
+
             var rdo = $(this);
             var
                 rdo_name = rdo.attr('name'),
@@ -25,5 +25,6 @@ $(window).load(function () {
 
             });
         });
+
     });
 });
