@@ -42,7 +42,7 @@
         {% csrf_token %}
         <div class="row" style="float: left">
 
-            <div class="col-lg-9  table-bordered" style="padding-bottom: 20px;padding-top: 20px;float:left;">
+            <div class="col-md-10  table-bordered" style="padding-bottom: 20px;padding-top: 20px;float:left;">
                 {% for q in exam.question_set.all %}
                     <div class="well" style="margin-bottom: 25px;box-shadow:3px 3px #F3F3F3;">
                         <div class="row">
