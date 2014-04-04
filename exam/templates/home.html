@@ -4,7 +4,19 @@
 
 {% block css %}
     <link href="{% static "css/jquery.countdown.css" %}" rel="stylesheet">
+    <link href="{% static "css/onepage-scroll.css" %}" rel="stylesheet">
+
+
     <style>
+
+        section {
+            text-align: center;
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        /**/
+
         #Main_Carousel .item {
 
         }
@@ -76,7 +88,7 @@
 {% endblock %}
 {% block js %}
     <script type="text/javascript" src="{% static "js/jquery.plugin.js" %}"></script>
-
+    <script type="text/javascript" src="{% static "js/jquery.onepage-scroll.js" %}"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -91,154 +103,46 @@
 
             }, until: new Date(2014, 3, 7)});
 
-            $('.carousel').carousel({
-                interval: 6000
-            })
 
+            $(".main").onepage_scroll({
+                sectionContainer: "section",
+                easing: "ease",
+                animationTime: 1000,
+                pagination: true,
+                updateURL: false
+            });
 
         });
 
-    function DontMove(){
-           $('.carousel').carousel('pause');
-           $('#timer').countdown('toggle');
-    }
     </script>
 {% endblock %}
 
 
 {% block content %}
+    <div class="main">
+        <section>
+            <img class="img-thumbnail exam-img" src="http://placehold.it/500x400"
+                    {# src="{{ q.image.url }}" #}/>
 
-    <div class="container" style="padding-top: 50px;">
+        </section>
 
-        <div class="row">
-            {#            <div class="col-lg-1">#}
-            {#            </div>#}
-            <div class="col-lg-12">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    {#                    <ol class="carousel-indicators">#}
-                    {#                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
-                    {#                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
-                    {#                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
-                    {#                    </ol>#}
-                    <div id="Main_Carousel" class="carousel-inner">
-                        <div class="item active">
-                            <div id="heaven" class="item-top">
-                                <img src='{% static "image/Heaven.jpg" %}' alt="Heaven"/>
-                            </div>
-                            <div class="item-bottom">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                    </div>
-                                    <div class="col-md-10">
-                                        <h1>بهشت کجاست ؟</h1>
+        <section>
+            <img class="img-thumbnail exam-img" src="http://placehold.it/600x400"
+                    {# src="{{ q.image.url }}" #}/>
+        </section>
+        <section>
+            <img class="img-thumbnail exam-img" src="http://placehold.it/700x400"
+                    {# src="{{ q.image.url }}" #}/>
+        </section>
+        <section>
+            <img class="img-thumbnail exam-img" src="http://placehold.it/800x400"
+                    {# src="{{ q.image.url }}" #}/>
+        </section>
 
-                                        <p>
-                                            به نظرم بهشت جائیه که هیچ کارفرمایی از نبود نیروی متخصص در رنج نیست .
-                                            <br>
-                                            جائی که هیچ نیروی متخصصی وقت و مهارتش برای امور سطح پائین تر هدر نمیره .
 
-                                            <br>
-                                            و قطعا تا زمانی که متخصص مرتبط با امری وجود دارد نیروی نامجرب استخدام نمیشود
-                                            .
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item container">
-                            <div id="Professionals" class="item-top">
-                                <img src='{% static "image/professionals.jpg" %}' alt="Professionals"/>
-                            </div>
-                            <div class="item-bottom">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                    </div>
-                                    <div class="col-md-10">
-                                        <h1>
-                                            این حداقل حق شماست !
-                                        </h1>
-                                        یک تیم حرفه ای ، انتظارات به جا ، مهارت کافی...خواسته های زیادیست ؟
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item container">
-                            <div id="technologies" class=" item-top">
-                                <img src='{% static "image/Technologies.gif" %}' alt="Technologies"/>
-                            </div>
-                            <div class="item-bottom">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                    </div>
-                                    <div class="col-md-10">
-                                        <h1>
-                                            خشتِ اول گر نهد معمار کج ...!
-                                        </h1>
-
-                                        <p>
-                                            هنوز انتخاب نکردید ؟ قبل از برداشتن اولین قدم حرف های ما را هم گوش کنید<br>
-                                            حواستان باشد ، درست است که شروع کردن خیلی مهم است اما قبل از بالا رفتن از
-                                            نردبان
-                                            موفقیت <br>
-                                            مطمئن شوید نردبان را در جای درستی گذاشته اید .<br>
-                                        </p>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="item container">
-                            <div id="technologies" class=" item-top">
-                                <div id="timer" class="container form-group timer" style="display: none;"></div>
-                            </div>
-                            <div class="item-bottom">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                    </div>
-                                    <div class="col-md-10">
-                                        <h1>
-                                            همین الان شروع کن
-                                        </h1>
-
-                                        <p>
-                                            آزما وب از ۱۸ فروردین کار خود را آغاز خواهد کرد.
-                                            <br/>
-                                            ولی شما هم اکنون می توانید در آزما وب
-                                            <a href="{% url 'register' %}">ثبت نام</a>
-                                            کنید و با استقبال خود ما را مورد حمایت قرار دهید.
-
-                                        </p>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                <span style="font-size: 50pt;" class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                <span style="font-size: 50pt;" class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
-        {#            <div class="col-lg-1">#}
-        {#            </div>#}
     </div>
-    {#        <div class="row">#}
-    {#            <div class="col-lg-1">#}
-    {#            </div>#}
-    {#            <div class="col-md-10">#}
-    {#                <h1 class="center-block"></h1>#}
-    {#            </div>#}
-    {#            <div class="col-lg-1">#}
-    {#            </div>#}
-    {#        </div>#}
-    </div>
+
+
+
 
 {% endblock %}
