@@ -1,10 +1,34 @@
-{% extends 'base.html' %}
-{% block title %}آزما وب{% endblock %}
 {% load staticfiles %}
+{% load i18n %}
+{% load compress %}
+<html>
+<head>
 
-{% block css %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>
+        آزماوب
+    </title>
+
+
+    <link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
+
+    {% compress css %}
+        <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
+
+        <link href="{% static "bootstrap/css/bootstrap-theme.min.yeti.css" %}" rel="stylesheet">
+        <link href="{% static "bootstrap/css/bootstrap-rtl.css" %}" rel="stylesheet">
+
+        <link href="{% static "css/base.css" %}" rel="stylesheet">
+        <link href="{% static "font-farsi/fonts.css" %}" rel="stylesheet">
+
+
+    {% endcompress %}
     <link href="{% static "css/jquery.countdown.css" %}" rel="stylesheet">
-    <link href="{% static "css/onepage-scroll.css" %}" rel="stylesheet">
 
 
     <style>
@@ -76,73 +100,196 @@
 
         }
 
+        #one {
+            background-color: red;
+        }
+
+        #two {
+            background-color: green;
+        }
+
+        #three {
+            background-color: blue;
+        }
+
+        #four {
+            background-color: Yellow;
+        }
     </style>
-{% endblock %}
 
-{% block nocompress_css %}
-    <link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
-{% endblock %}
+    <link href="{% static "css/onepage-scroll.css" %}" rel="stylesheet">
+</head>
 
-{% block nocompress_js %}
-    <script type="text/javascript" src="{% static "js/jquery.countdown.js" %}"></script>
-{% endblock %}
-{% block js %}
-    <script type="text/javascript" src="{% static "js/jquery.plugin.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/jquery.onepage-scroll.js" %}"></script>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top center-block round" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+
+                    <a style="padding-top: 2px;" class="navbar-brand YekanFont" href="{% url 'exam:home' %}">
+                        <img src="{% static 'image/logo/logo.png' %}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="collapse navbar-collapse ">
+                    <ul class="nav navbar-nav YekanFont">
+                        <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>
+                        {% if categories %}
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                آزمونها
+                                <b class="caret">
+
+                                </b>
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                {% for category in categories %}
+                                    {#                                    <li class="nav-header"> {% trans category.local_name %}</li>#}
+                                    <li>
+                                        <a href="{% url 'exam:sub_categories' category.id %}">{% trans category.local_name %}</a>
+                                    </li>
+                                    {#                                    {% for e in category.exam_set.all %}#}
+                                    {#                                        <li><a href="{% url 'exam:intro' e.id %}">{% trans e.local_name %}</a></li>#}
+                                    {#                                    {% endfor %}#}
+                                    {#                                    <li class="divider"></li>#}
+                                {% endfor %}
+
+                            </ul>
+                        {% endif %}
+                        {% if not user.is_authenticated %}
+                            <li><a class="" href="{% url 'login' %}">ورود </a></li>
+                            <li><a class="" href="{% url 'register' %}">ثبت نام </a></li>
+                        {% endif %}
+                        <li><a class="" href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
+                        <li><a class="" href="{% url 'about' %}">درباره ما</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                {% if user.is_authenticated %}
+                    <ul class="nav navbar-nav navbar-left YekanFont">
+                        <li class="navbar-left">
+                            <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
+                            </a>
+                        </li>
+                    </ul>
+
+                {% endif %}
+
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<div class="main">
+    <section id="one">
+        <img class="img-thumbnail exam-img" src="http://placehold.it/500x400"
+                {# src="{{ q.image.url }}" #}/>
+
+    </section>
+
+    <section id="two">
+        <img class="img-thumbnail exam-img" src="http://placehold.it/600x400"
+                {# src="{{ q.image.url }}" #}/>
+    </section>
+    <section id="three">
+        <img class="img-thumbnail exam-img" src="http://placehold.it/700x400"
+                {# src="{{ q.image.url }}" #}/>
+    </section>
+    <section id="four">
+        <img class="img-thumbnail exam-img" src="http://placehold.it/800x400"
+                {# src="{{ q.image.url }}" #}/>
+    </section>
+
+
+</div>
+
+
+
+
+{% if debug == True %}
+    <script src="{% static 'js/jquery-1.11.0.js' %}"></script>
+
+{% else %}
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+{% endif %}
+<script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+{% compress js %}
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $.countdown.setDefaults({description: 'تا آغاز کار آزما وب'});
-            $('#timer').fadeIn('slow');
-            $('#timer').countdown({onTick: function (periods) {
-                var secs = $.countdown.periodsToSeconds(periods);
-                if (secs == 0)
-                    $('#timer').fadeOut('slow', function () {
-                        $('#enter').fadeIn('slow');
-                    });
+            {% if validation_error %}
+                $('.validation_error').fadeIn('slow');
+            {%  endif %}
+            {% if error_message %}
+                $('.error_message').fadeIn('slow');
+            {% endif %}
+            {% if message %}
+                $('.message').fadeIn('slow');
+                {% if redirect_url %}
+                    setTimeout(function () {
+                                window.location = '{{ redirect_url }}';
+                            }
+                            , 1500);
+                {% endif %}
+            {% endif %}
+        });
+    </script>
 
-            }, until: new Date(2014, 3, 7)});
+{% endcompress %}
 
 
-            $(".main").onepage_scroll({
-                sectionContainer: "section",
-                easing: "ease",
-                animationTime: 1000,
-                pagination: true,
-                updateURL: false
-            });
+<script type="text/javascript" src="{% static "js/jquery.plugin.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.countdown.js" %}"></script>
 
+
+<script type="text/javascript" src="{% static "js/jquery.onepage-scroll.js" %}"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.countdown.setDefaults({description: 'تا آغاز کار آزما وب'});
+        $('#timer').fadeIn('slow');
+        $('#timer').countdown({onTick: function (periods) {
+            var secs = $.countdown.periodsToSeconds(periods);
+            if (secs == 0)
+                $('#timer').fadeOut('slow', function () {
+                    $('#enter').fadeIn('slow');
+                });
+
+        }, until: new Date(2014, 3, 7)});
+
+
+        $(".main").onepage_scroll({
+            sectionContainer: "section",
+            easing: "ease",
+            animationTime: 1000,
+            pagination: true,
+            updateURL: false
         });
 
-    </script>
-{% endblock %}
 
+    });
 
-{% block content %}
-    <div class="main">
-        <section>
-            <img class="img-thumbnail exam-img" src="http://placehold.it/500x400"
-                    {# src="{{ q.image.url }}" #}/>
-
-        </section>
-
-        <section>
-            <img class="img-thumbnail exam-img" src="http://placehold.it/600x400"
-                    {# src="{{ q.image.url }}" #}/>
-        </section>
-        <section>
-            <img class="img-thumbnail exam-img" src="http://placehold.it/700x400"
-                    {# src="{{ q.image.url }}" #}/>
-        </section>
-        <section>
-            <img class="img-thumbnail exam-img" src="http://placehold.it/800x400"
-                    {# src="{{ q.image.url }}" #}/>
-        </section>
-
-
-    </div>
+</script>
+</body>
+</html>
 
 
 
 
-{% endblock %}
+
+
