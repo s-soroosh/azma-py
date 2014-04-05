@@ -9,18 +9,23 @@ from exam.models import Question, Exam, Choice
 class ExamAnswer(models.Model):
     user = models.ForeignKey(User)
     exam = models.ForeignKey(Exam)
+    score = models.IntegerField(default=0)
+
+
+class ExamAnswerHistory(models.Model):
+    user = models.ForeignKey(User)
+    exam = models.ForeignKey(Exam)
 
     def score(self):
         result = 0
         for answer in list(self.answers.all()):
             result += answer.catched_score()
-
         return result
 
 
 class Answer(models.Model):
     question = models.ForeignKey(Question)
-    exam_answer = models.ForeignKey(ExamAnswer, related_name='answers')
+    exam_answer = models.ForeignKey(ExamAnswerHistory, related_name='answers')
     selected_choices = models.ManyToManyField(Choice, related_name='cho+')
 
     def catched_score(self):

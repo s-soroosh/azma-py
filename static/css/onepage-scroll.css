@@ -50,6 +50,15 @@ body, .onepage-wrapper, html {
 
 }
 
+.onepage-pagination li a.active {
+    padding: 10px;
+    width: 4px;
+    padding-right: 15px;
+    height: 4px;
+    display: block;
+
+}
+
 .onepage-pagination li a:before {
     content: '';
     position: absolute;
@@ -64,6 +73,7 @@ body, .onepage-wrapper, html {
 .onepage-pagination li a.active:before {
     width: 10px;
     height: 10px;
+
     background: none;
     border: 1px solid black;
     margin-top: -4px;

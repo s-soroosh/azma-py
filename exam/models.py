@@ -25,6 +25,7 @@ class Exam(models.Model):
     description = models.CharField(max_length=2000)
     duration = models.IntegerField()
     category = models.ForeignKey(ExamCategory)
+    number_of_attempts = models.IntegerField(default=1)
 
 
     def score(self):
