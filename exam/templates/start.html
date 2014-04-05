@@ -5,12 +5,9 @@
     <link href="{% static "UI/checkbox/input.checkbox.css" %}" rel="stylesheet">
     <link href="{% static "UI/radiobutton/input.radiobutton.css" %}" rel="stylesheet">
     <link href="{% static "UI/img/img.css" %}" rel="stylesheet">
-    <style>
-
-    </style>
 {% endblock %}
 {% block content %}
-    <div class="well exam-panel">
+    <div class="well exam-panel hidden-sm hidden-xs hidden-md hidden-print">
         <div class="exam-panel-row">
             <span class="glyphicon glyphicon-time"></span>
 
@@ -40,9 +37,9 @@
     </div>
     <form method="post" action="{% url 'answer:analyze' exam.id %}">
         {% csrf_token %}
-        <div class="row" style="float: left">
+        <div class="row">
 
-            <div class="col-md-9  table-bordered" style="padding-bottom: 20px;padding-top: 20px;float:left;">
+            <div class="col-xs-12 col-md-12 col-lg-9  table-bordered" style="padding-bottom: 20px;padding-top: 20px;float:left;">
                 {% for q in exam.question_set.all %}
                     <div class="well" style="margin-bottom: 25px;box-shadow:3px 3px #F3F3F3;">
                         <div class="row">
