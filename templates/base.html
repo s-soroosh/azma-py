@@ -28,19 +28,20 @@
 <div class="navbar navbar-inverse navbar-fixed-top center-block round" role="navigation">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-xs-2">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
                             class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
 
-                    <a style="padding-top: 2px;" class="navbar-brand YekanFont" href="{% url 'exam:home' %}">
+                    <a style="padding-top: 2px;" class="hidden-sm hidden-xs navbar-brand YekanFont"
+                       href="{% url 'exam:home' %}">
                         <img src="{% static 'image/logo/logo.png' %}"/>
                     </a>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-xs-12 col-md-8">
                 <div class="collapse navbar-collapse ">
                     <ul class="nav navbar-nav YekanFont">
                         {% comment %}                {% if user.is_authenticated %}
@@ -81,10 +82,15 @@
                         {% endif %}
                         <li><a class="" href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
                         <li><a class="" href="{% url 'about' %}">درباره ما</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a class="hidden-lg hidden-md" href="{% url 'profile:show_profile' %}">پروفایل </a></li>
+                            <li><a class="hidden-lg hidden-md" href="{% url 'logout' %}">خروج</a></li>
+                        {% endif %}
+
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-xs-2 hidden-sm hidden-xs">
                 {% if user.is_authenticated %}
                     <ul class="nav navbar-nav navbar-left YekanFont">
                         <li class="navbar-left">
