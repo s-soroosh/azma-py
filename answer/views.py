@@ -12,6 +12,8 @@ from django.utils.translation import ugettext_lazy as _
 
 @transaction.atomic()
 def analyze_answer(request, exam_id):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect(reverse('exam:home'))
     template = loader.get_template('answer.html')
     if request.method == "GET":
         try:
