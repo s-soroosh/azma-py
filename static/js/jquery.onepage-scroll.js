@@ -82,7 +82,7 @@
             status = "off",
             topPos = 0,
             lastAnimation = 0,
-            quietPeriod = 500,
+            quietPeriod = 10,
             paginationList = "";
 
         $.fn.transformPage = function (settings, pos) {
@@ -155,7 +155,7 @@
             deltaOfInterest = delta;
             var timeNow = new Date().getTime();
             // Cancel scroll if currently animating or within quiet period
-            if (timeNow - lastAnimation < quietPeriod + settings.animationTime) {
+            if (timeNow - lastAnimation + 100 < quietPeriod + settings.animationTime) {
                 event.preventDefault();
                 return;
             }
@@ -185,8 +185,8 @@
         el.swipeEvents().bind("swipeDown",function () {
             el.moveUp();
         }).bind("swipeUp", function () {
-                el.moveDown();
-            });
+            el.moveDown();
+        });
 
         // Create Pagination and Display Them
         if (settings.pagination == true) {
