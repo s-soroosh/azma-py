@@ -4,6 +4,7 @@ from django.db.models import Count
 from django.db.models.aggregates import Avg
 from django.template import RequestContext, loader
 from django.http import HttpResponse, HttpResponseRedirect
+from answer.models import ExamAnswerHistory
 
 from exam.models import Exam, ExamCategory
 
@@ -37,9 +38,12 @@ def sub_categories(request, category_id):
 def start(request, exam_id):
     if request.method == "GET":
         exam = Exam.objects.get(id=exam_id)
+        user_answers_count = \
+        ExamAnswerHistory.objects.filter(exam_id=exam_id, user_id=request.user.id).aggregate(Count('id'))['id__count']
         template = loader.get_template('start.html')
         participates_count = exam.examanswer_set.aggregate(Count('id'))['id__count']
-        context = RequestContext(request, {'exam': exam, 'participates_count': participates_count})
+        context = RequestContext(request, {'user_answers_count': user_answers_count, 'exam': exam,
+                                           'participates_count': participates_count})
         return HttpResponse(template.render(context))
     else:
         return HttpResponse('% method is not permitted', request.method)
