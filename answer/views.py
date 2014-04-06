@@ -5,6 +5,7 @@ from django.http.response import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.template.context import RequestContext
 from answer.models import ExamAnswerHistory, Answer, ExamAnswer
+from answer.validator import validate_number_of_attempts
 from exam.models import Exam
 from django.db import transaction
 from django.utils.translation import ugettext_lazy as _
@@ -17,11 +18,7 @@ def analyze_answer(request, exam_id):
     template = loader.get_template('answer.html')
     if request.method == "GET":
         try:
-            attempts = \
-                ExamAnswerHistory.objects.filter(user_id=request.user.id, exam_id=exam_id).aggregate(Count('id'))[
-                    'id__count']
-            exam = Exam.objects.get(id=exam_id)
-            if attempts == exam.number_of_attempts:
+            if not validate_number_of_attempts(request.user.id, exam_id):
                 return HttpResponse("Noch Noch")
 
             exam_answer = ExamAnswer.objects.get(user_id=request.user.id, exam_id=exam_id)
@@ -32,19 +29,9 @@ def analyze_answer(request, exam_id):
             return HttpResponseRedirect(reverse('exam:home'))
     if request.method == "POST":
         exam = Exam.objects.get(id=exam_id)
-        exam_answer = ExamAnswer.objects.get_or_create(user_id=request.user.id, exam_id=exam_id)[0]
-        if ExamAnswerHistory.objects.filter(user_id=request.user.id, exam_id=exam_id).exists():
-            attempts = \
-                ExamAnswerHistory.objects.filter(user_id=request.user.id, exam_id=exam_id).aggregate(Count('id'))[
-                    'id__count']
-
-            if attempts == exam.number_of_attempts:
-                return HttpResponse("Noch Noch")
-
-                # exam_answer = ExamAnswerHistory.objects.filter(user_id=request.user.id, exam_id=exam_id).aggregate(Count('id'))['id__count']
-                # return HttpResponse(
-                #     template.render(
-                #         RequestContext(request, {'answer': exam_answer, 'error_message': _('You have done this exam')})))
+        exam_answer, is_new = ExamAnswer.objects.get_or_create(user_id=request.user.id, exam_id=exam_id)
+        if not validate_number_of_attempts(request.user.id, exam_id):
+            return HttpResponse("Noch Noch")
 
         exam_answer_history = ExamAnswerHistory()
         exam_answer_history.user_id = request.user.id
