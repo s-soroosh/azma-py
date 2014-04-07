@@ -1,6 +1,7 @@
 $(window).load(function () {
     window.image_preview = false;
-    $(".exam-img").click(function () {
+    var $images = $(".exam-img");
+    $images.click(function () {
         if (!window.image_preview) {
             window.image_preview = true;
             $("body").append("<div id='preview_sheet'></div>");
@@ -15,4 +16,8 @@ $(window).load(function () {
 
         }
     });
+    $images.each(function (index, item) {
+        console.log($(item).css('width'));
+    })
+
 });
