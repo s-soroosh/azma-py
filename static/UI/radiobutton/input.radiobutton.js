@@ -1,7 +1,7 @@
 $(window).load(function () {
     $('input[type="radio"]').each(function (index, item) {
         var $item = $(item);
-        //$item.hide();
+        $item.hide();
         $item.after('<div class="radio-mine"><span class="radio-mine-inside glyphicon glyphicon-pushpin"></span></div>');
         $item.change(function () {
 

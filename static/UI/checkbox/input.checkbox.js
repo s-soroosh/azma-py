@@ -1,7 +1,7 @@
         $(window).load(function () {
             $('input[type="checkbox"]').each(function (index, item) {
                 var $item = $(item);
-                //$item.hide();
+                $item.hide();
                 $item.after('<div class="checkbox-mine"><span class="checkbox-mine-inside glyphicon glyphicon-ok"></span></div>');
 
                 $item.change(function () {
