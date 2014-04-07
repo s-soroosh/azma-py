@@ -1,5 +1,6 @@
 $(window).load(function () {
     window.image_preview = false;
+    var image_width = 200, image_height = 200;//images will be showed with this size
     var $images = $(".exam-img");
     $images.click(function () {
         if (!window.image_preview) {
@@ -17,7 +18,22 @@ $(window).load(function () {
         }
     });
     $images.each(function (index, item) {
-        console.log($(item).css('width'));
+        item = $(item);
+        var w = parseFloat(item.css('width'));
+        var h = parseFloat(item.css('height'));
+
+
+        if (w > image_width || h > image_height)
+            item.css('width', image_width).css('height', image_height);
+        else {
+            var diff_width = image_width - w, diff_height = image_height - h;
+
+            item.css("padding-left", diff_width / 2)
+                .css("padding-right", diff_width / 2)
+                .css("padding-top", diff_height / 2)
+                .css("padding-bottom", diff_height / 2);
+
+        }
     })
 
 });
