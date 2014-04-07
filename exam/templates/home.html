@@ -124,7 +124,7 @@
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-3">
-                <img class="exam-img" src="{% static 'image/home/on the wall0.png' %}"/>
+                <img id="wall" style="display: none;" class="exam-img" src="{% static 'image/home/on the wall0.png' %}"/>
             </div>
             <div class="col-xs-1"></div>
             <div class="col-xs-4" style="padding-top:5%; text-align: right; color:white;">
@@ -201,9 +201,18 @@
             easing: "ease",
             animationTime: 1000,
             pagination: true,
-            updateURL: false
+            updateURL: false,
+            onMovement: function(pos){
+                if(pos == -100){
+                    $('#wall').fadeIn();
+                }
+                else{
+                    $('#wall').hide();
+                }
+            }
         });
     });
+
 </script>
 </body>
 </html>
