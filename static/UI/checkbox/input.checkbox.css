@@ -1,14 +1,10 @@
 
 .checkbox-mine {
-
     font-size: 15pt;
-
     padding-left: 3px;
     padding-right: 3px;
-
     margin-left: 20px;
     border-radius: 5px 5px;
-
     background-color: #00aed9;
     border-color: #004b63;
     border-width: 2px;
@@ -33,5 +29,4 @@
 
 .checkbox label {
     display: block;
-
 }
