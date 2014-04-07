@@ -96,6 +96,13 @@
                 "transform": "translate3d(0, " + pos + "%, 0)",
                 "transition": "all " + settings.animationTime + "ms " + settings.easing
             });
+            // onMovement event added (we need this extension point
+            if (settings.onMovement) {
+                setTimeout(function () {
+                    settings.onMovement(pos);
+                }, settings.animationTime);
+            }
+
         }
 
         $.fn.moveDown = function () {
@@ -121,6 +128,8 @@
                 }
                 pos = (index * 100) * -1;
                 el.transformPage(settings, pos);
+
+
             }
         }
 
