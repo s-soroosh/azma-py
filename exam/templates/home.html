@@ -102,7 +102,7 @@
     </div>
 </div>
 <div class="main">
-    <section id="one">
+    <section id="one" style="padding-top:40px;">
         <div class="row">
             <div class="col-xs-2"></div>
             <div class="col-xs-4" style="padding-top:5%; text-align: right; color:white;">
@@ -114,17 +114,20 @@
                     ا رعهقا عهرا عارعهق ارعها عهرا
                 </p>
             </div>
-            <div class="col-md-3">
-                <img class="img-thumbnail exam-img" src="http://placehold.it/500x400"/>
-            </div>
         </div>
+
+        <div style="position: fixed;bottom: 0px;">
+            <img class="exam-img" src="{% static 'image/home/pensive1.png' %}"/>
+        </div>
+
 
     </section>
     <section id="two">
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-3">
-                <img id="wall" style="display: none;" class="exam-img" src="{% static 'image/home/on the wall0.png' %}"/>
+                <img id="wall" style="display: none;" class="exam-img"
+                     src="{% static 'image/home/on the wall0.png' %}"/>
             </div>
             <div class="col-xs-1"></div>
             <div class="col-xs-4" style="padding-top:5%; text-align: right; color:white;">
@@ -202,11 +205,11 @@
             animationTime: 1000,
             pagination: true,
             updateURL: false,
-            onMovement: function(pos){
-                if(pos == -100){
+            onMovement: function (pos) {
+                if (pos == -100) {
                     $('#wall').fadeIn();
                 }
-                else{
+                else {
                     $('#wall').hide();
                 }
             }
