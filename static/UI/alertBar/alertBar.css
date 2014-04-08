@@ -1,0 +1,13 @@
+.alertBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 90990;
+    min-height: 6%;
+    background-color: #91ee71;
+    padding: 4px;
+    text-align: right;
+    direction: rtl;
+    display: none;
+    opacity: 0.0;
+}
