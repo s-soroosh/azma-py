@@ -4,6 +4,8 @@
     <link href="{% static "UI/checkbox/input.checkbox.css" %}" rel="stylesheet">
     <link href="{% static "UI/radiobutton/input.radiobutton.css" %}" rel="stylesheet">
     <link href="{% static "UI/img/img.css" %}" rel="stylesheet">
+    <link href="{% static 'UI/alertBar/alertBar.css' %}" rel="stylesheet">
+
     <style>
         input {
             visibility: hidden;
@@ -168,11 +170,18 @@
 {% block js %}
     <script src="{% static 'UI/checkbox/input.checkbox.js' %}" type="text/javascript"></script>
     <script src="{% static 'UI/radiobutton/input.radiobutton.js' %}" type="text/javascript"></script>
+    <script src="{% static 'UI/alertBar/alertBar.js' %}" type="text/javascript"></script>
     <script src="{% static 'UI/img/img.js' %}" type="text/javascript"></script>
+
+
+
     <script type="text/javascript">
+
         $(window).ready(function () {
-            $('.modal').modal();
+            alertBar("دوستان عزیز ...سلام خوش آمدید")
         });
+
+
     </script>
 
 {% endblock %}
