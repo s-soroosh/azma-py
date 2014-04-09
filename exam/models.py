@@ -58,7 +58,7 @@ class Question(models.Model):
     text = models.CharField(max_length=500)
     exam = models.ForeignKey(Exam)
     score = models.IntegerField(default=1)
-    code = models.CharField(max_length=2000, null=True, blank=True)
+    code = models.TextField(null=True, blank=True)
     image = models.FileField(upload_to=update_image_name, null=True, blank=True)
     #according to this doc : https://docs.djangoproject.com/en/1.7/ref/models/fields/
     JAVA = "java"
