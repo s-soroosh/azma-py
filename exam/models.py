@@ -30,7 +30,7 @@ class Exam(models.Model):
 
     def score(self):
         score = self.question_set.aggregate(Sum('score'))['score__sum']
-        if score == None:
+        if score is None:
             return 0
         else:
             return score

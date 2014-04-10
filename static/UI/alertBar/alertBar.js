@@ -32,7 +32,7 @@ var alertBar = function (text) {
         {
             "opacity": "1.0"
         }
-        , 2000, function () {
+        , 1000, function () {
             setTimeout(function () {
                 alertbarBox.animate(
                     {
@@ -42,7 +42,7 @@ var alertBar = function (text) {
                         alertbarBox.hide()
                     }
                 )
-            }, 2000)
+            }, 1000)
         })
 }
 

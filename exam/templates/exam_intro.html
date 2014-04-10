@@ -7,7 +7,10 @@
     <script type="text/javascript" src="{% static "js/jquery.countdown.js" %}"></script>
     <script type="text/javascript" src="{% static "js/jquery.countdown-fa.js" %}"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
+            {% if exam.number_of_attempts <= attempts %}
+                alertBar('متاسفانه شما دیگر قادر به شرکت در این آزمون نیستید');
+            {% endif %}
             {%  if exam.start_date > current_date %}
                 $.countdown.setDefaults({description: 'تا شروع آزمون'});
                 $('#timer').fadeIn('slow');
@@ -37,6 +40,8 @@
 
     <h1>آزمون {{ exam.local_name }} </h1>
 
+    <div class="alertbar">
+    </div>
     <div class="container">
         <p>
             {{ exam.description | safe }}
@@ -46,6 +51,12 @@
     <div class="container duration">مدت زمان آزمون:
         {{ exam.duration }}
         دقیقه
+    </div>
+    <div class="container">
+        تعداد دفعات شرکت شما در این آزمون:
+        {{ attempts }}
+        از
+        {{ exam.number_of_attempts }}
     </div>
     <br/>
 
@@ -66,8 +77,11 @@
 
     <div id="timer" class="container form-group timer" style="display: none;"></div>
     <div id="enter" class="container enter" style="display: none;">
-        <a class="btn btn-success " href="{% url 'exam:start' exam.id %}">
-            ورود به آزمون
-        </a>
+        {% if exam.number_of_attempts > attempts %}
+            <a class="btn btn-success " href="{% url 'exam:start' exam.id %}">
+                ورود به آزمون
+            </a>
+        {% endif %}
+
     </div>
 {% endblock %}
