@@ -252,6 +252,8 @@
         "pk": "1",
         "fields": {
             "text": "کدام یک از گزینه ها کلمه کلیدی در جاوا نیست؟‎‎",
+            "code_type":"java",
+            "code":"public static void main(String... args){\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nfor(int i=0;i<=1000;i++){\r\ni++;\r\n}\r\n\r\n}",
             "exam": 1
         }
     },
