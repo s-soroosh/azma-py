@@ -54,7 +54,7 @@
                 <div class="col-xs-12 col-md-8">
                     <div class="collapse navbar-collapse ">
                         <ul class="nav navbar-nav YekanFont">
-{#                            <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>#}
+                            {#                            <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>#}
                             {% if categories %}
                                 <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -106,22 +106,69 @@
     </div>
     <div class="main">
         <section id="one" style="padding-top:40px;">
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-4" style="padding-top:5%; text-align: right; color:white;">
-                    <p>ست زتیقث بترقخهربت رهخ تخبهرت رخهرت خهرت </p>
+            <div class="row" style="padding-bottom: 2%;">
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-8" style="font-family:  padding-top:1%; text-align: right; color:white;">
+                        <h2 class="YekanFont" style="text-decoration: none; font-weight: bold;">
+                            در آزما وب خواهید دید که شما کجایید
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
 
-                    <p>طزاعثهص اربقعه اقثرا عهقرلا قرق عهرارق عهرلاقثعه رعها رعهاقث عهارقثعهرا عهراق رعهقا عراقعه اقعهرا
-                        عهراعه اعهرا عهراعه قاعقهرا
-                        راعقهرا عهراعه ارعه قثاعهرا
-                        ا رعهقا عهرا عارعهق ارعها عهرا
-                    </p>
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-4" style="padding-top:1%; text-align: right; color:white;">
+
+                        <p>
+                            آزما وب یک پروژه جدید است که به شما کمک می کند تا دانش و توانایی های خود را مورد سنجش قرار
+                            دهید.
+                        </p>
+
+                        <p>
+                            آزما وب مجموعه ای از آزمونها در گروه های مختلف است که با شرکت در آنها می توانید توانایی های
+                            خود را با دیگران مقایسه کنید.
+                        </p>
+
+                        <p>
+                            <a class="btn btn-lg btn-success" href="{% url 'exam:what' %}"
+                               style="font-size: 22px; border:solid 1px #449955; border-radius: 6px; color: #f5e79e;">اطلاعات
+                                بیشتر</a>
+                        </p>
+                    </div>
                 </div>
             </div>
-
-            <div style="position: fixed;bottom: 0px;">
-                <img class="exam-img" src="{% static 'image/home/pensive1.png' %}"/>
+            <div class="row">
+                <div class="col-lg-1" style="height: 200px;"></div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-2">
+                    <img class="img-responsive exam-img" src="{% static 'image/techs/python.png' %}"/>
+                </div>
+                <div class="col-xs-2">
+                    <img class="img-responsive exam-img" src="{% static 'image/techs/java.png' %}"/>
+                </div>
+                <div class="col-xs-2">
+                    <img class="img-responsive exam-img" src="{% static 'image/techs/php.png' %}"/>
+                </div>
+                <div class="col-xs-2">
+                    <img class="img-responsive exam-img" src="{% static 'image/techs/linux.png' %}"/>
+                </div>
+
+                <div class="col-xs-2" style="padding-top: 2%;">
+                    <img class="img-responsive exam-img" src="{% static 'image/techs/spring.png' %}"/>
+                </div>
+            </div>
+            {#            <div class="row">#}
+            {#                <div class="col-xs-3">#}
+            {#                    <img class="img-responsive exam-img" src="{% static 'image/techs/mysql.png' %}"/>#}
+            {#                </div>#}
+            {#                <div class="col-xs-3">#}
+            {#                    <img class="img-responsive exam-img" src="{% static 'image/techs/spring.png' %}"/>#}
+            {#                </div>#}
+            {#            </div>#}
 
 
         </section>
@@ -134,12 +181,23 @@
                 </div>
                 <div class="col-xs-1"></div>
                 <div class="col-xs-4" style="padding-top:5%; text-align: right; color:white;">
-                    <p>ست زتیقث بترقخهربت رهخ تخبهرت رخهرت خهرت </p>
+                    <div class="row">
+                        <div class="col-xs-1"></div>
+                        <div class="col-xs-8" style="font-family:  padding-top:1%; text-align: right; color:white;">
+                            <h2 class="YekanFont" style="text-decoration: none; font-weight: bold;">
+                                یک حرکت رو به جلو
+                            </h2>
+                        </div>
+                    </div>
 
-                    <p>طزاعثهص اربقعه اقثرا عهقرلا قرق عهرارق عهرلاقثعه رعها رعهاقث عهارقثعهرا عهراق رعهقا عراقعه اقعهرا
-                        عهراعه اعهرا عهراعه قاعقهرا
-                        راعقهرا عهراعه ارعه قثاعهرا
-                        ا رعهقا عهرا عارعهق ارعها عهرا
+                    <p>
+
+                        آزما وب به گونه ای طراحی شده که مناسب برای طیف وسیعی از مهندسین باشد.
+                        پس مهم نیست شما یک دانشجو هستید و یا یک خبره - آزما وب سعی می کند به پیشرفت شما کمک کند.
+                    </p>
+
+                    <p>
+                        نتایج آزمونها و نحوه عملکرد شما باعث خواهد شد که بتوانید پروفایل آزما وب خود را به عنوان بخشی از رزومه به کارفرمایان معرفی کنید.
                     </p>
                 </div>
                 <div class="col-xs-2"></div>
@@ -162,9 +220,9 @@
 
             </div>
         </section>
-        <section id="four">
-            <img class="img-thumbnail exam-img" src="http://placehold.it/800x400"/>
-        </section>
+{#        <section id="four">#}
+{#            <img class="img-thumbnail exam-img" src="http://placehold.it/800x400"/>#}
+{#        </section>#}
     </div>
 </div>
 
