@@ -1,0 +1,14 @@
+[{"pk": 1, "model": "auth.user", "fields": {
+    "username": "soroosh",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_superuser": true,
+    "is_staff": true,
+    "last_login": "2014-05-31T06:48:05",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$12000$73GPv2YkvPFa$Js8Ts6+5BQxam5UzBIsgfP6lQ7d5a1pa/pP9Ow1K78M=",
+    "email": "admin@yahoo.com",
+    "date_joined": "2014-05-31T06:48:05"
+}}]
