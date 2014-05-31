@@ -65,14 +65,9 @@
                             <ul class="dropdown-menu">
 
                                 {% for category in categories %}
-                                    {#                                    <li class="nav-header"> {% trans category.local_name %}</li>#}
                                     <li>
                                         <a href="{% url 'exam:sub_categories' category.id %}">{% trans category.local_name %}</a>
                                     </li>
-                                    {#                                    {% for e in category.exam_set.all %}#}
-                                    {#                                        <li><a href="{% url 'exam:intro' e.id %}">{% trans e.local_name %}</a></li>#}
-                                    {#                                    {% endfor %}#}
-                                    {#                                    <li class="divider"></li>#}
                                 {% endfor %}
 
                             </ul>
