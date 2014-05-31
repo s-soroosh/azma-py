@@ -120,7 +120,8 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME', 'AZMA'),
         'USER': os.environ.get('MYSQL_USER', 'root'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'root'),
-        'HOST': '127.0.0.1'
+        'HOST': '127.0.0.1',
+        'ATOMIC_REQUESTS': True
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
