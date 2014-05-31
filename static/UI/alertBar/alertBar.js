@@ -44,5 +44,5 @@ var alertBar = function (text) {
                 )
             }, 1000)
         })
-}
+};
 
