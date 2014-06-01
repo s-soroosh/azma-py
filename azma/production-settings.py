@@ -35,7 +35,7 @@ INTERNAL_IPS = ['localhost', '127.0.0.1']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 
 ALLOWED_HOSTS = ['*']
 
