@@ -34,196 +34,219 @@
 <body>
 
 <div id="main_content" class="collapse">
-    <div class="navbar navbar-inverse navbar-fixed-top center-block round" role="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-2">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
-                                class="icon-bar"></span><span class="icon-bar"></span>
-                        </button>
+<div class="navbar navbar-inverse navbar-fixed-top center-block round" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
 
-                        <a style="padding-top: 2px;" class="hidden-sm hidden-xs navbar-brand YekanFont"
-                           href="{% url 'exam:home' %}">
-                            <img src="{% static 'image/logo/logo.png' %}"/>
-                        </a>
-                    </div>
+                    <a style="padding-top: 2px;" class="hidden-sm hidden-xs navbar-brand YekanFont"
+                       href="{% url 'exam:home' %}">
+                        <img src="{% static 'image/logo/logo.png' %}"/>
+                    </a>
                 </div>
-                <div class="col-xs-12 col-md-8">
-                    <div class="collapse navbar-collapse ">
-                        <ul class="nav navbar-nav YekanFont">
-                            {#                            <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>#}
-                            {% if categories %}
-                                <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    آزمونها
-                                    <b class="caret">
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="collapse navbar-collapse ">
+                    <ul class="nav navbar-nav YekanFont">
+                        {#                            <li><a class="active" href="{% url 'exam:home' %}">پیشخوان </a></li>#}
+                        {% if categories %}
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                آزمونها
+                                <b class="caret">
 
-                                    </b>
-                                </a>
-                                <ul class="dropdown-menu">
+                                </b>
+                            </a>
+                            <ul class="dropdown-menu">
 
-                                    {% for category in categories %}
-                                        <li>
-                                            <a href="{% url 'exam:sub_categories' category.id %}">{% trans category.local_name %}</a>
-                                        </li>
-                                    {% endfor %}
+                                {% for category in categories %}
+                                    <li>
+                                        <a href="{% url 'exam:sub_categories' category.id %}">{% trans category.local_name %}</a>
+                                    </li>
+                                {% endfor %}
 
-                                </ul>
-                            {% endif %}
-                            {% if not user.is_authenticated %}
-                                <li><a href="{% url 'login' %}">ورود </a></li>
-                                <li><a href="{% url 'register' %}">ثبت نام </a></li>
-                            {% endif %}
-                            <li><a href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
-                            <li><a href="{% url 'about' %}">درباره ما</a></li>
-                            {% if user.is_authenticated %}
-                                <li><a class="hidden-lg hidden-md" href="{% url 'profile:show_profile' %}">پروفایل </a>
-                                </li>
-                                <li><a class="hidden-lg hidden-md" href="{% url 'logout' %}">خروج</a></li>
-                            {% endif %}
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-2 hidden-sm hidden-xs">
-                    {% if user.is_authenticated %}
-                        <ul class="nav navbar-nav navbar-left YekanFont">
-                            <li class="navbar-left">
-                                <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
-                                </a>
+                            </ul>
+                        {% endif %}
+                        {% if not user.is_authenticated %}
+                            <li><a href="{% url 'login' %}">ورود </a></li>
+                            <li><a href="{% url 'register' %}">ثبت نام </a></li>
+                        {% endif %}
+                        <li><a href="{% url 'exam:what' %}">بیشتر بدانید</a></li>
+                        <li><a href="{% url 'about' %}">درباره ما</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a class="hidden-lg hidden-md" href="{% url 'profile:show_profile' %}">پروفایل </a>
                             </li>
-                            <li>
-                                <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
-                                </a>
-                            </li>
-                        </ul>
-                    {% endif %}
+                            <li><a class="hidden-lg hidden-md" href="{% url 'logout' %}">خروج</a></li>
+                        {% endif %}
+                    </ul>
                 </div>
+            </div>
+            <div class="col-xs-2 hidden-sm hidden-xs">
+                {% if user.is_authenticated %}
+                    <ul class="nav navbar-nav navbar-left YekanFont">
+                        <li class="navbar-left">
+                            <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
+                            </a>
+                        </li>
+                    </ul>
+                {% endif %}
             </div>
         </div>
     </div>
-    <div class="main">
-        <section id="one" style="padding-top:40px;">
-            <div class="row" style="padding-bottom: 2%;">
-                <div class="row">
-                    <div class="col-xs-1"></div>
-                    <div class="col-xs-8" style="font-family:  padding-top:1%; text-align: right; color:white;">
-                        <h2 class="YekanFont" style="text-decoration: none; font-weight: bold;">
-                            در آزما وب خواهید دید که شما کجایید
-                        </h2>
-                    </div>
-                </div>
-                <div class="row">
+</div>
+<div class="main">
 
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-4" style="padding-top:1%; text-align: right; color:white;">
-
-                        <p>
-                            آزما وب یک پروژه جدید است که به شما کمک می کند تا دانش و توانایی های خود را مورد سنجش قرار
-                            دهید.
-                        </p>
-
-                        <p>
-                            آزما وب مجموعه ای از آزمونها در گروه های مختلف است که با شرکت در آنها می توانید توانایی های
-                            خود را با دیگران مقایسه کنید.
-                        </p>
-
-                        <p>
-                            <a class="btn btn-lg btn-success" href="{% url 'exam:what' %}"
-                               style="font-size: 22px; border:solid 1px #449955; border-radius: 6px; color: #f5e79e;">اطلاعات
-                                بیشتر</a>
-                        </p>
-                    </div>
+    <section id="one" style="padding-top:40px;">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-10" style="font-family:  padding-top:1%; text-align: right; ">
+                    <h2 class="YekanFont" style="text-decoration: none; font-weight: bold;">
+                        در آزما وب خواهید دید که شما کجایید
+                    </h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-1" style="height: 200px;"></div>
-            </div>
 
-            <div class="row">
-                <div class="col-xs-1"></div>
-                <div class="col-xs-2">
-                    <img class="img-responsive exam-img" src="{% static 'image/techs/python.png' %}"/>
-                </div>
-                <div class="col-xs-2">
-                    <img class="img-responsive exam-img" src="{% static 'image/techs/java.png' %}"/>
-                </div>
-                <div class="col-xs-2">
-                    <img class="img-responsive exam-img" src="{% static 'image/techs/php.png' %}"/>
-                </div>
-                <div class="col-xs-2">
-                    <img class="img-responsive exam-img" src="{% static 'image/techs/linux.png' %}"/>
-                </div>
-
-                <div class="col-xs-2" style="padding-top: 2%;">
-                    <img class="img-responsive exam-img" src="{% static 'image/techs/spring.png' %}"/>
-                </div>
-            </div>
-            {#            <div class="row">#}
-            {#                <div class="col-xs-3">#}
-            {#                    <img class="img-responsive exam-img" src="{% static 'image/techs/mysql.png' %}"/>#}
-            {#                </div>#}
-            {#                <div class="col-xs-3">#}
-            {#                    <img class="img-responsive exam-img" src="{% static 'image/techs/spring.png' %}"/>#}
-            {#                </div>#}
-            {#            </div>#}
-
-
-        </section>
-        <section id="two">
-            <div class="row">
-                <div class="col-xs-1"></div>
-                <div class="col-xs-3">
-                    <img id="wall" style="display: none;" class="exam-img"
-                         src="{% static 'image/home/on the wall0.png' %}"/>
-                </div>
-                <div class="col-xs-1"></div>
-                <div class="col-xs-4" style="padding-top:5%; text-align: right; color:white;">
-                    <div class="row">
-                        <div class="col-xs-1"></div>
-                        <div class="col-xs-8" style="font-family:  padding-top:1%; text-align: right; color:white;">
-                            <h2 class="YekanFont" style="text-decoration: none; font-weight: bold;">
-                                یک حرکت رو به جلو
-                            </h2>
-                        </div>
-                    </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8" style="padding-right: 25px; padding-top:1%; text-align: right; ">
 
                     <p>
+                        آزما وب یک پروژه جدید است که به شما کمک می کند تا دانش و توانایی های خود را مورد سنجش قرار
+                        دهید.
+                    </p>
 
+                    <p>
+                        آزما وب مجموعه ای از آزمونها در گروه های مختلف است که با شرکت در آنها می توانید توانایی های
+                        خود را با دیگران مقایسه کنید.
+                    </p>
+
+                    <p>
+                        <a class="btn btn-lg btn-success" href="{% url 'exam:what' %}"
+                                >اطلاعات
+                            بیشتر</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1" style="height: 20px;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2">
+                <img class="img-responsive exam-img" src="{% static 'image/techs/python.png' %}"/>
+            </div>
+            <div class="col-xs-2">
+                <img class="img-responsive exam-img" src="{% static 'image/techs/java.png' %}"/>
+            </div>
+            <div class="col-xs-2">
+                <img class="img-responsive exam-img" src="{% static 'image/techs/php.png' %}"/>
+            </div>
+            <div class="col-xs-2">
+                <img class="img-responsive exam-img" src="{% static 'image/techs/linux.png' %}"/>
+            </div>
+
+            <div class="col-xs-2" style="padding-top: 2%;">
+                <img class="img-responsive exam-img" src="{% static 'image/techs/spring.png' %}"/>
+            </div>
+        </div>
+        {#            <div class="row">#}
+        {#                <div class="col-xs-3">#}
+        {#                    <img class="img-responsive exam-img" src="{% static 'image/techs/mysql.png' %}"/>#}
+        {#                </div>#}
+        {#                <div class="col-xs-3">#}
+        {#                    <img class="img-responsive exam-img" src="{% static 'image/techs/spring.png' %}"/>#}
+        {#                </div>#}
+        {#            </div>#}
+
+
+    </section>
+    <section id="two">
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-3">
+                <img id="wall" style="visibility:hidden;" class="exam-img"
+                     src="{% static 'image/home/on the wall0.png' %}"/>
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2"></div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-10" style="height: 100px;">
+
+            </div>
+        </div>
+        <div class="jumbotron" style="height: 100%;">
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6">
+                    <h2 class="YekanFont" style="text-decoration: none; font-weight: bold;">
+                        یک حرکت رو به جلو
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <p>
                         آزما وب به گونه ای طراحی شده که مناسب برای طیف وسیعی از مهندسین باشد.
                         پس مهم نیست شما یک دانشجو هستید و یا یک خبره - آزما وب سعی می کند به پیشرفت شما کمک کند.
                     </p>
 
                     <p>
-                        نتایج آزمونها و نحوه عملکرد شما باعث خواهد شد که بتوانید پروفایل آزما وب خود را به عنوان بخشی از رزومه به کارفرمایان معرفی کنید.
+                        نتایج آزمونها و نحوه عملکرد شما باعث خواهد شد که بتوانید پروفایل آزما وب خود را به عنوان
+                        بخشی از
+                        رزومه به کارفرمایان معرفی کنید.
                     </p>
                 </div>
-                <div class="col-xs-2"></div>
-
             </div>
-        </section>
-        <section id="three">
-            <img class="exam-img" src="{% static 'image/home/live-happy.png' %}"/>
+        </div>
 
-            <div class="row" style="padding-top: 30px;">
+    </section>
+    <section id="three">
+        <img class="img-responsive exam-img" src="{% static 'image/home/live-happy.png' %}" style="padding-bottom: 0px;"/>
+
+        <div class="jumbotron" style="padding-top: 0px; height: 100%;">
+            <div class="row">
                 <div class="col-xs-2"></div>
                 <div class="col-xs-8">
-                    آزما وب آزما وب آزما وب آزما وبآزما وب آزما وبآزما وب آزما وبآزما وب آزما وبآزما وب آزما وبآزما وب
-                    آزما
-                    وبآزما وب آزما وبآزما وب آزما وب
-                    آزما وب آزما وبآزما وب آزما وبآزما وب آزما وبآزما وب آزما وبآزما وب آزما وبآزما وب آزما وب
-                    آزما وب آزما وبآزما وب آزما وبآزما وب آزما وبآزما وب آزما وب
-                    آزما وب آزما وبآزما وب آزما وبآزما وب آزما وبآزما وب آزما وب
-                </div>
+                    <h2 style="margin-top: 10px; padding-bottom: 0px;">
+                        لذت از کار
+                    </h2>
 
+                    <p>
+                        آزما وب سعی میکنه کاری کنه که شما بیشتر از کارتون لذت ببرید - یادگیری با آزما وب یک تجربه جدیده
+
+                    </p>
+
+                    <p>
+                        <a href="{% url 'register' %}" class="btn btn-lg btn-success">
+                            ثبت نام
+                        </a>
+                    </p>
+
+                </div>
             </div>
-        </section>
-{#        <section id="four">#}
-{#            <img class="img-thumbnail exam-img" src="http://placehold.it/800x400"/>#}
-{#        </section>#}
-    </div>
+
+        </div>
+    </section>
+    {#        <section id="four">#}
+    {#            <img class="img-thumbnail exam-img" src="http://placehold.it/800x400"/>#}
+    {#        </section>#}
+</div>
 </div>
 
 {% if debug == True %}
@@ -271,10 +294,10 @@
             updateURL: false,
             onMovement: function (pos) {
                 if (pos == -100) {
-                    $('#wall').fadeIn();
+                    $('#wall').css('visibility', 'visible').hide().fadeIn("slow");
                 }
                 else {
-                    $('#wall').hide();
+                    $('#wall').css('visibility', 'hidden');
                 }
             }
         });
