@@ -1,5 +1,27 @@
+.rgba-primary-0 {
+    color: rgba(101, 133, 201, 1)
+}
+
+/* Main Primary color */
+.rgba-primary-1 {
+    color: rgba(146, 180, 252, 1)
+}
+
+.rgba-primary-2 {
+    color: rgba(121, 157, 233, 1)
+}
+
+.rgba-primary-3 {
+    color: rgba(89, 112, 161, 1)
+}
+
+.rgba-primary-4 {
+    color: rgba(65, 77, 102, 1)
+}
+
 body {
     font-family: Yekan;
+    background-color: rgba(121, 157, 233, 1);
 }
 
 h1, h2, h3 {
@@ -44,7 +66,7 @@ p {
 
 .navbar-inverse .navbar-nav > li > a:hover {
 
-    background-color: #ff6600;
+    background-color: #799DE9;
 
 }
 
@@ -410,7 +432,7 @@ p.thought:after {
 }
 
 .navbar-inverse .navbar-nav li a {
-    color: #FCD271;
+    color: #92B4FC;
 }
 
 .answer-option {
@@ -476,34 +498,44 @@ section {
     text-align: center;
     vertical-align: middle;
     margin: auto;
+    color: #92B4FC;
 }
 
 #one {
-    background-color: #99aa44;
+    background-color: #799DE9;
     padding-top: 0px;
+    color: #92B4FC;
 }
 
 #two {
     /*background-color: #565656;*/
-    background-color: #99aa44;
+    background-color: #92B4FC;
     padding-top: 0px;
+    color: #92B4FC;
 }
 
 #three {
-    background-color: #55aa77;
+    background-color: #92B4FC;
     padding-top: 0px;
+    color: #92B4FC;
 }
 
 #four {
-    background-color: #eaeaea;
+    background-color: #414D66;
+    color: #92B4FC;
 }
 
 .jumbotron {
-    background-color: #EEEEEE;
-    color: gray;
+    background-color: #414D66;
+    color: #92B4FC;
     padding-top: 30px;
     padding-bottom: 2%;
     text-align: right;
+}
+
+.navbar-inverse {
+    background-color: #5970A1;
+    color: #92B4FC;
 }
 
 @media (min-width: 100px) {
@@ -515,12 +547,12 @@ section {
 
     .jumbotron p {
         font-size: 2.2vw;
-        color: black;
+        color: #6585C9;
     }
 
     .jumbotron p a {
         font-size: 2.9vw;
-        border: solid 1px #449955;
+        border: solid 1px #5970A1;
         border-radius: 6px;
         color: #f5e79e;
 
@@ -548,7 +580,7 @@ section {
         font-size: 2.9vw;
         border: solid 1px #449955;
         border-radius: 6px;
-        color: #f5e79e;
+        color: #6585C9;
 
     }
 
@@ -567,7 +599,7 @@ section {
 
     .jumbotron p {
         font-size: 1.2vw;
-        color: black;
+        color: #6585C9;
     }
 
     .jumbotron p a {
