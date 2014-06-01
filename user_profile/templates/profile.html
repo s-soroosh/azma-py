@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 
-
 {% block no_container_content %}
 
 
@@ -13,7 +12,8 @@
     {##}
     {#        </div>#}
     <div class="row" style="padding-right: 0px;margin-right: 0px;">
-        <div id="profile-menu" class="col-xs-2" style="border: solid 1px black; border-radius: 0px; padding-left: 0px; padding-right: 0px;margin-right: 4px; ">
+        <div id="profile-menu" class="col-xs-2"
+             style="border: solid 1px black; border-radius: 0px; padding-left: 0px; padding-right: 0px;margin-right: 4px; ">
 
             <div class="col-xs-12" style="padding-right: 2px; padding-left: 0; padding-top:8px;" id="profile-menu">
                 <div class="profile-item profile-item-selected" id="info">
@@ -55,7 +55,8 @@
                 {#                از#}
                 {#                {{ answer.exam.score }}#}
                 {#            {% endfor %}#}
-                <div class="panel-group">
+                <div class="panel-group" style="width: 90%;">
+
                     {% for category in exam_categories %}
                         <div class="panel panel-success">
                             <div class="panel-heading">
@@ -82,14 +83,19 @@
                                 {{ category.sum_score }}
                             </div>
                         </div>
-
-
                         <br/>
                     {% endfor %}
+
                 </div>
                 <div>
-                    امتیاز کل:
-                    {{ sum_score }}
+                    {% if sum_score == 0 %}
+                        <div class="jumbotron container" style="text-align: center; width: 80%;">
+                            <h3>شما تا کنون در هیچ آزمونی شرکت نکرده اید.</h3>
+                        </div>
+                    {% else %}
+                        امتیاز کل:
+                        {{ sum_score }}
+                    {% endif %}
                 </div>
 
             </div>
@@ -135,10 +141,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
 
 {% endblock %}
