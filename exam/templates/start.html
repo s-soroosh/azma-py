@@ -167,7 +167,9 @@
                     </div>
                 {% endfor %}
                 {% if user.is_authenticated and exam.number_of_attempts > user_answers_count %}
-                    <input type="submit" class="btn btn-success btn-lg center-block" value="ثبت"/>
+                    <button type="submit" class="btn btn-success btn-lg center-block">
+                    ثبت
+                    </button>
                 {% endif %}
             </div>
         </div>
