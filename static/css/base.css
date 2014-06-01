@@ -481,15 +481,18 @@ section {
 
 #one {
     background-color: #99aa44;
+    padding-top:0px;
 }
 
 #two {
     /*background-color: #565656;*/
     background-color: #99aa44;
+    padding-top:0px;
 }
 
 #three {
     background-color: #55aa77;
+    padding-top:0px;
 }
 
 #four {
