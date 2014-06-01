@@ -502,7 +502,7 @@ section {
     text-align: right;
 }
 
-@media (min-width: 200px) {
+@media (min-width: 400px) {
 
     h2 {
         font-size: 4vw;
@@ -520,6 +520,11 @@ section {
         border-radius: 6px;
         color: #f5e79e;
 
+    }
+
+    #happy-image {
+        width: 250px;
+        height: 250px;
     }
 }
 
@@ -542,6 +547,11 @@ section {
         color: #f5e79e;
 
     }
+
+    #happy-image {
+        width: 350px;
+        height: 350px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -562,6 +572,11 @@ section {
         border-radius: 6px;
         color: #f5e79e;
 
+    }
+
+    #happy-image {
+        width: 400px;
+        height: 400px;
     }
 }
 
