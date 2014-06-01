@@ -8,11 +8,6 @@ h1, h2, h3 {
     padding-bottom: 20px;
 }
 
-h2 {
-    font-size: 3.2vw;
-    font-weight: bold;
-}
-
 a {
     color: #5080f0;
 }
@@ -481,18 +476,18 @@ section {
 
 #one {
     background-color: #99aa44;
-    padding-top:0px;
+    padding-top: 0px;
 }
 
 #two {
     /*background-color: #565656;*/
     background-color: #99aa44;
-    padding-top:0px;
+    padding-top: 0px;
 }
 
 #three {
     background-color: #55aa77;
-    padding-top:0px;
+    padding-top: 0px;
 }
 
 #four {
@@ -507,15 +502,69 @@ section {
     text-align: right;
 }
 
-.jumbotron p {
-    font-size: 1.2vw;
-    color: black;
+@media (min-width: 200px) {
+
+    h2 {
+        font-size: 4vw;
+        font-weight: bold;
+    }
+
+    .jumbotron p {
+        font-size: 3.2vw;
+        color: black;
+    }
+
+    .jumbotron p a {
+        font-size: 3.9vw;
+        border: solid 1px #449955;
+        border-radius: 6px;
+        color: #f5e79e;
+
+    }
 }
 
-.jumbotron p a {
-    font-size: 1.6vw;
-    border: solid 1px #449955;
-    border-radius: 6px;
-    color: #f5e79e;
+@media (min-width: 700px) {
 
+    h2 {
+        font-size: 3.4vw;
+        font-weight: bold;
+    }
+
+    .jumbotron p {
+        font-size: 1.9vw;
+        color: black;
+    }
+
+    .jumbotron p a {
+        font-size: 2.9vw;
+        border: solid 1px #449955;
+        border-radius: 6px;
+        color: #f5e79e;
+
+    }
 }
+
+@media (min-width: 1200px) {
+
+    h2 {
+        font-size: 3vw;
+        font-weight: bold;
+    }
+
+    .jumbotron p {
+        font-size: 1.2vw;
+        color: black;
+    }
+
+    .jumbotron p a {
+        font-size: 1.6vw;
+        border: solid 1px #449955;
+        border-radius: 6px;
+        color: #f5e79e;
+
+    }
+}
+
+
+
+
