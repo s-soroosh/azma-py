@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 
 {% block no_container_content %}
@@ -48,61 +49,16 @@
                 </div>
             </div>
             <div class=" c visible" id="exam-container">
-                {#            {% for answer in exam_answers %}#}
-                {#                {{ answer.exam.local_name }}#}
-                {#                <br/>#}
-                {#                {{ answer.score }}#}
-                {#                از#}
-                {#                {{ answer.exam.score }}#}
-                {#            {% endfor %}#}
-                {#                <div class="panel-group" style="width: 90%;">#}
-                {##}
-                {#                    {% for category in exam_categories %}#}
-                {#                        <div class="panel panel-success">#}
-                {#                            <div class="panel-heading">#}
-                {#                                {{ category.local_name }}#}
-                {#                            </div>#}
-                {#                            <div class="panel-body">#}
-                {#                                {% for answer in category.answers %}#}
-                {#                                    <div class="row">#}
-                {#                                        <div class="col-md-10">#}
-                {#                                            {{ answer.exam.local_name }}#}
-                {#                                        </div>#}
-                {#                                        <div class="col-md-2">#}
-                {#                                        <span class="badge">#}
-                {#                                            {{ answer.score }}#}
-                {#                                        از#}
-                {#                                            {{ answer.exam.score }}#}
-                {#                                        </span>#}
-                {#                                        </div>#}
-                {#                                    </div>#}
-                {#                                {% endfor %}#}
-                {#                            </div>#}
-                {#                            <div class="panel-footer">#}
-                {#                                امتیاز این بخش:#}
-                {#                                {{ category.sum_score }}#}
-                {#                            </div>#}
-                {#                        </div>#}
-                {#                        <br/>#}
-                {#                    {% endfor %}#}
-                {##}
-                {#                </div>#}
-                {#                <div>#}
-                {#                    {% if sum_score == 0 %}#}
-                {#                        <div class="jumbotron container" style="text-align: center; width: 80%;">#}
-                {#                            <h3>شما تا کنون در هیچ آزمونی شرکت نکرده اید.</h3>#}
-                {#                        </div>#}
-                {#                    {% else %}#}
-                {#                        امتیاز کل:#}
-                {#                        {{ sum_score }}#}
-                {#                    {% endif %}#}
-                {#                </div>#}
-                {#                <div class="row">#}
                 <div>
                     <ul id="myTab" class="nav nav-tabs">
                         {% for category in categories %}
                             <li class="">
-                                <a data-toggle="tab" href="#{{ category.local_name }}">{{ category.local_name }}</a>
+                                {% with "image/techs/"|add:category.name|add:".png" as address %}
+                                    <a data-toggle="tab" style="height: 60px;" href="#{{ category.local_name }}"><img
+                                            class="img-responsive" style="height: 40px;"
+                                            src="{% static address %}"/>
+                                    </a>
+                                {% endwith %}
                             </li>
                         {% endfor %}
                     </ul>
@@ -110,8 +66,17 @@
                         {% for category in categories %}
                             <div class="tab-pane" id="{{ category.local_name }}">
                                 {% for sub in category.sub_categories.all %}
-                                    <div class="jumbotron" style="margin-bottom: 0px; border-bottom: 0px;">
-                                        {{ sub.local_name }}
+                                    <div class="jumbotron"
+                                         style="padding-top: 10px; padding-bottom: 10px; margin-bottom: 0px; border-bottom: 0px;">
+                                        <div class="row">
+                                            <div class="col-xs-10">
+                                                {{ sub.local_name }}
+                                            </div>
+                                            <div class="col-xs-1 pull-left " style="text-align: left; padding-left: 0px;">
+                                                <span style="vertical-align: middle; margin-top: 11px;" class="badge">{{ sub.exam_set.count }}
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="row">
                                         {% for exam in sub.exam_set.all %}
@@ -119,10 +84,10 @@
                                                  style="background-color:#E0E0E0;margin:20px; min-height: 200px; text-align: center; ">
                                                 <a href="{% url 'exam:intro' exam.id %}"> {{ exam.local_name }} </a>
 
-                                                <div id="{{ exam.id }}">
+                                                <div>
                                                     امتیاز شما:
                                                     <div id="{{ exam.id }}">
-                                                         شمار در این آزمون شرکت نکرده اید
+                                                        شمار در این آزمون شرکت نکرده اید
                                                     </div>
                                                 </div>
                                             </div>
@@ -135,33 +100,8 @@
 
                         {% endfor %}
                     </div>
-                    {#                    {% for cat in categories %}#}
-                    {#                        <div class="row">#}
-                    {#                            <div class="col-xs-7" style="padding-right: 30px;">#}
-                    {#                                {{ cat.local_name }}#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {##}
-                    {#                        {% for sub in cat.sub_categories.all %}#}
-                    {#                            <div class="row">#}
-                    {#                                <div class="col-xs-1"></div>#}
-                    {#                                <div class="col-xs-7" style="border: solid 1px #f5e79e;">#}
-                    {#                                    {{ sub.local_name }}#}
-                    {#                                </div>#}
-                    {#                            </div>#}
-                    {#                            {% for exam in sub.exam_set.all %}#}
-                    {#                                <div class="row">#}
-                    {#                                    <div class="col-xs-2"></div>#}
-                    {#                                    <div class="col-xs-7">#}
-                    {#                                        {{ exam.local_name }}#}
-                    {#                                    </div>#}
-                    {#                                </div>#}
-                    {#                            {% endfor %}#}
-                    {#                        {% endfor %}#}
-                    {##}
-                    {#                    {% endfor %}#}
+
                 </div>
-                {#                </div>#}
             </div>
         </div>
         <div class="c hidden col-xs-9" id="password-container">
@@ -308,6 +248,12 @@
 
         $(document).ready(function () {
             $('#myTab a:first').tab('show');
+
+            {% for answer in exam_answers %}
+                var element = $('#{{ answer.exam.id }}');
+                element.html('{{ answer.score }}');
+                element.parent().parent().css('backgroundColor', 'green');
+            {% endfor %}
 
             $('.panel-handle').click(function () {
                 user_panel.toggle();
