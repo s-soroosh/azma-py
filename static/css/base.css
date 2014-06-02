@@ -403,7 +403,7 @@ p.thought:after {
     border-radius: 19px 19px;
     border: solid thin rgba(200, 200, 255, 0.23);
     min-height: 500px;
-    max-height: 500px;
+    /*max-height: 500px;*/
 
 }
 
