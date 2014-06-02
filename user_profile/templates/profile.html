@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div class="col-xs-9  profile-content">
+        <div class="col-xs-9  profile-content" style="padding-left: 30px;">
             <div class="hidden" id="info-container">
                 <div class="row">
                     <div class="col-lg-2">نام</div>
@@ -62,7 +62,7 @@
                             </li>
                         {% endfor %}
                     </ul>
-                    <div class="tab-content" style="font-size: 1.1vw;">
+                    <div class="tab-content" style="font-size: 1.1vw; border: solid 1px #448899;">
                         {% for category in categories %}
                             <div class="tab-pane" id="{{ category.local_name }}">
                                 {% for sub in category.sub_categories.all %}
