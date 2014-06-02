@@ -29,7 +29,7 @@
         </div>
 
         <div class="col-xs-9  profile-content">
-            <div class="visible" id="info-container">
+            <div class="hidden" id="info-container">
                 <div class="row">
                     <div class="col-lg-2">نام</div>
                     <div class="col-lg-10">{{ user.first_name }}</div>
@@ -47,7 +47,7 @@
                     <div class="col-lg-10">{{ user.date_joined }}</div>
                 </div>
             </div>
-            <div class="c hidden" id="exam-container">
+            <div class=" c visible" id="exam-container">
                 {#            {% for answer in exam_answers %}#}
                 {#                {{ answer.exam.local_name }}#}
                 {#                <br/>#}
@@ -55,91 +55,156 @@
                 {#                از#}
                 {#                {{ answer.exam.score }}#}
                 {#            {% endfor %}#}
-                <div class="panel-group" style="width: 90%;">
-
-                    {% for category in exam_categories %}
-                        <div class="panel panel-success">
-                            <div class="panel-heading">
-                                {{ category.local_name }}
-                            </div>
-                            <div class="panel-body">
-                                {% for answer in category.answers %}
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                            {{ answer.exam.local_name }}
-                                        </div>
-                                        <div class="col-md-2">
-                                        <span class="badge">
-                                            {{ answer.score }}
-                                        از
-                                            {{ answer.exam.score }}
-                                        </span>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            <div class="panel-footer">
-                                امتیاز این بخش:
-                                {{ category.sum_score }}
-                            </div>
-                        </div>
-                        <br/>
-                    {% endfor %}
-
-                </div>
+                {#                <div class="panel-group" style="width: 90%;">#}
+                {##}
+                {#                    {% for category in exam_categories %}#}
+                {#                        <div class="panel panel-success">#}
+                {#                            <div class="panel-heading">#}
+                {#                                {{ category.local_name }}#}
+                {#                            </div>#}
+                {#                            <div class="panel-body">#}
+                {#                                {% for answer in category.answers %}#}
+                {#                                    <div class="row">#}
+                {#                                        <div class="col-md-10">#}
+                {#                                            {{ answer.exam.local_name }}#}
+                {#                                        </div>#}
+                {#                                        <div class="col-md-2">#}
+                {#                                        <span class="badge">#}
+                {#                                            {{ answer.score }}#}
+                {#                                        از#}
+                {#                                            {{ answer.exam.score }}#}
+                {#                                        </span>#}
+                {#                                        </div>#}
+                {#                                    </div>#}
+                {#                                {% endfor %}#}
+                {#                            </div>#}
+                {#                            <div class="panel-footer">#}
+                {#                                امتیاز این بخش:#}
+                {#                                {{ category.sum_score }}#}
+                {#                            </div>#}
+                {#                        </div>#}
+                {#                        <br/>#}
+                {#                    {% endfor %}#}
+                {##}
+                {#                </div>#}
+                {#                <div>#}
+                {#                    {% if sum_score == 0 %}#}
+                {#                        <div class="jumbotron container" style="text-align: center; width: 80%;">#}
+                {#                            <h3>شما تا کنون در هیچ آزمونی شرکت نکرده اید.</h3>#}
+                {#                        </div>#}
+                {#                    {% else %}#}
+                {#                        امتیاز کل:#}
+                {#                        {{ sum_score }}#}
+                {#                    {% endif %}#}
+                {#                </div>#}
+                {#                <div class="row">#}
                 <div>
-                    {% if sum_score == 0 %}
-                        <div class="jumbotron container" style="text-align: center; width: 80%;">
-                            <h3>شما تا کنون در هیچ آزمونی شرکت نکرده اید.</h3>
-                        </div>
-                    {% else %}
-                        امتیاز کل:
-                        {{ sum_score }}
-                    {% endif %}
+                    <ul id="myTab" class="nav nav-tabs">
+                        {% for category in categories %}
+                            <li class="">
+                                <a data-toggle="tab" href="#{{ category.local_name }}">{{ category.local_name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="tab-content" style="font-size: 1.1vw;">
+                        {% for category in categories %}
+                            <div class="tab-pane" id="{{ category.local_name }}">
+                                {% for sub in category.sub_categories.all %}
+                                    <div class="jumbotron" style="margin-bottom: 0px; border-bottom: 0px;">
+                                        {{ sub.local_name }}
+                                    </div>
+                                    <div class="row">
+                                        {% for exam in sub.exam_set.all %}
+                                            <div class="col-xs-3"
+                                                 style="background-color:#E0E0E0;margin:20px; min-height: 200px; text-align: center; ">
+                                                <a href="{% url 'exam:intro' exam.id %}"> {{ exam.local_name }} </a>
+
+                                                <div id="{{ exam.id }}">
+                                                    امتیاز شما:
+                                                    <div id="{{ exam.id }}">
+                                                         شمار در این آزمون شرکت نکرده اید
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+
+                                {% endfor %}
+
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                    {#                    {% for cat in categories %}#}
+                    {#                        <div class="row">#}
+                    {#                            <div class="col-xs-7" style="padding-right: 30px;">#}
+                    {#                                {{ cat.local_name }}#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                        {% for sub in cat.sub_categories.all %}#}
+                    {#                            <div class="row">#}
+                    {#                                <div class="col-xs-1"></div>#}
+                    {#                                <div class="col-xs-7" style="border: solid 1px #f5e79e;">#}
+                    {#                                    {{ sub.local_name }}#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                            {% for exam in sub.exam_set.all %}#}
+                    {#                                <div class="row">#}
+                    {#                                    <div class="col-xs-2"></div>#}
+                    {#                                    <div class="col-xs-7">#}
+                    {#                                        {{ exam.local_name }}#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            {% endfor %}#}
+                    {#                        {% endfor %}#}
+                    {##}
+                    {#                    {% endfor %}#}
                 </div>
-
-            </div>
-            <div class="c hidden col-xs-9" id="password-container">
-                <form method="post" action="{% url 'profile:change_password' %}">
-                    {% csrf_token %}
-
-                    <div class="control-group"><label class="form-label">
-
-                        رمز عبور کنونی
-
-                    </label>
-
-                        <div class="controls">
-                            <label></label>
-                            <input type="password" class="form-control" name="oldPass"/>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="form-label">
-                            رمز عبور جدید
-                        </label>
-
-                        <div class="controls">
-                            <label></label>
-                            <input type="password" class="form-control" name="newPass"/>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="form-label">
-                            تکرار رمز عبور
-                        </label>
-
-                        <div class="controls">
-                            <label></label>
-                            <input type="password" class="form-control"/>
-                        </div>
-                    </div>
-                    <button style="margin-top: 10px;" type="submit" class="btn btn-success btn-lg">
-                        ثبت
-                    </button>
-                </form>
+                {#                </div>#}
             </div>
         </div>
+        <div class="c hidden col-xs-9" id="password-container">
+            <form method="post" action="{% url 'profile:change_password' %}">
+                {% csrf_token %}
+
+                <div class="control-group"><label class="form-label">
+
+                    رمز عبور کنونی
+
+                </label>
+
+                    <div class="controls">
+                        <label></label>
+                        <input type="password" class="form-control" name="oldPass"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="form-label">
+                        رمز عبور جدید
+                    </label>
+
+                    <div class="controls">
+                        <label></label>
+                        <input type="password" class="form-control" name="newPass"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="form-label">
+                        تکرار رمز عبور
+                    </label>
+
+                    <div class="controls">
+                        <label></label>
+                        <input type="password" class="form-control"/>
+                    </div>
+                </div>
+                <button style="margin-top: 10px;" type="submit" class="btn btn-success btn-lg">
+                    ثبت
+                </button>
+            </form>
+        </div>
+    </div>
     </div>
 
 
@@ -242,7 +307,7 @@
         };
 
         $(document).ready(function () {
-
+            $('#myTab a:first').tab('show');
 
             $('.panel-handle').click(function () {
                 user_panel.toggle();
