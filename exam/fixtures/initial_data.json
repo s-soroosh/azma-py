@@ -3,7 +3,7 @@
         "model": "exam.examcategory",
         "pk": "1",
         "fields": {
-            "name": "JAVA",
+            "name": "java",
             "local_name": "جاوا"
         }
     },
@@ -44,7 +44,7 @@
         "model": "exam.examcategory",
         "pk": "2",
         "fields": {
-            "name": "Python",
+            "name": "python",
             "local_name": "پایتون"
         }
     },
@@ -52,7 +52,7 @@
         "model": "exam.examcategory",
         "pk": "3",
         "fields": {
-            "name": "Linux",
+            "name": "linux",
             "local_name": "لینوکس"
         }
     },
