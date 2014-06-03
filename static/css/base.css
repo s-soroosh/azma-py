@@ -504,7 +504,7 @@ section {
 #one {
     background-color: #799DE9;
     padding-top: 0px;
-    color: #92B4FC;
+    color: #ffff00;
 }
 
 #two {
@@ -527,7 +527,7 @@ section {
 
 .jumbotron {
     background-color: #414D66;
-    color: #92B4FC;
+    color: #ffddaa;
     padding-top: 30px;
     padding-bottom: 2%;
     text-align: right;
@@ -547,7 +547,7 @@ section {
 
     .jumbotron p {
         font-size: 2.2vw;
-        color: #6585C9;
+        /*color: #6585C9;*/
     }
 
     .jumbotron p a {
@@ -573,7 +573,7 @@ section {
 
     .jumbotron p {
         font-size: 1.9vw;
-        color: black;
+        /*color: black;*/
     }
 
     .jumbotron p a {
@@ -599,7 +599,7 @@ section {
 
     .jumbotron p {
         font-size: 1.2vw;
-        color: #6585C9;
+        /*color: #6585C9;*/
     }
 
     .jumbotron p a {
