@@ -403,7 +403,7 @@ p.thought:after {
     border-radius: 19px 19px;
     border: solid thin rgba(200, 200, 255, 0.23);
     min-height: 500px;
-    max-height: 500px;
+    /*max-height: 500px;*/
 
 }
 
@@ -612,6 +612,37 @@ section {
     }
 }
 
+.tab-content .jumbotron {
+    background-color: #448899;
+    /*border-radius: 10px;*/
+}
 
+.nav-tabs {
+    border-bottom: 0px;
+}
 
+.nav-tabs > li > a {
+    margin-right: 0px;
+    margin-left: 1px;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.428571429;
+    border: 1px solid transparent;
+    border-radius: 9px 9px 0 0;
+    background-color: #ffffff;
+}
 
+.nav-tabs > li > a:hover {
+    border-color: #eeeeee #eeeeee #dddddd;
+    background-color: #ffdd99;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    background-color: #ffcc99;
+    border: 1px solid #dddddd;
+    border-bottom-color: transparent;
+}
