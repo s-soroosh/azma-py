@@ -13,7 +13,6 @@ from azma import settings
 from user.login import auth_user
 
 
-
 errorLogger = logging.getLogger('error')
 
 
@@ -33,7 +32,6 @@ def is_user_anon(login_url=None):
 
 @is_user_anon(login_url=settings.DEFAULT_LOGIN_URL)
 def user_login(request):
-
     if request.method == "POST":
         return auth_user(request)
 
@@ -64,12 +62,18 @@ def user_register(request):
         username = request.POST["username"]
         password = request.POST["password"]
 
+        is_exist = User.objects.filter(email=email).count() > 0
         u = User(username=username, first_name=name, last_name=last_name, email=email)
         u.set_password(password)
         try:
+            if is_exist:
+                raise ValidationError("")
             u.full_clean()
         except ValidationError as e:
-            context = RequestContext(request, {'validation_error': e})
+            if is_exist:
+                context = RequestContext(request, {'error_message': "You have been registered with this email"})
+            else:
+                context = RequestContext(request, {'validation_error': e})
             return HttpResponse(register_template.render(context))
         u.is_active = False
         u.save()
