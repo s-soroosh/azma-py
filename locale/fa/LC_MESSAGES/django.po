@@ -1340,7 +1340,7 @@ msgstr "شما قبلا در این أزمون شرکت کرده اید!"
 #: templates/zinnia/_entry_detail_base.html:92 templates/zinnia/base.html:48
 #: templates/zinnia/tag_list.html:6
 msgid "Tags"
-msgstr "Tags"
+msgstr "تگ ها"
 
 #: breadcrumbs.py:71 templates/zinnia/author_list.html:6
 #: templates/zinnia/base.html:40
@@ -1350,7 +1350,7 @@ msgstr "نویسندگان"
 #: breadcrumbs.py:75 admin/forms.py:57 templates/zinnia/base.html:36
 #: templates/zinnia/category_list.html:6 templates/zinnia/sitemap.html:52
 msgid "Categories"
-msgstr "Categories"
+msgstr "دسته ها"
 
 #: breadcrumbs.py:100
 #, python-format
@@ -1481,7 +1481,7 @@ msgstr "Publication"
 #: admin/entry.py:43 templates/admin/zinnia/widgets/_content_stats.html:4
 #: templates/zinnia/_entry_detail_base.html:114
 msgid "Discussions"
-msgstr "Discussions"
+msgstr "کامنتها"
 
 #: admin/entry.py:47
 msgid "Privacy"
@@ -1529,7 +1529,7 @@ msgstr "site(s)"
 
 #: admin/entry.py:169
 msgid "short url"
-msgstr "short url"
+msgstr "لینک کوتاه"
 
 #: admin/entry.py:177
 msgid "is visible"
@@ -1653,7 +1653,7 @@ msgstr "A category cannot be parent of itself."
 
 #: admin/forms.py:59 models/category.py:75 models_bases/entry.py:407
 msgid "categories"
-msgstr "categories"
+msgstr "دسته ها"
 
 #: models/category.py:24 models_bases/entry.py:49
 msgid "slug"
@@ -1805,7 +1805,7 @@ msgstr "authors"
 
 #: models_bases/entry.py:417
 msgid "tags"
-msgstr "tags"
+msgstr "تگ ها"
 
 #: models_bases/entry.py:436
 msgid "login required"
@@ -2044,7 +2044,7 @@ msgstr "View all draft entries"
 #: templates/zinnia/tags/comments_recent.html:6
 #: templates/zinnia/tags/linkbacks_recent.html:7
 msgid "in"
-msgstr "in"
+msgstr "در مورد"
 
 #: templates/admin/zinnia/widgets/_recent_comments.html:13
 #: templates/zinnia/tags/comments_recent.html:8
@@ -2120,36 +2120,36 @@ msgstr "Publish"
 #: templates/admin/zinnia/widgets/recent_comments.html:8
 #: templates/zinnia/base.html:56
 msgid "Recent comments"
-msgstr "Recent comments"
+msgstr "آخرین کامنت ها"
 
 #: templates/admin/zinnia/widgets/recent_linkbacks.html:6
 #: templates/admin/zinnia/widgets/recent_linkbacks.html:8
 #: templates/zinnia/base.html:60
 msgid "Recent linkbacks"
-msgstr "Recent linkbacks"
+msgstr "آخرین link back ها"
 
 #: templates/comments/comment_authors_email.txt:1
 #: templates/comments/comment_notification_email.txt:1
 #: templates/comments/comment_reply_email.txt:1
 #: templates/zinnia/entry_list.html:21
 msgid "Author"
-msgstr "Author"
+msgstr "نویسنده"
 
 #: templates/comments/comment_authors_email.txt:3
 #: templates/comments/comment_notification_email.txt:5
 #: templates/comments/comment_reply_email.txt:3
 msgid "Comment"
-msgstr "Comment"
+msgstr "کامنت"
 
 #: templates/comments/comment_authors_email.txt:6
 #: templates/comments/comment_notification_email.txt:8
 #: templates/comments/comment_reply_email.txt:6
 msgid "View this comment"
-msgstr "View this comment"
+msgstr "مشاهده این کامنت"
 
 #: templates/comments/comment_notification_email.txt:2
 msgid "Email"
-msgstr "Email"
+msgstr "ایمیل"
 
 #: templates/comments/comment_notification_email.txt:3
 msgid "IP"
@@ -2192,16 +2192,16 @@ msgstr "Comment as"
 #: templates/comments/zinnia/entry/form.html:26 templates/zinnia/base.html:96
 #: templates/zinnia/base.html.py:97
 msgid "Log out"
-msgstr "Log out"
+msgstr "خروج"
 
 #: templates/comments/zinnia/entry/form.html:30
 msgid "Post"
-msgstr "Post"
+msgstr "پست"
 
 #: templates/comments/zinnia/entry/posted.html:4
 #: templates/comments/zinnia/entry/posted.html:9
 msgid "Thanks for your comment"
-msgstr "Thanks for your comment"
+msgstr "از کامنت شما سپاسگزاریم"
 
 #: templates/comments/zinnia/entry/posted.html:11
 msgid "Your comment needs to be approved before getting displayed."
@@ -2219,7 +2219,7 @@ msgstr "Return to entry list"
 
 #: templates/zinnia/_entry_detail_base.html:17
 msgid "Written by"
-msgstr "Written by"
+msgstr "نوشته شده توسط"
 
 #: templates/zinnia/_entry_detail_base.html:21
 #: templates/zinnia/author_list.html:17 templates/zinnia/tags/authors.html:6
@@ -2264,7 +2264,7 @@ msgstr "No tags"
 
 #: templates/zinnia/_entry_detail_base.html:104
 msgid "Short url"
-msgstr "Short url"
+msgstr "لینک کوتاه"
 
 #: templates/zinnia/_entry_detail_base.html:106
 #, python-format
@@ -2335,19 +2335,19 @@ msgstr "Don't hesitate to override the template <strong>zinnia/base.html</strong
 
 #: templates/zinnia/base.html:44
 msgid "Calendar"
-msgstr "Calendar"
+msgstr "تقویم"
 
 #: templates/zinnia/base.html:52
 msgid "Recent entries"
-msgstr "Recent entries"
+msgstr "پستهای جدید"
 
 #: templates/zinnia/base.html:64
 msgid "Random entries"
-msgstr "Random entries"
+msgstr "پستهای تصادفی"
 
 #: templates/zinnia/base.html:68
 msgid "Popular entries"
-msgstr "Popular entries"
+msgstr "پستهای محبوب"
 
 #: templates/zinnia/base.html:72 templates/zinnia/entry_archive_day.html:4
 #: templates/zinnia/entry_archive_day.html:6
@@ -2368,11 +2368,11 @@ msgstr "Popular entries"
 #: templates/zinnia/tags/entries_archives_tree.html:13
 #: templates/zinnia/tags/entries_archives_tree.html:23
 msgid "Archives"
-msgstr "Archives"
+msgstr "آرشیو"
 
 #: templates/zinnia/base.html:77
 msgid "Tools"
-msgstr "Tools"
+msgstr "ابزار"
 
 #: templates/zinnia/base.html:81 templates/zinnia/base.html.py:82
 msgid "Dashboard"
