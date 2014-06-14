@@ -1082,7 +1082,7 @@ msgstr "No categories yet."
 
 #: templates/zinnia/entry_archive.html:16
 msgid "Yearly archives"
-msgstr "Yearly archives"
+msgstr "آرشیو سالانه"
 
 #: templates/zinnia/entry_archive_day.html:16
 #: templates/zinnia/entry_archive_today.html:16

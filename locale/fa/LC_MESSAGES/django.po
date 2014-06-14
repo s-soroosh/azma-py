@@ -1345,7 +1345,7 @@ msgstr "Tags"
 #: breadcrumbs.py:71 templates/zinnia/author_list.html:6
 #: templates/zinnia/base.html:40
 msgid "Authors"
-msgstr "Authors"
+msgstr "نویسندگان"
 
 #: breadcrumbs.py:75 admin/forms.py:57 templates/zinnia/base.html:36
 #: templates/zinnia/category_list.html:6 templates/zinnia/sitemap.html:52
@@ -1355,17 +1355,17 @@ msgstr "Categories"
 #: breadcrumbs.py:100
 #, python-format
 msgid "Page %s"
-msgstr "Page %s"
+msgstr "صفحه %s"
 
 #: breadcrumbs.py:128
 #, python-format
 msgid "Week %s"
-msgstr "Week %s"
+msgstr "هفته %s"
 
 #: feeds.py:178 templates/zinnia/entry_archive.html:4
 #: templates/zinnia/entry_archive.html:6
 msgid "Latest entries"
-msgstr "Latest entries"
+msgstr "آخرین پست ها"
 
 #: feeds.py:184
 #, python-format
@@ -1434,12 +1434,12 @@ msgstr "The latest discussions for the entry %s"
 #: feeds.py:470
 #, python-format
 msgid "Comments on %s"
-msgstr "Comments on %s"
+msgstr "کامنتهای %s"
 
 #: feeds.py:476
 #, python-format
 msgid "The latest comments for the entry %s"
-msgstr "The latest comments for the entry %s"
+msgstr "آخرین کامنتها برای %s"
 
 #: feeds.py:520
 #, python-format
@@ -1464,7 +1464,7 @@ msgstr "The latest trackbacks for the entry %s"
 #: moderator.py:65 moderator.py:87 moderator.py:110
 #, python-format
 msgid "[%(site)s] New comment posted on \"%(title)s\""
-msgstr "[%(site)s] New comment posted on \"%(title)s\""
+msgstr "[%(site)s] کامنت جدید برای \"%(title)s\""
 
 #: admin/category.py:34
 msgid "tree path"
@@ -1765,7 +1765,7 @@ msgstr "Allows trackbacks if checked."
 
 #: models_bases/entry.py:248
 msgid "comment count"
-msgstr "comment count"
+msgstr "تعداد کامنت"
 
 #: models_bases/entry.py:250
 msgid "pingback count"
@@ -1916,9 +1916,9 @@ msgstr[1] "%(entry_count)s entries"
 #: templates/zinnia/tags/statistics.html:16
 #, python-format
 msgid "%(comment_count)s comment"
-msgid_plural "%(comment_count)s comments"
-msgstr[0] "%(comment_count)s comment"
-msgstr[1] "%(comment_count)s comments"
+msgid_plural "%(comment_count)s کامنت"
+msgstr[0] "%(comment_count)s کامنت"
+msgstr[1] "%(comment_count)s کامنت"
 
 #: templates/admin/zinnia/widgets/_content_stats.html:21
 #: templates/zinnia/tags/statistics.html:13
@@ -2320,7 +2320,7 @@ msgstr "RSS Feed of latest discussions"
 
 #: templates/zinnia/base.html:27
 msgid "Welcome!"
-msgstr "Welcome!"
+msgstr "به وبلاگ آزما وب خوش امدید"
 
 #: templates/zinnia/base.html:29
 msgid "This simple theme is the default appearance of Zinnia."
@@ -2395,7 +2395,7 @@ msgstr "No categories yet."
 
 #: templates/zinnia/entry_archive.html:16
 msgid "Yearly archives"
-msgstr "Yearly archives"
+msgstr "آرشیو سالانه"
 
 #: templates/zinnia/entry_archive_day.html:16
 #: templates/zinnia/entry_archive_today.html:16
@@ -2587,7 +2587,7 @@ msgstr "Author archives: %(author)s"
 #: templates/zinnia/tags/entries_random.html:9
 #: templates/zinnia/tags/entries_recent.html:9
 msgid "No entries yet."
-msgstr "No entries yet."
+msgstr "هنوز پستی ارسال نشده است."
 
 #: templates/zinnia/entry_list.html:70 templates/zinnia/entry_list.html:71
 msgid "Edit the category"
@@ -2669,7 +2669,7 @@ msgstr "Entries per categories"
 
 #: templates/zinnia/sitemap.html:20 templates/zinnia/sitemap.html.py:40
 msgid "comment"
-msgstr "comment"
+msgstr "کامنت"
 
 #: templates/zinnia/sitemap.html:33
 msgid "All the entries"
