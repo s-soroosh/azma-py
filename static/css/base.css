@@ -37,6 +37,7 @@ a {
 p {
     font-family: Yekan;
     padding-bottom: 10px;
+    text-align: right;
 }
 
 .navbar .glyphicon {
@@ -500,6 +501,7 @@ section {
     margin: auto;
     color: #92B4FC;
 }
+
 
 #one {
     background-color: #799DE9;
