@@ -1729,11 +1729,11 @@ msgstr "last update"
 
 #: models_bases/entry.py:181
 msgid "entry"
-msgstr "entry"
+msgstr "پست"
 
 #: models_bases/entry.py:182
 msgid "entries"
-msgstr "entries"
+msgstr "پست"
 
 #: models_bases/entry.py:196
 msgid "content"
@@ -1906,9 +1906,9 @@ msgstr "Contents"
 #: templates/zinnia/tags/statistics.html:7
 #, python-format
 msgid "%(entry_count)s entry"
-msgid_plural "%(entry_count)s entries"
-msgstr[0] "%(entry_count)s entry"
-msgstr[1] "%(entry_count)s entries"
+msgid_plural "%(entry_count)s پست"
+msgstr[0] "%(entry_count)s پست"
+msgstr[1] "%(entry_count)s پست"
 
 #: templates/admin/zinnia/widgets/_content_stats.html:14
 #: templates/zinnia/_entry_detail_base.html:120
