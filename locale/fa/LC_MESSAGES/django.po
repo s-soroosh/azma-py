@@ -2922,3 +2922,6 @@ msgstr "User cannot %s."
 #: xmlrpc/pingback.py:114
 msgid "No title"
 msgstr "No title"
+
+msgid "You have been registered with this email"
+msgstr "قبلا با این ایمیل کاربری ایجاد شذه است"

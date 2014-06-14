@@ -10,6 +10,18 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
+<!--Google Analytics script -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-51749007-1', 'onlinecademy.com');
+      ga('send', 'pageview');
+
+    </script>
+<!--End of Google Analytics script -->
     <title>
         آزماوب
     </title>
@@ -29,12 +41,40 @@
     {% endcompress %}
     <link href="{% static "css/jquery.countdown.css" %}" rel="stylesheet">
     <link href="{% static "css/onepage-scroll.css" %}" rel="stylesheet">
+    <link href="{% static "css/hpanim.css" %}" rel="stylesheet">
+
+
+    <style>
+
+        .BarColor, .navbar-inverse .dropdown-menu {
+            background-color: #6A87AE;
+            color: #F6FAFF;
+
+        }
+
+        /* Main Primary color */
+        .firstRow {
+            background-color: #CFE1F9;
+            color: #6A87AE;
+        }
+
+        .firstRow h2 {
+            color: #FFEEFF;
+        }
+
+        .secondRow {
+            background-color: #ACC6EA;
+            color: #8AA8D2;
+        }
+
+
+    </style>
 </head>
 
 <body>
 
 <div id="main_content" class="collapse">
-<div class="navbar navbar-inverse navbar-fixed-top center-block round" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top center-block round BarColor" role="navigation">
     <div class="container">
         <div class="row">
             <div class="col-xs-2">
@@ -106,8 +146,8 @@
 </div>
 <div class="main">
 
-    <section id="one">
-        <div class="jumbotron">
+    <section id="one" class="firstRow">
+        <div class="jumbotron secondRow">
             <div class="row">
                 <div class="col-xs-2"></div>
                 <div class="col-xs-10" style="font-family:  padding-top:1%; text-align: right; ">
@@ -173,11 +213,11 @@
 
 
     </section>
-    <section id="two">
+    <section id="two" class="firstRow">
         <div class="row">
             <div class="col-xs-1"></div>
             <div class="col-xs-3">
-                <img id="wall" style="margin-top: -12px; visibility:hidden;" class="img-responsive exam-img"
+                <img id="wall" style="margin-top: -12px; visibility:hidden;" class="img-responsive exam-img2"
                      src="{% static 'image/home/on the wall0.png' %}"/>
             </div>
             <div class="col-xs-1"></div>
@@ -189,7 +229,7 @@
 
             </div>
         </div>
-        <div class="jumbotron" style="height: 100%;">
+        <div class="jumbotron secondRow" style="height: 100%;">
             <div class="row">
                 <div class="col-xs-2"></div>
                 <div class="col-xs-10 col-md-8">
@@ -216,20 +256,20 @@
         </div>
 
     </section>
-    <section id="three">
+    <section id="three" class="firstRow">
         <div class="row">
             <div class="col-xs-4 col-md-4">
 
             </div>
             <div class="col-xs-4">
-                <img id="happy-image" class="exam-img" src="{% static 'image/home/live-happy.png' %}"
+                <img id="happy-image" class="exam-img2" src="{% static 'image/home/live-happy.png' %}"
                      style="padding-bottom: 0px;"/>
             </div>
             <div class="col-xs-4"></div>
         </div>
 
 
-        <div class="jumbotron" style="padding-top: 0px; height: 100%;">
+        <div class="jumbotron secondRow" style="padding-top: 0px; height: 100%;">
             <div class="row">
                 <div class="col-xs-2"></div>
                 <div class="col-xs-10 col-md-8">

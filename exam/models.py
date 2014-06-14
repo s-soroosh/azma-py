@@ -36,8 +36,8 @@ class Exam(models.Model):
             return score
 
 
-def __str__(self):
-    return str(self.pk) + " " + self.name
+    def __str__(self):
+        return str(self.pk) + " " + self.name
 
 
 class RequiredKnowledge(models.Model):

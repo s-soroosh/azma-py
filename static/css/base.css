@@ -152,7 +152,7 @@ p {
 }
 
 .form-group label {
-    color: #888888;
+    color: #EEDDFF;
 }
 
 #txtEmailAddress, #txtUsername, #txtPassword, #txtConfirmPassword {
@@ -533,11 +533,6 @@ section {
     text-align: right;
 }
 
-.navbar-inverse {
-    background-color: #5970A1;
-    color: #92B4FC;
-}
-
 @media (min-width: 100px) {
 
     h2 {
@@ -649,4 +644,14 @@ section {
     background-color: #ffcc99;
     border: 1px solid #dddddd;
     border-bottom-color: transparent;
+}
+
+.content {
+    padding-top: 55px;
+}
+
+.navbar-inverse {
+    background-color: #6A87AE;
+    color: #F6FAFF;
+
 }

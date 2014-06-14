@@ -4,13 +4,14 @@ from exam.models import *
 
 from django import forms
 
+
 class ChoiceForm(forms.ModelForm):
     text = forms.CharField(widget=forms.Textarea)
 
+
 class QuestionForm(forms.ModelForm):
     text = forms.CharField(widget=forms.Textarea)
-    code = forms.CharField(widget=forms.Textarea)
-
+    code = forms.CharField(widget=forms.Textarea,required=False)
 
 
 class ChoiceInline(admin.TabularInline):
@@ -41,8 +42,7 @@ class ExamAdmin(admin.ModelAdmin):
 
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline]
-    form= QuestionForm
-
+    form = QuestionForm
 
 
 admin.site.register(Exam, ExamAdmin)
