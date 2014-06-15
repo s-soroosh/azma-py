@@ -10,8 +10,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.jonin(BASE_DIR, ...)
 import os
-from django.conf.urls import include
-from django.core.urlresolvers import reverse
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'stat')
@@ -19,7 +17,7 @@ COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 
 
 # COMPRESS_CSS_FILTERS = [
-#     #creates absolute urls from relative ones
+# #creates absolute urls from relative ones
 #     'compressor.filters.css_default.CssAbsoluteFilter',
 #     #css minimizer
 #     'compressor.filters.cssmin.CSSMinFilter'
@@ -87,6 +85,8 @@ INSTALLED_APPS = (
     'zinnia_template',
     'pytz',
     'zinnia',
+    'feincms',
+    'elephantblog'
 )
 
 STATICFILES_FINDERS = (
@@ -107,7 +107,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.doc.XViewMiddleware',
 )
-
 
 ROOT_URLCONF = 'azma.urls'
 
