@@ -64,7 +64,7 @@ class Question(models.Model):
     score = models.IntegerField(default=1)
     code = models.TextField(null=True, blank=True)
     image = models.FileField(upload_to=update_image_name, null=True, blank=True)
-    #according to this doc : https://docs.djangoproject.com/en/1.7/ref/models/fields/
+    # according to this doc : https://docs.djangoproject.com/en/1.7/ref/models/fields/
     JAVA = "java"
     JS = "javascript"
     PHP = "PHP"
@@ -92,6 +92,11 @@ class Choice(models.Model):
     def __str__(self):
         return str(self.pk)
 
+
+# Entry.register_extensions('feincms.module.extensions.datepublisher',
+# 'feincms.module.extensions.translations',
+#                           'elephantblog.extensions.blogping',
+# )
 
 # Entry.register_extensions('feincms.module.extensions.datepublisher',
 #                           'feincms.module.extensions.translations',
