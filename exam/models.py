@@ -5,7 +5,6 @@ from django.db import models
 from django.db.models import Sum, Count
 from django.utils.encoding import force_text, force_str
 from feincms.content.richtext.models import RichTextContent
-import feincms_cleanse
 from elephantblog.models import Entry
 
 
@@ -107,7 +106,7 @@ Entry.register_regions(
     ('main', 'Main content area'),
 )
 Entry.create_content_type(RichTextContent,
-                          cleanse=feincms_cleanse.cleanse_html, regions=('main',))
+                           regions=('main',))
 # Entry.create_content_type(MediaFileContent, TYPE_CHOICES=(
 #     ('default', 'default'),
 # ))
