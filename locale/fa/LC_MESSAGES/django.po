@@ -22,6 +22,9 @@ msgstr ""
 "Language: fa\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+msgid "1"
+msgstr "1"
+
 #: conf/global_settings.py:51
 msgid "Afrikaans"
 msgstr "آفریکانس"
