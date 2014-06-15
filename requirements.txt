@@ -11,3 +11,8 @@ django-tagging
 beautifulsoup4
 django-blog-zinnia
 django-app-namespace-template-loader
+BeautifulSoup
+lxml
+feincms
+feincms-cleanse
+feincms-elephantblog
