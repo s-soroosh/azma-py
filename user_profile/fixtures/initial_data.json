@@ -1,7 +1,7 @@
 [{"pk": 1, "model": "auth.user", "fields": {
     "username": "soroosh",
-    "first_name": "",
-    "last_name": "",
+    "first_name": "سروش",
+    "last_name": "سرآبادانی",
     "is_active": true,
     "is_superuser": true,
     "is_staff": true,
