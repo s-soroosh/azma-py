@@ -4,6 +4,7 @@ import datetime
 from django.db import models
 from django.db.models import Sum, Count
 from django.utils.encoding import force_text, force_str
+from feincms.content.medialibrary.models import MediaFileContent
 from feincms.content.richtext.models import RichTextContent
 from elephantblog.models import Entry
 
@@ -94,19 +95,22 @@ class Choice(models.Model):
 
 # Entry.register_extensions('feincms.module.extensions.datepublisher',
 # 'feincms.module.extensions.translations',
-#                           'elephantblog.extensions.blogping',
+# 'elephantblog.extensions.blogping',
 # )
 
-# Entry.register_extensions('feincms.module.extensions.datepublisher',
-#                           'feincms.module.extensions.translations',
-#                           'elephantblog.extensions.blogping',
-# )
+Entry.register_extensions('feincms.module.extensions.datepublisher',
+                          # 'feincms.module.extensions.translations',
+                          'elephantblog.extensions.blogping',
+                          'feincms.module.extensions.seo',
+)
 
 Entry.register_regions(
     ('main', 'Main content area'),
+    ('header', 'Header content area')
 )
 Entry.create_content_type(RichTextContent,
-                           regions=('main',))
-# Entry.create_content_type(MediaFileContent, TYPE_CHOICES=(
-#     ('default', 'default'),
-# ))
+                          regions=('main',))
+
+Entry.create_content_type(MediaFileContent, TYPE_CHOICES=(
+    ('default', 'default'),
+))
