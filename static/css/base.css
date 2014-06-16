@@ -666,3 +666,18 @@ section {
   background-color: #ffffff;
   border: 1px solid #dddddd;
 }
+
+.lead {
+   font-size: 1.1vw;
+}
+
+.entry-summary  {
+    padding-top: 10px;
+    color: white;
+}
+
+.entry-content  {
+    padding-top: 10px;
+    color: white;
+    padding-bottom: 50px;
+}
