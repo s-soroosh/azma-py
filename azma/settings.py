@@ -18,7 +18,7 @@ COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 
 # COMPRESS_CSS_FILTERS = [
 # #creates absolute urls from relative ones
-#     'compressor.filters.css_default.CssAbsoluteFilter',
+# 'compressor.filters.css_default.CssAbsoluteFilter',
 #     #css minimizer
 #     'compressor.filters.cssmin.CSSMinFilter'
 # ]
@@ -86,6 +86,8 @@ INSTALLED_APPS = (
     'pytz',
     'zinnia',
     'feincms',
+    'feincms.module.medialibrary',
+    'feincms.module.extensions',
     'elephantblog'
 )
 
