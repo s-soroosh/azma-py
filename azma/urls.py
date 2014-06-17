@@ -11,7 +11,7 @@ urlpatterns = patterns('',
                        # Examples:
                        # url(r'^$', 'azma.views.home', name='home'),
                        # url(r'^blog/', include('blog.urls')),
-
+                       url(r'^cms/', include('azma_cms.urls')),
                        url(r'^blog/', include('elephantblog.urls')),
                        # url(r'^weblog/', include('zinnia.urls')),
                        url(r'^comments/', include('django.contrib.comments.urls')),

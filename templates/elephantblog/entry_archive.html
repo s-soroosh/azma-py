@@ -1,6 +1,7 @@
 {% extends feincms_page.template.path|default:"base.html" %}
 
 {% load feincms_tags i18n %}
+{% load i18n blog_widgets %}
 
 {% block title %}
     {#    {% trans "News" %} - {{ block.super }}#}
@@ -17,6 +18,7 @@
         </h2>
         </h1>
     {% endblock %}
+    {% get_frontpage %}
 
     {% block object_list %}
         <div class="hfeed newsfeed">

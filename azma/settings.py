@@ -19,7 +19,7 @@ COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 # COMPRESS_CSS_FILTERS = [
 # #creates absolute urls from relative ones
 # 'compressor.filters.css_default.CssAbsoluteFilter',
-#     #css minimizer
+# #css minimizer
 #     'compressor.filters.cssmin.CSSMinFilter'
 # ]
 # COMPRESS_JS_FILTERS = [
@@ -85,11 +85,16 @@ INSTALLED_APPS = (
     'zinnia_template',
     'pytz',
     'zinnia',
+    'azma_cms',
     'feincms',
+    'feincms.module.page',
     'feincms.module.medialibrary',
     'feincms.module.extensions',
+    'elephantblog.navigation_extensions',
     'elephantblog'
 )
+
+FEINCMS_USE_PAGE_ADMIN=True
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -245,3 +250,10 @@ MEDIA_URL = '/static/upload/'
 
 # weblog config
 SITE_ID = 1
+
+
+#cms
+
+# FEINCMS_RICHTEXT_INIT_CONTEXT = {
+#
+# }
