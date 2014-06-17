@@ -13,7 +13,7 @@ urlpatterns = patterns('',
                        # url(r'^blog/', include('blog.urls')),
 
                        url(r'^blog/', include('elephantblog.urls')),
-                       url(r'^weblog/', include('zinnia.urls')),
+                       # url(r'^weblog/', include('zinnia.urls')),
                        url(r'^comments/', include('django.contrib.comments.urls')),
                        url(r'^(?i)admin/', include(admin.site.urls)),
                        url(r'^(?i)about', views.about, name='about'),

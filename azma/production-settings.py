@@ -10,8 +10,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.jonin(BASE_DIR, ...)
 import os
-from django.conf.urls import include
-from django.core.urlresolvers import reverse
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'stat')
@@ -84,6 +82,10 @@ INSTALLED_APPS = (
     'zinnia_template',
     'pytz',
     'zinnia',
+    'feincms',
+    'feincms.module.medialibrary',
+    'feincms.module.extensions',
+    'elephantblog'
 )
 
 STATICFILES_FINDERS = (
