@@ -1,0 +1,17 @@
+{% load i18n %}
+
+<div class="blog-widget">
+    {% for entry in latest_entries %}
+        {% if forloop.first %}
+            <div class="header">{{ entry_list_title }}</div>
+            <hr style="margin-top: 1px;margin-bottom: 1px;"/>
+        {% endif %}
+
+        <a href="{{ entry.get_absolute_url }}">{{ entry }}</a>
+        <br/>
+
+        {% if forloop.last %}
+        {% endif %}
+    {% endfor %}
+
+</div>
