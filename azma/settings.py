@@ -20,7 +20,7 @@ COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 # #creates absolute urls from relative ones
 # 'compressor.filters.css_default.CssAbsoluteFilter',
 # #css minimizer
-#     'compressor.filters.cssmin.CSSMinFilter'
+# 'compressor.filters.cssmin.CSSMinFilter'
 # ]
 # COMPRESS_JS_FILTERS = [
 #     'compressor.filters.jsmin.JSMinFilter'
@@ -94,7 +94,7 @@ INSTALLED_APPS = (
     'elephantblog'
 )
 
-FEINCMS_USE_PAGE_ADMIN=True
+FEINCMS_USE_PAGE_ADMIN = True
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',

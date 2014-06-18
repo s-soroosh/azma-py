@@ -16,9 +16,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'stat')
 COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 
 COMPRESS_CSS_FILTERS = [
-    #creates absolute urls from relative ones
+    # creates absolute urls from relative ones
     'compressor.filters.css_default.CssAbsoluteFilter',
-    #css minimizer
+    # css minimizer
     'compressor.filters.cssmin.CSSMinFilter'
 ]
 
@@ -59,6 +59,7 @@ AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
 # Application definition
 
 INSTALLED_APPS = (
+    'azma_cms',
     'south',
     'compressor',
     'django.contrib.admin',
@@ -90,7 +91,7 @@ INSTALLED_APPS = (
     'elephantblog'
 )
 
-FEINCMS_USE_PAGE_ADMIN=True
+FEINCMS_USE_PAGE_ADMIN = True
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -111,7 +112,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.doc.XViewMiddleware',
 )
 
-
 ROOT_URLCONF = 'azma.urls'
 
 WSGI_APPLICATION = 'azma.wsgi.application'
@@ -130,8 +130,8 @@ DATABASES = {
         'ATOMIC_REQUESTS': True
     }
     # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # 'ENGINE': 'django.db.backends.sqlite3',
+    # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
 }
 
@@ -213,7 +213,7 @@ LOGGING = {
 DEFAULT_LOGIN_URL = '/profile'
 DEFAULT_LOGOUT_URL = '/'
 
-#Mail Setting
+# Mail Setting
 DEFAULT_FROM_EMAIL = 'noreply@onlinecademy.com'
 EMAIL_HOST = 'smtp.onlinecademy.com'
 EMAIL_HOST_PASSWORD = 'sorooshMAHDI123'
