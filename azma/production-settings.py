@@ -83,10 +83,14 @@ INSTALLED_APPS = (
     'pytz',
     'zinnia',
     'feincms',
+    'feincms.module.page',
     'feincms.module.medialibrary',
     'feincms.module.extensions',
+    'elephantblog.navigation_extensions',
     'elephantblog'
 )
+
+FEINCMS_USE_PAGE_ADMIN=True
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
