@@ -703,12 +703,49 @@ section {
 }
 
 .blog-widget a {
-    color:#ffff00;
+    color: #ffff00;
     padding-top: 3px;
     font-size: 1.0vw;
     padding-right: 10px;
 }
 
-.blog-widget a:hover{
+.blog-widget a:hover {
     text-decoration: none;
+}
+
+.comment-list {
+    padding-right: 6px;
+    background-color: white;
+    color: #000000;
+    padding-bottom: 20px;
+
+}
+
+.comment {
+
+    background-color: #F5F5F5;
+    padding-top: 5px;
+    padding-right: 20px;
+    margin: 20px;
+    padding-bottom: 5px;
+    font-size: 13px;
+}
+
+#form-comment {
+
+    font-size: 1.0vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    padding-right: 15px;
+    font-family: tahoma, sans-serif, serif;
+    border: solid #C5C5C5 1px;
+    background-color: #F5F5F5;
+    color: #888888;
+}
+
+#form-comment label {
+    font-family: Yekan;
+    background-color: #F5F5F5;
+    color: #888888;
 }

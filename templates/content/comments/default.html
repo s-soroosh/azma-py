@@ -1,0 +1,96 @@
+{% load comments i18n %}
+{% load staticfiles %}
+
+{% block comment-separator %}
+    <hr/>
+{% endblock %}
+
+{% get_comment_count for parent as comment_count %}
+
+{% if comment_count %}
+
+    {#    {% blocktrans %}{{ comment_count }} comments.{% endblocktrans %}#}
+    تا به حال
+    {{ comment_count }}
+    کامنت برای این پست نوشته شده است.
+
+    {% block comment-list %}
+        <div class="comment-list">
+            {% get_comment_list for parent as comment_list %}
+            {% for comment in comment_list %}
+                <div class="comment-list-entry" style="direction: rtl;">
+                    {% block comment-list-entry %}{# TODO: get_username/etc below #}
+                        <img src="{% static 'image/dialog.png' %}"/>
+                        {% with comment.user.username as comment_username and comment.submit_date|date:"Y-m-d H:i" as comment_submit_date %}
+                            {{ comment_username }}
+                            در تاریخ
+                            {{ comment_submit_date }}
+                            <br/>
+                        {% endwith %}
+                        <div class="comment">
+                            {{ comment.comment }}
+                        </div>
+                    {% endblock comment-list-entry %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endblock comment-list %}
+{% else %}
+    {% trans "No comments." %}
+{% endif %}
+
+{% block comment-form %}
+    {% if content.comments_enabled %}
+        <form action="{{ feincms_page.get_absolute_url }}" method="post" id="form-comment">
+            {% csrf_token %}
+                        <div class="row">
+                            <div class="col-xs-3">
+                                نام
+                            </div>
+                            <div class="col-xs-9">
+                                {{ form.name }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                نشانی پست الکترونیک
+                            </div>
+                            <div class="col-xs-9">
+                                {{ form.email }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                وب سایت
+                            </div>
+                            <div class="col-xs-9">
+                                {{ form.url }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                کامنت
+                            </div>
+                            <div class="col-xs-9">
+                                {{ form.comment }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                لطفا در این فیلد چیزی ننویسید
+                            </div>
+                            <div class="col-xs-9">
+                                {{ form.honeypot }}
+                            </div>
+                        </div>
+            <input type="hidden" name="content_type" value="" />
+            {{ form.content_type }}
+{#            {{ form.as_p }}#}
+            {{ form.object_pk }}
+            {{ form.timestamp }}
+            {{ form.security_hash }}
+
+            <input type="submit" name="post" id="submit" value="ثبت کامنت" class="btn btn-default"/>
+        </form>
+    {% endif %}
+{% endblock comment-form %}
