@@ -1,16 +1,18 @@
 {% load i18n %}
 
-{% for category in categories %}
-  {% if forloop.first %}
-    <div class="content">
-      <h2>{% trans "Categories" %}</h2>
-      <ul>
-  {% endif %}
-        <li>
-          <a href="{{ category.get_absolute_url }}">{{ category }}</a>
-        </li>
-  {% if forloop.last %}
-      </ul>
-    </div>
-  {% endif %}
-{% endfor %}
+<div class="blog-widget">
+    {% for category in categories %}
+        {% if forloop.first %}
+            <div class="header">{{ category_list_title }}</div>
+            <hr style="margin-top: 1px;margin-bottom: 1px;"/>
+        {% endif %}
+
+        <a href="{{ category.get_absolute_url }}">{{ category }}</a>
+        <br />
+
+        {% if forloop.last %}
+
+        {% endif %}
+    {% endfor %}
+
+</div>
