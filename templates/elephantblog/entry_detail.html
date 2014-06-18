@@ -1,41 +1,47 @@
-{% extends feincms_page.template.path|default:"base.html" %}
+{% extends feincms_page.template.path|default:"feint_base.html" %}
 
 {% load feincms_tags i18n %}
 
 {% block title %}
-{#    {% trans "News" %} - {{ block.super }}#}
+    {#    {% trans "News" %} - {{ block.super }}#}
     {{ entry }}
 {% endblock %}
 
-{% block content %}
+{% block  main_content %}
     <!-- contains hAtom microformats proposed by http://www.readability.com/publishers/guidelines/ -->
     <article class="hentry">
         <header>
             <h1 class="entry-title">{{ entry }}</h1>
-        <span class="small byline">
-                {% if entry.author.get_full_name %}
-                    <span class="author source-org vcard">
-{#                {% trans 'by' %}#}
-                نویسنده:
-                <span class="fn">{{ entry.author.get_full_name }}
-                </span>
-            </span> |
-                {% endif %}
-        آخرین بروز رسانی:
-            <time datetime="{{ entry.published_on|date:'c' }}"
-                  pubdate>{{ entry.published_on|date:"SHORT_DATE_FORMAT" }}</time>
-            </span> |
-            دسته ها:
-            {% for category in entry.categories.all %}
-                <a href="{{ category.get_absolute_url }}" rel="tag">{{ category }}</a>
-                {% if not forloop.last %},
-                {% endif %}
-            {% endfor %}
 
-            </span>
         </header>
         <div class="entry-content">
             {% feincms_render_region entry "main" request %}
         </div>
     </article>
+{% endblock %}
+
+{% block main_sidebar %}
+
+    <div class="blog-widget small byline">
+                {% if entry.author.get_full_name %}
+                    <span class="author source-org vcard">
+                نویسنده:
+                <span class="fn">{{ entry.author.get_full_name }}
+                </span>
+            </span><br/>
+                {% endif %}
+        آخرین بروز رسانی:
+            <time datetime="{{ entry.published_on|date:'c' }}"
+                  pubdate>{{ entry.published_on|date:"SHORT_DATE_FORMAT" }}</time>
+            </span> <br/>
+    دسته ها
+    <br />
+    {% for category in entry.categories.all %}
+        <a href="{{ category.get_absolute_url }}" rel="tag">{{ category }}</a>
+        {% if not forloop.last %}<br />
+        {% endif %}
+    {% endfor %}
+
+    </div>
+
 {% endblock %}
