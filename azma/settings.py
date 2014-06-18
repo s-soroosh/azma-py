@@ -62,6 +62,7 @@ AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
 # Application definition
 
 INSTALLED_APPS = (
+    'azma_cms',
     'south',
     'compressor',
     'django.contrib.admin',
@@ -85,7 +86,6 @@ INSTALLED_APPS = (
     'zinnia_template',
     'pytz',
     'zinnia',
-    'azma_cms',
     'feincms',
     'feincms.module.page',
     'feincms.module.medialibrary',
