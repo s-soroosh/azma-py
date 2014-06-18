@@ -1,14 +1,15 @@
-{% extends feincms_page.template.path|default:"base.html" %}
+{% extends feincms_page.template.path|default:"feint_base.html" %}
 
 {% load feincms_tags i18n %}
-{% load i18n blog_widgets %}
+{% load i18n elephantblog_tags blog_widgets %}
+
 
 {% block title %}
     {#    {% trans "News" %} - {{ block.super }}#}
     وبلاگ آزما وب
 {% endblock %}
 
-{% block content %}
+{% block main_content %}
     {% block content_title %}
         {#<h1>News {% if year %}{% trans "for" %} {{ year|date:"Y"|default:year }}{% endif %}#}
         {#  {% if month %}{% trans "for" %} {{ month|date:"F Y"|default:month }}{% endif %}#}
@@ -16,7 +17,7 @@
         {#  {% if category %}{% trans "for" %} {{ category }}{% endif %}#}
         <h2>وبلاگ آزما وب
         </h2>
-        </h1>
+        {#        </h1>#}
     {% endblock %}
     {% get_frontpage %}
 
@@ -78,4 +79,11 @@
             {% endif %}
         </div>
     {% endblock %}
+{% endblock %}
+
+{% block main_sidebar %}
+    {% elephantblog_categories as categories %}
+    {% include 'content/elephantblog/category_list.html' with category_list_title="دسته ها" %}
+    {% elephantblog_entries limit=4 as latest_entries %}
+    {% include 'content/elephantblog/latest_entry_list.html' with entry_list_title="آخرین پست ها" %}
 {% endblock %}
