@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
-from django.db.models import Sum
 from exam.models import Question, Exam, Choice
 
 
@@ -10,6 +9,9 @@ class ExamAnswer(models.Model):
     user = models.ForeignKey(User)
     exam = models.ForeignKey(Exam)
     score = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return self.user.get_full_name() + " on exam: " + self.exam.local_name + " score:" + str(self.score)
 
 
 class ExamAnswerHistory(models.Model):
