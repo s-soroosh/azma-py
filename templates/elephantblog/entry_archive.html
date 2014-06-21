@@ -15,14 +15,15 @@
         {#  {% if month %}{% trans "for" %} {{ month|date:"F Y"|default:month }}{% endif %}#}
         {#  {% if day %}{% trans "for" %} {{ day|date:"DATE_FORMAT"|default:day }}{% endif %}#}
         {#  {% if category %}{% trans "for" %} {{ category }}{% endif %}#}
-        <h2>وبلاگ آزما وب
-        </h2>
+
         {#        </h1>#}
     {% endblock %}
     {% get_frontpage %}
 
     {% block object_list %}
-        <div class="hfeed newsfeed">
+        <div class="hfeed newsfeed" style="width: 90%;">
+            <h2>وبلاگ آزما وب
+            </h2>
             {% for entry in object_list %}
                 <article class="hentry{% if forloop.first %} first{% endif %}">
                     <header>

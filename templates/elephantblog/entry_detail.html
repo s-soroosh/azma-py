@@ -5,14 +5,16 @@
 {% block title %}
     {#    {% trans "News" %} - {{ block.super }}#}
     {{ entry }}
+
 {% endblock %}
 
 {% block  main_content %}
     <!-- contains hAtom microformats proposed by http://www.readability.com/publishers/guidelines/ -->
-    <article class="hentry">
+    <article class="hentry"
+             style="border: solid #aaaaaa 1px; background-color: #eeeeff;margin-top: 20px; padding:30px; color: #333333;">
         <header>
             <h1 class="entry-title">{{ entry }}</h1>
-
+            <hr/>
         </header>
         <div class="entry-content">
             {% feincms_render_region entry "main" request %}
@@ -23,24 +25,24 @@
 {% block main_sidebar %}
 
     <div class="blog-widget small byline">
-                {% if entry.author.get_full_name %}
-                    <span class="author source-org vcard">
+        {% if entry.author.get_full_name %}
+            <span class="author source-org vcard">
                 نویسنده:
                 <span class="fn">{{ entry.author.get_full_name }}
                 </span>
             </span><br/>
-                {% endif %}
-        آخرین بروز رسانی:
-            <time datetime="{{ entry.published_on|date:'c' }}"
-                  pubdate>{{ entry.published_on|date:"SHORT_DATE_FORMAT" }}</time>
-            </span> <br/>
-    دسته ها
-    <br />
-    {% for category in entry.categories.all %}
-        <a href="{{ category.get_absolute_url }}" rel="tag">{{ category }}</a>
-        {% if not forloop.last %}<br />
         {% endif %}
-    {% endfor %}
+        آخرین بروز رسانی:
+        <time datetime="{{ entry.published_on|date:'c' }}"
+              pubdate>{{ entry.published_on|date:"SHORT_DATE_FORMAT" }}</time>
+        </span> <br/>
+        دسته ها
+        <br/>
+        {% for category in entry.categories.all %}
+            <a href="{{ category.get_absolute_url }}" rel="tag">{{ category }}</a>
+            {% if not forloop.last %}<br/>
+            {% endif %}
+        {% endfor %}
 
     </div>
 
