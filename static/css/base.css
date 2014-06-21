@@ -666,6 +666,21 @@ section {
     border: 1px solid #dddddd;
 }
 
+#footer {
+
+    min-height: 30px;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    background-color: #eef8f7;
+    text-align: center;
+    margin: 0px;
+}
+
+#footer .row {
+    margin:0px;
+}
+
 .lead {
     font-size: 1.1vw;
 }
