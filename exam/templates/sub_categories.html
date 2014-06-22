@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
     <div class="panel-group" id="panel-group">
+        {% if sub_categories.count == 0 %}
+            <h3>
+                با عرض پوزش در حال حاضر آزمونی در این بخش وجود ندارد
+            </h3>
+            <p>
+                ممکن است که طبقه بندی آزمونی که شما به آن مراجعه کردید وجود نداشته باشد و یا در حال حاضر شامل آزمونی
+                برای برگذاری نباشد
+            </p>
+            <img src="{% static "image/come-back-later.jpg" %}"/>
+        {% endif %}
         {% for cat in sub_categories %}
             <div class="panel panel-success">
 
