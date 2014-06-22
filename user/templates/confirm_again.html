@@ -2,10 +2,16 @@
 {% load staticfiles %}
 
 {% block content %}
-    <div class="center-block form-group">
+    <div class="row">
+        <div class="col-lg-3 col-lg-offset-4">
+            <div class="center-block form-group">
         <form action="{% url 'confirm_again' %}" method="post" novalidate>
             {% csrf_token %}
             <div class="control-group">
+                <p>
+                    آدرس ایمیل عضویت خود را در این قسمت وارد کنید تا لینک فعال سازی مجددا برای شما ارسال شود
+                </p>
+
                 <label class="form-label">
                     ایمیل
                 </label>
@@ -21,6 +27,8 @@
                 ارسال مجدد
             </button>
         </form>
+            </div>
+        </div>
     </div>
 {% endblock %}
 
