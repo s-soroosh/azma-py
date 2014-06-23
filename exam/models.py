@@ -10,6 +10,7 @@ from feincms.content.medialibrary.models import MediaFileContent
 from feincms.content.richtext.models import RichTextContent
 from django_enumfield import enum
 
+
 class ExamCategory(models.Model):
     name = models.CharField(max_length=200)
     local_name = models.CharField(max_length=200)
@@ -38,7 +39,7 @@ class Exam(models.Model):
     name = models.CharField(max_length=200)
     local_name = models.CharField(max_length=200)
     start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    end_date = models.DateTimeField(null=True,blank=True)
     description = models.CharField(max_length=2000)
     duration = models.IntegerField()
     category = models.ForeignKey(ExamCategory)

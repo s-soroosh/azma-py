@@ -1,8 +1,8 @@
 # -*- coding: utf8 -*-
 from django.contrib import admin
-from exam.models import *
-
 from django import forms
+
+from exam.models import *
 
 
 class ChoiceForm(forms.ModelForm):
@@ -34,7 +34,7 @@ class QuestionInline(admin.TabularInline):
 class ExamAdmin(admin.ModelAdmin):
     # date_hierarchy = 'start_date'
     fieldsets = [
-        ('عمومی', {'fields': ('name', 'local_name')}),
+        ('عمومی', {'fields': ('name', 'local_name','exam_state')}),
         (None, {'fields': ('start_date', 'description', 'duration', 'category')})
     ]
     inlines = [QuestionInline]
