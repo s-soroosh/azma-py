@@ -144,11 +144,9 @@ p {
 
 .alert-danger {
     background-image: linear-gradient(#6CB5FF, #f2dede 88%, #f2dede);
-    color: #4E6262 ;
+    color: #4E6262;
     border-color: #66CCFF;
     height: 40px;
-
-
 
 }
 
@@ -242,51 +240,66 @@ p.thought:after {
 /* for profile page (we will move them to a specific file */
 /* i move these styles to <style> tag for easier designing*/
 #profile-menu {
-    height: 100%;
+
+    right: 10px;
+    width: 22%;
+    min-height: 300px
+
     font-size: 18pt;
-    background-color: #E0E0E3;
 
 }
 
 .profile-item {
-    padding-right: 5%;
-    border: thin solid rgba(3, 18, 104, 0.22);
+    /*padding-right: 5%;*/
+    /*border: thin solid rgba(3, 18, 104, 0.22);*/
     /*height: 30px;*/
-    font-size: 1.2vw;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    margin-bottom: 2px;
-    box-shadow: rgba(22, 41, 75, 0.29) 4px 2px 9px;
-    cursor: pointer;
-    text-align: justify;
+    /*font-size: 1.2vw;*/
+    /*padding-top: 1px;*/
+    /*padding-bottom: 1px;*/
+    /*margin-bottom: 2px;*/
+    /*box-shadow: rgba(22, 41, 75, 0.29) 4px 2px 9px;*/
+    /*cursor: pointer;*/
+    /*text-align: justify;*/
     /*margin-right: 5%;*/
-    color: gray;
-    border-right: thick solid rgba(0, 0, 0, 0);
-    background-color: #f5f5f5;
+    /*color: gray;*/
+    /*border-right: thick solid rgba(0, 0, 0, 0);*/
+    /*background-color: #f5f5f5;*/
 
     /*rgba(181, 196, 255, 0.44);*/
+
+    border-color: rgb(70, 110, 190);
+    border-style: solid;
+    border-width: 5px;
+    margin-top: 15px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 7px 7px;;
+
+    vertical-align: middle;
 }
 
 .profile-item:not(.profile-item-selected):hover {
-    border-right: thick solid #FFFFFF;
-    border-left: thick solid #FFFFFF;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+    /*border-right: thick solid #FFFFFF;*/
+    /*border-left: thick solid #FFFFFF;*/
+    /*border-bottom-right-radius: 5px;*/
+    /*border-top-right-radius: 5px;*/
+    /*border-bottom-left-radius: 5px;*/
+    /*border-top-left-radius: 5px;*/
+    background-color: #e4b9b9;
     color: white;
 }
 
 .profile-item-selected {
-    border-right: thick solid #CCCCFF;
-    border-left: thick solid #CCCCFF;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-    background-color: rgba(181, 196, 255, 0.66);
+    /*border-right: thick solid #CCCCFF;*/
+    /*border-left: thick solid #CCCCFF;*/
+    /*border-bottom-right-radius: 5px;*/
+    /*border-top-right-radius: 5px;*/
+    /*border-bottom-left-radius: 5px;*/
+    /*border-top-left-radius: 5px;*/
+    /*background-color: rgba(181, 196, 255, 0.66);*/
 
-    cursor: default;
+    /*cursor: default;*/
+    background-color: #f4b919;
 }
 
 .profile-content {
@@ -672,7 +685,7 @@ section {
 }
 
 #footer .row {
-    margin:0px;
+    margin: 0px;
 }
 
 .lead {

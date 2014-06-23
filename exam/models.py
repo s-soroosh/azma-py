@@ -12,9 +12,10 @@ from django_enumfield import enum
 
 
 class ExamCategory(models.Model):
+    
     name = models.CharField(max_length=200)
     local_name = models.CharField(max_length=200)
-    parent = models.ForeignKey("self", null=True, related_name='sub_categories')
+    parent = models.ForeignKey("self", null=True, blank=True, related_name='sub_categories')
 
 
     def number_of_exams(self):
@@ -39,7 +40,7 @@ class Exam(models.Model):
     name = models.CharField(max_length=200)
     local_name = models.CharField(max_length=200)
     start_date = models.DateTimeField()
-    end_date = models.DateTimeField(null=True,blank=True)
+    end_date = models.DateTimeField(null=True, blank=True)
     description = models.CharField(max_length=2000)
     duration = models.IntegerField()
     category = models.ForeignKey(ExamCategory)
@@ -109,7 +110,7 @@ class Choice(models.Model):
 
 
 # Entry.register_extensions('feincms.module.extensions.datepublisher',
-#                           'feincms.module.extensions.translations',
+# 'feincms.module.extensions.translations',
 #                           'elephantblog.extensions.blogping',
 # )
 #
