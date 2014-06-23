@@ -8,6 +8,7 @@ from elephantblog.models import Entry
 from feincms.content.comments.models import CommentsContent
 from feincms.content.medialibrary.models import MediaFileContent
 from feincms.content.richtext.models import RichTextContent
+from django_enumfield import enum
 
 
 class ExamCategory(models.Model):
@@ -23,14 +24,27 @@ class ExamCategory(models.Model):
         return self.name
 
 
+class ExamState(enum.Enum):
+    PENDING = 0
+    PUBLISHED = 1
+    FINISHED = 2
+    labels = {
+        PENDING: 'Pending',
+        PUBLISHED: 'Published',
+        FINISHED: 'Finished',
+    }
+
+
 class Exam(models.Model):
     name = models.CharField(max_length=200)
     local_name = models.CharField(max_length=200)
     start_date = models.DateTimeField()
+    end_date = models.DateTimeField(null=True,blank=True)
     description = models.CharField(max_length=2000)
     duration = models.IntegerField()
     category = models.ForeignKey(ExamCategory)
     number_of_attempts = models.IntegerField(default=1)
+    exam_state = enum.EnumField(ExamState, default=ExamState.PENDING)
 
 
     def score(self):
