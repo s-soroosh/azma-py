@@ -1,0 +1,377 @@
+[
+    {
+        "pk": 23,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "import java.util.*;\r\nclass Vehicle {}\r\nclass Car extends Vehicle {}\r\nclass Bus extends Vehicle {}\r\nclass TestSamp {\r\n\tpublic static void main(String [] args) {\r\n\tArrayList<Car> a = new ArrayList<Car>();\r\n\ta.add(new Car());\r\n\tArrayList b = a;\r\n\tArrayList<Bus> c = (ArrayList<Bus>)b;\r\n\tc.add(new Bus());\r\n\tfor (Object obj : b)\r\n\t\tSystem.out.println(obj);\r\n\t}\r\n}",
+            "exam": 2,
+            "text": "\u0646\u062a\u06cc\u062c\u0647 \u0627\u062c\u0631\u0627\u06cc \u06a9\u062f \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 24,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "List<Number> list1 = null;\r\nList<Integer> list2 = null;\r\nlist1 = list2;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 25,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "List<? extends Number> list1 = null;\r\nList<Integer> list2 = null;\r\nlist1 = list2;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 26,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "List<Number> list1 = null;\r\nList<? super Integer> list2 = null;\r\nlist1 = list2;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 27,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "LinkedList<?> list1 = null;\r\nLinkedList<Integer> list2 = null;\r\nlist2 = list1;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 28,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "PriorityQueue<?> queue1 = null;\r\nPriorityQueue queue2 = null;\r\nqueue1 = queue2;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 29,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "import java.util.*;\r\n\r\nclass Parent {\r\n\tvoid say(List<String> list) {\r\n\t\tSystem.out.println(\"parent\");\r\n\t}\r\n}\r\nclass Child extends Parent {\r\n\tvoid say(List list) {\r\n\t\tSystem.out.println(\"child\");\r\n\t}\r\n}\r\n\r\n\r\n\r\n\r\npublic static void main(String[] java) {\r\n\tChild c = new Child();\r\n\tc.say(new LinkedList<String>());\r\n}",
+            "exam": 2,
+            "text": "\u0628\u0627 \u062a\u0648\u062c\u0647 \u0628\u0647 \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0644\u0627\u0633\u0647\u0627 \u0646\u062a\u06cc\u062c\u0647 \u0627\u062c\u0631\u0627\u06cc \u06a9\u062f main \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 30,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "List<? extends String> list1 = new ArrayList<String>();\r\nList<? super String> list2 = new ArrayList<String>();\r\nList<Integer> list3 = new ArrayList<Integer>();\r\nList list4 = new ArrayList();\r\n\r\nif (list1 instanceof List && \r\n    list2 instanceof List &&\r\n    list3 instanceof List &&\r\n    list4 instanceof List) {\r\n    System.out.println(\"yes\");\r\n}",
+            "exam": 2,
+            "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 31,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "class Test implements Comparable<Comparable<?>> {\r\n    public int compareTo(Comparable<?> object) {\r\n        return 0;\r\n    }\r\n}",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 32,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "new ArrayList<Set<?>>();",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 33,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "new TreeMap<String, ? super Integer>();",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 97,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Compile Error",
+            "question": 23
+        }
+    },
+    {
+        "pk": 98,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0627 warning \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc\u0634\u0648\u062f \u0648 \u0686\u0646\u062f \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u0645\u06cc \u062f\u0647\u062f",
+            "question": 23
+        }
+    },
+    {
+        "pk": 99,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u062f\u0648\u0646 warning \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc\u0634\u0648\u062f \u0648 \u0686\u0646\u062f \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u0645\u06cc \u062f\u0647\u062f",
+            "question": 23
+        }
+    },
+    {
+        "pk": 100,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0648 \u0627\u062c\u0631\u0627 \u0645\u06cc\u0634\u0648\u062f \u0648\u0644\u06cc \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0627\u062f\u0647 \u0646\u0645\u06cc \u0634\u0648\u062f.",
+            "question": 23
+        }
+    },
+    {
+        "pk": 101,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647",
+            "question": 24
+        }
+    },
+    {
+        "pk": 102,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u062e\u06cc\u0631",
+            "question": 24
+        }
+    },
+    {
+        "pk": 103,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647",
+            "question": 25
+        }
+    },
+    {
+        "pk": 104,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 25
+        }
+    },
+    {
+        "pk": 105,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647",
+            "question": 26
+        }
+    },
+    {
+        "pk": 106,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u062e\u06cc\u0631",
+            "question": 26
+        }
+    },
+    {
+        "pk": 107,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647",
+            "question": 27
+        }
+    },
+    {
+        "pk": 108,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u062e\u06cc\u0631",
+            "question": 27
+        }
+    },
+    {
+        "pk": 109,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647 \u0648\u0644\u06cc \u0628\u0627 warning",
+            "question": 28
+        }
+    },
+    {
+        "pk": 110,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647 \u0628\u062f\u0648\u0646 warning",
+            "question": 28
+        }
+    },
+    {
+        "pk": 111,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 28
+        }
+    },
+    {
+        "pk": 112,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "child \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0648\u0634\u062a\u0647 \u0645\u06cc\u0634\u0648\u062f",
+            "question": 29
+        }
+    },
+    {
+        "pk": 113,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "parent \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0648\u0634\u062a\u0647 \u0645\u06cc\u0634\u0648\u062f",
+            "question": 29
+        }
+    },
+    {
+        "pk": 114,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Compile Error",
+            "question": 29
+        }
+    },
+    {
+        "pk": 115,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u0631\u0648\u062c\u06cc \u0646\u062f\u0627\u0631\u062f",
+            "question": 30
+        }
+    },
+    {
+        "pk": 116,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "yes",
+            "question": 30
+        }
+    },
+    {
+        "pk": 117,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Compile Error",
+            "question": 30
+        }
+    },
+    {
+        "pk": 118,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647",
+            "question": 31
+        }
+    },
+    {
+        "pk": 119,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 31
+        }
+    },
+    {
+        "pk": 120,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647",
+            "question": 32
+        }
+    },
+    {
+        "pk": 121,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 32
+        }
+    },
+    {
+        "pk": 122,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647",
+            "question": 33
+        }
+    },
+    {
+        "pk": 123,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u062e\u06cc\u0631",
+            "question": 33
+        }
+    }
+]

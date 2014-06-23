@@ -412,6 +412,10 @@ p.thought:after {
     font-size: 18pt;
 }
 
+.exam-container p {
+    text-align: center;
+}
+
 .navbar .container {
     width: 100%;
     padding-right: 40px;
