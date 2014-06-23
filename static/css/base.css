@@ -157,9 +157,10 @@ p {
 
 .bg-primary {
 
-    border-radius: 25px;
-    color: #000 ;
-    background-color: #66BAD6
+    border-radius: 10px;
+    height: 35px;
+    color: #FFF0FF ;
+    background-color: #FF9900
 }
 
 .animation {
@@ -170,8 +171,8 @@ p {
 
 @keyframes myfirst{
 
-    from{background: white;}
-    to {background: #66BAD6}
+    from{background: #66BAD6;}
+    to {background: #FF9900;}
 
 }
 
