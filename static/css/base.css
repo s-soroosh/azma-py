@@ -143,9 +143,20 @@ p {
 }
 
 .alert-danger {
-    background-image: linear-gradient(#f29e9e, #f2dede 90%, #f2dede);
-    color: #a94442;
-    border-color: #ebccd1;
+    background-image: linear-gradient(#6CB5FF, #f2dede 88%, #f2dede);
+    color: #4E6262 ;
+    border-color: #66CCFF;
+    border-style: outset ;
+    height: 40px;
+
+
+
+}
+
+.error_message {
+    padding-top: 7px;
+    text-align: center;
+    font-weight: bold;
 }
 
 label {
