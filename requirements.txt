@@ -16,3 +16,4 @@ lxml
 feincms==1.8.3
 feincms-cleanse
 feincms-elephantblog
+django-enumfield
