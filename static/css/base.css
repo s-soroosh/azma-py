@@ -143,10 +143,35 @@ p {
 }
 
 .alert-danger {
-    background-image: linear-gradient(#6CB5FF, #f2dede 88%, #f2dede);
-    color: #4E6262;
+    background-color: #6CB5FF;
+    color: #4E6262 ;
     border-color: #66CCFF;
     height: 40px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+
+
+}
+
+.bg-primary {
+
+    border-radius: 25px;
+    color: #000 ;
+    background-color: #66BAD6
+}
+
+.animation {
+
+    -webkit-animation: myfirst 5s;
+    animation: myfirst 5s;
+}
+
+@keyframes myfirst{
+
+    from{background: white;}
+    to {background: #66BAD6}
 
 }
 
@@ -246,6 +271,7 @@ p.thought:after {
     min-height: 300px
 
     font-size: 18pt;
+    background-color: #E0E0E3;
 
 }
 
@@ -685,7 +711,7 @@ section {
 }
 
 #footer .row {
-    margin: 0px;
+    margin:0px;
 }
 
 .lead {
