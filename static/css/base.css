@@ -277,29 +277,16 @@ p.thought:after {
 }
 
 .profile-item {
-    /*padding-right: 5%;*/
-    /*border: thin solid rgba(3, 18, 104, 0.22);*/
-    /*height: 30px;*/
-    /*font-size: 1.2vw;*/
-    /*padding-top: 1px;*/
-    /*padding-bottom: 1px;*/
-    /*margin-bottom: 2px;*/
-    /*box-shadow: rgba(22, 41, 75, 0.29) 4px 2px 9px;*/
-    /*cursor: pointer;*/
-    /*text-align: justify;*/
-    /*margin-right: 5%;*/
-    /*color: gray;*/
-    /*border-right: thick solid rgba(0, 0, 0, 0);*/
-    /*background-color: #f5f5f5;*/
 
-    /*rgba(181, 196, 255, 0.44);*/
-
+    padding-right: 25px;
+    padding-top: 7px;
+    padding-bottom: 5px;
     border-color: rgb(70, 110, 190);
     border-style: solid;
     border-width: 5px;
     margin-top: 15px;
     height: 50px;
-    padding: 5px;
+    /*padding: 5px;*/
     border-radius: 7px 7px;;
 
     vertical-align: middle;
