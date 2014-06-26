@@ -159,20 +159,24 @@ p {
 
     border-radius: 10px;
     height: 35px;
-    color: #FFF0FF ;
+    color: #990000 ;
     background-color: #FF9900
 }
 
 .animation {
 
-    -webkit-animation: myfirst 5s;
-    animation: myfirst 5s;
+    -webkit-animation: myfirst 4s;
+    animation: myfirst 4s;
 }
+
 
 @keyframes myfirst{
 
     from{background: #66BAD6;}
     to {background: #FF9900;}
+
+    from{color: #EAA83A;}
+    to{color: #990000}
 
 }
 
