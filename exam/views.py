@@ -5,7 +5,8 @@ from django.db.models.aggregates import Avg
 from django.template import RequestContext, loader
 from django.http import HttpResponse, HttpResponseRedirect
 from answer.models import ExamAnswerHistory
-
+from django.core.urlresolvers import reverse
+from django.views import generic
 from exam.models import Exam, ExamCategory
 
 
@@ -34,8 +35,9 @@ def intro(request, exam_id):
 
 def sub_categories(request, category_id):
     sub_categories = ExamCategory.objects.filter(parent__id=category_id)
+    category = ExamCategory.objects.get(id=category_id)
     template = loader.get_template('sub_categories.html')
-    context = RequestContext(request, {'sub_categories': sub_categories})
+    context = RequestContext(request, {'sub_categories': sub_categories, 'category': category})
     return HttpResponse(template.render(context))
 
 
@@ -58,3 +60,4 @@ def index(request):
     template = loader.get_template('home.html')
     context = RequestContext(request)
     return HttpResponse(template.render(context))
+

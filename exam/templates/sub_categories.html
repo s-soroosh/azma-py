@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
+{% block title %}{{ category.local_name }}{% endblock %}
 {% block content %}
     <div class="panel-group" id="panel-group">
         {% if sub_categories.count == 0 %}
