@@ -30,7 +30,7 @@
 
     </script>
     <!--End of Google Analytics script -->
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{{ exam.local_name }}{% endblock %}</title>
     {% compress css %}
         <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
 
