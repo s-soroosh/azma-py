@@ -1,0 +1,17 @@
+[
+    {
+        "pk": "Python",
+        "model": "tutorial.tutorialcategory",
+        "fields": {
+            "local_name": "پایتون"
+        }
+    },
+    {
+        "pk": "JAVA",
+        "model": "tutorial.tutorialcategory",
+        "fields": {
+            "local_name": "جاوا"
+
+        }
+    }
+]
