@@ -1,12 +1,60 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block no_container_content %}
     <div class="row">
-    <div class="col-xs-9">
-        Main Tutorial content
-    </div>
-    <div class="col-xs-2">
-        {{ t_categories }}
-    </div>
+
+        <div class="col-xs-2"
+             style="margin-right: 50px;margin-left: 20px; background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
+            <h4 style="font-weight: bold; font-family: Yekan;">
+                گروه های آموزشی
+            </h4>
+
+            <div style="padding-right: 15px;">
+                {% for c in t_categories %}
+                    <div>
+                        {{ c.local_name }}
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        <div class="col-xs-9"
+             style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
+
+            <div class="well">
+
+
+                <div class="row">
+                    <div class="col-xs-9">
+                        <h1>
+                            آموزش برنامه نویسی
+                        </h1>
+                        شرح گوره انتخلب شده در اینجا میلددرت اگه ذثساث
+
+                    </div>
+                    <div class="col-xs-2 pull-left" style="text-align: left;">
+                        <img  class="img-thumbnail img-rounded" src="{% static 'image/techs/java.png' %}"/>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                بت اتب هخثب بث تهخبث لتق خهتل لخهقت قلت قهخل تر ره قترقهختقهتق تلقخهت هخلت لتق هختهخ تهخقلت هختقه تهخ
+                تذهخثتق هختثقهخ تهخفذت هخذت هخذت
+            </p>
+
+            <p>
+                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
+            </p>
+
+            <p>
+                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
+            </p>
+
+            <p>
+                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
+            </p>
+        </div>
     </div>
 {% endblock %}
