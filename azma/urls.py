@@ -20,6 +20,7 @@ urlpatterns = patterns('',
                        url(r'^(?i)profile', include('user_profile.urls', namespace='profile')),
                        url(r'^(?i)wage_meter/', include('wage_meter.urls', namespace='wages')),
                        url(r'^(?i)answer/', include('answer.urls', namespace='answer')),
+                       url(r'^(?i)tutorial/', include('tutorial.urls', namespace='tutorial')),
                        url(r'^', include('exam.urls', namespace='exam')),
 )
 

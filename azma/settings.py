@@ -79,6 +79,7 @@ INSTALLED_APPS = (
     'Postchi',
     'user_profile',
     'wage_meter',
+    'tutorial',
     'rest_framework',
     'django.contrib.sites',
     'tagging',
