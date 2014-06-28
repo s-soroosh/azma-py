@@ -23,7 +23,7 @@ COMPRESS_ROOT = os.path.join(BASE_DIR, 'stat')
 # 'compressor.filters.cssmin.CSSMinFilter'
 # ]
 # COMPRESS_JS_FILTERS = [
-#     'compressor.filters.jsmin.JSMinFilter'
+# 'compressor.filters.jsmin.JSMinFilter'
 # ]
 
 # Quick-start development settings - unsuitable for production
@@ -86,6 +86,7 @@ INSTALLED_APPS = (
     'mptt',
     'pytz',
     'feincms',
+    'tinymce',
     'feincms.module.page',
     'feincms.module.medialibrary',
     'feincms.module.extensions',
@@ -256,3 +257,21 @@ SITE_ID = 1
 # FEINCMS_RICHTEXT_INIT_CONTEXT = {
 #
 # }
+
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced",
+    'language': "en",
+    'theme_advanced_toolbar_location': "top",
+    'theme_advanced_toolbar_align': "right",
+    'theme_advanced_statusbar_location': "bottom",
+    'theme_advanced_buttons3_add': "ltr,rtl",
+    'theme_advanced_path': False,
+    'theme_advanced_blockformats': "p,h2,h3",
+    'theme_advanced_resizing': True,
+    'width': '1300',
+    'height': '400',
+    #
+    'plugins': "table,spellchecker,paste,searchreplace,fullscreen,directionality",
+    # 'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+}
