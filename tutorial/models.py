@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from jdatetime import datetime as jalali_datetime
 
 
 class TutorialCategory(models.Model):
@@ -10,11 +11,15 @@ class TutorialCategory(models.Model):
 
 
 class Tutorial(models.Model):
-    category = models.ForeignKey(TutorialCategory,related_name='tutorials')
+    category = models.ForeignKey(TutorialCategory, related_name='tutorials')
     keyword = models.CharField(max_length=200)  # comma separated
     name = models.CharField(max_length=120, primary_key=True)
     local_name = models.CharField(max_length=150)
     author = models.ForeignKey(User)
     content = models.TextField()
     registered_date = models.DateTimeField()
+
+    def get_persian_registered_date(self):
+        return jalali_datetime.fromgregorian(datetime=self.registered_date).strftime('%Y/%m/%d')
+
 
