@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block no_container_content %}
-    <div class="row">
+    <div class="row" style="margin:0px;">
 
         <div class="col-xs-2"
              style="margin-right: 50px;margin-left: 20px; background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
@@ -13,7 +13,7 @@
             <div style="padding-right: 15px;">
                 {% for c in t_categories %}
                     <div>
-                        {{ c.local_name }}
+                        <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
                     </div>
                 {% endfor %}
             </div>
@@ -34,7 +34,7 @@
 
                     </div>
                     <div class="col-xs-2 pull-left" style="text-align: left;">
-                        <img  class="img-thumbnail img-rounded" src="{% static 'image/techs/java.png' %}"/>
+                        <img class="img-thumbnail img-rounded" src="{% static 'image/techs/java.png' %}"/>
                     </div>
                 </div>
             </div>
