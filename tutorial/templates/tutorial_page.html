@@ -11,18 +11,7 @@
             </h4>
 
             <div style="padding-right: 15px;">
-                {% for c in t_categories %}
-                    <div>
-                        <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
-                    </div>
-                    <div style="padding-right: 15px;">
-                        {% for t in c.tutorials.all %}
-                            <div class="{% if t.name == tutorial.name %}active{% endif %}">
-                                <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
+                {% include '_category_list.html' with categories=t_categories %}
             </div>
 
         </div>
@@ -37,7 +26,7 @@
                         <h1>
                             آموزش برنامه نویسی
                         </h1>
-                        شرح گوره انتخلب شده در اینجا میلددرت اگه ذثساث
+                        در این بخش آمورشهایی در فیلدهای مختلف کامپیوتر قرار می گیرد
 
                     </div>
                     <div class="col-xs-2 pull-left" style="text-align: left;">
@@ -46,22 +35,22 @@
                 </div>
             </div>
 
-            <p>
-                بت اتب هخثب بث تهخبث لتق خهتل لخهقت قلت قهخل تر ره قترقهختقهتق تلقخهت هخلت لتق هختهخ تهخقلت هختقه تهخ
-                تذهخثتق هختثقهخ تهخفذت هخذت هخذت
-            </p>
+            {% for c in t_categories %}
+                <div class="well">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
+                            <hr/>
+                            {{ c.description | safe }}
+                        </div>
+                        <div class="col-xs-1 pull-left" style="text-align: left;">
+                            <img style="width:64px;" class="img-responsive img-thumbnail img-rounded"
+                                 src="{% static 'image/techs/java.png' %}"/>
+                        </div>
+                    </div>
 
-            <p>
-                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
-            </p>
-
-            <p>
-                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
-            </p>
-
-            <p>
-                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
-            </p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
