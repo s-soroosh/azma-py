@@ -63,9 +63,9 @@
 
                         <div class="well">
 
-                        <img src="http://www.gravatar.com/avatar/{{ c.user.profile.email_md5 }}" />
+                            <img src="http://www.gravatar.com/avatar/{{ c.user.profile.email_md5 }}"/>
                             {{ c.user.get_full_name }} نوشته است:
-                            <hr />
+                            <hr/>
                             {{ c.comment }}
                         </div>
                     {% endfor %}
@@ -83,15 +83,16 @@
                                     کامنت
                                 </div>
                                 <div class="col-xs-9">
-                                    {{ form.comment }}
+                                    <textarea class="form-control" name="comment" style="margin-bottom: 15px;"></textarea>
+                                    {#                                    {{ form.comment }}#}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-2">
                                     چیزی ننویسید
                                 </div>
-                                <div class="col-xs-9">
-                                    {{ form.honeypot }}
+                                <div class="col-xs-3">
+                                    <input type="text" class="form-control" name="honeypot" style="margin-bottom: 15px;"></textarea>
                                 </div>
                             </div>
 
@@ -100,7 +101,8 @@
                             {{ form.timestamp }}
                             {{ form.security_hash }}
                             <input type="hidden" name="next" value="{% url 'tutorial:tutorial' tutorial.name %}"/>
-                            <input class="btn btn-lg btn-success" style="width: 100%;" type="submit" value="ثبت" id="id_submit"/>
+                            <input class="btn btn-lg btn-success" style="width: 100%;" type="submit" value="ثبت"
+                                   id="id_submit"/>
                         </form>
                     {% else %}
                         <p>برای کامنت لطفا
