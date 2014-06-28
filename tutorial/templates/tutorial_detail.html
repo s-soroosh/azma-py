@@ -58,17 +58,7 @@
                 {% get_comment_count for tutorial as comment_count %}
                 <div> {{ comment_count }} کامنت</div>
                 <div class="well">
-                    {% get_comment_list for tutorial as comments %}
-                    {% for c in comments %}
-
-                        <div class="well">
-
-                            <img src="http://www.gravatar.com/avatar/{{ c.user.profile.email_md5 }}"/>
-                            {{ c.user.get_full_name }} نوشته است:
-                            <hr/>
-                            {{ c.comment }}
-                        </div>
-                    {% endfor %}
+                    {% render_comment_list for tutorial %}
                 </div>
                 {#                <div class="well">#}
                 {#                    {% render_comment_form for tutorial %}#}
@@ -83,7 +73,8 @@
                                     کامنت
                                 </div>
                                 <div class="col-xs-9">
-                                    <textarea class="form-control" name="comment" style="margin-bottom: 15px;"></textarea>
+                                    <textarea class="form-control" name="comment"
+                                              style="margin-bottom: 15px;"></textarea>
                                     {#                                    {{ form.comment }}#}
                                 </div>
                             </div>
@@ -92,7 +83,8 @@
                                     چیزی ننویسید
                                 </div>
                                 <div class="col-xs-3">
-                                    <input type="text" class="form-control" name="honeypot" style="margin-bottom: 15px;"></textarea>
+                                    <input type="text" class="form-control" name="honeypot"
+                                           style="margin-bottom: 15px;"></textarea>
                                 </div>
                             </div>
 
