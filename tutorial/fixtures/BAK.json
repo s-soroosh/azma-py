@@ -1,0 +1,51 @@
+[
+    {
+        "pk": "Python",
+        "model": "tutorial.tutorialcategory",
+        "fields": {
+            "local_name": "پایتون",
+            "img_address": "image/techs/python.png"
+        }
+    },
+    {
+        "pk": "JAVA",
+        "model": "tutorial.tutorialcategory",
+        "fields": {
+            "local_name": "جاوا"
+
+        }
+    },
+
+    {
+        "pk": "JAVA-BEGINNING",
+        "model": "tutorial.tutorialcategory",
+        "fields": {
+            "parent": "JAVA",
+            "local_name": "جاوا مقدماتی"
+
+        }
+    },
+    {
+        "pk": "JAVA-START",
+        "model": "tutorial.tutorial",
+        "fields": {
+            "author": 1,
+            "category": "JAVA-BEGINNING",
+            "local_name": "راه اندازی جاوا",
+            "registered_date": "2014-02-04 00:00:00",
+            "content": "یک کانتنت کوچولو"
+
+        }
+    },
+    {
+        "pk": "JAVA-SYNTAX",
+        "model": "tutorial.tutorial",
+        "fields": {
+            "author": 1,
+            "category": "JAVA-BEGINNING",
+            "local_name": "آشنایی با سینتکس جاوا",
+            "registered_date": "2014-02-04 00:00:00"
+
+        }
+    }
+]
