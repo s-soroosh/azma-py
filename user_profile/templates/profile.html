@@ -32,7 +32,7 @@
         <div class="col-xs-9 pull-right profile-content"
              style="padding-right: 30px;margin-right: 20px; padding-left: 30px;"
                 >
-            <div class="hidden" id="info-container">
+            <div class="visible" id="info-container">
                 <div class="row">
                     <div class="col-lg-2">نام</div>
                     <div class="col-lg-10">{{ user.first_name }}</div>
@@ -50,7 +50,7 @@
                     <div class="col-lg-10">{{ user.date_joined }}</div>
                 </div>
             </div>
-            <div class=" c visible" id="exam-container">
+            <div class=" c hidden" id="exam-container">
                 <div>
                     <ul id="myTab" class="nav nav-tabs">
                         {% for category in categories %}
