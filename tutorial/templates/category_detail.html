@@ -13,12 +13,13 @@
             <div style="padding-right: 15px;">
                 {% for c in t_category.sub_categories.all %}
                     <div>
-                        <a style="font-weight: bold;" href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
+                        <a style="font-weight: bold;"
+                           href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
                     </div>
                     <div style="padding-right: 15px;">
                         {% for t in c.tutorials.all %}
                             <div>
-                                <a href="#"> {{ t.local_name }}</a>
+                                <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
                             </div>
                         {% endfor %}
                     </div>
