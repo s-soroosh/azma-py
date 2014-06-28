@@ -793,3 +793,10 @@ section {
 input[type=email] {
     direction: ltr;
 }
+
+.active {
+    background-color: #eed3d7;
+    width: 100%;
+    margin:0;
+    padding: 0;
+}

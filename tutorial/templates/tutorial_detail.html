@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block no_container_content %}
+    <div class="row" style="margin:0px;">
+
+        <div class="col-xs-2"
+             style="margin-right: 50px;margin-left: 20px; background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
+            <h4 style="font-weight: bold; font-family: Yekan;">
+                گروه های آموزشی
+            </h4>
+
+            <div style="padding-right: 15px;">
+                {% for c in category.sub_categories.all %}
+                    <div>
+                        <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
+                    </div>
+                    <div style="padding-right: 15px;">
+                        {% for t in c.tutorials.all %}
+                            <div class="{% if t.name == tutorial.name %}active{% endif %}">
+                                <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        <div class="col-xs-9"
+             style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
+
+            <div class="well">
+
+
+                <div class="row">
+                    <div class="col-xs-9">
+                        <h1>
+                            {{ tutorial.local_name }}
+                        </h1>
+
+                        <div>
+                            نویسنده: &nbsp;
+                            {{ tutorial.author.get_full_name }}
+                        </div>
+                        <div>
+                            در تاریخ: &nbsp;
+                            {{ tutorial.get_persian_registered_date }}
+                        </div>
+
+                    </div>
+                    <div class="col-xs-2 pull-left" style="text-align: left;">
+                        <img class="img-thumbnail img-rounded" src="{% static 'image/techs/java.png' %}"/>
+                    </div>
+                </div>
+            </div>
+            {{ tutorial.content }}
+
+            <p>
+                بت اتب هخثب بث تهخبث لتق خهتل لخهقت قلت قهخل تر ره قترقهختقهتق تلقخهت هخلت لتق هختهخ تهخقلت هختقه تهخ
+                تذهخثتق هختثقهخ تهخفذت هخذت هخذت
+            </p>
+
+            <p>
+                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
+            </p>
+
+            <p>
+                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
+            </p>
+
+            <p>
+                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
+            </p>
+        </div>
+    </div>
+{% endblock %}
