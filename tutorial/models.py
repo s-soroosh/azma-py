@@ -9,7 +9,8 @@ class TutorialCategory(models.Model):
     name = models.CharField(max_length=120, primary_key=True)
     local_name = models.CharField(max_length=120, )
     parent = models.ForeignKey("self", null=True, blank=True, related_name='sub_categories')
-    description = models.TextField(default="Without description")
+    description = HTMLField(default="Without description")
+    img_address = models.CharField(default='image/techs/python.png', max_length=200)
 
     def __unicode__(self):
         return self.local_name
