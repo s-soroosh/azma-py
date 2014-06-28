@@ -794,7 +794,7 @@ input[type=email] {
     direction: ltr;
 }
 
-.active {
+.category .active {
     background-color: #eed3d7;
     width: 100%;
     margin:0;
