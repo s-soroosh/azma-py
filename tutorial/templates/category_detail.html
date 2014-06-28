@@ -10,21 +10,7 @@
                 گروه های آموزشی
             </h4>
 
-            <div style="padding-right: 15px;">
-                {% for c in t_category.sub_categories.all %}
-                    <div>
-                        <a style="font-weight: bold;"
-                           href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
-                    </div>
-                    <div style="padding-right: 15px;">
-                        {% for t in c.tutorials.all %}
-                            <div>
-                                <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-            </div>
+          {%  include '_category_list.html' with categories=t_category.sub_categories.all %}
 
         </div>
         <div class="col-xs-9"
