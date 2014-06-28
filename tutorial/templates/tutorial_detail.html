@@ -10,20 +10,20 @@
                 گروه های آموزشی
             </h4>
 
-{#            <div style="padding-right: 15px;">#}
-{#                {% for c in category.sub_categories.all %}#}
-{#                    <div>#}
-{#                        <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>#}
-{#                    </div>#}
-{#                    <div style="padding-right: 15px;">#}
-{#                        {% for t in c.tutorials.all %}#}
-{#                            <div class="{% if t.name == tutorial.name %}active{% endif %}">#}
-{#                                <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>#}
-{#                            </div>#}
-{#                        {% endfor %}#}
-{#                    </div>#}
-{#                {% endfor %}#}
-{#            </div>#}
+            {#            <div style="padding-right: 15px;">#}
+            {#                {% for c in category.sub_categories.all %}#}
+            {#                    <div>#}
+            {#                        <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>#}
+            {#                    </div>#}
+            {#                    <div style="padding-right: 15px;">#}
+            {#                        {% for t in c.tutorials.all %}#}
+            {#                            <div class="{% if t.name == tutorial.name %}active{% endif %}">#}
+            {#                                <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>#}
+            {#                            </div>#}
+            {#                        {% endfor %}#}
+            {#                    </div>#}
+            {#                {% endfor %}#}
+            {#            </div>#}
             {% include '_category_list.html' with categories=category.sub_categories.all %}
 
         </div>
@@ -50,13 +50,26 @@
 
                     </div>
                     <div class="col-xs-2 pull-left" style="text-align: left;">
-                        <img style="width:40px;"  class="img-responsive img-thumbnail img-rounded" src="{% static 'image/techs/java.png' %}"/>
+                        <img style="width:40px;" class="img-responsive img-thumbnail img-rounded"
+                             src="{% static 'image/techs/java.png' %}"/>
                     </div>
                 </div>
             </div>
             <div class="tutorial-content">
                 {{ tutorial.content | safe }}
             </div>
+            <div class="well">
+                <div class="row">
+                    <div class="col-xs-4 pull-left" style="text-align: left;">
+                        <a class="btn btn-success">آموزش قبلی</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a class="btn btn-success">آموزش بعدی</a>
+                    </div>
+
+                </div>
+            </div>
         </div>
+
     </div>
 {% endblock %}
