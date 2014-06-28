@@ -40,6 +40,26 @@
         }
     },
     {
+        "pk": "Pyhton-Beginning",
+        "model": "tutorial.tutorialcategory",
+        "fields": {
+            "img_address": "/image/techs/python.png",
+            "description": "\u062a\u0648\u0636\u06cc\u062d\u0627\u062a \u0686\u0627\u0631\u0686\u0648\u0628 \u0627\u0633\u067e\u0631\u06cc\u0646\u06af",
+            "parent": "Python",
+            "local_name": "پایتون مقدماتی"
+        }
+    },
+    {
+        "pk": "Django",
+        "model": "tutorial.tutorialcategory",
+        "fields": {
+            "img_address": "/image/techs/python.png",
+            "description": "\u062a\u0648\u0636\u06cc\u062d\u0627\u062a \u0686\u0627\u0631\u0686\u0648\u0628 \u0627\u0633\u067e\u0631\u06cc\u0646\u06af",
+            "parent": "Python",
+            "local_name": "Django"
+        }
+    },
+    {
         "pk": "JAVA",
         "model": "tutorial.tutorial",
         "fields": {
