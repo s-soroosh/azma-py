@@ -15,6 +15,13 @@
                     <div>
                         <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
                     </div>
+                    <div style="padding-right: 15px;">
+                        {% for t in c.tutorials.all %}
+                            <div class="{% if t.name == tutorial.name %}active{% endif %}">
+                                <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
+                            </div>
+                        {% endfor %}
+                    </div>
                 {% endfor %}
             </div>
 
