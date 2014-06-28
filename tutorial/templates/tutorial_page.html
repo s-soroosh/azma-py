@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block keywords %}{% for c in t_categories %}آموزش {{ c.local_name }}{% if not forloop.last %},{% endif %}{% endfor %}{% endblock %}
 {% load staticfiles %}
 
 {% block no_container_content %}
@@ -17,23 +18,23 @@
         </div>
         <div class="col-xs-9"
              style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
-
-            <div class="well">
-
-
-                <div class="row">
-                    <div class="col-xs-9">
-                        <h1>
-                            آموزش برنامه نویسی
-                        </h1>
-                        در این بخش آمورشهایی در فیلدهای مختلف کامپیوتر قرار می گیرد
-
-                    </div>
-                    <div class="col-xs-2 pull-left" style="text-align: left;">
-                        <img class="img-thumbnail img-rounded" src="{% static 'image/techs/java.png' %}"/>
-                    </div>
-                </div>
-            </div>
+            {##}
+            {#            <div class="well">#}
+            {##}
+            {##}
+            {#                <div class="row">#}
+            {#                    <div class="col-xs-9">#}
+            {#                        <h1>#}
+            {#                            آموزش برنامه نویسی#}
+            {#                        </h1>#}
+            {#                        در این بخش آمورشهایی در فیلدهای مختلف کامپیوتر قرار می گیرد#}
+            {##}
+            {#                    </div>#}
+            {#                    <div class="col-xs-2 pull-left" style="text-align: left;">#}
+            {#                        <img class="img-thumbnail img-rounded" src="{% static 'image/techs/java.png' %}"/>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
 
             {% for c in t_categories %}
                 <div class="well">

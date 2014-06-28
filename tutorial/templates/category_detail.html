@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block keywords %}{% for c in t_category.sub_categories.all %}آموزش {{ c.local_name }}{% if not forloop.last %},{% endif %}{% endfor %}{% endblock %}
 {% load staticfiles %}
 
 {% block no_container_content %}
@@ -10,7 +11,7 @@
                 گروه های آموزشی
             </h4>
 
-          {%  include '_category_list.html' with categories=t_category.sub_categories.all %}
+            {% include '_category_list.html' with categories=t_category.sub_categories.all %}
 
         </div>
         <div class="col-xs-9"
