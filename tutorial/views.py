@@ -19,9 +19,12 @@ class TutorialView(View):
 class TutorialWithCategoryView(View):
     def get(self, request, category_name):
         t_category = TutorialCategory.objects.get(name=category_name.upper())
+        category = t_category
+        while category.parent is not None:
+            category = category.parent
         template = loader.get_template('category_detail.html')
 
-        context = RequestContext(request, {'t_category': t_category})
+        context = RequestContext(request, {'category': category, 't_category': t_category})
         return HttpResponse(template.render(context))
 
 

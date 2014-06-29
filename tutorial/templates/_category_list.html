@@ -1,12 +1,18 @@
-<div style="padding-right: 15px;">
+<div>
     {% for c in categories %}
-        <div>
-            <a style="font-weight: bold;" href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
+        <div class="well" style="padding: 0px; margin-bottom: 0px; min-height: 30px;">
+            <a style="font-weight: bold;" href="{% url 'tutorial:category' c.name %}">
+                {{ c.local_name }}
+                <span style="padding-left: 6px;padding-top: 3px; font-size: 20px; color: #AAAAAA;" class="pull-left glyphicon glyphicon-book"></span>
+            </a>
         </div>
-        <div class="category" style="padding-right: 15px;">
+        {% with categories=c.sub_categories.all template_name="_category_list.html" %}
+            {% include template_name %}
+        {% endwith %}
+        <div class="category">
             {% for t in c.tutorials.all %}
-                <div class="{% if t.name == tutorial.name %}active{% endif %}">
-                    <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
+                <div style="border: solid 1px #DDDDDD; padding-bottom: 1px;" class="{% if t.name == tutorial.name %}active{% endif %}">
+                    <a style="padding-right: 15px;" href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
                 </div>
             {% endfor %}
         </div>

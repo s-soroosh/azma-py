@@ -795,8 +795,14 @@ input[type=email] {
 }
 
 .category .active {
-    background-color: #eed3d7;
+
+    background-color: #5588ff;
     width: 100%;
     margin:0;
     padding: 0;
+
+}
+
+.category .active a {
+    color: #ffffff !important;
 }
