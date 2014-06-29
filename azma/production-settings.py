@@ -51,7 +51,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
-    # 'zinnia.context_processors.version',
+
 )
 
 AUTH_PROFILE_MODULE = 'user_profile.models.UserProfile'
@@ -76,12 +76,14 @@ INSTALLED_APPS = (
     'Postchi',
     'user_profile',
     'wage_meter',
+    'tutorial',
     'rest_framework',
     'django.contrib.sites',
     'tagging',
     'mptt',
     'pytz',
     'feincms',
+    'tinymce',
     'feincms.module.page',
     'feincms.module.medialibrary',
     'feincms.module.extensions',
@@ -246,3 +248,27 @@ MEDIA_URL = '/static/upload/'
 
 # weblog config
 SITE_ID = 1
+
+#cms
+
+# FEINCMS_RICHTEXT_INIT_CONTEXT = {
+#
+# }
+
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced",
+    'language': "en",
+    'theme_advanced_toolbar_location': "top",
+    'theme_advanced_toolbar_align': "right",
+    'theme_advanced_statusbar_location': "bottom",
+    'theme_advanced_buttons3_add': "ltr,rtl",
+    'theme_advanced_path': False,
+    'theme_advanced_blockformats': "p,h2,h3",
+    'theme_advanced_resizing': True,
+    'width': '1300',
+    'height': '400',
+    #
+    'plugins': "table,spellchecker,paste,searchreplace,fullscreen,directionality",
+    # 'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+}
