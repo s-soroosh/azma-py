@@ -1,10 +1,17 @@
 {% for c in comment_list %}
 
     <div class="well">
+        <div>
+           <span>
+                <img src="http://www.gravatar.com/avatar/{{ c.user.profile.email_md5 }}"/>
+            </span>
+            <span style="padding-right: 3px; vertical-align: bottom;">
+                {{ c.user.get_full_name }} نوشته است:
+            </span>
+        </div>
 
-        <img src="http://www.gravatar.com/avatar/{{ c.user.profile.email_md5 }}"/>
-        {{ c.user.get_full_name }} نوشته است:
-        <hr/>
+
+        <hr style="margin-top: 10px; margin-bottom: 10px;"/>
         {{ c.comment }}
     </div>
 {% endfor %}
