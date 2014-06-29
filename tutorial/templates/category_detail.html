@@ -2,6 +2,9 @@
 {% block keywords %}{% for c in t_category.sub_categories.all %}آموزش
     {{ c.local_name }}{% if not forloop.last %},{% endif %}{% endfor %}{% endblock %}
 {% load staticfiles %}
+{% block title %}
+    {{ category.local_name }}
+{% endblock %}
 
 {% block no_container_content %}
     <div class="row" style="margin:0px;">

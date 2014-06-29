@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block keywords %}{% for c in t_categories %}آموزش {{ c.local_name }}{% if not forloop.last %},{% endif %}{% endfor %}{% endblock %}
 {% load staticfiles %}
+{% block title %}آموزش آزما وب
+{% endblock %}
 
 {% block no_container_content %}
     <div class="row" style="margin:0px;">

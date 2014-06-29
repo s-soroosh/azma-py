@@ -2,6 +2,9 @@
 {% load comments %}
 {% load staticfiles %}
 {% block keywords %}{{ tutorial.keyword }}{% endblock %}
+{% block title %}
+    {{ tutorial.local_name }}
+{% endblock %}
 
 {% block no_container_content %}
     <div class="row" style="margin:0px;">
