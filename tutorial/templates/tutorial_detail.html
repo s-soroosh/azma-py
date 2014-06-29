@@ -20,7 +20,7 @@
 
                 <div class="row">
                     <div class="col-xs-9">
-                        <h1>
+                        <h1 style="font-family:Yekan;font-weight: bold;">
                             {{ tutorial.local_name }}
                         </h1>
 
@@ -43,20 +43,22 @@
             <div class="tutorial-content" style="padding: 30px;">
                 {{ tutorial.content | safe }}
             </div>
-{#            <div class="well">#}
-{#                <div class="row">#}
-{#                    <div class="col-xs-4 pull-left" style="text-align: left;">#}
-{#                        <a class="btn btn-success">آموزش قبلی</a>#}
-{#                    </div>#}
-{#                    <div class="col-xs-4">#}
-{#                        <a class="btn btn-success">آموزش بعدی</a>#}
-{#                    </div>#}
-{##}
-{#                </div>#}
-{#            </div>#}
+            {#            <div class="well">#}
+            {#                <div class="row">#}
+            {#                    <div class="col-xs-4 pull-left" style="text-align: left;">#}
+            {#                        <a class="btn btn-success">آموزش قبلی</a>#}
+            {#                    </div>#}
+            {#                    <div class="col-xs-4">#}
+            {#                        <a class="btn btn-success">آموزش بعدی</a>#}
+            {#                    </div>#}
+            {##}
+            {#                </div>#}
+            {#            </div>#}
             <div class="well">
                 {% get_comment_count for tutorial as comment_count %}
-                <div class="well" style="padding: 5px; padding-right: 20px;"> تا به حال  {{ comment_count }} نظر برای این آموزش داده شده است.</div>
+                <div class="well" style="padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این
+                    آموزش داده شده است.
+                </div>
                 <div class="well">
                     {% render_comment_list for tutorial %}
                 </div>
