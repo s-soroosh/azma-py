@@ -18,3 +18,4 @@ feincms-cleanse
 feincms-elephantblog
 django-enumfield
 jdatetime
+tinymce
