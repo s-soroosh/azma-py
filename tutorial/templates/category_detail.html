@@ -10,7 +10,6 @@
             <h4 style="font-weight: bold; font-family: Yekan;">
                 گروه های آموزشی
             </h4>
-
             {% include '_category_list.html' with categories=t_category.sub_categories.all %}
 
         </div>
@@ -22,10 +21,10 @@
 
                 <div class="row">
                     <div class="col-xs-9">
-                        <h1>
-                            آموزش برنامه نویسی
+                        <h1 style="font-family:Titr">
+                            گروه آموزش {{ t_category.local_name }}
                         </h1>
-                        شرح گوره انتخلب شده در اینجا میلددرت اگه ذثساث
+                        {{ t_category.description | safe }}
 
                     </div>
                     <div class="col-xs-2 pull-left" style="text-align: left;">
@@ -34,22 +33,21 @@
                 </div>
             </div>
 
-            <p>
-                بت اتب هخثب بث تهخبث لتق خهتل لخهقت قلت قهخل تر ره قترقهختقهتق تلقخهت هخلت لتق هختهخ تهخقلت هختقه تهخ
-                تذهخثتق هختثقهخ تهخفذت هخذت هخذت
-            </p>
-
-            <p>
-                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
-            </p>
-
-            <p>
-                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
-            </p>
-
-            <p>
-                تبهثخت لتهقخلت ثفهت هخفات هختا هتفاهت قهخت هخت هیتقیهخ ذتهثخق تذقثهخت هقخذتهخ ثقتهخق تلهخت ثقهخقهخت
-            </p>
+            {% for c in t_category.sub_categories.all %}
+                <div class="well">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
+                            <hr/>
+                            {{ c.description | safe }}
+                        </div>
+                        <div class="col-xs-1 pull-left" style="text-align: left;">
+                            <img style="width:64px;" class="img-responsive img-thumbnail img-rounded"
+                                 src="{% static c.img_address %}"/>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
