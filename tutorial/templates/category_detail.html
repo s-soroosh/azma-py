@@ -14,7 +14,11 @@
             <h4 style="font-weight: bold; font-family: Yekan;">
                 گروه های آموزشی
             </h4>
-            {% include '_category_list.html' with categories=category.sub_categories.all %}
+
+            <span >{% include '_category_list.html' with categories=category.sub_categories.all %}</span>
+            <br>
+
+            {% include '_category_list.html' with categories=t_categories no_detail='True' %}
 
         </div>
         <div class="col-xs-9"
