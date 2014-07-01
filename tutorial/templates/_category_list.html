@@ -3,20 +3,25 @@
         <div class="well" style="padding: 0px; margin-bottom: 0px; min-height: 30px;">
             <a style="padding-right: {{ base }}5px; font-weight: bold;" href="{% url 'tutorial:category' c.name %}">
                 {{ c.local_name }}
-                <span style="padding-left: 6px;padding-top: 3px; font-size: 20px; color: #AAAAAA;" class="pull-left glyphicon glyphicon-book"></span>
+                <span style="padding-left: 6px;padding-top: 3px; font-size: 20px; color: #AAAAAA;"
+                      class="pull-left glyphicon glyphicon-book"></span>
             </a>
         </div>
-        {% with base=1 categories=c.sub_categories.all template_name="_category_list.html" %}
-            {% include template_name %}
-        {% endwith %}
+        {% if not no_category %}
+            {% with base=1 categories=c.sub_categories.all template_name="_category_list.html" %}
+                {% include template_name %}
+            {% endwith %}
+        {% endif %}
         {% if not  no_detail %}
-        <div class="category">
-            {% for t in c.tutorials.all %}
-                <div style="border: solid 1px #DDDDDD; padding-bottom: 1px;" class="{% if t.name == tutorial.name %}active{% endif %}">
-                    <a style="padding-right: 15px;" href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
-                </div>
-            {% endfor %}
-        </div>
+            <div class="category">
+                {% for t in c.tutorials.all %}
+                    <div style="border: solid 1px #DDDDDD; padding-bottom: 1px;"
+                         class="{% if t.name == tutorial.name %}active{% endif %}">
+                        <a style="padding-right: 15px;"
+                           href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
+                    </div>
+                {% endfor %}
+            </div>
         {% endif %}
     {% endfor %}
 </div>

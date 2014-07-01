@@ -10,15 +10,19 @@
     <div class="row" style="margin:0px;">
 
         <div class="col-xs-2"
-             style="margin-right: 50px;margin-left: 20px; background-color:#ffffff; border: solid 2px #CCCCCC; padding: 0px;">
-            <h4 style="font-weight: bold; font-family: Yekan;">
-                گروه های آموزشی
-            </h4>
+             style="margin-right: 50px;margin-left: 20px; padding: 0px;">
 
-            <span >{% include '_category_list.html' with categories=category.sub_categories.all %}</span>
+            <div style="background-color:#ffffff; border: solid 2px #CCCCCC; ">
+                {% include '_category_list.html' with categories=category.sub_categories.all %}
+            </div>
             <br>
 
-            {% include '_category_list.html' with categories=t_categories no_detail='True' %}
+            <div style="background-color:#ffffff; border: solid 2px #CCCCCC; ">
+                گروه های آموزشی
+                <br/>
+                {% include '_category_list.html' with categories=t_categories no_detail='True' no_category='True' %}
+            </div>
+
 
         </div>
         <div class="col-xs-9"
@@ -30,7 +34,7 @@
                 <div class="row">
                     <div class="col-xs-9">
                         <h1 style="font-family:Yekan;font-weight: bold;">
-                           {{ t_category.local_name }}
+                            {{ t_category.local_name }}
                         </h1>
                         {{ t_category.description | safe }}
 
@@ -45,7 +49,8 @@
                 <div class="well">
                     <div class="row">
                         <div class="col-xs-11">
-                            <a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a>
+                            <h4 style="font-weight: bold;"><a
+                                    href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a></h4>
                             <hr/>
                             {{ c.description | safe }}
                         </div>
@@ -61,7 +66,8 @@
                 <div class="well">
                     <div class="row">
                         <div class="col-xs-11">
-                            <a href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a>
+                            <h4 style="font-weight: bold;"><a
+                                    href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a></h4>
                             <hr/>
                             {{ t.abstract | safe }}
                         </div>
