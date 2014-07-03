@@ -9,9 +9,6 @@
 {% block no_container_content %}
     <div class="row" style="margin:0px;">
         <div class="col-xs-2" style="margin-right: 50px;margin-left: 20px;padding: 0px;">
-            {#            <h4 style="font-weight: bold; font-family: Yekan;">#}
-            {#                آموزشهای {{ tutorial.category.local_name }}#}
-            {#            </h4>#}
             <div style="background-color:#ffffff; border: solid 2px #CCCCCC; ">
                 {% include '_category_list.html' with categories=category.sub_categories.all %}
             </div>
@@ -21,6 +18,14 @@
                 گروه های آموزشی
                 <br/>
                 {% include '_category_list.html' with categories=t_categories no_detail='True' no_category='True' %}
+            </div>
+            <br/>
+
+            <div style=" background-color:#ffffff; border: solid 2px #CCCCCC; ">
+                <h4 style="font-weight: bold; font-family: Yekan;">
+                    آخرین آموزشها
+                </h4>
+                {% include '_tutorial_list.html' with tutorials=latest_tutorials %}
             </div>
 
         </div>
@@ -32,18 +37,27 @@
 
                 <div class="row">
                     <div class="col-xs-9">
-                        <h1 style="font-family:Yekan;font-weight: bold;">
+                        <h1 style="font-family:Yekan;font-weight: 400;">
                             {{ tutorial.local_name }}
                         </h1>
 
-                        <div>
-                            نویسنده: &nbsp;
-                            {{ tutorial.author.get_full_name }}
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <img class="img-responsive img-thumbnail"
+                                     src="http://www.gravatar.com/avatar/{{ tutorial.author.profile.email_md5 }}"/>
+                            </div>
+                            <div class="col-xs-8">
+                                <div>
+                                    نویسنده: &nbsp;
+                                    {{ tutorial.author.get_full_name }}
+                                </div>
+                                <div>
+                                    در تاریخ: &nbsp;
+                                    {{ tutorial.get_persian_registered_date }}
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            در تاریخ: &nbsp;
-                            {{ tutorial.get_persian_registered_date }}
-                        </div>
+
 
                     </div>
                     <div class="col-xs-2 pull-left" style="text-align: left;">
@@ -52,20 +66,9 @@
                     </div>
                 </div>
             </div>
-            <div class="tutorial-content" style="padding: 30px;">
+            <div class="tutorial-content" style="font-family: tahoma; padding: 30px;">
                 {{ tutorial.content | safe }}
             </div>
-            {#            <div class="well">#}
-            {#                <div class="row">#}
-            {#                    <div class="col-xs-4 pull-left" style="text-align: left;">#}
-            {#                        <a class="btn btn-success">آموزش قبلی</a>#}
-            {#                    </div>#}
-            {#                    <div class="col-xs-4">#}
-            {#                        <a class="btn btn-success">آموزش بعدی</a>#}
-            {#                    </div>#}
-            {##}
-            {#                </div>#}
-            {#            </div>#}
             <div class="well">
                 {% get_comment_count for tutorial as comment_count %}
                 <div class="well" style="padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این

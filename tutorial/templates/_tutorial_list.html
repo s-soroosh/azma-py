@@ -1,0 +1,10 @@
+<div>
+    {% for t in tutorials %}
+        <div class="well" style="padding: 0px; margin-bottom: 0px; min-height: 30px;">
+            <a style="padding-right:5px; font-weight: bold;" href="{% url 'tutorial:tutorial' t.name %}">
+                {{ t.local_name }}
+            </a>
+        </div>
+
+    {% endfor %}
+</div>
