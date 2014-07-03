@@ -811,3 +811,7 @@ input[type=email] {
 .tutorial-content p{
     font-family: tahoma,'Abel',Verdana,Geneva,sans-serif;
 }
+
+.tutorial-content ul li{
+    font-family: tahoma,'Abel',Verdana,Geneva,sans-serif;
+}
