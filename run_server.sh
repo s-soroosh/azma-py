@@ -1,0 +1,1 @@
+nohup gunicorn -w 2 azma.production-wsgi:application &
