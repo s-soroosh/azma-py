@@ -20,7 +20,7 @@ class TutorialCategory(models.Model):
 
 class Tutorial(models.Model):
     class Meta:
-        ordering = ['registered_date']
+        ordering = ['-registered_date']
 
     category = models.ForeignKey(TutorialCategory, related_name='tutorials')
     keyword = models.CharField(max_length=200)  # comma separated
