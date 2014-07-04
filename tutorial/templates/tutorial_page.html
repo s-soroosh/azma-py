@@ -11,7 +11,7 @@
         <div class="col-xs-2"
              style="margin-right: 50px;margin-left: 20px;padding: 0px;">
 
-            <div style=" background-color:#ffffff; border: solid 2px #CCCCCC; ">
+            <div style=" background-color: lightslategray; border: solid 2px #CCCCCC; ">
                 <h4 style="font-weight: bold; font-family: Yekan;">
                     گروه های آموزشی
                 </h4>
@@ -19,7 +19,7 @@
             </div>
             <br/>
 
-            <div style=" background-color:#ffffff; border: solid 2px #CCCCCC; ">
+            <div style=" background-color:lightslategray; border: solid 2px #CCCCCC; ">
                 <h4 style="font-weight: bold; font-family: Yekan;">
                     آخرین آموزشها
                 </h4>
@@ -29,7 +29,7 @@
         </div>
         <div class="col-xs-9"
              style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
-            <div class="well">
+            <div class="well1">
                 <div class="row">
                     <div class="col-xs-9">
                         <h1 style="font-family:Yekan;font-weight: bold;">آموزش های آزما وبی</h1>
@@ -43,7 +43,7 @@
             </div>
 
             {% for c in t_categories %}
-                <div class="well">
+                <div class="well1">
                     <div class="row">
                         <div class="col-xs-11">
                             <h4 style="font-weight: bold;"><a href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a></h4>
@@ -52,7 +52,7 @@
                             {{ c.description | safe }}
                         </div>
                         <div class="col-xs-1 pull-left" style="text-align: left;">
-                            <img style="width:64px;" class="img-responsive img-thumbnail img-rounded"
+                            <img style="width:64px; border: outset #008AEA" class="img-responsive img-thumbnail img-rounded"
                                  src="{% static c.img_address %}"/>
                         </div>
                     </div>

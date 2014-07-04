@@ -9,19 +9,19 @@
 {% block no_container_content %}
     <div class="row" style="margin:0px;">
         <div class="col-xs-2" style="margin-right: 50px;margin-left: 20px;padding: 0px;">
-            <div style="background-color:#ffffff; border: solid 2px #CCCCCC; ">
+            <div style="background-color:#A6A6C3; border: solid 2px #CCCCCC; ">
                 {% include '_category_list.html' with categories=category.sub_categories.all %}
             </div>
             <br>
 
-            <div style="background-color:#ffffff; border: solid 2px #CCCCCC; ">
+            <div style="background-color:lightslategray; border: solid 2px #CCCCCC; ">
                 گروه های آموزشی
                 <br/>
                 {% include '_category_list.html' with categories=t_categories no_detail='True' no_category='True' %}
             </div>
             <br/>
 
-            <div style=" background-color:#ffffff; border: solid 2px #CCCCCC; ">
+            <div style=" background-color:lightslategray; border: solid 2px #CCCCCC; ">
                 <h4 style="font-weight: bold; font-family: Yekan;">
                     آخرین آموزشها
                 </h4>
@@ -32,7 +32,7 @@
         <div class="col-xs-9"
              style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
 
-            <div class="well">
+            <div class="well1">
 
 
                 <div class="row">
@@ -43,7 +43,7 @@
 
                         <div class="row">
                             <div class="col-xs-2">
-                                <img class="img-responsive img-thumbnail"
+                                <img class="img-responsive img-thumbnail "
                                      src="http://www.gravatar.com/avatar/{{ tutorial.author.profile.email_md5 }}"/>
                             </div>
                             <div class="col-xs-8">
@@ -61,7 +61,7 @@
 
                     </div>
                     <div class="col-xs-2 pull-left" style="text-align: left;">
-                        <img class="img-responsive img-thumbnail img-rounded"
+                        <img class="img-responsive img-thumbnail img-rounded" style="border: outset #008AEA"
                              src="{% static tutorial.category.img_address %}"/>
                     </div>
                 </div>
@@ -69,18 +69,18 @@
             <div class="tutorial-content" style="font-family: tahoma; padding: 30px;">
                 {{ tutorial.content | safe }}
             </div>
-            <div class="well">
+            <div class="well1">
                 {% get_comment_count for tutorial as comment_count %}
-                <div class="well" style="padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این
+                <div class="well1" style="padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این
                     آموزش داده شده است.
                 </div>
-                <div class="well">
+                <div class="well1">
                     {% render_comment_list for tutorial %}
                 </div>
                 {#                <div class="well">#}
                 {#                    {% render_comment_form for tutorial %}#}
                 {#                </div>#}
-                <div class="well">
+                <div class="well1">
                     {% if user.is_authenticated %}
                         {% get_comment_form for tutorial as form %}
                         <form action="{% comment_form_target %}" method="POST">
