@@ -36,8 +36,9 @@ def intro(request, exam_id):
 def sub_categories(request, category_id):
     sub_categories = ExamCategory.objects.filter(parent__id=category_id)
     category = ExamCategory.objects.get(id=category_id)
+    category_head = ExamCategory.objects.filter(parent__id=category_id)
     template = loader.get_template('sub_categories.html')
-    context = RequestContext(request, {'sub_categories': sub_categories, 'category': category})
+    context = RequestContext(request, {'sub_categories': sub_categories, 'category': category, 'category_head': category_head})
     return HttpResponse(template.render(context))
 
 

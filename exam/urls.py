@@ -2,7 +2,7 @@ from django.conf.urls import patterns, url
 from exam import views
 
 urlpatterns = patterns('',
-                       url(r'^(?i)$', views.index, name='home'),
+                       url(r'^(?i)$', views.index, name='index'),
                        url(r'^(?i)what$', views.what, name='what'),
                        url(r'^exam/(?i)(?P<exam_id>\d*)', views.intro, name='intro'),
                        url(r'^start/(?i)(?P<exam_id>\d*)', views.start, name='start'),

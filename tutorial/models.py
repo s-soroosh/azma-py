@@ -24,7 +24,7 @@ class Tutorial(models.Model):
 
     category = models.ForeignKey(TutorialCategory, related_name='tutorials')
     keyword = models.CharField(max_length=200)  # comma separated
-    abstract = HTMLField()
+    abstract = HTMLField()  # ?
     name = models.CharField(max_length=120, primary_key=True)
     local_name = models.CharField(max_length=150)
     author = models.ForeignKey(User)

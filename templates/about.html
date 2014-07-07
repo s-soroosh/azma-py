@@ -1,72 +1,220 @@
 {% extends 'base.html' %}
 {% block title %} درباره ما{% endblock %}
+{% block css%}
+
+{% endblock %}
 {% block content %}
 
 
+    <div class="container">
 
+        <div class="row">
 
+            <div class="col-lg-12">
+                <h1 class="page-header">درباره ما
+                    <small>از دیدن شما بسیار خرسندیم!</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href= {% url 'exam:index' %}>خانه</a>
+                    </li>
+                    <li class="active">درباره ما</li>
+                </ol>
+            </div>
 
-    <h1>چرا آزماوب؟</h1>
-    <div class="row">
-        {#        <div class="col-lg-2"></div>#}
-        <div class="col-lg-10">
-            <p>
-                یکی از مشکلات مهندسین و دانشجویان کامپیوتر وسیع بودن علوم کامپیوتر است. به گونه ای که شخص نمی تواند
-                بهترین
-                گزینه را برای یادگیری انتخاب کند و همیشه با این مشکل دست و پنجه نرم می کند که
-                "الان باید چه چیزی یاد بگیرم".
-                یکی دیگر از مشکلاتی که دانشجویان و مهندسین کامپیوتر با آن دست و پنجه نرم می کنند شک در فهمیدن مطالب و
-                مفاهیم
-                است که معمولا منجر به پرسیدن این سوال می شود: "آیا من دانش مناسبی در مورد این موضوع دارم؟".
-
-            </p>
-
-            <P>
-                آزماوب سرویسی است که سعی در کاهش این دست مشکلات در بین مهندسین کامپیوتر ایرانی دارد.
-                این سرویس سعی می کند تا مسیرهای مختلف ممکن را به مهندسین کامپیوتر بشناساند تا بتوانند بهترین انتخاب را
-                داشته باشند.
-                در کنار معرفی مسیرهای مختلف ما با برگزاری آزمون های مختلف دانش شما را محک می زنیم تا بتوانید با خیالی
-                آسوده و محکم تر در مسیرتان قدم بردارید.
-                نتیجه آزمونها خود می تواند ادله مناسبی بر دانش شما باشد پس یکی دیگر از مزایای شرکت در آزمون ها ایجاد
-                رزومه ای مناسب برای شما است.
-            </P>
-
-            <p>
-                ما سرویس های متنوع و جذاب دیگری نیز به شما ارایه خواهیم کرد تنها کافی است منتظر باشید!
-            </p>
         </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <img class="img-responsive" src="/static/image/intro.png">
+            </div>
+            <div class="col-md-6">
+                <h2>به آزماوب خوش آمدید</h2>
+                <p>
+
+یکی از مشکلات مهندسین و دانشجویان کامپیوتر وسیع بودن علوم کامپیوتر است. به گونه ای که شخص نمی تواند بهترین گزینه را برای یادگیری انتخاب کند و همیشه با این مشکل دست و پنجه نرم می کند که "الان باید چه چیزی یاد بگیرم". یکی دیگر از مشکلاتی که دانشجویان و مهندسین کامپیوتر با آن دست و پنجه نرم می کنند شک در فهمیدن مطالب و مفاهیم است که معمولا منجر به پرسیدن این سوال می شود: "آیا من دانش مناسبی در مورد این موضوع دارم؟". </p>
+                <p>آزماوب سرویسی است که سعی در کاهش این دست مشکلات در بین مهندسین کامپیوتر ایرانی دارد. این سرویس سعی می کند تا مسیرهای مختلف ممکن را به مهندسین کامپیوتر بشناساند تا بتوانند بهترین انتخاب را داشته باشند. در کنار معرفی مسیرهای مختلف ما با برگزاری آزمون های مختلف دانش شما را محک می زنیم تا بتوانید با خیالی آسوده و محکم تر در مسیرتان قدم بردارید. نتیجه آزمونها خود می تواند ادله مناسبی بر دانش شما باشد پس یکی دیگر از مزایای شرکت در آزمون ها ایجاد رزومه ای مناسب برای شما است.</p>
+                <p> ما سرویس های متنوع و جذاب دیگری نیز به شما ارایه خواهیم کرد تنها کافی است منتظر باشید!
+</p>
+            </div>
+
+        </div>
+
+        <!-- Team Member Profiles -->
+
+        <div class="row">
+
+            <div class="col-lg-12" >
+                <h2 class="page-header">اعضای توسعه و آموزش آزماوب</h2>
+            </div>
+
+            <div class="col-sm-4" style="border-radius: 50px">
+                <img class="img-responsive" src="http://www.gravatar.com/avatar/soroosh.sarabadani@gmail.com">
+                <h3>سروش سرآبادانی
+                    <small>مدیریت آزماوب</small>
+                </h3>
+                <p> بیش از ۷ سال سابقه حضور در نقش های مختلف در پروژه های کوچک و بزرگ نرم افزاری رو دارم و با استفاده از این سرویس سعی خواهم کرد تا بخشی از مشکلات همکاران عزیزم رو از بین ببرم. </p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+                <img class="img-responsive" src="http://placehold.it/750x450">
+                <h3>John Smith
+                    <small>Job Title</small>
+                </h3>
+                <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+                <img class="img-responsive" src="http://placehold.it/750x450">
+                <h3>John Smith
+                    <small>Job Title</small>
+                </h3>
+                <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+                <img class="img-responsive" src="http://placehold.it/750x450">
+                <h3>John Smith
+                    <small>Job Title</small>
+                </h3>
+                <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+                <img class="img-responsive" src="http://placehold.it/750x450">
+                <h3>John Smith
+                    <small>Job Title</small>
+                </h3>
+                <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+                <img class="img-responsive" src="http://placehold.it/750x450">
+                <h3>John Smith
+                    <small>Job Title</small>
+                </h3>
+                <p>What does this team member do? Keep it short! This is also a great spot for social links!</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li class="tooltip-social facebook-link"><a href="#facebook-profile" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social linkedin-link"><a href="#linkedin-profile" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social twitter-link"><a href="#twitter-profile" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li class="tooltip-social google-plus-link"><a href="#google-plus-profile" data-toggle="tooltip" data-placement="top" title="Google+"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Our Customers -->
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h2 class="page-header">Our Customers</h2>
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img class="img-responsive img-customer" src="http://placehold.it/500x300">
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img class="img-responsive img-customer" src="http://placehold.it/500x300">
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img class="img-responsive img-customer" src="http://placehold.it/500x300">
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img class="img-responsive img-customer" src="http://placehold.it/500x300">
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img class="img-responsive img-customer" src="http://placehold.it/500x300">
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-xs-6">
+                <img class="img-responsive img-customer" src="http://placehold.it/500x300">
+            </div>
+
+        </div>
+
     </div>
-    <h1>اعضای آزما وب</h1>
-    <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-lg-10 center-block">
-            <h3> سروش سرآبادانی </h3>
+    <!-- /.container -->
 
+    <div class="container">
+
+        <hr>
+
+        <footer>
             <div class="row">
-                <div class="col-lg-3">Image</div>
-                <div class="col-lg-9">
-                    سلام- من سروش سرآبادانی  - موسس آزماوب هستم.
-                    <br />
-                    بیش از ۷ سال سابقه حضور در نقش های مختلف در پروژه های کوچک و بزرگ نرم افزاری رو دارم و با استفاده از این سرویس سعی خواهم کرد تا بخشی از مشکلات همکاران عزیزم رو از بین ببرم.
-
-                    <br />
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Company 2013</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row" style="padding-bottom: 70px;">
-        <div class="col-sm-1"></div>
-        <div class="col-lg-10 center-block">
-            <h3> مهدی زارعی </h3>
+        </footer>
 
-            <div class="row">
-                <div class="col-lg-3"><img src=""/></div>
-                <div class="col-lg-9">
-سلام ، من مهدی زارعی ، عضو تیم توسعه ی آزماوب هستم . <br />
-پیش از این پروژه به مدت 4 سال در مورد امور آموزشی در زمینه برنامه نویسی به خصوص آموزش مجازی تحقیق و بررسی انجام دادم .
-واقعا به آزماوب امیدوارم و مطمئنم روزی آزماوب کلیدی برای باز کردن قفل مشکلات بازارِ کار صنعت نرم افزار در کشور عزیزمان خواهد شد.
-                </div>
-            </div>
-        </div>
     </div>
-{% endblock %}
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/modern-business.js"></script>
+
+
+
+{% endblock content %}

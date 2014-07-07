@@ -11,10 +11,16 @@
         }
 
     </style>
+
 {% endblock %}
 
 
 {% block content %}
+    <div class="row">
+        <div class="page-header">
+            <h2>ورود به حساب کاربری</h2>
+        </div>
+    </div>
     <div class="center-block form-group">
         <div class="col-md-offset-3">
             <form id="login_form" action="{% url 'login' %}" method="post" novalidate="">
@@ -102,7 +108,7 @@
                     </div>
                 </div>
 
-                <button id="btnSubmit" type="submit" class="btn btn-success">
+                <button id="btnSubmit" type="submit" class="btn btn-gentel">
                     ورود
                 </button>
             </form>
