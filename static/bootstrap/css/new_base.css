@@ -313,3 +313,33 @@ fieldset[disabled] .btn-gentel.active {
     clear: both
 }
 
+.bg-primary1 {
+
+    border-radius: 10px;
+    height: 35px;
+    color: #ffffcc ;
+    background-color: #3E3E3E
+}
+
+.animation {
+
+    -webkit-animation: myfirst 4s;
+    animation: myfirst 4s;
+}
+
+
+@keyframes myfirst{
+
+    from{background: #ffffcc;}
+    to {background: #3E3E3E;}
+
+    from{color: #3E3E3E;}
+    to{color: #ffffcc}
+
+}
+
+.error_message {
+    padding-top: 7px;
+    text-align: center;
+    font-weight: bold;
+}

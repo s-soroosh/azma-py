@@ -37,22 +37,21 @@ h6,
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.navbar-brand {
-  float: right;
-}
+
 
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand {
     margin-right: -15px;
     margin-left: 0;
   }
-}
 
+/*
 @media (min-width: 768px) {
   .navbar-header {
     float: right;
   }
 }
+*/
 
 .navbar-toggle {
   float: left;
@@ -76,7 +75,7 @@ h6,
 }
 
 .navbar-text {
-  float: right;
+  float: left;
 }
 
 @media (min-width: 768px) {
@@ -95,10 +94,10 @@ h6,
 
 @media (min-width: 768px) {
   .navbar-nav {
-    float: right;
+    float: left;
   }
   .navbar-nav > li {
-    float: right;
+    float: left;
   }
 }
 
@@ -993,4 +992,4 @@ th {
 .list-group-item > .badge + .badge {
   margin-right: 0;
   margin-left: 5px;
-}
+}}
