@@ -44,7 +44,7 @@
     {% endcompress %}
     {% block nocompress_css %} {% endblock %}
 </head>
-<body style="background-color: #C1C1C1;">
+<body class="">
 
 
 
@@ -76,7 +76,7 @@
                     </li>
 
                     <li>
-                        <a href="contact.php">تماس با ما</a>
+                        <a href="{% url 'exam:what' %}">تماس با ما</a>
                     </li>
                     {% if not user.is_authenticated %}
                             <li><a class="" href="{% url 'login' %}">ورود </a></li>
