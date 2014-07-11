@@ -239,7 +239,7 @@
     <div class="row">
         <div class="col-md-11">
             <div class="checkbox">
-                <label class="form-label">
+                <label class="form-label" data-toggle="modal" data-target="#myModal">
                     من تمام قوانین و حقوقم را خواندم و متعهد به انجام آنها میباشم.
                 </label>
                 <input
@@ -247,6 +247,25 @@
                         id="chkrights"
                         name="terms-and-conditions"
                         />
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 style="color: black" class="modal-title" id="myModalLabel">قوانین</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-gentel" data-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
             </div>
         </div>
         <div class="col-md-1">
@@ -264,6 +283,7 @@
     </form>
     </div>
     </div>
+
 {% endblock %}
 
 {% block js %}
