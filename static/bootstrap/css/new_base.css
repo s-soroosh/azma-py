@@ -801,3 +801,10 @@ body {
 .panel-danger > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #ebccd1;
 }
+
+.modal-body {
+
+    color: rgba(0,0,0,0.5);
+    font-size-adjust: 0.55;
+    font-weight: bold;
+}
