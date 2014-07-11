@@ -33,6 +33,7 @@
     <title>{% block title %}{{ exam.local_name }}{% endblock %}</title>
 
     {% compress css %}
+        <link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
         <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
         <link href="{% static "bootstrap/css/new_base.css" %}" rel="stylesheet">
         <link href="{% static "font-farsi/fonts.css" %}" rel="stylesheet">
@@ -44,7 +45,7 @@
     {% endcompress %}
     {% block nocompress_css %} {% endblock %}
 </head>
-<body class="">
+<body>
 
 
 
@@ -70,37 +71,31 @@
                     <li class="active">
                         <a href="{% url 'about' %}">درباره ما</a>
                     </li>
-
                     <li>
-                        <a href="{% url 'tutorial:home' %}">آموزش</a>
+                        <a href="{% url 'exam:what' %}">بیشتر بدانید</a>
                     </li>
 
-                    <li>
-                        <a href="{% url 'exam:what' %}">تماس با ما</a>
-                    </li>
-                    {% if not user.is_authenticated %}
+                     {% if not user.is_authenticated %}
                             <li><a class="" href="{% url 'login' %}">ورود </a></li>
                             <li><a class="" href="{% url 'register' %}">ثبت نام </a></li>
-                        {% endif %}
+                     {% endif %}
 
                      {% if user.is_authenticated %}
                             <li><a class="hidden-lg hidden-md " href="{% url 'profile:show_profile' %}">پروفایل </a></li>
                             <li><a class="hidden-lg hidden-md" href="{% url 'logout' %}">خروج</a></li>
-                        {% endif %}
+                     {% endif %}
 
+                    <li>
+                        <a href="{% url 'tutorial:home' %}">آموزش</a>
+                    </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">آزمون ها <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="portfolio-1-col.html">1 Column Portfolio</a>
-                            </li>
-                            <li><a href="portfolio-2-col.html">2 Column Portfolio</a>
-                            </li>
-                            <li><a href="portfolio-3-col.html">3 Column Portfolio</a>
-                            </li>
-                            <li><a href="portfolio-4-col.html">4 Column Portfolio</a>
-                            </li>
-                            <li><a href="portfolio-item.html">Single Portfolio Item</a>
-                            </li>
+                                {% for category in categories %}
+                                    <li>
+                                        <a href="{% url 'exam:sub_categories' category.id %}">{% trans category.local_name %}</a>
+                                    </li>
+                                {% endfor %}
                         </ul>
                     </li>
                     <li class="dropdown">

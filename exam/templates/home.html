@@ -42,12 +42,16 @@
     <link href="{% static 'UI/alertBar/alertBar.css' %}" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
+
     <link href="{% static "font-farsi/fonts.css" %}" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link href="{% static "bootstrap/css/modern-business.css" %}" rel="stylesheet">
+
     <link href="{% static "bootstrap/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">
+
     <link href="{% static "css/jquery.countdown.css" %}" rel="stylesheet">
+
     <link href="{% static "css/hpanim.css" %}" rel="stylesheet">
 
 
@@ -83,6 +87,9 @@
                     <li>
                         <a href="{% url 'about' %}">درباره ما</a>
                     </li>
+                    <li>
+                        <a href="{% url 'exam:what' %}">بیشتر بدانید</a>
+                    </li>
                 {% if not user.is_authenticated %}
                             <li><a href="{% url 'login' %}">ورود </a></li>
                             <li><a href="{% url 'register' %}">ثبت نام </a></li>
@@ -96,9 +103,7 @@
                     <li>
                         <a class="" href="{% url 'tutorial:home' %}">آموزش</a>
                     </li>
-                    <li>
-                        <a href="contact.php">تماس با ما</a>
-                    </li>
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">آزمون ها <b class="caret"></b></a>
                         <ul class="dropdown-menu">

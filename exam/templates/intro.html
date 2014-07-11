@@ -4,7 +4,7 @@
 
 
 {% block content %}
-
+<!--
 <div class="small-container animation3">
     <div class="container" style="padding-top: 50px;">
 
@@ -60,5 +60,82 @@
             </div>
         </div>
     </div>
+    </div>
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+                <h2>
+                    بیشتر بدانید
+                </h2>
+            </div>
+        </div>
+     <div style="margin-top: 80px;">
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          آزما وب چیه؟
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+                    آزما یک سرویس کارا و مفید برای آزمودن دانش شما در زمینه های مختلف است.<br>
+                    با استفاده از این سرویس شما می توانید میزان تسلط خود بر روی مباحث موجود را بسنجید.<br>
+                    در کنار این خودآزمایی ما سرویس های دیگری به شما معرفی می کنیم تا خودآزمایی و یادگیری برای شما لذت
+                    بخش تر شود.<br>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          خب از کجا شروع کنم؟
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+          چون ما نیاز داریم که بتونیم وضعیت شما دوست عزیز رو پیگیری کنیم و سرویس با کیفیتی رو به شما ارایه بدیم , از شما استدعا داریم که در این وب سایت عضو بشید.<br>
+ما قول میدیم که <a href="{% url 'register' %}">عضویت </a>۲ دقیقه بیشتر وقت شما رو نگیره. یه قول دیگه هم میدیدم و اون اینه که "ارزششو داره".
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+من میتونم تو آزمون ها شرکت کنم؟
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+چرا که نه؟ شما در تمام آزمون های آزما وب می توانید شرکت کنید و هیچ محدودیتی وجود ندارد.
+      </div>
+    </div>
+  </div>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          کاش منم میتونستم کمک کنم
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+چرا که نه؟ اگر شما در هر بخش از پروژه علاقه به همکاری داشته باشید وب آزما با تمام وجود از شما استقبال می کند. <br>
+ شما می توانید در بخش های مختلفی همچون توسعه سرویس - تکمیل آزمون ها و ایجاد آزمون جدید - گزارش مشکلات موجود با ما همکاری کنید.<br>
+اگر حس می کنید در زمینه ای قادر به همکاری هستید ولی در اینجا ذکر نشده حتما با ما تماس بگیرید.<br>
+      </div>
+    </div>
+  </div>
+</div>
+     </div>
     </div>
 {% endblock %}
