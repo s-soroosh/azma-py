@@ -1,6 +1,7 @@
 {% load staticfiles %}
 {% load i18n %}
 {% load compress %}
+{% load tutorial_tags %}
 
 <head>
 
@@ -56,243 +57,259 @@
 
 
     <link href="{% static "bootstrap/css/bootstrap-rtl.css" %}" rel="stylesheet">
-        <link href="{% static "bootstrap/css/new_base.css" %}" rel="stylesheet">
+    <link href="{% static "bootstrap/css/new_base.css" %}" rel="stylesheet">
 
 </head>
 
 
-
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar">sajad</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                <!-- <a class="navbar-brand" href="index.html">Modern Business</a> -->
-                <a style="padding-top: 2px;" class="hidden-sm hidden-xs navbar-brand YekanFont"
-                       href="{% url 'exam:index' %}">
-                        <img src="{% static 'image/logo/logo.png' %}"/>
-                    </a>
-            </div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">sajad</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+            <!-- <a class="navbar-brand" href="index.html">Modern Business</a> -->
+            <a style="padding-top: 2px;" class="hidden-sm hidden-xs navbar-brand YekanFont"
+               href="{% url 'exam:index' %}">
+                <img src="{% static 'image/logo/logo.png' %}"/>
+            </a>
+        </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="{% url 'about' %}">درباره ما</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'exam:what' %}">بیشتر بدانید</a>
-                    </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="{% url 'about' %}">درباره ما</a>
+                </li>
+                <li>
+                    <a href="{% url 'exam:what' %}">بیشتر بدانید</a>
+                </li>
                 {% if not user.is_authenticated %}
-                            <li><a href="{% url 'login' %}">ورود </a></li>
-                            <li><a href="{% url 'register' %}">ثبت نام </a></li>
-                        {% endif %}
+                    <li><a href="{% url 'login' %}">ورود </a></li>
+                    <li><a href="{% url 'register' %}">ثبت نام </a></li>
+                {% endif %}
 
                 {% if user.is_authenticated %}
-                            <li><a class="hidden-lg hidden-md " href="{% url 'profile:show_profile' %}">پروفایل </a></li>
-                            <li><a class="hidden-lg hidden-md" href="{% url 'logout' %}">خروج</a></li>
-                        {% endif %}
-
-                    <li>
-                        <a class="" href="{% url 'tutorial:home' %}">آموزش</a>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">آزمون ها <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                                {% for category in categories %}
-                                    <li>
-                                        <a href="{% url 'exam:sub_categories' category.id %}">{% trans category.local_name %}</a>
-                                    </li>
-                                {% endfor %}
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog-home-1.html">Blog Home 1</a>
-                            </li>
-                            <li><a href="blog-home-2.html">Blog Home 2</a>
-                            </li>
-                            <li><a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="full-width.html">Full Width Page</a>
-                            </li>
-                            <li><a href="sidebar.html">Sidebar Page</a>
-                            </li>
-                            <li><a href="faq.html">FAQ</a>
-                            </li>
-                            <li><a href="404.html">404</a>
-                            </li>
-                            <li><a href="pricing.html">Pricing Table</a>
-                            </li>
-                        </ul>
-                    </li>
-                         {% if user.is_authenticated %}
-                        <li class="navbar-left">
-                            <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
-                            </a>
-                        </li>
+                    <li><a class="hidden-lg hidden-md " href="{% url 'profile:show_profile' %}">پروفایل </a></li>
+                    <li><a class="hidden-lg hidden-md" href="{% url 'logout' %}">خروج</a></li>
                 {% endif %}
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+
+                <li>
+                    <a class="" href="{% url 'tutorial:home' %}">آموزش</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">آزمون ها <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        {% for category in categories %}
+                            <li>
+                                <a href="{% url 'exam:sub_categories' category.id %}">{% trans category.local_name %}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog-home-1.html">Blog Home 1</a>
+                        </li>
+                        <li><a href="blog-home-2.html">Blog Home 2</a>
+                        </li>
+                        <li><a href="blog-post.html">Blog Post</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="full-width.html">Full Width Page</a>
+                        </li>
+                        <li><a href="sidebar.html">Sidebar Page</a>
+                        </li>
+                        <li><a href="faq.html">FAQ</a>
+                        </li>
+                        <li><a href="404.html">404</a>
+                        </li>
+                        <li><a href="pricing.html">Pricing Table</a>
+                        </li>
+                    </ul>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="navbar-left">
+                        <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
         </div>
-        <!-- /.container -->
-    </nav>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
-    <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+<div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('{% static 'image/intro.png' %}');"></div>
-                <div class="carousel-caption">
-                    <h1>Modern Business - A Bootstrap 3 Template</h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-                <div class="carousel-caption">
-                    <h1>Ready to Style &amp; Add Content</h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
-                    <h1>Additional Layout Options at <a href="http://startbootstrap.com">http://startbootstrap.com</a>
-                    </h1>
-                </div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('{% static 'image/intro.png' %}');"></div>
+            <div class="carousel-caption">
+                <h1>Modern Business - A Bootstrap 3 Template</h1>
             </div>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
+        <div class="item">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+            <div class="carousel-caption">
+                <h1>Ready to Style &amp; Add Content</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+            <div class="carousel-caption">
+                <h1>Additional Layout Options at <a href="http://startbootstrap.com">http://startbootstrap.com</a>
+                </h1>
+            </div>
+        </div>
     </div>
 
-    <div class="section">
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</div>
 
-        <div class="container">
+<div class="section">
 
-            <div class="row">
-                <div class="col-lg-5 col-md-5">
-                    <h3 ><i class="fa fa-check-circle"></i>آموزشهای رایگان</h3>
-                    <p>
-                        The 'Modern Business' website template by <a href="http://startbootstrap.com">Start Bootstrap</a>
-                        is built with <a href="http://getbootstrap.com">Bootstrap 3</a>.
-                        Make sure you're up to date with latest Bootstrap documentation!
-                    </p>
-                </div>
-                <div class="col-lg-2 col-md2"></div>
-                <div class="col-lg-5 col-md-5">
-                    <h3><i class="fa fa-pencil"></i>آزمونهای کاربردی</h3>
-                    <p>You're ready to go with this pre-built page structure, now all you need to do is add your own custom stylings! You can see some free themes over at <a href="http://bootswatch.com">Bootswatch</a>, or come up with your own using <a href="http://getbootstrap.com/customize/">the Bootstrap customizer</a>!</p>
-                </div>
-{#                <div class="col-lg-4 col-md-4">#}
-{#                    <h3><i class="fa fa-folder-open"></i> </h3>#}
-{#                    <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p>#}
-{#                </div>#}
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 col-md-5">
+                <h3><i class="fa fa-check-circle"></i>آموزشهای رایگان</h3>
+
+                <p>
+                    The 'Modern Business' website template by <a href="http://startbootstrap.com">Start Bootstrap</a>
+                    is built with <a href="http://getbootstrap.com">Bootstrap 3</a>.
+                    Make sure you're up to date with latest Bootstrap documentation!
+                </p>
             </div>
-            <!-- /.row -->
+            <div class="col-lg-2 col-md2"></div>
+            <div class="col-lg-5 col-md-5">
+                <h3><i class="fa fa-pencil"></i>آزمونهای کاربردی</h3>
 
+                <p>You're ready to go with this pre-built page structure, now all you need to do is add your own custom
+                    stylings! You can see some free themes over at <a href="http://bootswatch.com">Bootswatch</a>, or
+                    come up with your own using <a href="http://getbootstrap.com/customize/">the Bootstrap
+                        customizer</a>!</p>
+            </div>
+            {#                <div class="col-lg-4 col-md-4">#}
+            {#                    <h3><i class="fa fa-folder-open"></i> </h3>#}
+            {#                    <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p>#}
+            {#                </div>#}
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
 
     </div>
-    <!-- /.section -->
+    <!-- /.container -->
 
-    <div class="section-colored text-center">
+</div>
+<!-- /.section -->
 
-        <div class="container">
+<div class="section-colored text-center">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Modern Business: A Clean &amp; Simple Full Website Template by Start Bootstrap</h2>
-                    <p>A complete website design featuring various single page templates from Start Bootstraps library of free HTML starter templates.</p>
-                    <hr>
-                </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Modern Business: A Clean &amp; Simple Full Website Template by Start Bootstrap</h2>
+
+                <p>A complete website design featuring various single page templates from Start Bootstraps library of
+                    free HTML starter templates.</p>
+                <hr>
             </div>
-            <!-- /.row -->
-
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
 
     </div>
-    <!-- /.section-colored -->
+    <!-- /.container -->
 
-    <div class="section">
+</div>
+<!-- /.section-colored -->
 
-        <div class="container">
+<div class="section">
 
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>زبانها و تکنولوژیهایی که در آزما وب می توانید یاد بگیرید</h2>
-                    <hr>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6" >
-                        <img class="img-responsive exam-img" src="{% static 'image/techs/python.png' %}" style="padding-right: 105px;"/>
-                        <div style="text-align: center;"><h3>زبان برنامه نویسی پایتون</h3></div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="portfolio-item.html">
-                        <img class="img-responsive exam-img" src="{% static 'image/techs/php.png' %}" style="padding-right: 105px;"/>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="portfolio-item.html">
-                        <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="portfolio-item.html">
-                        <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="portfolio-item.html">
-                        <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="portfolio-item.html">
-                        <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                    </a>
-                </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>زبانها و تکنولوژیهایی که در آزما وب می توانید یاد بگیرید</h2>
+                <hr>
             </div>
-            <!-- /.row -->
-
+            {%tutorial_categories as t_c %}
+                {% for c in t_c %}
+                    <div class="col-lg-4 col-md-4 col-sm-6" style="text-align: center;">
+                        <img align="center" style="text-align: center;" class="img-responsive exam-img center-block" src="{% static c.img_address %}" />
+                        <div style="text-align: center;"><h3>{{ c.local_name }}</h3></div>
+                    </div>
+                {% endfor %}
+            {#            <div class="col-lg-4 col-md-4 col-sm-6">#}
+            {#                <img class="img-responsive exam-img" src="{% static 'image/techs/python.png' %}"#}
+            {#                     style="padding-right: 105px;"/>#}
+            {##}
+            {#                <div style="text-align: center;"><h3>زبان برنامه نویسی پایتون</h3></div>#}
+            {#            </div>#}
+            {#            <div class="col-lg-4 col-md-4 col-sm-6">#}
+            {#                <a href="portfolio-item.html">#}
+            {#                    <img class="img-responsive exam-img" src="{% static 'image/techs/php.png' %}"#}
+            {#                         style="padding-right: 105px;"/>#}
+            {#                </a>#}
+            {#            </div>#}
+            {#            <div class="col-lg-4 col-md-4 col-sm-6">#}
+            {#                <a href="portfolio-item.html">#}
+            {#                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">#}
+            {#                </a>#}
+            {#            </div>#}
+            {#            <div class="col-lg-4 col-md-4 col-sm-6">#}
+            {#                <a href="portfolio-item.html">#}
+            {#                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">#}
+            {#                </a>#}
+            {#            </div>#}
+            {#            <div class="col-lg-4 col-md-4 col-sm-6">#}
+            {#                <a href="portfolio-item.html">#}
+            {#                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">#}
+            {#                </a>#}
+            {#            </div>#}
+            {#            <div class="col-lg-4 col-md-4 col-sm-6">#}
+            {#                <a href="portfolio-item.html">#}
+            {#                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">#}
+            {#                </a>#}
+            {#            </div>#}
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
 
     </div>
-    <!-- /.section -->
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
 
 {#    <div class="section-colored">#}
 {##}
@@ -356,42 +373,44 @@
 {#    </div>#}
 {#    <!-- /.section -->#}
 
-    <div class="container">
+<div class="container">
 
-        <div class="row well">
-            <div class="col-lg-8 col-md-8">
-                <h4 style="text-align: center">حالا برای اولین بار این فرصتی استثنایی به وجود آمده است تا برنامه نویس را بیاموزیم</h4>
-                <p style="text-align: center">برای پیوستن به جامعه ی برنامه نوسان آزماوبی همین حالا اقدام نمایید!</p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <a class="btn btn-lg btn-gentel pull-right" href="{% url 'register' %}">همین حالا ثبت نام کنید</a>
+    <div class="row well">
+        <div class="col-lg-8 col-md-8">
+            <h4 style="text-align: center">حالا برای اولین بار این فرصتی استثنایی به وجود آمده است تا برنامه نویس را
+                بیاموزیم</h4>
+
+            <p style="text-align: center">برای پیوستن به جامعه ی برنامه نوسان آزماوبی همین حالا اقدام نمایید!</p>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <a class="btn btn-lg btn-gentel pull-right" href="{% url 'register' %}">همین حالا ثبت نام کنید</a>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<div class="container">
+
+    <hr>
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-12" style="text-align: center;">
+                {#                    <p>Copyright &copy; Company 2013</p>#}
+                <p>تمامی حقوق مادی و معنوی این پروژه متعلق به گروه آزما وب می باشد</p>
             </div>
         </div>
-        <!-- /.row -->
+    </footer>
 
-    </div>
-    <!-- /.container -->
+</div>
+<!-- /.container -->
 
-    <div class="container">
-
-        <hr>
-
-        <footer>
-            <div class="row">
-                <div class="col-lg-12" style="text-align: center;">
-{#                    <p>Copyright &copy; Company 2013</p>#}
-                    <p>تمامی حقوق مادی و معنوی این پروژه متعلق به گروه آزما وب می باشد</p>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- JavaScript -->
-    <script src="/static/bootstrap/js/jquery-1.10.2.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.js"></script>
-    <script src="/static/bootstrap/js/modern-business.js"></script>
+<!-- JavaScript -->
+<script src="/static/bootstrap/js/jquery-1.10.2.js"></script>
+<script src="/static/bootstrap/js/bootstrap.js"></script>
+<script src="/static/bootstrap/js/modern-business.js"></script>
 
 </body>
 
