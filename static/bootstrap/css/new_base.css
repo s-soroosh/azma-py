@@ -256,10 +256,6 @@ fieldset[disabled] .btn-gentel.active {
     }
 }
 
-.tab-content {
-    overflow: auto;
-}
-
 .tab-content > .tab-pane, .pill-content > .pill-pane {
     display: none;
 }
@@ -894,8 +890,8 @@ body {
     font-weight: bold;
 }
 
-
 .nav-tabs > li > a {
+    margin-right: 0px;
     background-color: #ffffff;
     border: 1px solid transparent;
     border-radius: 9px 9px 0 0;
@@ -904,4 +900,16 @@ body {
     margin-right: 0;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+#exam-container .active {
+    height: auto;
+}
+
+#exam-container .tab-pane {
+    margin-top: 0px;
+}
+
+.nav-tabs {
+    border-bottom: 0 none;
 }
