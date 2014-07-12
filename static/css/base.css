@@ -908,3 +908,14 @@ fieldset[disabled] .btn-success.active {
   color: #5cb85c;
   background-color: #fff;
 }
+
+.nav-tabs > li > a {
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 9px 9px 0 0;
+    line-height: 1.42857;
+    margin-left: 1px;
+    margin-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}

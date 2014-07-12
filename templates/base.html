@@ -35,12 +35,12 @@
     {% compress css %}
         <link href="{% static 'css/Counter.fonts.css' %}" rel="stylesheet">
         <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
-        <link href="{% static "bootstrap/css/new_base.css" %}" rel="stylesheet">
         <link href="{% static "font-farsi/fonts.css" %}" rel="stylesheet">
         <link href="{% static 'UI/alertBar/alertBar.css' %}" rel="stylesheet">
         <link href="{% static "bootstrap/css/bootstrap-rtl.css" %}" rel="stylesheet">
         <link href="{% static "bootstrap/css/modern-business.css"%}" rel="stylesheet">
         <link href="{% static "bootstrap/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">
+        <link href="{% static "bootstrap/css/new_base.css" %}" rel="stylesheet">
         {% block css %}{% endblock %}
     {% endcompress %}
     {% block nocompress_css %} {% endblock %}

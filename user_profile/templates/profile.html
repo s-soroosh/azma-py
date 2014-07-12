@@ -4,7 +4,7 @@
 {% load compress %}
 
 {% block title %}صفحه شخصی {% endblock %}
-{% block content %}
+{% block no_container_content %}
 
 
 
@@ -18,8 +18,9 @@
     {##}
     {#        </div>#}
 
-    <div class="row">
+    <div class="row" style="margin: 30px;">
         <div class="page-header">
+
             <h3> صفحه شخصی {{ user.username }}</h3>
         </div>
     </div>
