@@ -8,25 +8,18 @@
 {% block no_container_content %}
     <div class="row" style="margin:0px;">
 
-        <div class="col-xs-2"
-             style="margin-right: 50px;margin-left: 20px;padding: 0px;">
+        <div class="col-xs-2"  style="margin-right: 50px;margin-left: 20px;padding: 0px;">
 
-            <div style=" background-color: lightslategray; border: solid 2px #CCCCCC; ">
-                <h4 style="font-weight: bold; font-family: Yekan;">
+            <div style="background-color: #222222;">
+                <h4 style="font-weight: bold; font-family: Yekan; padding :10px 15px">
                     گروه های آموزشی
                 </h4>
-                {% include '_category_list.html' with categories=t_categories no_detail='True' %}
+                {% include '_category_list.html' with categories=t_categories no_detail='True' no_category='True'%}
             </div>
-            <br/>
-
-            <div style=" background-color:lightslategray; border: solid 2px #CCCCCC; ">
-                <h4 style="font-weight: bold; font-family: Yekan;">
-                    آخرین آموزشها
-                </h4>
-                {% include '_tutorial_list.html' with tutorials=latest_tutorials %}
-            </div>
-
         </div>
+
+
+
         <div class="col-xs-9"
              style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
             <div class="well1">

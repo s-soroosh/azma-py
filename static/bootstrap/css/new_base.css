@@ -256,9 +256,9 @@ fieldset[disabled] .btn-gentel.active {
     }
 }
 
-/*.tab-content {*/
-    /*overflow: auto;*/
-/*}*/
+.tab-content {
+    overflow: auto;
+}
 
 .tab-content > .tab-pane, .pill-content > .pill-pane {
     display: none;
@@ -894,45 +894,14 @@ body {
     font-weight: bold;
 }
 
-#exam-container .active {
-    height: auto;
-}
 
 .nav-tabs > li > a {
-    margin-right: 0px;
-    margin-left: 1px;
-    padding-left: 30px;
-    padding-right: 30px;
-    line-height: 1.428571429;
+    background-color: #ffffff;
     border: 1px solid transparent;
     border-radius: 9px 9px 0 0;
-    background-color: #ffffff;
-}
-
-.nav-tabs > li > a:hover {
-    border-color: #eeeeee #eeeeee #dddddd;
-    background-color: #ffdd99;
-}
-
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
-    color: #555555;
-    cursor: default;
-    background-color: #ffcc99;
-    border: 1px solid #dddddd;
-    border-bottom-color: transparent;
-}
-
-#exam-container .tab-pane {
-    margin-top: 0px;
-}
-
-.tab-content .jumbotron {
-    border-radius: 0px;
-    background-color: #448899;
-}
-
-.nav-tabs {
-    border-bottom: 0 none;
+    line-height: 1.42857;
+    margin-left: 1px;
+    margin-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
 }

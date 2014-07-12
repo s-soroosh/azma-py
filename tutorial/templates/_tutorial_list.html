@@ -1,7 +1,7 @@
-<div>
+<div >
     {% for t in tutorials %}
         <div class="well2" style="padding: 0px; margin-bottom: 0px; min-height: 30px;">
-            <a style="padding-right:5px; font-weight: normal;" href="{% url 'tutorial:tutorial' t.name %}">
+            <a style="padding-right:5px; font-weight: bolder;" href="{% url 'tutorial:tutorial' t.name %}">
                 {{ t.local_name }}
             </a>
         </div>

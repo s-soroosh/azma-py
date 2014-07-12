@@ -7,34 +7,20 @@
 {% endblock %}
 
 {% block no_container_content %}
-    <div class="row" style="margin:0px;">
+    <div class="row">
 
-        <div class="col-xs-2"
-             style="margin-right: 50px;margin-left: 20px; padding: 0px;">
+        <div class="col-xs-2"  style="margin-right: 50px;margin-left: 20px;padding: 0px;">
 
-            <div style="background-color:#A6A6C3; border: solid 2px #CCCCCC; ">
+            <div style="background-color: #222222;">
+            <h4  style="font-weight: bold; font-family: Yekan; padding :10px 15px">
+                بخش آموزشی {{ category.local_name }}
+            </h4>
                 {% include '_category_list.html' with categories=category.sub_categories.all %}
             </div>
-            <br>
-
-            <div style="background-color:lightslategray; border: solid 2px #CCCCCC;">
-                گروه های آموزشی
-                <br/>
-                {% include '_category_list.html' with categories=t_categories no_detail='True' no_category='True' %}
-            </div>
-            <br/>
-
-            <div style=" background-color: lightslategray; border: solid 2px #CCCCCC; ">
-                <h4 style="font-weight: bold; font-family: Yekan; ">
-                    آخرین آموزشها
-                </h4>
-                <span style = "background-color: blueviolet">{% include '_tutorial_list.html' with tutorials=latest_tutorials %}</span>
-            </div>
-
-
         </div>
-        <div class="col-xs-9"
-             style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
+
+
+        <div class="col-xs-9" style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
 
             <div class="well1">
 
@@ -47,7 +33,7 @@
                         {{ t_category.description | safe }}
 
                     </div>
-                    <div class="col-xs-2 pull-left" style="border: outset style="text-align: left;">
+                    <div class="col-xs-2 pull-left" style="border: outset; text-align: left">
                         <img class="img-thumbnail img-rounded" style="border: outset #008AEA" src="{% static t_category.img_address %}"/>
                     </div>
                 </div>

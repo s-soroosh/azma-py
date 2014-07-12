@@ -1,10 +1,9 @@
 <div>
     {% for c in categories %}
-        <div class="well2" style="padding: 0px; margin-bottom: 0px; min-height: 30px; background">
+        <div class="well2" style="padding: 0px; margin-bottom: 0px; min-height: 30px;">
             <a style="padding-right: {{ base }}5px; font-weight: bold;" href="{% url 'tutorial:category' c.name %}">
                 {{ c.local_name }}
-                <span style="padding-left: 6px;padding-top: 3px; font-size: 20px; color: #AAAAAA;"
-                      class="pull-left glyphicon glyphicon-book"></span>
+
             </a>
         </div>
         {% if not no_category %}

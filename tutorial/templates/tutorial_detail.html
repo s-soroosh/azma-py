@@ -9,24 +9,14 @@
 {% block no_container_content %}
     <div class="row" style="margin:0px;">
         <div class="col-xs-2" style="margin-right: 50px;margin-left: 20px;padding: 0px;">
-            <div style="background-color:#A6A6C3; border: solid 2px #CCCCCC; ">
+
+
+            <div class="nav-side ">
+            <div >
                 {% include '_category_list.html' with categories=category.sub_categories.all %}
             </div>
-            <br>
-
-            <div style="background-color:lightslategray; border: solid 2px #CCCCCC; ">
-                گروه های آموزشی
-                <br/>
-                {% include '_category_list.html' with categories=t_categories no_detail='True' no_category='True' %}
             </div>
-            <br/>
 
-            <div style=" background-color:lightslategray; border: solid 2px #CCCCCC; ">
-                <h4 style="font-weight: bold; font-family: Yekan;">
-                    آخرین آموزشها
-                </h4>
-                {% include '_tutorial_list.html' with tutorials=latest_tutorials %}
-            </div>
 
         </div>
         <div class="col-xs-9"
