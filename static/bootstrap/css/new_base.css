@@ -362,7 +362,7 @@ fieldset[disabled] .btn-gentel.active {
 a,
 a:focus,
 a:hover {
-    color: #fff;
+    color: #666;
 }
 
 /* Custom default button */
@@ -391,6 +391,10 @@ body {
     text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
 
+.tutorial-content {
+
+    background-color: rgba(999, 222, 3, 0.35);
+}
 
 
 
@@ -531,10 +535,11 @@ body {
 
 .well1 {
 
+    background-color: #febc53;
     padding: 19px;
     margin-bottom: 20px;
     border: 1px solid rgba(0, 0, 0, .55);
-    color: rgba(0, 0, 0, .35)
+    color: rgba(0, 0, 0, .75)
 }
 
 .well1 blockquote {
@@ -554,7 +559,7 @@ body {
 
 .panel-body {
     padding: 15px;
-    background-color: rgba(0, 0, 0, .56);
+    background-color: rgba(0, 0, 0, .26);
     font-size-adjust: 0.6;
 
 }
@@ -588,6 +593,7 @@ body {
 
 .panel-heading + .list-group .list-group-item:first-child {
     border-top-width: 0;
+
 }
 
 .panel > .table,
@@ -719,11 +725,12 @@ body {
     border: 0;
 }
 
-.panel-heading {
+.panel-heading-exam {
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-right-radius: 53px;
+    background-color: #febc53;
 }
 
 .panel-heading > .dropdown .dropdown-toggle {
@@ -735,6 +742,7 @@ body {
     margin-bottom: 0;
     font-size: 16px;
     color: inherit;
+
 
 }
 
@@ -752,6 +760,12 @@ body {
 
 .panel-group {
     margin-bottom: 20px;
+
+}
+
+.panel {
+    border-radius: 7px !important;
+
 }
 
 .panel-group .panel {
@@ -782,6 +796,7 @@ body {
 
 .panel-default {
     border-color: #ddd;
+
 }
 
 .panel-default > .panel-heading {
@@ -818,6 +833,7 @@ body {
 
 .panel-success {
     border-color: #d6e9c6;
+    background-color: dimgray;
 }
 
 .panel-success > .panel-heading {
@@ -921,4 +937,17 @@ body {
 
 .home-well {
   color: rgba(0, 0, 0, .56)
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 2px solid #888;
+
+}
+
+hr {
+
+    border-color: #999;
+    border-width: 2px;
 }

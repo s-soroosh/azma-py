@@ -38,16 +38,21 @@
 
 {% block content %}
 
+    <div class="modal-open">
     <h1>آزمون {{ exam.local_name }} </h1>
-
+    <hr >
+    <div style="padding-top: 10px">
     <div class="alertbar">
     </div>
-    <div class="container">
+    <div style="background-color: #808080; height:auto; border-radius: 5px">
+    <div style="padding: 20px">
+    <div class="container" >
         <p>
             {{ exam.description | safe }}
 
         </p>
     </div>
+    <hr>
     <div class="container duration">مدت زمان آزمون:
         {{ exam.duration }}
         دقیقه
@@ -59,7 +64,7 @@
         {{ exam.number_of_attempts }}
     </div>
     <br/>
-
+    <hr>
     <div class="container">
         دانش مورد نیاز این آزمون
         <ul>
@@ -78,10 +83,15 @@
     <div id="timer" class="container form-group timer" style="display: none;"></div>
     <div id="enter" class="container enter" style="display: none;">
         {% if exam.number_of_attempts > attempts %}
-            <a class="btn btn-success " href="{% url 'exam:start' exam.id %}">
+            <a class="btn btn-primary " href="{% url 'exam:start' exam.id %}">
                 ورود به آزمون
             </a>
         {% endif %}
 
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
 {% endblock %}

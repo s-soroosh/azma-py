@@ -2,6 +2,9 @@
 {% load staticfiles %}
 {% block title %}{{ category.local_name }}{% endblock %}
 {% block content %}
+    <div class="page-header">
+        <h2>آزمون ها</h2>
+    </div>
     <div class="panel-group" id="panel-group">
         {% if sub_categories.count == 0 %}
             <h3>
@@ -16,7 +19,7 @@
         {% for cat in sub_categories %}
             <div class="panel panel-success">
 
-                <div class="panel-heading">
+                <div class="panel-heading-exam">
                     <a data-toggle="collapse" data-parent="panel-group" href="#" data-target="#cat-{{ cat.name }}">
                         <div class="panel-title">
                             <div class="row">

@@ -130,3 +130,28 @@ footer {
  /* increases the carousel height so it looks good on phones */
   }
 }
+
+
+.modal-header,.modal-footer{
+
+    background-color: #808080;
+
+}
+
+.modal-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-footer {
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.modal-body {
+
+    background-color: rgba(999,222,3,0.25);
+    margin-bottom: -15px;
+    padding-bottom: -5px;
+}
