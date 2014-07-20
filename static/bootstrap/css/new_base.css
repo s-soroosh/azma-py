@@ -363,6 +363,7 @@ a,
 a:focus,
 a:hover {
     color: #666;
+    text-decoration: none;
 }
 
 /* Custom default button */
