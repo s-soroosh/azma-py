@@ -56,7 +56,7 @@ fieldset[disabled] .btn-gentel.active {
 
     right: 10px;
     width: 22%;
-    min-height: 100%;
+    min-height: auto;
     font-size: 10pt;
     background-color: rgba(0, 0, 0, 0.3);
     /*box-shadow: inset 100px 100px 100px #282828;*/
@@ -949,7 +949,7 @@ body {
 
 hr {
 
-    border-color: #999;
+    border-color: #444;
     border-width: 2px;
 }
 
