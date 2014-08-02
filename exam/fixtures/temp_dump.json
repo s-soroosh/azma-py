@@ -1,1 +1,2872 @@
-[{"pk": 1, "model": "exam.examcategory", "fields": {"name": "java", "parent": null, "local_name": "\u062c\u0627\u0648\u0627"}}, {"pk": 2, "model": "exam.examcategory", "fields": {"name": "python", "parent": null, "local_name": "\u067e\u0627\u06cc\u062a\u0648\u0646"}}, {"pk": 3, "model": "exam.examcategory", "fields": {"name": "linux", "parent": null, "local_name": "\u0644\u06cc\u0646\u0648\u06a9\u0633"}}, {"pk": 10, "model": "exam.examcategory", "fields": {"name": "BeginningJAVA", "parent": 1, "local_name": "\u062c\u0627\u0648\u0627 \u0645\u0642\u062f\u0645\u0627\u062a\u06cc"}}, {"pk": 11, "model": "exam.examcategory", "fields": {"name": "Spring", "parent": 1, "local_name": "Spring"}}, {"pk": 12, "model": "exam.examcategory", "fields": {"name": "JPA", "parent": 1, "local_name": "JPA"}}, {"pk": 13, "model": "exam.examcategory", "fields": {"name": "pythonlang", "parent": 2, "local_name": "\u0632\u0628\u0627\u0646 \u067e\u0627\u06cc\u062a\u0648\u0646"}}, {"pk": 1, "model": "exam.exam", "fields": {"category": 10, "number_of_attempts": 3, "description": "\u062f\u0631 \u0627\u06cc\u0646 \u0622\u0632\u0645\u0648\u0646 \u0645\u06cc\u0632\u0627\u0646 \u0622\u0634\u0646\u0627\u06cc\u06cc \u0634\u0645\u0627 \u0628\u0627 \u0632\u0628\u0627\u0646 \u062c\u0627\u0648\u0627 \u0633\u0646\u062c\u06cc\u062f\u0647 \u0645\u06cc \u0634\u0648\u062f.  <br  />\u0628\u0631\u0627\u06cc \u0634\u0631\u06a9\u062a \u062f\u0631 \u0627\u06cc\u0646 \u0622\u0632\u0645\u0648\u0646 \u062a\u0646\u0647\u0627 \u062f\u0627\u0634\u062a\u0646 \u0622\u0634\u0646\u0627\u06cc\u06cc \u0627\u0648\u0644\u06cc\u0647 \u0628\u0627 \u0627\u06cc\u0646 \u0632\u0628\u0627\u0646 \u06a9\u0627\u0641\u06cc \u0627\u0633\u062a.", "end_date": null, "local_name": "\u062c\u0627\u0648\u0627 \u0645\u0642\u062f\u0645\u0627\u062a\u06cc", "duration": 100, "exam_state": 0, "start_date": "2014-02-06T00:00:00", "name": "JAVA Elementary"}}, {"pk": 2, "model": "exam.exam", "fields": {"category": 10, "number_of_attempts": 1, "description": "\u062f\u0631  \u0627\u06cc\u0646 \u0622\u0632\u0645\u0648\u0646 \u0645\u06cc\u0632\u0627\u0646 \u0622\u0634\u0646\u0627\u06cc\u06cc \u0634\u0645\u0627 \u0628\u0627 JAVA Generics \u0633\u0646\u062c\u06cc\u062f\u0647 \u0645\u06cc \u0634\u0648\u062f.", "end_date": null, "local_name": "JAVA Generics", "duration": 100, "exam_state": 0, "start_date": "2014-02-04T00:00:00", "name": "JAVA Generics"}}, {"pk": 3, "model": "exam.exam", "fields": {"category": 2, "number_of_attempts": 1, "description": "", "end_date": null, "local_name": "\u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u0642\u062f\u0645\u0627\u062a\u06cc", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Python Elementary"}}, {"pk": 4, "model": "exam.exam", "fields": {"category": 2, "number_of_attempts": 1, "description": "", "end_date": null, "local_name": "Django", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Django"}}, {"pk": 5, "model": "exam.exam", "fields": {"category": 3, "number_of_attempts": 1, "description": "", "end_date": null, "local_name": "\u0627\u0633\u06a9\u0631\u0628\u067e\u062a \u0646\u0648\u06cc\u0633\u06cc Bash", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Bash Scripting"}}, {"pk": 6, "model": "exam.exam", "fields": {"category": 3, "number_of_attempts": 1, "description": "", "end_date": null, "local_name": "\u0645\u062f\u06cc\u0631\u06cc\u062a \u06f1", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Administration I"}}, {"pk": 7, "model": "exam.exam", "fields": {"category": 3, "number_of_attempts": 1, "description": "", "end_date": null, "local_name": "\u0645\u062f\u06cc\u0631\u06cc\u062a \u06f2", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Administration II"}}, {"pk": 8, "model": "exam.exam", "fields": {"category": 3, "number_of_attempts": 1, "description": "", "end_date": null, "local_name": "\u0633\u0631\u0648\u06cc\u0633", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Services"}}, {"pk": 9, "model": "exam.exam", "fields": {"category": 11, "number_of_attempts": 1, "description": "\u06cc\u0647 \u0645\u0642\u062f\u0627\u0631 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0641\u0627\u0631\u0633\u06cc \u062f\u0631 \u0645\u0648\u0631\u062f \u0627\u0633\u067e\u0631\u06cc\u0646\u06af \u0648 \u0627\u06cc\u0646\u06a9\u0647 \u062f\u0631 \u0627\u06cc\u0646 \u0628\u0647\u0634 \u0686\u0647 \u0686\u06cc\u0632\u06cc \u0645\u0648\u0631\u062f \u0627\u0645\u062a\u062d\u0627\u0646 \u0642\u0631\u0627\u0631 \u0645\u06cc\u06af\u06cc\u0631\u0647\u0642", "end_date": null, "local_name": "Bean Factory", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "BeanFactory"}}, {"pk": 10, "model": "exam.exam", "fields": {"category": 11, "number_of_attempts": 1, "description": "", "end_date": null, "local_name": "Inversion Of Control", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "IOC"}}, {"pk": 11, "model": "exam.exam", "fields": {"category": 11, "number_of_attempts": 1, "description": "\u0630\u062a\u0641\u0630 \u0631\u0642\u062a\u0631\u0644\u0642 \u062a\u0642\u0631\u062a \u0631\u0628\u062a\u0631 \u0644\u0642\u062a\u0631  \u0631\u0642\u062a \u0644\u0631\u062a \u0644\u0631\u0644\u0631\u062a\u0631 \u0644\u062a \u0631\u0644\u0631\u062a \u0628\u0631\u062a  \u0644\u0631\u062a \u0631 \u062a\u0631 \u0631\u062a \u0631\u0644\u0631\u062a\u0631 ", "end_date": null, "local_name": "Spring JDBC", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Spring JDBC"}}, {"pk": 12, "model": "exam.exam", "fields": {"category": 11, "number_of_attempts": 1, "description": "\u0628\u06cc \u06cc\u062a\u06cc\u062a \u06cc\u06cc\u062a\u06cc \u06cc\u062a \u06cc\u062b\u062a\u0632 \u0634\u06cc\u062f\u0632\u0632\u062f \u0628\u062a\u062b \u0647 \u06cc\u062a\u0635\u06cc\u0647\u06cc \u062a\u06cc\u0636\u062e \u062a\u0635\u062d \u0628\u062a\u0628\u0635\u062a", "end_date": null, "local_name": "Spring MVC", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Spring MVC"}}, {"pk": 13, "model": "exam.exam", "fields": {"category": 11, "number_of_attempts": 1, "description": "\u0644\u0627\u0637 \u062a\u06cc\u0646 \u0628\u062a\u06cc \u062a\u0628 \u0628\u062a\u0635 \u0628\u062a\u062b\u0642\u0647\u062b \u0632\u062f\u0632\u067e\u06cc \u0631\u0627\u062b\u062e \u0632\u062b\u062e\u0647\u062a\u0632 \u062a\u062e\u0647\u062b \u0628\u0647\u062e\u062b\u0635\u062a\u0628 \u062a\u0628\u062b\u0642 \u062b\u062e\u0647\u062a\u0631", "end_date": null, "local_name": "Spring Data", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Spring Data"}}, {"pk": 14, "model": "exam.exam", "fields": {"category": 12, "number_of_attempts": 1, "description": "\u0644\u0627\u0637 \u062a\u06cc\u0646 \u0628\u062a\u06cc \u062a\u0628 \u0628\u062a\u0635 \u0628\u062a\u062b\u0642\u0647\u062b \u0632\u062f\u0632\u067e\u06cc \u0631\u0627\u062b\u062e \u0632\u062b\u062e\u0647\u062a\u0632 \u062a\u062e\u0647\u062b \u0628\u0647\u062e\u062b\u0635\u062a\u0628 \u062a\u0628\u062b\u0642 \u062b\u062e\u0647\u062a\u0631", "end_date": null, "local_name": "Hibernate Elementary", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Hibernate Elementary"}}, {"pk": 15, "model": "exam.exam", "fields": {"category": 12, "number_of_attempts": 1, "description": "\u0644\u0627\u0637 \u062a\u06cc\u0646 \u0628\u062a\u06cc \u062a\u0628 \u0628\u062a\u0635 \u0628\u062a\u062b\u0642\u0647\u062b \u0632\u062f\u0632\u067e\u06cc \u0631\u0627\u062b\u062e \u0632\u062b\u062e\u0647\u062a\u0632 \u062a\u062e\u0647\u062b \u0628\u0647\u062e\u062b\u0635\u062a\u0628 \u062a\u0628\u062b\u0642 \u062b\u062e\u0647\u062a\u0631", "end_date": null, "local_name": "Toplink Elementary", "duration": 100, "exam_state": 0, "start_date": "2014-10-10T00:00:00", "name": "Toplink Elementary"}}, {"pk": 16, "model": "exam.exam", "fields": {"category": 13, "number_of_attempts": 1, "description": "\u062f\u0631 \u0627\u06cc\u0646 \u0622\u0632\u0645\u0648\u0646 \u0645\u06cc\u0632\u0627\u0646 \u0622\u0634\u0646\u0627\u06cc\u06cc \u0634\u0645\u0627 \u0628\u0627 \u067e\u0627\u06cc\u062a\u0648\u0646 \u062f\u0631 \u0633\u0637\u062d \u0645\u0642\u062f\u0645\u0627\u062a\u06cc \u0633\u0646\u062c\u06cc\u062f\u0647 \u0645\u06cc \u0634\u0648\u062f", "end_date": null, "local_name": "\u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u0642\u062f\u0645\u0627\u062a\u06cc", "duration": 100, "exam_state": 0, "start_date": "2014-06-23T16:51:20", "name": "python-basic"}}, {"pk": 1, "model": "exam.requiredknowledge", "fields": {"name": "\u0645\u062a\u063a\u06cc\u0631\u0647\u0627", "exams": [1, 2, 3]}}, {"pk": 1, "model": "exam.question", "fields": {"code_type": "java", "code": "public static void main(String... args){\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nfor(int i=0;i<=1000;i++){\r\ni++;\r\n}\r\n\r\n}", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627 \u06a9\u0644\u0645\u0647 \u06a9\u0644\u06cc\u062f\u06cc \u062f\u0631 \u062c\u0627\u0648\u0627 \u0646\u06cc\u0633\u062a\u061f\u200e\u200e", "image": "", "score": 1}}, {"pk": 2, "model": "exam.question", "fields": {"code_type": "java", "code": null, "exam": 1, "text": "\u0622\u06cc\u0627 \u0628\u062f\u0648\u0646 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u062c\u0627\u0648\u0627 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0646\u0641\u0633 \u06a9\u0634\u06cc\u062f\u061f\u200e\u200e", "image": "", "score": 1}}, {"pk": 3, "model": "exam.question", "fields": {"code_type": "java", "code": null, "exam": 1, "text": "\u062f\u0631 \u0646\u0633\u062e \u0645\u062e\u062a\u0644\u0641 \u062c\u0627\u0648\u0627 \u0627\u0645\u06a9\u0627\u0646\u0627\u062a \u0645\u062e\u062a\u0644\u0641\u06cc \u0628\u0647 \u0627\u06cc\u0646 \u0632\u0628\u0627\u0646 \u0627\u0636\u0627\u0641\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a. <br /> \u06cc\u06a9\u06cc \u0627\u0632 \u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646\u0627\u062a Generic \u0627\u0633\u062a. <br /> \u06a9\u062f\u0627\u0645 \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627 \u062f\u0631 \u0645\u0648\u0631\u062f Generic \u0635\u062d\u06cc\u062d \u0627\u0633\u062a.", "image": "", "score": 1}}, {"pk": 4, "model": "exam.question", "fields": {"code_type": "java", "code": null, "exam": 1, "text": "\u0641\u0631\u0636 \u06a9\u0646\u06cc\u062f \u06a9\u0647 \u0645\u062a\u062f \u0632\u06cc\u0631 synchronized \u062a\u0639\u0631\u06cc\u0641 \u0634\u062f\u0647 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u0622\u0628\u062c\u06a9\u062a B \u0627\u0632 \u0646\u062e A \u0635\u062f\u0627 \u0632\u062f\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a <br /> wait(2000); <br /> \u0628\u0639\u062f \u0627\u0632 \u0641\u0631\u0627\u062e\u0648\u0627\u0646\u06cc \u0627\u06cc\u0646 \u0645\u062a\u062f  \u0686\u0647 \u0632\u0645\u0627\u0646\u06cc \u0646\u062e A \u0645\u06cc\u062a\u0648\u0627\u0646\u062f \u06a9\u0627\u0646\u062f\u06cc\u062f \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u067e\u0631\u062f\u0627\u0632\u0634\u06af\u0631 \u0628\u0627\u0634\u062f\u061f", "image": "question/images/4.png", "score": 1}}, {"pk": 5, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u063a\u06cc\u0631 \u0642\u0627\u0628\u0644 \u0642\u0628\u0648\u0644 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 6, "model": "exam.question", "fields": {"code_type": "java", "code": "public class Test {\r\nstatic int age;\r\npublic static void main (String args []) {\r\nage = age + 1;\r\nSystem.out.println(\"The age is \" + age);\r\n}\r\n}", "exam": 1, "text": "\u06af\u0632\u06cc\u0646\u0647 \u0645\u0646\u0627\u0633\u0628 \u0631\u0627 \u0628\u0631\u0627\u06cc \u0627\u06cc\u0646 \u0642\u0637\u0639\u0647 \u06a9\u062f \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.", "image": "", "score": 1}}, {"pk": 7, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0635\u062d\u06cc\u062d \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 8, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 true \u0628\u0631\u0645\u06cc\u06af\u0631\u062f\u0627\u0646\u062f\u061f", "image": "", "score": 1}}, {"pk": 9, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u0627\u067e\u0631\u0627\u062a\u0648\u0631\u0647\u0627 \u0628\u0647 \u0627\u067e\u0631\u0627\u062a\u0648\u0631\u0647\u0627\u06cc \u0627\u062a\u0635\u0627\u0644 \u06a9\u0648\u062a\u0627\u0647 \u0645\u0639\u0631\u0648\u0641 \u0647\u0633\u062a\u0646\u062f\u061f", "image": "", "score": 1}}, {"pk": 10, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0642\u0627\u0628\u0644 \u0642\u0628\u0648\u0644 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 11, "model": "exam.question", "fields": {"code_type": "java", "code": "public class Test {\r\nstatic int total = 10;\r\npublic static void main (String args []) {\r\nnew Test();\r\n}\r\npublic Test () {\r\nSystem.out.println(\"In test\");\r\nSystem.out.println(this);\r\nint temp = this.total;\r\nif (temp > 5) {\r\nSystem.out.println(temp);\r\n}}}", "exam": 1, "text": "\u0628\u0627 \u062a\u0648\u062c\u0647 \u0628\u0647 \u06a9\u062f \u067e\u0627\u0633\u062e \u062f\u0647\u06cc\u062f", "image": "", "score": 1}}, {"pk": 12, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0635\u062d\u06cc\u062d \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 13, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u062a\u0639\u0627\u0631\u06cc\u0641 \u0645\u062a\u062f main \u0645\u06cc \u062a\u0648\u0627\u0646\u062f \u0646\u0642\u0637\u0647 \u0622\u0632\u0627\u062f \u06cc\u06a9 \u0628\u0631\u0646\u0627\u0645\u0647 \u062c\u0627\u0648\u0627 \u0628\u0627\u0634\u062f\u061f", "image": "", "score": 1}}, {"pk": 14, "model": "exam.question", "fields": {"code_type": "java", "code": "public class test {\r\n   public static void main(String args[]) { \r\n      Integer intObj=Integer.valueOf(args[args.length-1]);\r\n      int i = intObj.intValue();\r\n\r\n      if(args.length > 1) \r\n         System.out.println(i);\r\n      if(args.length > 0)\r\n         System.out.println(i - 1);\r\n      else \r\n         System.out.println(i - 2);\r\n   }\r\n}", "exam": 1, "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 15, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u062a\u0645\u0627\u0645 \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627\u06cc\u06cc \u06a9\u0647 \u06a9\u0644\u0645\u0647 \u06a9\u0644\u06cc\u062f\u06cc \u062f\u0631 \u062c\u0627\u0648\u0627 \u0647\u0633\u062a\u0646\u062f \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.", "image": "", "score": 1}}, {"pk": 16, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u0645\u062a\u063a\u06cc\u0631 long \u062f\u0631 \u062c\u0627\u0648\u0627 \u0686\u0646\u062f \u0628\u0627\u06cc\u062a \u062d\u0627\u0641\u0638\u0647 \u0627\u0634\u063a\u0627\u0644 \u0645\u06cc\u06a9\u0646\u062f\u061f", "image": "", "score": 1}}, {"pk": 17, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u062a\u0648\u0627\u0628\u0639 \u0633\u0627\u0632\u0646\u062f\u0647 \u062f\u0631 \u062c\u0627\u0648\u0627 \u0686\u0647 access modifier \u0647\u0627\u06cc\u06cc \u0645\u06cc\u062a\u0648\u0627\u0646\u0646\u062f \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u0646\u062f\u061f", "image": "", "score": 1}}, {"pk": 18, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06a9\u062f\u0627\u0645 \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627 \u0635\u062d\u06cc\u062d \u0647\u0633\u062a\u0646\u062f\u061f", "image": "", "score": 1}}, {"pk": 19, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u062a\u0639\u062f\u0627\u062f \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631\u0647\u0627 \u062f\u0631 \u06cc\u06a9 String \u0686\u06af\u0648\u0646\u0647 \u0628\u062f\u0633\u062a \u0645\u06cc \u0622\u06cc\u062f\u061f", "image": "", "score": 1}}, {"pk": 20, "model": "exam.question", "fields": {"code_type": "java", "code": "public class test {\r\n   public static void main(String args[]) { \r\n      String str1=\"abc\";\r\n      String str2=\"def\";\r\n      String str3=str1.concat(str2);\r\n\r\n      str1.concat(str2);\r\n      System.out.println(str1);\r\n   }\r\n}\r\n", "exam": 1, "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 21, "model": "exam.question", "fields": {"code_type": "java", "code": "public class test {\r\n   public static void main(String args[]) { \r\n   int i;\r\n   float  f = 2.3f;\r\n   double d = 2.7;\r\n   i = ((int)Math.ceil(f)) * ((int)Math.round(d));\r\n \r\n   System.out.println(i);\r\n   }\r\n}", "exam": 1, "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 22, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 1, "text": "\u06af\u0632\u06cc\u0646\u0647 \u0647\u0627\u06cc \u0635\u062d\u06cc\u062d \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.", "image": "", "score": 1}}, {"pk": 23, "model": "exam.question", "fields": {"code_type": "java", "code": "import java.util.*;\r\nclass Vehicle {}\r\nclass Car extends Vehicle {}\r\nclass Bus extends Vehicle {}\r\nclass TestSamp {\r\n\tpublic static void main(String [] args) {\r\n\tArrayList<Car> a = new ArrayList<Car>();\r\n\ta.add(new Car());\r\n\tArrayList b = a;\r\n\tArrayList<Bus> c = (ArrayList<Bus>)b;\r\n\tc.add(new Bus());\r\n\tfor (Object obj : b)\r\n\t\tSystem.out.println(obj);\r\n\t}\r\n}", "exam": 2, "text": "\u0646\u062a\u06cc\u062c\u0647 \u0627\u062c\u0631\u0627\u06cc \u06a9\u062f \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 24, "model": "exam.question", "fields": {"code_type": "java", "code": "List<Number> list1 = null;\r\nList<Integer> list2 = null;\r\nlist1 = list2;", "exam": 2, "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 25, "model": "exam.question", "fields": {"code_type": "java", "code": "List<? extends Number> list1 = null;\r\nList<Integer> list2 = null;\r\nlist1 = list2;", "exam": 2, "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 26, "model": "exam.question", "fields": {"code_type": "java", "code": "List<Number> list1 = null;\r\nList<? super Integer> list2 = null;\r\nlist1 = list2;", "exam": 2, "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 27, "model": "exam.question", "fields": {"code_type": "java", "code": "LinkedList<?> list1 = null;\r\nLinkedList<Integer> list2 = null;\r\nlist2 = list1;", "exam": 2, "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 28, "model": "exam.question", "fields": {"code_type": "java", "code": "PriorityQueue<?> queue1 = null;\r\nPriorityQueue queue2 = null;\r\nqueue1 = queue2;", "exam": 2, "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 29, "model": "exam.question", "fields": {"code_type": "java", "code": "import java.util.*;\r\n\r\nclass Parent {\r\n\tvoid say(List<String> list) {\r\n\t\tSystem.out.println(\"parent\");\r\n\t}\r\n}\r\nclass Child extends Parent {\r\n\tvoid say(List list) {\r\n\t\tSystem.out.println(\"child\");\r\n\t}\r\n}\r\n\r\n\r\n\r\n\r\npublic static void main(String[] java) {\r\n\tChild c = new Child();\r\n\tc.say(new LinkedList<String>());\r\n}", "exam": 2, "text": "\u0628\u0627 \u062a\u0648\u062c\u0647 \u0628\u0647 \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0644\u0627\u0633\u0647\u0627 \u0646\u062a\u06cc\u062c\u0647 \u0627\u062c\u0631\u0627\u06cc \u06a9\u062f main \u0686\u06cc\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 30, "model": "exam.question", "fields": {"code_type": "java", "code": "List<? extends String> list1 = new ArrayList<String>();\r\nList<? super String> list2 = new ArrayList<String>();\r\nList<Integer> list3 = new ArrayList<Integer>();\r\nList list4 = new ArrayList();\r\n\r\nif (list1 instanceof List && \r\n    list2 instanceof List &&\r\n    list3 instanceof List &&\r\n    list4 instanceof List) {\r\n    System.out.println(\"yes\");\r\n}", "exam": 2, "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 31, "model": "exam.question", "fields": {"code_type": "java", "code": "class Test implements Comparable<Comparable<?>> {\r\n    public int compareTo(Comparable<?> object) {\r\n        return 0;\r\n    }\r\n}", "exam": 2, "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 32, "model": "exam.question", "fields": {"code_type": "java", "code": "new ArrayList<Set<?>>();", "exam": 2, "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 33, "model": "exam.question", "fields": {"code_type": "java", "code": "new TreeMap<String, ? super Integer>();", "exam": 2, "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 34, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u06a9\u062f\u0627\u0645 \u062f\u0633\u062a\u0648\u0631 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u062e\u0631\u0648\u062c\u06cc \u0631\u0627 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0627\u062f.\r\n(\u0628\u062f\u0648\u0646 \u0647\u06cc\u0686 \u062a\u063a\u06cc\u06cc\u0631 \u0648 \u0645\u0627\u0633\u06a9 \u06a9\u0631\u062f\u0646\u06cc \u062f\u0631 \u062a\u0648\u0627\u0628\u0639)", "image": "", "score": 1}}, {"pk": 35, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u062c\u0645\u0644\u0627\u062a \u0632\u06cc\u0631 \u0635\u062d\u06cc\u062d \u0646\u0645\u06cc \u0628\u0627\u0634\u062f\u061f", "image": "", "score": 1}}, {"pk": 36, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0627\u0632 \u06a9\u062f\u0627\u0645 \u0633\u0645\u0628\u0644 \u0628\u0631\u0627\u06cc \u0646\u0645\u0627\u06cc\u0634 \u06a9\u0627\u0645\u0646\u062a \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0645\u06cc \u0634\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 37, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0686\u06af\u0648\u0646\u0647 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0645\u062c\u0645\u0648\u0639\u0647 \u0627\u06cc \u0627\u0632 \u062e\u0637\u0647\u0627 \u0631\u0627 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u06a9\u0627\u0645\u0646\u062a \u06a9\u0631\u062f?", "image": "", "score": 1}}, {"pk": 38, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0646\u062d\u0648\u0647 \u062a\u0639\u0631\u06cc\u0641 \u0645\u062a\u063a\u06cc\u0631 a \u0628\u0627 \u0645\u0642\u062f\u0627\u0631 \u06f2 \u06a9\u062f\u0627\u0645 \u06af\u0632\u06cc\u0646\u0647 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 39, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0686\u06af\u0648\u0646\u0647 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0645\u0642\u062f\u0627\u0631 \u0631\u0634\u062a\u0647 \u0627\u06cc \"2\" \u0631\u0627 \u0628\u0647 \u0639\u062f\u062f \u062a\u0628\u062f\u06cc\u0644 \u0646\u0645\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 40, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u0627\u067e\u0631\u0627\u062a\u0648\u0631\u0647\u0627\u06cc \u0632\u06cc\u0631 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u062c\u0627\u0632 \u0646\u06cc\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 41, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u062a\u0639\u0627\u0631\u06cc\u0641 \u0634\u0631\u0637\u06cc \u0632\u06cc\u0631 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0635\u062d\u06cc\u062d \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 42, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0645\u06cc\u062a\u0648\u0627\u0646 \u06cc\u06a9 \u0634\u0631\u0637 alternative \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0631\u062f\u061f", "image": "", "score": 1}}, {"pk": 43, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0646\u062d\u0648\u0647 \u0635\u062d\u06cc\u062d \u062a\u0639\u0631\u06cc\u0641 \u062a\u0627\u0628\u0639 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 44, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u06a9\u062f\u0627\u0645 \u062a\u0639\u0631\u06cc\u0641 loop \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0635\u062d\u06cc\u062d \u0627\u0633\u062a", "image": "", "score": 1}}, {"pk": 45, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u06a9\u062f\u0627\u0645 \u062a\u0639\u0631\u06cc\u0641 while \u0635\u062d\u06cc\u062d \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 46, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0686\u06af\u0648\u0646\u0647 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0646\u0648\u0639 \u0622\u0628\u062c\u06a9\u062a \u0631\u0627 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0647 \u062f\u0633\u062a \u0622\u0648\u0631\u062f.", "image": "", "score": 1}}, {"pk": 47, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0686\u06af\u0648\u0646\u0647 \u0645\u06cc\u062a\u0648\u0627\u0646 \u062a\u0645\u0627\u0645 \u0645\u062a\u063a\u06cc\u0631 \"a\" \u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0645\u062a\u063a\u06cc\u0631 example \u0631\u0627 \u0628\u0647 \"b\" \u062a\u0628\u062f\u06cc\u0644 \u0646\u0645\u0648\u062f\u061f", "image": "", "score": 1}}, {"pk": 48, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0646\u062d\u0648\u0647 \u062a\u0639\u0631\u06cc\u0641 \u0644\u06cc\u0633\u062a \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 49, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0646\u062d\u0648\u0647 \u062a\u0639\u0631\u06cc\u0641 \u062a\u0627\u067e\u0644 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 50, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0646\u062d\u0648\u0647 \u062a\u0639\u0631\u06cc\u0641 \u062f\u06cc\u06a9\u0634\u0646\u0631\u06cc \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 51, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0646\u062d\u0648\u0647 \u0627\u0646\u062a\u062e\u0627\u0628 \u062f\u0648\u0645\u06cc\u0646 \u0639\u0646\u0635\u0631 \u0644\u06cc\u0633\u062a \u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 52, "model": "exam.question", "fields": {"code_type": "java", "code": "print('%.2f' % 123.444)", "exam": 16, "text": "\u062e\u0631\u0648\u062c\u06cc \u062f\u0633\u062a\u0648\u0631 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 53, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0646\u062d\u0648\u0647 catch \u06a9\u0631\u062f\u0646 \u0627\u0633\u062a\u062b\u0646\u0627\u0647\u0627\u06cc\u06cc \u06a9\u0647 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0627\u062a\u0641\u0627\u0642 \u0645\u06cc \u0627\u0641\u062a\u062f \u0628\u0627 \u06a9\u062f\u0627\u0645 \u06a9\u0644\u0645\u0647 \u06a9\u0644\u06cc\u062f\u06cc \u0632\u06cc\u0631 \u0645\u0645\u06a9\u0646 \u0627\u0633\u062a", "image": "", "score": 1}}, {"pk": 54, "model": "exam.question", "fields": {"code_type": "java", "code": "", "exam": 16, "text": "\u0646\u062d\u0648\u0647 \u0628\u0627\u0632 \u0646\u0645\u0648\u062f\u0646 \u06cc\u06a9 \u0641\u0627\u06cc\u0644 \u0628\u0647 \u0645\u0646\u0638\u0648\u0631 \u062e\u0648\u0627\u0646\u062f\u0646 \u0627\u0632 \u0622\u0646 \u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0627\u0633\u062a\u061f", "image": "", "score": 1}}, {"pk": 55, "model": "exam.question", "fields": {"code_type": "java", "code": "f = open(\"test.txt\",\"w\")", "exam": 16, "text": "\u067e\u0633 \u0627\u0632 \u0627\u062c\u0631\u0627\u06cc \u062f\u0633\u062a\u0648\u0631 \u0632\u06cc\u0631 \u0686\u0647 \u0627\u062a\u0641\u0627\u0642\u06cc \u062e\u0648\u0627\u0647\u062f \u0627\u0641\u062a\u0627\u062f\u061f", "image": "", "score": 1}}, {"pk": -1, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u062f\u0648\u0646 \u067e\u0627\u0633\u062e", "question": 1}}, {"pk": 1, "model": "exam.choice", "fields": {"answer": false, "text": "if", "question": 1}}, {"pk": 2, "model": "exam.choice", "fields": {"answer": false, "text": "while", "question": 1}}, {"pk": 3, "model": "exam.choice", "fields": {"answer": false, "text": "goto", "question": 1}}, {"pk": 4, "model": "exam.choice", "fields": {"answer": true, "text": "sealed", "question": 1}}, {"pk": 5, "model": "exam.choice", "fields": {"answer": false, "text": "\u062e\u06cc\u0631", "question": 2}}, {"pk": 6, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u0644\u0647", "question": 2}}, {"pk": 7, "model": "exam.choice", "fields": {"answer": false, "text": "\u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646 \u062f\u0631 \u0646\u0633\u062e\u0647 \u06f4 \u0628\u0647 \u062c\u0627\u0648\u0627 \u0627\u0636\u0627\u0641\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a.", "question": 3}}, {"pk": 8, "model": "exam.choice", "fields": {"answer": false, "text": "\u0627\u0632 \u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646 \u062a\u0646\u0647\u0627 \u0645\u06cc\u062a\u0648\u0627\u0646 \u062f\u0631 \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0644\u0627\u0633\u0647\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0648\u062f \u0648 \u062f\u0631 \u0645\u0648\u0627\u0631\u062f\u06cc \u0645\u0627\u0646\u0646\u062f \u062a\u0639\u0631\u06cc\u0641 \u0645\u062a\u063a\u06cc\u0631 \u0648 \u06cc\u0627 \u062a\u0639\u0631\u06cc\u0641 \u0645\u062a\u062f \u06a9\u0627\u0631\u0628\u0631\u062f \u0646\u062f\u0627\u0631\u062f", "question": 3}}, {"pk": 9, "model": "exam.choice", "fields": {"answer": true, "text": "\u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646 \u0645\u06cc\u062a\u0648\u0627\u0646\u062f \u062f\u0631 \u0627\u0641\u0632\u0627\u06cc\u0634 \u0642\u0627\u0628\u0644\u06cc\u062a \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0645\u062c\u062f\u062f \u06a9\u062f\u0647\u0627 \u0628\u0633\u06cc\u0627\u0631 \u0645\u0641\u06cc\u062f \u0628\u0627\u0634\u062f", "question": 3}}, {"pk": 10, "model": "exam.choice", "fields": {"answer": true, "text": "\u06a9\u0644\u0627\u0633\u0647\u0627 \u0631\u0627 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0628\u0647 \u06af\u0648\u0646\u0647 \u0627\u06cc \u0637\u0631\u0627\u062d\u06cc \u06a9\u0631\u062f \u0628\u062a\u0648\u0627\u0646 \u0627\u0632 \u0622\u0646\u0647\u0627 \u062f\u0631 \u062f\u0648\u062d\u0627\u0644\u062a Generic \u0648 \u063a\u06cc\u0631 Generic \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0648\u062f.", "question": 3}}, {"pk": 11, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u0639\u062f \u0627\u0632 \u0627\u06cc\u0646\u06a9\u0647 \u0646\u062e A notify \u0634\u0648\u062f \u0648 \u06cc\u0627 \u067e\u0633 \u0627\u0632 \u06af\u0630\u0634\u062a \u06f2 \u062b\u0627\u0646\u06cc\u0647", "question": 4}}, {"pk": 12, "model": "exam.choice", "fields": {"answer": false, "text": "\u067e\u0633 \u0627\u0632 \u0622\u0632\u0627\u062f \u0634\u062f\u0646 \u0642\u0641\u0644 \u062f\u0631\u0648\u0646 B \u0648 \u06cc\u0627 \u06af\u0630\u0634\u062a \u06f2 \u062b\u0627\u0646\u06cc\u0647", "question": 4}}, {"pk": 13, "model": "exam.choice", "fields": {"answer": false, "text": "\u06f2 \u062b\u0627\u0646\u06cc\u0647 \u067e\u0633 \u0627\u0632 notify \u0634\u062f\u0646 \u0646\u062e A", "question": 4}}, {"pk": 14, "model": "exam.choice", "fields": {"answer": false, "text": "\u06f2 \u062b\u0627\u0646\u06cc\u0647 \u067e\u0633 \u0627\u0632 \u0622\u0632\u0627\u062f \u0634\u062f\u0646 \u0642\u0641\u0644 \u0622\u0628\u062c\u06a9\u062a B", "question": 4}}, {"pk": 15, "model": "exam.choice", "fields": {"answer": false, "text": "int i = 32;", "question": 5}}, {"pk": 16, "model": "exam.choice", "fields": {"answer": true, "text": "float f = 45.0;\r\n", "question": 5}}, {"pk": 17, "model": "exam.choice", "fields": {"answer": false, "text": "double d = 45.0;\r\n", "question": 5}}, {"pk": 18, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0648 \u0627\u062c\u0631\u0627 \u0645\u06cc\u0634\u0648\u062f \u0627\u0645\u0627 \u062e\u0631\u0648\u062c\u06cc \u0646\u062f\u0627\u0631\u062f", "question": 6}}, {"pk": 19, "model": "exam.choice", "fields": {"answer": true, "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0648 \u0627\u062c\u0631\u0627 \u0645\u06cc\u0634\u0648\u062f \u0647\u0645\u0686\u0646\u06cc\u0646 \u062e\u0631\u0648\u062c\u06cc \u0622\u0646:\r\nThe age is 1\r\n\u0645\u06cc \u0628\u0627\u0634\u062f", "question": 6}}, {"pk": 20, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0646\u0645\u06cc\u0634\u0648\u062f", "question": 6}}, {"pk": 21, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc\u0634\u0648\u062f \u0648\u0644\u06cc \u062e\u0637\u0627\u06cc \u0632\u0645\u0627\u0646 \u0627\u062c\u0631\u0627 \u0627\u062a\u0641\u0627\u0642 \u062e\u0648\u0627\u0647\u062f \u0627\u0641\u062a\u0627\u062f", "question": 6}}, {"pk": 22, "model": "exam.choice", "fields": {"answer": true, "text": "128 >> 1 gives 64", "question": 7}}, {"pk": 23, "model": "exam.choice", "fields": {"answer": false, "text": "128 >>> 1 gives 64", "question": 7}}, {"pk": 24, "model": "exam.choice", "fields": {"answer": false, "text": "128 >> 1 gives -64", "question": 7}}, {"pk": 25, "model": "exam.choice", "fields": {"answer": false, "text": "128 >>> 1 gives -64", "question": 7}}, {"pk": 26, "model": "exam.choice", "fields": {"answer": true, "text": "\"john\" == \"john\"\r\n", "question": 8}}, {"pk": 27, "model": "exam.choice", "fields": {"answer": true, "text": "\"john\".equals(\"john\")\r\n", "question": 8}}, {"pk": 28, "model": "exam.choice", "fields": {"answer": false, "text": "\"john\" = \"john\"\r\n", "question": 8}}, {"pk": 29, "model": "exam.choice", "fields": {"answer": false, "text": "\"john\".equals(new Button(\"john\"))\r\n", "question": 8}}, {"pk": 30, "model": "exam.choice", "fields": {"answer": true, "text": "&&", "question": 9}}, {"pk": 31, "model": "exam.choice", "fields": {"answer": false, "text": "|", "question": 9}}, {"pk": 32, "model": "exam.choice", "fields": {"answer": true, "text": "||", "question": 9}}, {"pk": 33, "model": "exam.choice", "fields": {"answer": false, "text": "&", "question": 9}}, {"pk": 34, "model": "exam.choice", "fields": {"answer": true, "text": "Object o = new Button(\"A\");\r\n", "question": 10}}, {"pk": 35, "model": "exam.choice", "fields": {"answer": false, "text": "Frame f = new Panel();\r\n", "question": 10}}, {"pk": 36, "model": "exam.choice", "fields": {"answer": false, "text": "Boolean flag = true;\r\n", "question": 10}}, {"pk": 37, "model": "exam.choice", "fields": {"answer": true, "text": "Panel p = new Applet();\r\n", "question": 10}}, {"pk": 38, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644\u0631 \u0628\u0631 \u0631\u0648\u06cc \u062e\u0637 \u06f2 \u062e\u0637\u0627 \u06af\u0632\u0627\u0631\u0634 \u0645\u06cc\u062f\u0647\u062f", "question": 11}}, {"pk": 39, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0644\u0627\u0633 \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0646\u0645\u06cc\u0634\u0648\u062f.", "question": 11}}, {"pk": 40, "model": "exam.choice", "fields": {"answer": true, "text": "\u0639\u062f\u062f \u06f1\u06f0 \u06cc\u06a9\u06cc \u0627\u0632 \u062e\u0631\u0648\u062c\u06cc \u0647\u0627 \u0628\u0631\u0646\u0627\u0645\u0647 \u0627\u0633\u062a.", "question": 11}}, {"pk": 41, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644\u0631 \u0628\u0631 \u0631\u0648\u06cc \u062e\u0637 \u06f9 \u062e\u0637\u0627 \u06af\u0632\u0627\u0631\u0634 \u0645\u06cc\u062f\u0647\u062f", "question": 11}}, {"pk": 42, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0634\u062f\u0647 \u0648\u0644\u06cc \u062f\u0631 \u0631\u0645\u0627\u0646 \u0627\u062c\u0631\u0627 \u062e\u0637\u0627 \u0645\u06cc\u062f\u0647\u062f", "question": 11}}, {"pk": 43, "model": "exam.choice", "fields": {"answer": false, "text": "String temp [] = new String {\"j\" \"a\" \"z\"};\r\n", "question": 12}}, {"pk": 44, "model": "exam.choice", "fields": {"answer": false, "text": "String temp [] = { \"j \" \" b\" \"c\"};\r\n", "question": 12}}, {"pk": 45, "model": "exam.choice", "fields": {"answer": false, "text": "String temp = {\"a\", \"b\", \"c\"};\r\n", "question": 12}}, {"pk": 46, "model": "exam.choice", "fields": {"answer": true, "text": "String temp [] = {\"a\", \"b\", \"c\"};\r\n", "question": 12}}, {"pk": 47, "model": "exam.choice", "fields": {"answer": false, "text": "public static int main(char args[])", "question": 13}}, {"pk": 48, "model": "exam.choice", "fields": {"answer": true, "text": "public static void main(String args[])", "question": 13}}, {"pk": 49, "model": "exam.choice", "fields": {"answer": false, "text": "public static void MAIN(String args[])", "question": 13}}, {"pk": 50, "model": "exam.choice", "fields": {"answer": false, "text": "public static void main(String args)", "question": 13}}, {"pk": 51, "model": "exam.choice", "fields": {"answer": true, "text": "public static void main(String... args[])", "question": 13}}, {"pk": 52, "model": "exam.choice", "fields": {"answer": false, "text": "test", "question": 14}}, {"pk": 53, "model": "exam.choice", "fields": {"answer": false, "text": "test-1", "question": 14}}, {"pk": 54, "model": "exam.choice", "fields": {"answer": true, "text": "0", "question": 14}}, {"pk": 55, "model": "exam.choice", "fields": {"answer": false, "text": "1", "question": 14}}, {"pk": 56, "model": "exam.choice", "fields": {"answer": false, "text": "2", "question": 14}}, {"pk": 57, "model": "exam.choice", "fields": {"answer": false, "text": "extern", "question": 15}}, {"pk": 58, "model": "exam.choice", "fields": {"answer": true, "text": "synchronized", "question": 15}}, {"pk": 59, "model": "exam.choice", "fields": {"answer": true, "text": "volatile", "question": 15}}, {"pk": 60, "model": "exam.choice", "fields": {"answer": false, "text": "friend", "question": 15}}, {"pk": 61, "model": "exam.choice", "fields": {"answer": false, "text": "friendly", "question": 15}}, {"pk": 62, "model": "exam.choice", "fields": {"answer": true, "text": "transient", "question": 15}}, {"pk": 63, "model": "exam.choice", "fields": {"answer": true, "text": "this", "question": 15}}, {"pk": 64, "model": "exam.choice", "fields": {"answer": false, "text": "then", "question": 15}}, {"pk": 65, "model": "exam.choice", "fields": {"answer": false, "text": "\u0648\u0627\u0628\u0633\u062a\u0647 \u0628\u0627 \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644\u0631 \u0627\u0633\u062a.", "question": 16}}, {"pk": 66, "model": "exam.choice", "fields": {"answer": false, "text": "2", "question": 16}}, {"pk": 67, "model": "exam.choice", "fields": {"answer": false, "text": "4", "question": 16}}, {"pk": 68, "model": "exam.choice", "fields": {"answer": false, "text": "8", "question": 16}}, {"pk": 69, "model": "exam.choice", "fields": {"answer": false, "text": "64", "question": 16}}, {"pk": 70, "model": "exam.choice", "fields": {"answer": true, "text": "public", "question": 17}}, {"pk": 71, "model": "exam.choice", "fields": {"answer": true, "text": "private", "question": 17}}, {"pk": 72, "model": "exam.choice", "fields": {"answer": true, "text": "protected", "question": 17}}, {"pk": 73, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u062f\u0648\u0646 access modifier", "question": 17}}, {"pk": 74, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0631\u0627\u06cc \u0647\u0631 \u0628\u0644\u0627\u06a9 try \u0628\u0627\u06cc\u062f \u062d\u062f\u0627\u0642\u0644 \u06cc\u06a9 \u0628\u0644\u0627\u06a9 catch \u0648\u062c\u0648\u062f \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u062f.", "question": 18}}, {"pk": 75, "model": "exam.choice", "fields": {"answer": false, "text": "\u0647\u0631 \u0628\u0644\u0627\u06a9 try \u0645\u06cc\u062a\u0648\u0627\u0646\u062f \u062f\u0627\u0631\u0627\u06cc \u0686\u0646\u062f\u06cc\u0646 \u0628\u0644\u0627\u06a9 finally \u0628\u0627\u0634\u062f.", "question": 18}}, {"pk": 76, "model": "exam.choice", "fields": {"answer": true, "text": "\u067e\u0633 \u0627\u0632 \u0647\u0631 \u0628\u0644\u0627\u06a9 try \u0628\u0627\u06cc\u062f \u0628\u0644\u0627\u06a9 catch \u0648 \u06cc\u0627 finally \u0648\u062c\u0648\u062f \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u062f.", "question": 18}}, {"pk": 77, "model": "exam.choice", "fields": {"answer": true, "text": "\u0627\u06af\u0631 \u067e\u0633 \u0627\u0632 \u0628\u0644\u0627\u06a9 try \u0647\u0631 \u062f\u0648 \u0646\u0648\u0639 catch \u0648 finally \u0648\u062c\u0648\u062f \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u062f \u0628\u0627\u06cc\u062f finally \u067e\u0633 \u0627\u0632 catch \u0628\u0627\u0634\u062f.", "question": 18}}, {"pk": 78, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0645\u062a\u063a\u06cc\u0631 size", "question": 19}}, {"pk": 79, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0645\u062a\u063a\u06cc\u0631  length", "question": 19}}, {"pk": 80, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0645\u062a\u062f size()", "question": 19}}, {"pk": 81, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0645\u062a\u062f length()", "question": 19}}, {"pk": 82, "model": "exam.choice", "fields": {"answer": true, "text": "abc", "question": 20}}, {"pk": 83, "model": "exam.choice", "fields": {"answer": false, "text": "def", "question": 20}}, {"pk": 84, "model": "exam.choice", "fields": {"answer": false, "text": "abcabc", "question": 20}}, {"pk": 85, "model": "exam.choice", "fields": {"answer": false, "text": "abcdef", "question": 20}}, {"pk": 86, "model": "exam.choice", "fields": {"answer": false, "text": "defabc", "question": 20}}, {"pk": 87, "model": "exam.choice", "fields": {"answer": false, "text": "abcdefdef", "question": 20}}, {"pk": 88, "model": "exam.choice", "fields": {"answer": false, "text": "4", "question": 21}}, {"pk": 89, "model": "exam.choice", "fields": {"answer": false, "text": "5", "question": 21}}, {"pk": 90, "model": "exam.choice", "fields": {"answer": false, "text": "6", "question": 21}}, {"pk": 91, "model": "exam.choice", "fields": {"answer": false, "text": "6.1", "question": 21}}, {"pk": 92, "model": "exam.choice", "fields": {"answer": true, "text": "9", "question": 21}}, {"pk": 93, "model": "exam.choice", "fields": {"answer": false, "text": "\u0645\u062a\u062f\u0647\u0627\u06cc \u062a\u0639\u0631\u06cc\u0641 \u0634\u062f\u0647 \u062f\u0631 interface \u0628\u0647 \u0635\u0648\u0631\u062a \u0636\u0645\u0646\u06cc private \u0647\u0633\u062a\u0646\u062f", "question": 22}}, {"pk": 94, "model": "exam.choice", "fields": {"answer": true, "text": "\u0645\u062a\u063a\u06cc\u0631\u0647\u0627\u06cc \u062a\u0639\u0631\u06cc\u0641 \u0634\u062f\u0647 \u062f\u0631 interface \u0628\u0647 \u0637\u0648\u0631 \u0636\u0645\u0646\u06cc public , static \u0648 final \u0647\u0633\u062a\u0646\u062f", "question": 22}}, {"pk": 95, "model": "exam.choice", "fields": {"answer": true, "text": "\u06cc\u06a9 interface \u0645\u06cc\u062a\u0648\u0627\u0646\u062f \u0627\u0632 \u0686\u0646\u062f\u06cc\u0646 interface \u0627\u0631\u062b \u0628\u0631\u06cc \u06a9\u0646\u062f.", "question": 22}}, {"pk": 96, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0644\u0645\u0647 \u06a9\u0644\u06cc\u062f\u06cc implements \u0628\u06cc\u0627\u0646\u06af\u0631 \u0627\u06cc\u0646 \u0627\u0633\u062a \u06a9\u0647 interface \u0627\u0632 interface \u062f\u06cc\u06af\u0631\u06cc \u0627\u0631\u062b \u0645\u06cc\u0628\u0631\u062f.", "question": 22}}, {"pk": 97, "model": "exam.choice", "fields": {"answer": false, "text": "Compile Error", "question": 23}}, {"pk": 98, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u0627 warning \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc\u0634\u0648\u062f \u0648 \u0686\u0646\u062f \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u0645\u06cc \u062f\u0647\u062f", "question": 23}}, {"pk": 99, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u062f\u0648\u0646 warning \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc\u0634\u0648\u062f \u0648 \u0686\u0646\u062f \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u0645\u06cc \u062f\u0647\u062f", "question": 23}}, {"pk": 100, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0648 \u0627\u062c\u0631\u0627 \u0645\u06cc\u0634\u0648\u062f \u0648\u0644\u06cc \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0627\u062f\u0647 \u0646\u0645\u06cc \u0634\u0648\u062f.", "question": 23}}, {"pk": 101, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0644\u0647", "question": 24}}, {"pk": 102, "model": "exam.choice", "fields": {"answer": true, "text": "\u062e\u06cc\u0631", "question": 24}}, {"pk": 103, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u0644\u0647", "question": 25}}, {"pk": 104, "model": "exam.choice", "fields": {"answer": false, "text": "\u062e\u06cc\u0631", "question": 25}}, {"pk": 105, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0644\u0647", "question": 26}}, {"pk": 106, "model": "exam.choice", "fields": {"answer": true, "text": "\u062e\u06cc\u0631", "question": 26}}, {"pk": 107, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0644\u0647", "question": 27}}, {"pk": 108, "model": "exam.choice", "fields": {"answer": true, "text": "\u062e\u06cc\u0631", "question": 27}}, {"pk": 109, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0644\u0647 \u0648\u0644\u06cc \u0628\u0627 warning", "question": 28}}, {"pk": 110, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u0644\u0647 \u0628\u062f\u0648\u0646 warning", "question": 28}}, {"pk": 111, "model": "exam.choice", "fields": {"answer": false, "text": "\u062e\u06cc\u0631", "question": 28}}, {"pk": 112, "model": "exam.choice", "fields": {"answer": true, "text": "child \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0648\u0634\u062a\u0647 \u0645\u06cc\u0634\u0648\u062f", "question": 29}}, {"pk": 113, "model": "exam.choice", "fields": {"answer": false, "text": "parent \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0648\u0634\u062a\u0647 \u0645\u06cc\u0634\u0648\u062f", "question": 29}}, {"pk": 114, "model": "exam.choice", "fields": {"answer": false, "text": "Compile Error", "question": 29}}, {"pk": 115, "model": "exam.choice", "fields": {"answer": false, "text": "\u062e\u0631\u0648\u062c\u06cc \u0646\u062f\u0627\u0631\u062f", "question": 30}}, {"pk": 116, "model": "exam.choice", "fields": {"answer": true, "text": "yes", "question": 30}}, {"pk": 117, "model": "exam.choice", "fields": {"answer": false, "text": "Compile Error", "question": 30}}, {"pk": 118, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u0644\u0647", "question": 31}}, {"pk": 119, "model": "exam.choice", "fields": {"answer": false, "text": "\u062e\u06cc\u0631", "question": 31}}, {"pk": 120, "model": "exam.choice", "fields": {"answer": true, "text": "\u0628\u0644\u0647", "question": 32}}, {"pk": 121, "model": "exam.choice", "fields": {"answer": false, "text": "\u062e\u06cc\u0631", "question": 32}}, {"pk": 122, "model": "exam.choice", "fields": {"answer": false, "text": "\u0628\u0644\u0647", "question": 33}}, {"pk": 123, "model": "exam.choice", "fields": {"answer": true, "text": "\u062e\u06cc\u0631", "question": 33}}, {"pk": 124, "model": "exam.choice", "fields": {"answer": false, "text": "ecoh", "question": 34}}, {"pk": 125, "model": "exam.choice", "fields": {"answer": true, "text": "print", "question": 34}}, {"pk": 126, "model": "exam.choice", "fields": {"answer": false, "text": "output", "question": 34}}, {"pk": 127, "model": "exam.choice", "fields": {"answer": false, "text": "console.log", "question": 34}}, {"pk": 128, "model": "exam.choice", "fields": {"answer": true, "text": "\u0633\u06cc\u0646\u062a\u06a9\u0633 \u0632\u06cc\u0627\u0646 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0633\u06cc\u0627\u0631 \u0634\u0628\u06cc\u0647 PHP \u0627\u0633\u062a", "question": 35}}, {"pk": 129, "model": "exam.choice", "fields": {"answer": false, "text": "\u0627\u0632 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0628\u0631\u0627\u06cc \u062a\u0648\u0633\u0639\u0647 \u0628\u0631\u0646\u0627\u0645\u0647 \u0647\u0627\u06cc \u062a\u062d\u062a \u0648\u0628 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0648\u062f", "question": 35}}, {"pk": 130, "model": "exam.choice", "fields": {"answer": false, "text": "\u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0631 \u0631\u0648\u06cc \u0627\u06a9\u062b\u0631 \u0633\u06a9\u0648\u0647\u0627 \u0642\u0627\u0628\u0644 \u0627\u062c\u0631\u0627 \u0627\u0633\u062a", "question": 35}}, {"pk": 131, "model": "exam.choice", "fields": {"answer": false, "text": "\u0627\u0632 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0628\u0631\u0627\u06cc \u062a\u0648\u0633\u0639\u0647 \u0628\u0631\u0646\u0627\u0645\u0647 \u0647\u0627\u06cc \u062a\u062d\u062a \u0634\u0628\u06a9\u0647 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0648\u062f", "question": 35}}, {"pk": 132, "model": "exam.choice", "fields": {"answer": false, "text": "*", "question": 36}}, {"pk": 133, "model": "exam.choice", "fields": {"answer": false, "text": "{% comment %}", "question": 36}}, {"pk": 134, "model": "exam.choice", "fields": {"answer": false, "text": "(comment)", "question": 36}}, {"pk": 135, "model": "exam.choice", "fields": {"answer": true, "text": "#", "question": 36}}, {"pk": 136, "model": "exam.choice", "fields": {"answer": true, "text": "'''", "question": 37}}, {"pk": 137, "model": "exam.choice", "fields": {"answer": false, "text": "///", "question": 37}}, {"pk": 138, "model": "exam.choice", "fields": {"answer": false, "text": "###", "question": 37}}, {"pk": 139, "model": "exam.choice", "fields": {"answer": false, "text": "(comment)", "question": 37}}, {"pk": 140, "model": "exam.choice", "fields": {"answer": false, "text": "var a = 2", "question": 38}}, {"pk": 141, "model": "exam.choice", "fields": {"answer": false, "text": "int a = 2", "question": 38}}, {"pk": 142, "model": "exam.choice", "fields": {"answer": true, "text": "a = 2", "question": 38}}, {"pk": 143, "model": "exam.choice", "fields": {"answer": false, "text": "variable a = 2", "question": 38}}, {"pk": 144, "model": "exam.choice", "fields": {"answer": false, "text": " Answers castToInt(a)", "question": 39}}, {"pk": 145, "model": "exam.choice", "fields": {"answer": true, "text": " int(a)", "question": 39}}, {"pk": 146, "model": "exam.choice", "fields": {"answer": false, "text": " integer(a)", "question": 39}}, {"pk": 147, "model": "exam.choice", "fields": {"answer": false, "text": " castToInteger(a)", "question": 39}}, {"pk": 148, "model": "exam.choice", "fields": {"answer": false, "text": "+=", "question": 40}}, {"pk": 149, "model": "exam.choice", "fields": {"answer": false, "text": "-=", "question": 40}}, {"pk": 150, "model": "exam.choice", "fields": {"answer": false, "text": "*=", "question": 40}}, {"pk": 151, "model": "exam.choice", "fields": {"answer": true, "text": "X=", "question": 40}}, {"pk": 152, "model": "exam.choice", "fields": {"answer": true, "text": "if a >= 22:", "question": 41}}, {"pk": 153, "model": "exam.choice", "fields": {"answer": false, "text": "if (a >= 22)", "question": 41}}, {"pk": 154, "model": "exam.choice", "fields": {"answer": false, "text": " if (a => 22)", "question": 41}}, {"pk": 155, "model": "exam.choice", "fields": {"answer": false, "text": " if a >= 22", "question": 41}}, {"pk": 156, "model": "exam.choice", "fields": {"answer": false, "text": "else if", "question": 42}}, {"pk": 157, "model": "exam.choice", "fields": {"answer": false, "text": "elseif", "question": 42}}, {"pk": 158, "model": "exam.choice", "fields": {"answer": true, "text": "elif", "question": 42}}, {"pk": 159, "model": "exam.choice", "fields": {"answer": false, "text": " None of the above", "question": 42}}, {"pk": 160, "model": "exam.choice", "fields": {"answer": false, "text": " function someFunction()", "question": 43}}, {"pk": 161, "model": "exam.choice", "fields": {"answer": true, "text": " def someFunction():", "question": 43}}, {"pk": 162, "model": "exam.choice", "fields": {"answer": false, "text": " def someFunction()", "question": 43}}, {"pk": 163, "model": "exam.choice", "fields": {"answer": false, "text": "function someFunction():", "question": 43}}, {"pk": 164, "model": "exam.choice", "fields": {"answer": false, "text": "for(a = 0; a < 3; a++)", "question": 44}}, {"pk": 165, "model": "exam.choice", "fields": {"answer": false, "text": "for a in range(3)", "question": 44}}, {"pk": 166, "model": "exam.choice", "fields": {"answer": false, "text": "for a loop 3:", "question": 44}}, {"pk": 167, "model": "exam.choice", "fields": {"answer": true, "text": "for a in range(1,3):", "question": 44}}, {"pk": 168, "model": "exam.choice", "fields": {"answer": false, "text": "while loop a < 10", "question": 45}}, {"pk": 169, "model": "exam.choice", "fields": {"answer": true, "text": "while a < 10:", "question": 45}}, {"pk": 170, "model": "exam.choice", "fields": {"answer": false, "text": "while(a < 10)", "question": 45}}, {"pk": 171, "model": "exam.choice", "fields": {"answer": false, "text": "while loop a < 10:", "question": 45}}, {"pk": 172, "model": "exam.choice", "fields": {"answer": false, "text": " getType(example)", "question": 46}}, {"pk": 173, "model": "exam.choice", "fields": {"answer": false, "text": "Type(example)", "question": 46}}, {"pk": 174, "model": "exam.choice", "fields": {"answer": true, "text": "type(example)", "question": 46}}, {"pk": 175, "model": "exam.choice", "fields": {"answer": false, "text": "example.type", "question": 46}}, {"pk": 176, "model": "exam.choice", "fields": {"answer": false, "text": "example.swap('b', 'a')", "question": 47}}, {"pk": 177, "model": "exam.choice", "fields": {"answer": true, "text": "example.replace('a','b')", "question": 47}}, {"pk": 178, "model": "exam.choice", "fields": {"answer": false, "text": "example.match('b','a')", "question": 47}}, {"pk": 179, "model": "exam.choice", "fields": {"answer": false, "text": "example.replace('b','a')", "question": 47}}, {"pk": 180, "model": "exam.choice", "fields": {"answer": false, "text": "sampleList = {1,2,3,4,5}", "question": 48}}, {"pk": 181, "model": "exam.choice", "fields": {"answer": false, "text": "sampleList = (1,2,3,4,5)", "question": 48}}, {"pk": 182, "model": "exam.choice", "fields": {"answer": false, "text": "sampleList = /1,2,3,4,5/", "question": 48}}, {"pk": 183, "model": "exam.choice", "fields": {"answer": true, "text": "sampleList = [1,2,3,4,5]", "question": 48}}, {"pk": 184, "model": "exam.choice", "fields": {"answer": true, "text": "sampleTuple = (1,2,3,4,5)", "question": 49}}, {"pk": 185, "model": "exam.choice", "fields": {"answer": false, "text": "\r\nsampleTuple = {1,2,3,4,5}", "question": 49}}, {"pk": 186, "model": "exam.choice", "fields": {"answer": false, "text": " sampleTuple = [1,2,3,4,5]", "question": 49}}, {"pk": 187, "model": "exam.choice", "fields": {"answer": false, "text": "sampleTuple = /1,2,3,4,5/", "question": 49}}, {"pk": 188, "model": "exam.choice", "fields": {"answer": false, "text": "myExample = {'someItem'=>2, 'otherItem'=>20}", "question": 50}}, {"pk": 189, "model": "exam.choice", "fields": {"answer": true, "text": "myExample = {'someItem': 2, 'otherItem': 20}", "question": 50}}, {"pk": 190, "model": "exam.choice", "fields": {"answer": false, "text": "myExample = ('someItem'=>2, 'otherItem'=>20)", "question": 50}}, {"pk": 191, "model": "exam.choice", "fields": {"answer": false, "text": " myExample = ('someItem': 2, 'otherItem': 20)", "question": 50}}, {"pk": 192, "model": "exam.choice", "fields": {"answer": false, "text": "example[2]", "question": 51}}, {"pk": 193, "model": "exam.choice", "fields": {"answer": false, "text": "example.get(1)", "question": 51}}, {"pk": 194, "model": "exam.choice", "fields": {"answer": false, "text": "example(1)", "question": 51}}, {"pk": 195, "model": "exam.choice", "fields": {"answer": true, "text": "example[1]", "question": 51}}, {"pk": 196, "model": "exam.choice", "fields": {"answer": true, "text": " 123.44", "question": 52}}, {"pk": 197, "model": "exam.choice", "fields": {"answer": false, "text": "12", "question": 52}}, {"pk": 198, "model": "exam.choice", "fields": {"answer": false, "text": "123.440", "question": 52}}, {"pk": 199, "model": "exam.choice", "fields": {"answer": false, "text": "44", "question": 52}}, {"pk": 200, "model": "exam.choice", "fields": {"answer": false, "text": "catch", "question": 53}}, {"pk": 201, "model": "exam.choice", "fields": {"answer": false, "text": "exception", "question": 53}}, {"pk": 202, "model": "exam.choice", "fields": {"answer": false, "text": "catch(a)", "question": 53}}, {"pk": 203, "model": "exam.choice", "fields": {"answer": true, "text": "except", "question": 53}}, {"pk": 204, "model": "exam.choice", "fields": {"answer": false, "text": " f = open(\"test.txt\", \"read\")", "question": 54}}, {"pk": 205, "model": "exam.choice", "fields": {"answer": false, "text": "f = open(\"r\",\"test.txt\")", "question": 54}}, {"pk": 206, "model": "exam.choice", "fields": {"answer": true, "text": " f = open(\"test.txt\", \"r\")", "question": 54}}, {"pk": 207, "model": "exam.choice", "fields": {"answer": false, "text": " f = open(\"read\",\"test.txt\")", "question": 54}}, {"pk": 208, "model": "exam.choice", "fields": {"answer": false, "text": "\u06a9\u0627\u0631\u06cc \u0646\u0645\u06cc\u06a9\u0646\u062f \u0645\u06af\u0631 \u0627\u06cc\u0646\u06a9\u0647 \u06a9\u062f\u0647\u0627\u06cc\u06cc \u06a9\u0647 \u062f\u0631 \u0627\u062f\u0627\u0645\u0647 \u0645\u06cc \u0622\u06cc\u0646\u062f \u062f\u0631 \u0641\u0627\u06cc\u0644 \u0628\u0646\u0648\u06cc\u0633\u0646\u062f", "question": 55}}, {"pk": 209, "model": "exam.choice", "fields": {"answer": true, "text": "\u0645\u062d\u062a\u0648\u0627\u06cc \u0641\u0627\u06cc\u0644 \u067e\u0627\u06a9 \u062e\u0648\u0627\u0647\u062f \u0634\u062f", "question": 55}}, {"pk": 210, "model": "exam.choice", "fields": {"answer": false, "text": "\u062f\u0633\u062a\u0648\u0631\u0627\u062a \u0646\u0648\u0634\u062a\u0646 \u062f\u0631 \u0627\u0646\u062a\u0647\u0627\u06cc \u0641\u0627\u06cc\u0644 \u0646\u0648\u0634\u062a\u0647 \u062e\u0648\u0627\u0647\u062f \u0634\u062f", "question": 55}}]
+[
+    {
+        "pk": 1,
+        "model": "exam.examcategory",
+        "fields": {
+            "name": "java",
+            "parent": null,
+            "local_name": "\u062c\u0627\u0648\u0627"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "exam.examcategory",
+        "fields": {
+            "name": "python",
+            "parent": null,
+            "local_name": "\u067e\u0627\u06cc\u062a\u0648\u0646"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "exam.examcategory",
+        "fields": {
+            "name": "linux",
+            "parent": null,
+            "local_name": "\u0644\u06cc\u0646\u0648\u06a9\u0633"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "exam.examcategory",
+        "fields": {
+            "name": "BeginningJAVA",
+            "parent": 1,
+            "local_name": "\u062c\u0627\u0648\u0627 \u0645\u0642\u062f\u0645\u0627\u062a\u06cc"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "exam.examcategory",
+        "fields": {
+            "name": "Spring",
+            "parent": 1,
+            "local_name": "Spring"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "exam.examcategory",
+        "fields": {
+            "name": "JPA",
+            "parent": 1,
+            "local_name": "JPA"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "exam.examcategory",
+        "fields": {
+            "name": "pythonlang",
+            "parent": 2,
+            "local_name": "\u0632\u0628\u0627\u0646 \u067e\u0627\u06cc\u062a\u0648\u0646"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "exam.exam",
+        "fields": {
+            "category": 10,
+            "number_of_attempts": 3,
+            "description": "\u062f\u0631 \u0627\u06cc\u0646 \u0622\u0632\u0645\u0648\u0646 \u0645\u06cc\u0632\u0627\u0646 \u0622\u0634\u0646\u0627\u06cc\u06cc \u0634\u0645\u0627 \u0628\u0627 \u0632\u0628\u0627\u0646 \u062c\u0627\u0648\u0627 \u0633\u0646\u062c\u06cc\u062f\u0647 \u0645\u06cc \u0634\u0648\u062f.  <br  />\u0628\u0631\u0627\u06cc \u0634\u0631\u06a9\u062a \u062f\u0631 \u0627\u06cc\u0646 \u0622\u0632\u0645\u0648\u0646 \u062a\u0646\u0647\u0627 \u062f\u0627\u0634\u062a\u0646 \u0622\u0634\u0646\u0627\u06cc\u06cc \u0627\u0648\u0644\u06cc\u0647 \u0628\u0627 \u0627\u06cc\u0646 \u0632\u0628\u0627\u0646 \u06a9\u0627\u0641\u06cc \u0627\u0633\u062a.",
+            "end_date": null,
+            "local_name": "\u062c\u0627\u0648\u0627 \u0645\u0642\u062f\u0645\u0627\u062a\u06cc",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-02-06T00:00:00",
+            "name": "JAVA Elementary"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "exam.exam",
+        "fields": {
+            "category": 10,
+            "number_of_attempts": 1,
+            "description": "\u062f\u0631  \u0627\u06cc\u0646 \u0622\u0632\u0645\u0648\u0646 \u0645\u06cc\u0632\u0627\u0646 \u0622\u0634\u0646\u0627\u06cc\u06cc \u0634\u0645\u0627 \u0628\u0627 JAVA Generics \u0633\u0646\u062c\u06cc\u062f\u0647 \u0645\u06cc \u0634\u0648\u062f.",
+            "end_date": null,
+            "local_name": "JAVA Generics",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-02-04T00:00:00",
+            "name": "JAVA Generics"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "exam.exam",
+        "fields": {
+            "category": 2,
+            "number_of_attempts": 1,
+            "description": "",
+            "end_date": null,
+            "local_name": "\u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u0642\u062f\u0645\u0627\u062a\u06cc",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Python Elementary"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "exam.exam",
+        "fields": {
+            "category": 2,
+            "number_of_attempts": 1,
+            "description": "",
+            "end_date": null,
+            "local_name": "Django",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Django"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "exam.exam",
+        "fields": {
+            "category": 3,
+            "number_of_attempts": 1,
+            "description": "",
+            "end_date": null,
+            "local_name": "\u0627\u0633\u06a9\u0631\u0628\u067e\u062a \u0646\u0648\u06cc\u0633\u06cc Bash",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Bash Scripting"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "exam.exam",
+        "fields": {
+            "category": 3,
+            "number_of_attempts": 1,
+            "description": "",
+            "end_date": null,
+            "local_name": "\u0645\u062f\u06cc\u0631\u06cc\u062a \u06f1",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Administration I"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "exam.exam",
+        "fields": {
+            "category": 3,
+            "number_of_attempts": 1,
+            "description": "",
+            "end_date": null,
+            "local_name": "\u0645\u062f\u06cc\u0631\u06cc\u062a \u06f2",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Administration II"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "exam.exam",
+        "fields": {
+            "category": 3,
+            "number_of_attempts": 1,
+            "description": "",
+            "end_date": null,
+            "local_name": "\u0633\u0631\u0648\u06cc\u0633",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Services"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "exam.exam",
+        "fields": {
+            "category": 11,
+            "number_of_attempts": 1,
+            "description": "\u06cc\u0647 \u0645\u0642\u062f\u0627\u0631 \u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0641\u0627\u0631\u0633\u06cc \u062f\u0631 \u0645\u0648\u0631\u062f \u0627\u0633\u067e\u0631\u06cc\u0646\u06af \u0648 \u0627\u06cc\u0646\u06a9\u0647 \u062f\u0631 \u0627\u06cc\u0646 \u0628\u0647\u0634 \u0686\u0647 \u0686\u06cc\u0632\u06cc \u0645\u0648\u0631\u062f \u0627\u0645\u062a\u062d\u0627\u0646 \u0642\u0631\u0627\u0631 \u0645\u06cc\u06af\u06cc\u0631\u0647\u0642",
+            "end_date": null,
+            "local_name": "Bean Factory",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "BeanFactory"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "exam.exam",
+        "fields": {
+            "category": 11,
+            "number_of_attempts": 1,
+            "description": "",
+            "end_date": null,
+            "local_name": "Inversion Of Control",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "IOC"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "exam.exam",
+        "fields": {
+            "category": 11,
+            "number_of_attempts": 1,
+            "description": "\u0630\u062a\u0641\u0630 \u0631\u0642\u062a\u0631\u0644\u0642 \u062a\u0642\u0631\u062a \u0631\u0628\u062a\u0631 \u0644\u0642\u062a\u0631  \u0631\u0642\u062a \u0644\u0631\u062a \u0644\u0631\u0644\u0631\u062a\u0631 \u0644\u062a \u0631\u0644\u0631\u062a \u0628\u0631\u062a  \u0644\u0631\u062a \u0631 \u062a\u0631 \u0631\u062a \u0631\u0644\u0631\u062a\u0631 ",
+            "end_date": null,
+            "local_name": "Spring JDBC",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Spring JDBC"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "exam.exam",
+        "fields": {
+            "category": 11,
+            "number_of_attempts": 1,
+            "description": "\u0628\u06cc \u06cc\u062a\u06cc\u062a \u06cc\u06cc\u062a\u06cc \u06cc\u062a \u06cc\u062b\u062a\u0632 \u0634\u06cc\u062f\u0632\u0632\u062f \u0628\u062a\u062b \u0647 \u06cc\u062a\u0635\u06cc\u0647\u06cc \u062a\u06cc\u0636\u062e \u062a\u0635\u062d \u0628\u062a\u0628\u0635\u062a",
+            "end_date": null,
+            "local_name": "Spring MVC",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Spring MVC"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "exam.exam",
+        "fields": {
+            "category": 11,
+            "number_of_attempts": 1,
+            "description": "\u0644\u0627\u0637 \u062a\u06cc\u0646 \u0628\u062a\u06cc \u062a\u0628 \u0628\u062a\u0635 \u0628\u062a\u062b\u0642\u0647\u062b \u0632\u062f\u0632\u067e\u06cc \u0631\u0627\u062b\u062e \u0632\u062b\u062e\u0647\u062a\u0632 \u062a\u062e\u0647\u062b \u0628\u0647\u062e\u062b\u0635\u062a\u0628 \u062a\u0628\u062b\u0642 \u062b\u062e\u0647\u062a\u0631",
+            "end_date": null,
+            "local_name": "Spring Data",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Spring Data"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "exam.exam",
+        "fields": {
+            "category": 12,
+            "number_of_attempts": 1,
+            "description": "\u0644\u0627\u0637 \u062a\u06cc\u0646 \u0628\u062a\u06cc \u062a\u0628 \u0628\u062a\u0635 \u0628\u062a\u062b\u0642\u0647\u062b \u0632\u062f\u0632\u067e\u06cc \u0631\u0627\u062b\u062e \u0632\u062b\u062e\u0647\u062a\u0632 \u062a\u062e\u0647\u062b \u0628\u0647\u062e\u062b\u0635\u062a\u0628 \u062a\u0628\u062b\u0642 \u062b\u062e\u0647\u062a\u0631",
+            "end_date": null,
+            "local_name": "Hibernate Elementary",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Hibernate Elementary"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "exam.exam",
+        "fields": {
+            "category": 12,
+            "number_of_attempts": 1,
+            "description": "\u0644\u0627\u0637 \u062a\u06cc\u0646 \u0628\u062a\u06cc \u062a\u0628 \u0628\u062a\u0635 \u0628\u062a\u062b\u0642\u0647\u062b \u0632\u062f\u0632\u067e\u06cc \u0631\u0627\u062b\u062e \u0632\u062b\u062e\u0647\u062a\u0632 \u062a\u062e\u0647\u062b \u0628\u0647\u062e\u062b\u0635\u062a\u0628 \u062a\u0628\u062b\u0642 \u062b\u062e\u0647\u062a\u0631",
+            "end_date": null,
+            "local_name": "Toplink Elementary",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-10-10T00:00:00",
+            "name": "Toplink Elementary"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "exam.exam",
+        "fields": {
+            "category": 13,
+            "number_of_attempts": 1,
+            "description": "\u062f\u0631 \u0627\u06cc\u0646 \u0622\u0632\u0645\u0648\u0646 \u0645\u06cc\u0632\u0627\u0646 \u0622\u0634\u0646\u0627\u06cc\u06cc \u0634\u0645\u0627 \u0628\u0627 \u067e\u0627\u06cc\u062a\u0648\u0646 \u062f\u0631 \u0633\u0637\u062d \u0645\u0642\u062f\u0645\u0627\u062a\u06cc \u0633\u0646\u062c\u06cc\u062f\u0647 \u0645\u06cc \u0634\u0648\u062f",
+            "end_date": null,
+            "local_name": "\u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u0642\u062f\u0645\u0627\u062a\u06cc",
+            "duration": 100,
+            "exam_state": 0,
+            "start_date": "2014-06-23T16:51:20",
+            "name": "python-basic"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "exam.requiredknowledge",
+        "fields": {
+            "name": "\u0645\u062a\u063a\u06cc\u0631\u0647\u0627",
+            "exams": [1, 2, 3]
+        }
+    },
+    {
+        "pk": 1,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "public static void main(String... args){\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nSystem.out.println(\"helo World!\");\r\nfor(int i=0;i<=1000;i++){\r\ni++;\r\n}\r\n\r\n}",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627 \u06a9\u0644\u0645\u0647 \u06a9\u0644\u06cc\u062f\u06cc \u062f\u0631 \u062c\u0627\u0648\u0627 \u0646\u06cc\u0633\u062a\u061f\u200e\u200e",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": null,
+            "exam": 1,
+            "text": "\u0622\u06cc\u0627 \u0628\u062f\u0648\u0646 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u062c\u0627\u0648\u0627 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0646\u0641\u0633 \u06a9\u0634\u06cc\u062f\u061f\u200e\u200e",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": null,
+            "exam": 1,
+            "text": "\u062f\u0631 \u0646\u0633\u062e \u0645\u062e\u062a\u0644\u0641 \u062c\u0627\u0648\u0627 \u0627\u0645\u06a9\u0627\u0646\u0627\u062a \u0645\u062e\u062a\u0644\u0641\u06cc \u0628\u0647 \u0627\u06cc\u0646 \u0632\u0628\u0627\u0646 \u0627\u0636\u0627\u0641\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a. <br /> \u06cc\u06a9\u06cc \u0627\u0632 \u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646\u0627\u062a Generic \u0627\u0633\u062a. <br /> \u06a9\u062f\u0627\u0645 \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627 \u062f\u0631 \u0645\u0648\u0631\u062f Generic \u0635\u062d\u06cc\u062d \u0627\u0633\u062a.",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": null,
+            "exam": 1,
+            "text": "\u0641\u0631\u0636 \u06a9\u0646\u06cc\u062f \u06a9\u0647 \u0645\u062a\u062f \u0632\u06cc\u0631 synchronized \u062a\u0639\u0631\u06cc\u0641 \u0634\u062f\u0647 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u0622\u0628\u062c\u06a9\u062a B \u0627\u0632 \u0646\u062e A \u0635\u062f\u0627 \u0632\u062f\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a <br /> wait(2000); <br /> \u0628\u0639\u062f \u0627\u0632 \u0641\u0631\u0627\u062e\u0648\u0627\u0646\u06cc \u0627\u06cc\u0646 \u0645\u062a\u062f  \u0686\u0647 \u0632\u0645\u0627\u0646\u06cc \u0646\u062e A \u0645\u06cc\u062a\u0648\u0627\u0646\u062f \u06a9\u0627\u0646\u062f\u06cc\u062f \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u067e\u0631\u062f\u0627\u0632\u0634\u06af\u0631 \u0628\u0627\u0634\u062f\u061f",
+            "image": "question/images/4.png",
+            "score": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u063a\u06cc\u0631 \u0642\u0627\u0628\u0644 \u0642\u0628\u0648\u0644 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "public class Test {\r\nstatic int age;\r\npublic static void main (String args []) {\r\nage = age + 1;\r\nSystem.out.println(\"The age is \" + age);\r\n}\r\n}",
+            "exam": 1,
+            "text": "\u06af\u0632\u06cc\u0646\u0647 \u0645\u0646\u0627\u0633\u0628 \u0631\u0627 \u0628\u0631\u0627\u06cc \u0627\u06cc\u0646 \u0642\u0637\u0639\u0647 \u06a9\u062f \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0635\u062d\u06cc\u062d \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 true \u0628\u0631\u0645\u06cc\u06af\u0631\u062f\u0627\u0646\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u0627\u067e\u0631\u0627\u062a\u0648\u0631\u0647\u0627 \u0628\u0647 \u0627\u067e\u0631\u0627\u062a\u0648\u0631\u0647\u0627\u06cc \u0627\u062a\u0635\u0627\u0644 \u06a9\u0648\u062a\u0627\u0647 \u0645\u0639\u0631\u0648\u0641 \u0647\u0633\u062a\u0646\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0642\u0627\u0628\u0644 \u0642\u0628\u0648\u0644 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "public class Test {\r\nstatic int total = 10;\r\npublic static void main (String args []) {\r\nnew Test();\r\n}\r\npublic Test () {\r\nSystem.out.println(\"In test\");\r\nSystem.out.println(this);\r\nint temp = this.total;\r\nif (temp > 5) {\r\nSystem.out.println(temp);\r\n}}}",
+            "exam": 1,
+            "text": "\u0628\u0627 \u062a\u0648\u062c\u0647 \u0628\u0647 \u06a9\u062f \u067e\u0627\u0633\u062e \u062f\u0647\u06cc\u062f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0635\u062d\u06cc\u062d \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u062a\u0639\u0627\u0631\u06cc\u0641 \u0645\u062a\u062f main \u0645\u06cc \u062a\u0648\u0627\u0646\u062f \u0646\u0642\u0637\u0647 \u0622\u0632\u0627\u062f \u06cc\u06a9 \u0628\u0631\u0646\u0627\u0645\u0647 \u062c\u0627\u0648\u0627 \u0628\u0627\u0634\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "public class test {\r\n   public static void main(String args[]) { \r\n      Integer intObj=Integer.valueOf(args[args.length-1]);\r\n      int i = intObj.intValue();\r\n\r\n      if(args.length > 1) \r\n         System.out.println(i);\r\n      if(args.length > 0)\r\n         System.out.println(i - 1);\r\n      else \r\n         System.out.println(i - 2);\r\n   }\r\n}",
+            "exam": 1,
+            "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u062a\u0645\u0627\u0645 \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627\u06cc\u06cc \u06a9\u0647 \u06a9\u0644\u0645\u0647 \u06a9\u0644\u06cc\u062f\u06cc \u062f\u0631 \u062c\u0627\u0648\u0627 \u0647\u0633\u062a\u0646\u062f \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u0645\u062a\u063a\u06cc\u0631 long \u062f\u0631 \u062c\u0627\u0648\u0627 \u0686\u0646\u062f \u0628\u0627\u06cc\u062a \u062d\u0627\u0641\u0638\u0647 \u0627\u0634\u063a\u0627\u0644 \u0645\u06cc\u06a9\u0646\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 17,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u062a\u0648\u0627\u0628\u0639 \u0633\u0627\u0632\u0646\u062f\u0647 \u062f\u0631 \u062c\u0627\u0648\u0627 \u0686\u0647 access modifier \u0647\u0627\u06cc\u06cc \u0645\u06cc\u062a\u0648\u0627\u0646\u0646\u062f \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u0646\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 18,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06a9\u062f\u0627\u0645 \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627 \u0635\u062d\u06cc\u062d \u0647\u0633\u062a\u0646\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 19,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u062a\u0639\u062f\u0627\u062f \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631\u0647\u0627 \u062f\u0631 \u06cc\u06a9 String \u0686\u06af\u0648\u0646\u0647 \u0628\u062f\u0633\u062a \u0645\u06cc \u0622\u06cc\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 20,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "public class test {\r\n   public static void main(String args[]) { \r\n      String str1=\"abc\";\r\n      String str2=\"def\";\r\n      String str3=str1.concat(str2);\r\n\r\n      str1.concat(str2);\r\n      System.out.println(str1);\r\n   }\r\n}\r\n",
+            "exam": 1,
+            "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 21,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "public class test {\r\n   public static void main(String args[]) { \r\n   int i;\r\n   float  f = 2.3f;\r\n   double d = 2.7;\r\n   i = ((int)Math.ceil(f)) * ((int)Math.round(d));\r\n \r\n   System.out.println(i);\r\n   }\r\n}",
+            "exam": 1,
+            "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 22,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 1,
+            "text": "\u06af\u0632\u06cc\u0646\u0647 \u0647\u0627\u06cc \u0635\u062d\u06cc\u062d \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 23,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "import java.util.*;\r\nclass Vehicle {}\r\nclass Car extends Vehicle {}\r\nclass Bus extends Vehicle {}\r\nclass TestSamp {\r\n\tpublic static void main(String [] args) {\r\n\tArrayList<Car> a = new ArrayList<Car>();\r\n\ta.add(new Car());\r\n\tArrayList b = a;\r\n\tArrayList<Bus> c = (ArrayList<Bus>)b;\r\n\tc.add(new Bus());\r\n\tfor (Object obj : b)\r\n\t\tSystem.out.println(obj);\r\n\t}\r\n}",
+            "exam": 2,
+            "text": "\u0646\u062a\u06cc\u062c\u0647 \u0627\u062c\u0631\u0627\u06cc \u06a9\u062f \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 24,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "List<Number> list1 = null;\r\nList<Integer> list2 = null;\r\nlist1 = list2;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 25,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "List<? extends Number> list1 = null;\r\nList<Integer> list2 = null;\r\nlist1 = list2;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 26,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "List<Number> list1 = null;\r\nList<? super Integer> list2 = null;\r\nlist1 = list2;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 27,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "LinkedList<?> list1 = null;\r\nLinkedList<Integer> list2 = null;\r\nlist2 = list1;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 28,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "PriorityQueue<?> queue1 = null;\r\nPriorityQueue queue2 = null;\r\nqueue1 = queue2;",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 29,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "import java.util.*;\r\n\r\nclass Parent {\r\n\tvoid say(List<String> list) {\r\n\t\tSystem.out.println(\"parent\");\r\n\t}\r\n}\r\nclass Child extends Parent {\r\n\tvoid say(List list) {\r\n\t\tSystem.out.println(\"child\");\r\n\t}\r\n}\r\n\r\n\r\n\r\n\r\npublic static void main(String[] java) {\r\n\tChild c = new Child();\r\n\tc.say(new LinkedList<String>());\r\n}",
+            "exam": 2,
+            "text": "\u0628\u0627 \u062a\u0648\u062c\u0647 \u0628\u0647 \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0644\u0627\u0633\u0647\u0627 \u0646\u062a\u06cc\u062c\u0647 \u0627\u062c\u0631\u0627\u06cc \u06a9\u062f main \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 30,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "List<? extends String> list1 = new ArrayList<String>();\r\nList<? super String> list2 = new ArrayList<String>();\r\nList<Integer> list3 = new ArrayList<Integer>();\r\nList list4 = new ArrayList();\r\n\r\nif (list1 instanceof List && \r\n    list2 instanceof List &&\r\n    list3 instanceof List &&\r\n    list4 instanceof List) {\r\n    System.out.println(\"yes\");\r\n}",
+            "exam": 2,
+            "text": "\u062e\u0631\u0648\u062c\u06cc \u0628\u0631\u0646\u0627\u0645\u0647 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 31,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "class Test implements Comparable<Comparable<?>> {\r\n    public int compareTo(Comparable<?> object) {\r\n        return 0;\r\n    }\r\n}",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 32,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "new ArrayList<Set<?>>();",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 33,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "new TreeMap<String, ? super Integer>();",
+            "exam": 2,
+            "text": "\u0622\u06cc\u0627 \u06a9\u062f \u0632\u06cc\u0631 \u0628\u0627 \u0645\u0648\u0641\u0642\u06cc\u062a \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 34,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u06a9\u062f\u0627\u0645 \u062f\u0633\u062a\u0648\u0631 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u062e\u0631\u0648\u062c\u06cc \u0631\u0627 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0627\u062f.\r\n(\u0628\u062f\u0648\u0646 \u0647\u06cc\u0686 \u062a\u063a\u06cc\u06cc\u0631 \u0648 \u0645\u0627\u0633\u06a9 \u06a9\u0631\u062f\u0646\u06cc \u062f\u0631 \u062a\u0648\u0627\u0628\u0639)",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 35,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u062c\u0645\u0644\u0627\u062a \u0632\u06cc\u0631 \u0635\u062d\u06cc\u062d \u0646\u0645\u06cc \u0628\u0627\u0634\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 36,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0627\u0632 \u06a9\u062f\u0627\u0645 \u0633\u0645\u0628\u0644 \u0628\u0631\u0627\u06cc \u0646\u0645\u0627\u06cc\u0634 \u06a9\u0627\u0645\u0646\u062a \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0645\u06cc \u0634\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 37,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0686\u06af\u0648\u0646\u0647 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0645\u062c\u0645\u0648\u0639\u0647 \u0627\u06cc \u0627\u0632 \u062e\u0637\u0647\u0627 \u0631\u0627 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u06a9\u0627\u0645\u0646\u062a \u06a9\u0631\u062f?",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 38,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0646\u062d\u0648\u0647 \u062a\u0639\u0631\u06cc\u0641 \u0645\u062a\u063a\u06cc\u0631 a \u0628\u0627 \u0645\u0642\u062f\u0627\u0631 \u06f2 \u06a9\u062f\u0627\u0645 \u06af\u0632\u06cc\u0646\u0647 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 39,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0686\u06af\u0648\u0646\u0647 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0645\u0642\u062f\u0627\u0631 \u0631\u0634\u062a\u0647 \u0627\u06cc \"2\" \u0631\u0627 \u0628\u0647 \u0639\u062f\u062f \u062a\u0628\u062f\u06cc\u0644 \u0646\u0645\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 40,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u0627\u067e\u0631\u0627\u062a\u0648\u0631\u0647\u0627\u06cc \u0632\u06cc\u0631 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u062c\u0627\u0632 \u0646\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 41,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0627\u0632 \u062a\u0639\u0627\u0631\u06cc\u0641 \u0634\u0631\u0637\u06cc \u0632\u06cc\u0631 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0635\u062d\u06cc\u062d \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 42,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0645\u06cc\u062a\u0648\u0627\u0646 \u06cc\u06a9 \u0634\u0631\u0637 alternative \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0631\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 43,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0646\u062d\u0648\u0647 \u0635\u062d\u06cc\u062d \u062a\u0639\u0631\u06cc\u0641 \u062a\u0627\u0628\u0639 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 44,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u06a9\u062f\u0627\u0645 \u062a\u0639\u0631\u06cc\u0641 loop \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0635\u062d\u06cc\u062d \u0627\u0633\u062a",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 45,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u06a9\u062f\u0627\u0645 \u062a\u0639\u0631\u06cc\u0641 while \u0635\u062d\u06cc\u062d \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 46,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0686\u06af\u0648\u0646\u0647 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0646\u0648\u0639 \u0622\u0628\u062c\u06a9\u062a \u0631\u0627 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0647 \u062f\u0633\u062a \u0622\u0648\u0631\u062f.",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 47,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0686\u06af\u0648\u0646\u0647 \u0645\u06cc\u062a\u0648\u0627\u0646 \u062a\u0645\u0627\u0645 \u0645\u062a\u063a\u06cc\u0631 \"a\" \u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0645\u062a\u063a\u06cc\u0631 example \u0631\u0627 \u0628\u0647 \"b\" \u062a\u0628\u062f\u06cc\u0644 \u0646\u0645\u0648\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 48,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0646\u062d\u0648\u0647 \u062a\u0639\u0631\u06cc\u0641 \u0644\u06cc\u0633\u062a \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 49,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0646\u062d\u0648\u0647 \u062a\u0639\u0631\u06cc\u0641 \u062a\u0627\u067e\u0644 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 50,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u06a9\u062f\u0627\u0645 \u06cc\u06a9 \u0646\u062d\u0648\u0647 \u062a\u0639\u0631\u06cc\u0641 \u062f\u06cc\u06a9\u0634\u0646\u0631\u06cc \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 51,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0646\u062d\u0648\u0647 \u0627\u0646\u062a\u062e\u0627\u0628 \u062f\u0648\u0645\u06cc\u0646 \u0639\u0646\u0635\u0631 \u0644\u06cc\u0633\u062a \u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 52,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "print('%.2f' % 123.444)",
+            "exam": 16,
+            "text": "\u062e\u0631\u0648\u062c\u06cc \u062f\u0633\u062a\u0648\u0631 \u0632\u06cc\u0631 \u0686\u06cc\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 53,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0646\u062d\u0648\u0647 catch \u06a9\u0631\u062f\u0646 \u0627\u0633\u062a\u062b\u0646\u0627\u0647\u0627\u06cc\u06cc \u06a9\u0647 \u062f\u0631 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0627\u062a\u0641\u0627\u0642 \u0645\u06cc \u0627\u0641\u062a\u062f \u0628\u0627 \u06a9\u062f\u0627\u0645 \u06a9\u0644\u0645\u0647 \u06a9\u0644\u06cc\u062f\u06cc \u0632\u06cc\u0631 \u0645\u0645\u06a9\u0646 \u0627\u0633\u062a",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 54,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "",
+            "exam": 16,
+            "text": "\u0646\u062d\u0648\u0647 \u0628\u0627\u0632 \u0646\u0645\u0648\u062f\u0646 \u06cc\u06a9 \u0641\u0627\u06cc\u0644 \u0628\u0647 \u0645\u0646\u0638\u0648\u0631 \u062e\u0648\u0627\u0646\u062f\u0646 \u0627\u0632 \u0622\u0646 \u0628\u0647 \u0686\u0647 \u0634\u06a9\u0644 \u0627\u0633\u062a\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": 55,
+        "model": "exam.question",
+        "fields": {
+            "code_type": "java",
+            "code": "f = open(\"test.txt\",\"w\")",
+            "exam": 16,
+            "text": "\u067e\u0633 \u0627\u0632 \u0627\u062c\u0631\u0627\u06cc \u062f\u0633\u062a\u0648\u0631 \u0632\u06cc\u0631 \u0686\u0647 \u0627\u062a\u0641\u0627\u0642\u06cc \u062e\u0648\u0627\u0647\u062f \u0627\u0641\u062a\u0627\u062f\u061f",
+            "image": "",
+            "score": 1
+        }
+    },
+    {
+        "pk": -1,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u062f\u0648\u0646 \u067e\u0627\u0633\u062e",
+            "question": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "if",
+            "question": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "while",
+            "question": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "goto",
+            "question": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "sealed",
+            "question": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 2
+        }
+    },
+    {
+        "pk": 6,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647",
+            "question": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646 \u062f\u0631 \u0646\u0633\u062e\u0647 \u06f4 \u0628\u0647 \u062c\u0627\u0648\u0627 \u0627\u0636\u0627\u0641\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a.",
+            "question": 3
+        }
+    },
+    {
+        "pk": 8,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0627\u0632 \u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646 \u062a\u0646\u0647\u0627 \u0645\u06cc\u062a\u0648\u0627\u0646 \u062f\u0631 \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0644\u0627\u0633\u0647\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0648\u062f \u0648 \u062f\u0631 \u0645\u0648\u0627\u0631\u062f\u06cc \u0645\u0627\u0646\u0646\u062f \u062a\u0639\u0631\u06cc\u0641 \u0645\u062a\u063a\u06cc\u0631 \u0648 \u06cc\u0627 \u062a\u0639\u0631\u06cc\u0641 \u0645\u062a\u062f \u06a9\u0627\u0631\u0628\u0631\u062f \u0646\u062f\u0627\u0631\u062f",
+            "question": 3
+        }
+    },
+    {
+        "pk": 9,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0627\u06cc\u0646 \u0627\u0645\u06a9\u0627\u0646 \u0645\u06cc\u062a\u0648\u0627\u0646\u062f \u062f\u0631 \u0627\u0641\u0632\u0627\u06cc\u0634 \u0642\u0627\u0628\u0644\u06cc\u062a \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0645\u062c\u062f\u062f \u06a9\u062f\u0647\u0627 \u0628\u0633\u06cc\u0627\u0631 \u0645\u0641\u06cc\u062f \u0628\u0627\u0634\u062f",
+            "question": 3
+        }
+    },
+    {
+        "pk": 10,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u06a9\u0644\u0627\u0633\u0647\u0627 \u0631\u0627 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0628\u0647 \u06af\u0648\u0646\u0647 \u0627\u06cc \u0637\u0631\u0627\u062d\u06cc \u06a9\u0631\u062f \u0628\u062a\u0648\u0627\u0646 \u0627\u0632 \u0622\u0646\u0647\u0627 \u062f\u0631 \u062f\u0648\u062d\u0627\u0644\u062a Generic \u0648 \u063a\u06cc\u0631 Generic \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0648\u062f.",
+            "question": 3
+        }
+    },
+    {
+        "pk": 11,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0639\u062f \u0627\u0632 \u0627\u06cc\u0646\u06a9\u0647 \u0646\u062e A notify \u0634\u0648\u062f \u0648 \u06cc\u0627 \u067e\u0633 \u0627\u0632 \u06af\u0630\u0634\u062a \u06f2 \u062b\u0627\u0646\u06cc\u0647",
+            "question": 4
+        }
+    },
+    {
+        "pk": 12,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u067e\u0633 \u0627\u0632 \u0622\u0632\u0627\u062f \u0634\u062f\u0646 \u0642\u0641\u0644 \u062f\u0631\u0648\u0646 B \u0648 \u06cc\u0627 \u06af\u0630\u0634\u062a \u06f2 \u062b\u0627\u0646\u06cc\u0647",
+            "question": 4
+        }
+    },
+    {
+        "pk": 13,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06f2 \u062b\u0627\u0646\u06cc\u0647 \u067e\u0633 \u0627\u0632 notify \u0634\u062f\u0646 \u0646\u062e A",
+            "question": 4
+        }
+    },
+    {
+        "pk": 14,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06f2 \u062b\u0627\u0646\u06cc\u0647 \u067e\u0633 \u0627\u0632 \u0622\u0632\u0627\u062f \u0634\u062f\u0646 \u0642\u0641\u0644 \u0622\u0628\u062c\u06a9\u062a B",
+            "question": 4
+        }
+    },
+    {
+        "pk": 15,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "int i = 32;",
+            "question": 5
+        }
+    },
+    {
+        "pk": 16,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "float f = 45.0;\r\n",
+            "question": 5
+        }
+    },
+    {
+        "pk": 17,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "double d = 45.0;\r\n",
+            "question": 5
+        }
+    },
+    {
+        "pk": 18,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0648 \u0627\u062c\u0631\u0627 \u0645\u06cc\u0634\u0648\u062f \u0627\u0645\u0627 \u062e\u0631\u0648\u062c\u06cc \u0646\u062f\u0627\u0631\u062f",
+            "question": 6
+        }
+    },
+    {
+        "pk": 19,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0648 \u0627\u062c\u0631\u0627 \u0645\u06cc\u0634\u0648\u062f \u0647\u0645\u0686\u0646\u06cc\u0646 \u062e\u0631\u0648\u062c\u06cc \u0622\u0646:\r\nThe age is 1\r\n\u0645\u06cc \u0628\u0627\u0634\u062f",
+            "question": 6
+        }
+    },
+    {
+        "pk": 20,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0646\u0645\u06cc\u0634\u0648\u062f",
+            "question": 6
+        }
+    },
+    {
+        "pk": 21,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc\u0634\u0648\u062f \u0648\u0644\u06cc \u062e\u0637\u0627\u06cc \u0632\u0645\u0627\u0646 \u0627\u062c\u0631\u0627 \u0627\u062a\u0641\u0627\u0642 \u062e\u0648\u0627\u0647\u062f \u0627\u0641\u062a\u0627\u062f",
+            "question": 6
+        }
+    },
+    {
+        "pk": 22,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "128 >> 1 gives 64",
+            "question": 7
+        }
+    },
+    {
+        "pk": 23,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "128 >>> 1 gives 64",
+            "question": 7
+        }
+    },
+    {
+        "pk": 24,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "128 >> 1 gives -64",
+            "question": 7
+        }
+    },
+    {
+        "pk": 25,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "128 >>> 1 gives -64",
+            "question": 7
+        }
+    },
+    {
+        "pk": 26,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\"john\" == \"john\"\r\n",
+            "question": 8
+        }
+    },
+    {
+        "pk": 27,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\"john\".equals(\"john\")\r\n",
+            "question": 8
+        }
+    },
+    {
+        "pk": 28,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\"john\" = \"john\"\r\n",
+            "question": 8
+        }
+    },
+    {
+        "pk": 29,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\"john\".equals(new Button(\"john\"))\r\n",
+            "question": 8
+        }
+    },
+    {
+        "pk": 30,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "&&",
+            "question": 9
+        }
+    },
+    {
+        "pk": 31,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "|",
+            "question": 9
+        }
+    },
+    {
+        "pk": 32,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "||",
+            "question": 9
+        }
+    },
+    {
+        "pk": 33,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "&",
+            "question": 9
+        }
+    },
+    {
+        "pk": 34,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "Object o = new Button(\"A\");\r\n",
+            "question": 10
+        }
+    },
+    {
+        "pk": 35,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Frame f = new Panel();\r\n",
+            "question": 10
+        }
+    },
+    {
+        "pk": 36,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Boolean flag = true;\r\n",
+            "question": 10
+        }
+    },
+    {
+        "pk": 37,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "Panel p = new Applet();\r\n",
+            "question": 10
+        }
+    },
+    {
+        "pk": 38,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644\u0631 \u0628\u0631 \u0631\u0648\u06cc \u062e\u0637 \u06f2 \u062e\u0637\u0627 \u06af\u0632\u0627\u0631\u0634 \u0645\u06cc\u062f\u0647\u062f",
+            "question": 11
+        }
+    },
+    {
+        "pk": 39,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0644\u0627\u0633 \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0646\u0645\u06cc\u0634\u0648\u062f.",
+            "question": 11
+        }
+    },
+    {
+        "pk": 40,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0639\u062f\u062f \u06f1\u06f0 \u06cc\u06a9\u06cc \u0627\u0632 \u062e\u0631\u0648\u062c\u06cc \u0647\u0627 \u0628\u0631\u0646\u0627\u0645\u0647 \u0627\u0633\u062a.",
+            "question": 11
+        }
+    },
+    {
+        "pk": 41,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644\u0631 \u0628\u0631 \u0631\u0648\u06cc \u062e\u0637 \u06f9 \u062e\u0637\u0627 \u06af\u0632\u0627\u0631\u0634 \u0645\u06cc\u062f\u0647\u062f",
+            "question": 11
+        }
+    },
+    {
+        "pk": 42,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0634\u062f\u0647 \u0648\u0644\u06cc \u062f\u0631 \u0631\u0645\u0627\u0646 \u0627\u062c\u0631\u0627 \u062e\u0637\u0627 \u0645\u06cc\u062f\u0647\u062f",
+            "question": 11
+        }
+    },
+    {
+        "pk": 43,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "String temp [] = new String {\"j\" \"a\" \"z\"};\r\n",
+            "question": 12
+        }
+    },
+    {
+        "pk": 44,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "String temp [] = { \"j \" \" b\" \"c\"};\r\n",
+            "question": 12
+        }
+    },
+    {
+        "pk": 45,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "String temp = {\"a\", \"b\", \"c\"};\r\n",
+            "question": 12
+        }
+    },
+    {
+        "pk": 46,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "String temp [] = {\"a\", \"b\", \"c\"};\r\n",
+            "question": 12
+        }
+    },
+    {
+        "pk": 47,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "public static int main(char args[])",
+            "question": 13
+        }
+    },
+    {
+        "pk": 48,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "public static void main(String args[])",
+            "question": 13
+        }
+    },
+    {
+        "pk": 49,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "public static void MAIN(String args[])",
+            "question": 13
+        }
+    },
+    {
+        "pk": 50,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "public static void main(String args)",
+            "question": 13
+        }
+    },
+    {
+        "pk": 51,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "public static void main(String... args[])",
+            "question": 13
+        }
+    },
+    {
+        "pk": 52,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "test",
+            "question": 14
+        }
+    },
+    {
+        "pk": 53,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "test-1",
+            "question": 14
+        }
+    },
+    {
+        "pk": 54,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "0",
+            "question": 14
+        }
+    },
+    {
+        "pk": 55,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "1",
+            "question": 14
+        }
+    },
+    {
+        "pk": 56,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "2",
+            "question": 14
+        }
+    },
+    {
+        "pk": 57,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "extern",
+            "question": 15
+        }
+    },
+    {
+        "pk": 58,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "synchronized",
+            "question": 15
+        }
+    },
+    {
+        "pk": 59,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "volatile",
+            "question": 15
+        }
+    },
+    {
+        "pk": 60,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "friend",
+            "question": 15
+        }
+    },
+    {
+        "pk": 61,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "friendly",
+            "question": 15
+        }
+    },
+    {
+        "pk": 62,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "transient",
+            "question": 15
+        }
+    },
+    {
+        "pk": 63,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "this",
+            "question": 15
+        }
+    },
+    {
+        "pk": 64,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "then",
+            "question": 15
+        }
+    },
+    {
+        "pk": 65,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0648\u0627\u0628\u0633\u062a\u0647 \u0628\u0627 \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644\u0631 \u0627\u0633\u062a.",
+            "question": 16
+        }
+    },
+    {
+        "pk": 66,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "2",
+            "question": 16
+        }
+    },
+    {
+        "pk": 67,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "4",
+            "question": 16
+        }
+    },
+    {
+        "pk": 68,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "8",
+            "question": 16
+        }
+    },
+    {
+        "pk": 69,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "64",
+            "question": 16
+        }
+    },
+    {
+        "pk": 70,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "public",
+            "question": 17
+        }
+    },
+    {
+        "pk": 71,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "private",
+            "question": 17
+        }
+    },
+    {
+        "pk": 72,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "protected",
+            "question": 17
+        }
+    },
+    {
+        "pk": 73,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u062f\u0648\u0646 access modifier",
+            "question": 17
+        }
+    },
+    {
+        "pk": 74,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0631\u0627\u06cc \u0647\u0631 \u0628\u0644\u0627\u06a9 try \u0628\u0627\u06cc\u062f \u062d\u062f\u0627\u0642\u0644 \u06cc\u06a9 \u0628\u0644\u0627\u06a9 catch \u0648\u062c\u0648\u062f \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u062f.",
+            "question": 18
+        }
+    },
+    {
+        "pk": 75,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0647\u0631 \u0628\u0644\u0627\u06a9 try \u0645\u06cc\u062a\u0648\u0627\u0646\u062f \u062f\u0627\u0631\u0627\u06cc \u0686\u0646\u062f\u06cc\u0646 \u0628\u0644\u0627\u06a9 finally \u0628\u0627\u0634\u062f.",
+            "question": 18
+        }
+    },
+    {
+        "pk": 76,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u067e\u0633 \u0627\u0632 \u0647\u0631 \u0628\u0644\u0627\u06a9 try \u0628\u0627\u06cc\u062f \u0628\u0644\u0627\u06a9 catch \u0648 \u06cc\u0627 finally \u0648\u062c\u0648\u062f \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u062f.",
+            "question": 18
+        }
+    },
+    {
+        "pk": 77,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0627\u06af\u0631 \u067e\u0633 \u0627\u0632 \u0628\u0644\u0627\u06a9 try \u0647\u0631 \u062f\u0648 \u0646\u0648\u0639 catch \u0648 finally \u0648\u062c\u0648\u062f \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u062f \u0628\u0627\u06cc\u062f finally \u067e\u0633 \u0627\u0632 catch \u0628\u0627\u0634\u062f.",
+            "question": 18
+        }
+    },
+    {
+        "pk": 78,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0645\u062a\u063a\u06cc\u0631 size",
+            "question": 19
+        }
+    },
+    {
+        "pk": 79,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0645\u062a\u063a\u06cc\u0631  length",
+            "question": 19
+        }
+    },
+    {
+        "pk": 80,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0645\u062a\u062f size()",
+            "question": 19
+        }
+    },
+    {
+        "pk": 81,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u0645\u062a\u062f length()",
+            "question": 19
+        }
+    },
+    {
+        "pk": 82,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "abc",
+            "question": 20
+        }
+    },
+    {
+        "pk": 83,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "def",
+            "question": 20
+        }
+    },
+    {
+        "pk": 84,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "abcabc",
+            "question": 20
+        }
+    },
+    {
+        "pk": 85,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "abcdef",
+            "question": 20
+        }
+    },
+    {
+        "pk": 86,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "defabc",
+            "question": 20
+        }
+    },
+    {
+        "pk": 87,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "abcdefdef",
+            "question": 20
+        }
+    },
+    {
+        "pk": 88,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "4",
+            "question": 21
+        }
+    },
+    {
+        "pk": 89,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "5",
+            "question": 21
+        }
+    },
+    {
+        "pk": 90,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "6",
+            "question": 21
+        }
+    },
+    {
+        "pk": 91,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "6.1",
+            "question": 21
+        }
+    },
+    {
+        "pk": 92,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "9",
+            "question": 21
+        }
+    },
+    {
+        "pk": 93,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0645\u062a\u062f\u0647\u0627\u06cc \u062a\u0639\u0631\u06cc\u0641 \u0634\u062f\u0647 \u062f\u0631 interface \u0628\u0647 \u0635\u0648\u0631\u062a \u0636\u0645\u0646\u06cc private \u0647\u0633\u062a\u0646\u062f",
+            "question": 22
+        }
+    },
+    {
+        "pk": 94,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0645\u062a\u063a\u06cc\u0631\u0647\u0627\u06cc \u062a\u0639\u0631\u06cc\u0641 \u0634\u062f\u0647 \u062f\u0631 interface \u0628\u0647 \u0637\u0648\u0631 \u0636\u0645\u0646\u06cc public , static \u0648 final \u0647\u0633\u062a\u0646\u062f",
+            "question": 22
+        }
+    },
+    {
+        "pk": 95,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u06cc\u06a9 interface \u0645\u06cc\u062a\u0648\u0627\u0646\u062f \u0627\u0632 \u0686\u0646\u062f\u06cc\u0646 interface \u0627\u0631\u062b \u0628\u0631\u06cc \u06a9\u0646\u062f.",
+            "question": 22
+        }
+    },
+    {
+        "pk": 96,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0644\u0645\u0647 \u06a9\u0644\u06cc\u062f\u06cc implements \u0628\u06cc\u0627\u0646\u06af\u0631 \u0627\u06cc\u0646 \u0627\u0633\u062a \u06a9\u0647 interface \u0627\u0632 interface \u062f\u06cc\u06af\u0631\u06cc \u0627\u0631\u062b \u0645\u06cc\u0628\u0631\u062f.",
+            "question": 22
+        }
+    },
+    {
+        "pk": 97,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Compile Error",
+            "question": 23
+        }
+    },
+    {
+        "pk": 98,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0627 warning \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc\u0634\u0648\u062f \u0648 \u0686\u0646\u062f \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u0645\u06cc \u062f\u0647\u062f",
+            "question": 23
+        }
+    },
+    {
+        "pk": 99,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u062f\u0648\u0646 warning \u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0645\u06cc\u0634\u0648\u062f \u0648 \u0686\u0646\u062f \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u0645\u06cc \u062f\u0647\u062f",
+            "question": 23
+        }
+    },
+    {
+        "pk": 100,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0645\u067e\u0627\u06cc\u0644 \u0648 \u0627\u062c\u0631\u0627 \u0645\u06cc\u0634\u0648\u062f \u0648\u0644\u06cc \u062e\u0631\u0648\u062c\u06cc \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0645\u0627\u06cc\u0634 \u062f\u0627\u062f\u0647 \u0646\u0645\u06cc \u0634\u0648\u062f.",
+            "question": 23
+        }
+    },
+    {
+        "pk": 101,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647",
+            "question": 24
+        }
+    },
+    {
+        "pk": 102,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u062e\u06cc\u0631",
+            "question": 24
+        }
+    },
+    {
+        "pk": 103,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647",
+            "question": 25
+        }
+    },
+    {
+        "pk": 104,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 25
+        }
+    },
+    {
+        "pk": 105,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647",
+            "question": 26
+        }
+    },
+    {
+        "pk": 106,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u062e\u06cc\u0631",
+            "question": 26
+        }
+    },
+    {
+        "pk": 107,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647",
+            "question": 27
+        }
+    },
+    {
+        "pk": 108,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u062e\u06cc\u0631",
+            "question": 27
+        }
+    },
+    {
+        "pk": 109,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647 \u0648\u0644\u06cc \u0628\u0627 warning",
+            "question": 28
+        }
+    },
+    {
+        "pk": 110,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647 \u0628\u062f\u0648\u0646 warning",
+            "question": 28
+        }
+    },
+    {
+        "pk": 111,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 28
+        }
+    },
+    {
+        "pk": 112,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "child \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0648\u0634\u062a\u0647 \u0645\u06cc\u0634\u0648\u062f",
+            "question": 29
+        }
+    },
+    {
+        "pk": 113,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "parent \u0628\u0631 \u0631\u0648\u06cc \u0635\u0641\u062d\u0647 \u0646\u0648\u0634\u062a\u0647 \u0645\u06cc\u0634\u0648\u062f",
+            "question": 29
+        }
+    },
+    {
+        "pk": 114,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Compile Error",
+            "question": 29
+        }
+    },
+    {
+        "pk": 115,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u0631\u0648\u062c\u06cc \u0646\u062f\u0627\u0631\u062f",
+            "question": 30
+        }
+    },
+    {
+        "pk": 116,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "yes",
+            "question": 30
+        }
+    },
+    {
+        "pk": 117,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Compile Error",
+            "question": 30
+        }
+    },
+    {
+        "pk": 118,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647",
+            "question": 31
+        }
+    },
+    {
+        "pk": 119,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 31
+        }
+    },
+    {
+        "pk": 120,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0628\u0644\u0647",
+            "question": 32
+        }
+    },
+    {
+        "pk": 121,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062e\u06cc\u0631",
+            "question": 32
+        }
+    },
+    {
+        "pk": 122,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0628\u0644\u0647",
+            "question": 33
+        }
+    },
+    {
+        "pk": 123,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u062e\u06cc\u0631",
+            "question": 33
+        }
+    },
+    {
+        "pk": 124,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "ecoh",
+            "question": 34
+        }
+    },
+    {
+        "pk": 125,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "print",
+            "question": 34
+        }
+    },
+    {
+        "pk": 126,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "output",
+            "question": 34
+        }
+    },
+    {
+        "pk": 127,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "console.log",
+            "question": 34
+        }
+    },
+    {
+        "pk": 128,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0633\u06cc\u0646\u062a\u06a9\u0633 \u0632\u06cc\u0627\u0646 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0633\u06cc\u0627\u0631 \u0634\u0628\u06cc\u0647 PHP \u0627\u0633\u062a",
+            "question": 35
+        }
+    },
+    {
+        "pk": 129,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0627\u0632 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0628\u0631\u0627\u06cc \u062a\u0648\u0633\u0639\u0647 \u0628\u0631\u0646\u0627\u0645\u0647 \u0647\u0627\u06cc \u062a\u062d\u062a \u0648\u0628 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0648\u062f",
+            "question": 35
+        }
+    },
+    {
+        "pk": 130,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u067e\u0627\u06cc\u062a\u0648\u0646 \u0628\u0631 \u0631\u0648\u06cc \u0627\u06a9\u062b\u0631 \u0633\u06a9\u0648\u0647\u0627 \u0642\u0627\u0628\u0644 \u0627\u062c\u0631\u0627 \u0627\u0633\u062a",
+            "question": 35
+        }
+    },
+    {
+        "pk": 131,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u0627\u0632 \u067e\u0627\u06cc\u062a\u0648\u0646 \u0645\u06cc\u062a\u0648\u0627\u0646 \u0628\u0631\u0627\u06cc \u062a\u0648\u0633\u0639\u0647 \u0628\u0631\u0646\u0627\u0645\u0647 \u0647\u0627\u06cc \u062a\u062d\u062a \u0634\u0628\u06a9\u0647 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0648\u062f",
+            "question": 35
+        }
+    },
+    {
+        "pk": 132,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "*",
+            "question": 36
+        }
+    },
+    {
+        "pk": 133,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "{% comment %}",
+            "question": 36
+        }
+    },
+    {
+        "pk": 134,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "(comment)",
+            "question": 36
+        }
+    },
+    {
+        "pk": 135,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "#",
+            "question": 36
+        }
+    },
+    {
+        "pk": 136,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "'''",
+            "question": 37
+        }
+    },
+    {
+        "pk": 137,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "///",
+            "question": 37
+        }
+    },
+    {
+        "pk": 138,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "###",
+            "question": 37
+        }
+    },
+    {
+        "pk": 139,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "(comment)",
+            "question": 37
+        }
+    },
+    {
+        "pk": 140,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "var a = 2",
+            "question": 38
+        }
+    },
+    {
+        "pk": 141,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "int a = 2",
+            "question": 38
+        }
+    },
+    {
+        "pk": 142,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "a = 2",
+            "question": 38
+        }
+    },
+    {
+        "pk": 143,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "variable a = 2",
+            "question": 38
+        }
+    },
+    {
+        "pk": 144,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " Answers castToInt(a)",
+            "question": 39
+        }
+    },
+    {
+        "pk": 145,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": " int(a)",
+            "question": 39
+        }
+    },
+    {
+        "pk": 146,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " integer(a)",
+            "question": 39
+        }
+    },
+    {
+        "pk": 147,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " castToInteger(a)",
+            "question": 39
+        }
+    },
+    {
+        "pk": 148,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "+=",
+            "question": 40
+        }
+    },
+    {
+        "pk": 149,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "-=",
+            "question": 40
+        }
+    },
+    {
+        "pk": 150,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "*=",
+            "question": 40
+        }
+    },
+    {
+        "pk": 151,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "X=",
+            "question": 40
+        }
+    },
+    {
+        "pk": 152,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "if a >= 22:",
+            "question": 41
+        }
+    },
+    {
+        "pk": 153,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "if (a >= 22)",
+            "question": 41
+        }
+    },
+    {
+        "pk": 154,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " if (a => 22)",
+            "question": 41
+        }
+    },
+    {
+        "pk": 155,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " if a >= 22",
+            "question": 41
+        }
+    },
+    {
+        "pk": 156,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "else if",
+            "question": 42
+        }
+    },
+    {
+        "pk": 157,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "elseif",
+            "question": 42
+        }
+    },
+    {
+        "pk": 158,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "elif",
+            "question": 42
+        }
+    },
+    {
+        "pk": 159,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " None of the above",
+            "question": 42
+        }
+    },
+    {
+        "pk": 160,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " function someFunction()",
+            "question": 43
+        }
+    },
+    {
+        "pk": 161,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": " def someFunction():",
+            "question": 43
+        }
+    },
+    {
+        "pk": 162,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " def someFunction()",
+            "question": 43
+        }
+    },
+    {
+        "pk": 163,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "function someFunction():",
+            "question": 43
+        }
+    },
+    {
+        "pk": 164,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "for(a = 0; a < 3; a++)",
+            "question": 44
+        }
+    },
+    {
+        "pk": 165,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "for a in range(3)",
+            "question": 44
+        }
+    },
+    {
+        "pk": 166,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "for a loop 3:",
+            "question": 44
+        }
+    },
+    {
+        "pk": 167,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "for a in range(1,3):",
+            "question": 44
+        }
+    },
+    {
+        "pk": 168,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "while loop a < 10",
+            "question": 45
+        }
+    },
+    {
+        "pk": 169,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "while a < 10:",
+            "question": 45
+        }
+    },
+    {
+        "pk": 170,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "while(a < 10)",
+            "question": 45
+        }
+    },
+    {
+        "pk": 171,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "while loop a < 10:",
+            "question": 45
+        }
+    },
+    {
+        "pk": 172,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " getType(example)",
+            "question": 46
+        }
+    },
+    {
+        "pk": 173,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "Type(example)",
+            "question": 46
+        }
+    },
+    {
+        "pk": 174,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "type(example)",
+            "question": 46
+        }
+    },
+    {
+        "pk": 175,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "example.type",
+            "question": 46
+        }
+    },
+    {
+        "pk": 176,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "example.swap('b', 'a')",
+            "question": 47
+        }
+    },
+    {
+        "pk": 177,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "example.replace('a','b')",
+            "question": 47
+        }
+    },
+    {
+        "pk": 178,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "example.match('b','a')",
+            "question": 47
+        }
+    },
+    {
+        "pk": 179,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "example.replace('b','a')",
+            "question": 47
+        }
+    },
+    {
+        "pk": 180,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "sampleList = {1,2,3,4,5}",
+            "question": 48
+        }
+    },
+    {
+        "pk": 181,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "sampleList = (1,2,3,4,5)",
+            "question": 48
+        }
+    },
+    {
+        "pk": 182,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "sampleList = /1,2,3,4,5/",
+            "question": 48
+        }
+    },
+    {
+        "pk": 183,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "sampleList = [1,2,3,4,5]",
+            "question": 48
+        }
+    },
+    {
+        "pk": 184,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "sampleTuple = (1,2,3,4,5)",
+            "question": 49
+        }
+    },
+    {
+        "pk": 185,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\r\nsampleTuple = {1,2,3,4,5}",
+            "question": 49
+        }
+    },
+    {
+        "pk": 186,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " sampleTuple = [1,2,3,4,5]",
+            "question": 49
+        }
+    },
+    {
+        "pk": 187,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "sampleTuple = /1,2,3,4,5/",
+            "question": 49
+        }
+    },
+    {
+        "pk": 188,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "myExample = {'someItem'=>2, 'otherItem'=>20}",
+            "question": 50
+        }
+    },
+    {
+        "pk": 189,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "myExample = {'someItem': 2, 'otherItem': 20}",
+            "question": 50
+        }
+    },
+    {
+        "pk": 190,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "myExample = ('someItem'=>2, 'otherItem'=>20)",
+            "question": 50
+        }
+    },
+    {
+        "pk": 191,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " myExample = ('someItem': 2, 'otherItem': 20)",
+            "question": 50
+        }
+    },
+    {
+        "pk": 192,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "example[2]",
+            "question": 51
+        }
+    },
+    {
+        "pk": 193,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "example.get(1)",
+            "question": 51
+        }
+    },
+    {
+        "pk": 194,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "example(1)",
+            "question": 51
+        }
+    },
+    {
+        "pk": 195,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "example[1]",
+            "question": 51
+        }
+    },
+    {
+        "pk": 196,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": " 123.44",
+            "question": 52
+        }
+    },
+    {
+        "pk": 197,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "12",
+            "question": 52
+        }
+    },
+    {
+        "pk": 198,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "123.440",
+            "question": 52
+        }
+    },
+    {
+        "pk": 199,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "44",
+            "question": 52
+        }
+    },
+    {
+        "pk": 200,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "catch",
+            "question": 53
+        }
+    },
+    {
+        "pk": 201,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "exception",
+            "question": 53
+        }
+    },
+    {
+        "pk": 202,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "catch(a)",
+            "question": 53
+        }
+    },
+    {
+        "pk": 203,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "except",
+            "question": 53
+        }
+    },
+    {
+        "pk": 204,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " f = open(\"test.txt\", \"read\")",
+            "question": 54
+        }
+    },
+    {
+        "pk": 205,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "f = open(\"r\",\"test.txt\")",
+            "question": 54
+        }
+    },
+    {
+        "pk": 206,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": " f = open(\"test.txt\", \"r\")",
+            "question": 54
+        }
+    },
+    {
+        "pk": 207,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": " f = open(\"read\",\"test.txt\")",
+            "question": 54
+        }
+    },
+    {
+        "pk": 208,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u06a9\u0627\u0631\u06cc \u0646\u0645\u06cc\u06a9\u0646\u062f \u0645\u06af\u0631 \u0627\u06cc\u0646\u06a9\u0647 \u06a9\u062f\u0647\u0627\u06cc\u06cc \u06a9\u0647 \u062f\u0631 \u0627\u062f\u0627\u0645\u0647 \u0645\u06cc \u0622\u06cc\u0646\u062f \u062f\u0631 \u0641\u0627\u06cc\u0644 \u0628\u0646\u0648\u06cc\u0633\u0646\u062f",
+            "question": 55
+        }
+    },
+    {
+        "pk": 209,
+        "model": "exam.choice",
+        "fields": {
+            "answer": true,
+            "text": "\u0645\u062d\u062a\u0648\u0627\u06cc \u0641\u0627\u06cc\u0644 \u067e\u0627\u06a9 \u062e\u0648\u0627\u0647\u062f \u0634\u062f",
+            "question": 55
+        }
+    },
+    {
+        "pk": 210,
+        "model": "exam.choice",
+        "fields": {
+            "answer": false,
+            "text": "\u062f\u0633\u062a\u0648\u0631\u0627\u062a \u0646\u0648\u0634\u062a\u0646 \u062f\u0631 \u0627\u0646\u062a\u0647\u0627\u06cc \u0641\u0627\u06cc\u0644 \u0646\u0648\u0634\u062a\u0647 \u062e\u0648\u0627\u0647\u062f \u0634\u062f",
+            "question": 55
+        }
+    }
+]
