@@ -221,7 +221,7 @@ EMAIL_HOST_USER = 'admin'
 EMAIL_PORT = 587
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
-SERVER_BASE_ADDRESS = 'http://onlinecademy.com/'
+SERVER_BASE_ADDRESS = 'http://onlinecademy.com'
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.

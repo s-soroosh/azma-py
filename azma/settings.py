@@ -223,7 +223,7 @@ EMAIL_HOST_USER = 'admin'
 EMAIL_PORT = 587
 EMAIL_SUBJECT_PREFIX = 'AzmaWeb : '
 
-SERVER_BASE_ADDRESS = 'http://127.0.0.1:8000/'
+SERVER_BASE_ADDRESS = 'http://127.0.0.1:8000'
 
 REST_FRAMEWORK = {
     # Use hyperlinked styles by default.
