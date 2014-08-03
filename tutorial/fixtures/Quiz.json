@@ -1,0 +1,118 @@
+[
+    {
+        "pk": "JAVA-START-WINDOWS",
+        "model": "tutorial.tutorialexam",
+            "fields": {
+                "category": "JAVA-BEGINNING",
+                "content": "در این قسمت هر آنچه که آموخته اید را محک بزنید و نمره ی خود را ببینید",
+                "local_name": "\u0634\u0631\u0648\u0639 \u0628\u0631\u0646\u0627\u0645\u0647 \u0646\u0648\u06cc\u0633\u06cc \u062c\u0627\u0648\u0627 \u062f\u0631 \u0648\u06cc\u0646\u062f\u0648\u0632 "
+        }
+    },
+    {
+        "pk": "JAVA-START-LINUX",
+        "model": "tutorial.tutorialexam",
+            "fields": {
+                "category": "JAVA-BEGINNING",
+                "content": "Hello!",
+                "local_name": "شروع برنامه نویسی جاوا در لینوکس"
+            }
+    },
+    {
+        "pk": "1",
+        "model": "tutorial.tutorialquestion",
+            "fields": {
+               "text": "کدام یک صحیح است؟" ,
+               "exam": "JAVA-START-WINDOWS"
+
+            }
+    },
+    {
+        "pk": "2",
+        "model": "tutorial.tutorialquestion",
+            "fields": {
+                "text": "حالا کدام صحیح است؟",
+                "exam": "JAVA-START-WINDOWS"
+            }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "-1",
+            "fields": {
+                "text": "بدون پاسخ",
+                "question": 1,
+                "answer": false
+            }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "1",
+        "fields": {
+            "text": "if",
+            "question": 1,
+            "answer": false
+        }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "2",
+        "fields": {
+            "text": "ifs",
+            "question": 1,
+            "answer": false
+        }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "3",
+        "fields": {
+            "text": "ifsd",
+            "question": 1,
+            "answer": true
+        }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "4",
+        "fields": {
+            "text": "ifsde",
+            "question": 1,
+            "answer": false
+        }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "5",
+        "fields": {
+            "text": "ifa",
+            "question": 2,
+            "answer": false
+        }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "6",
+        "fields": {
+            "text": "ifaq",
+            "question": 2,
+            "answer": false
+        }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "7",
+        "fields": {
+            "text": "ifaqw",
+            "question": 2,
+            "answer": true
+        }
+    },
+    {
+        "model": "tutorial.tutorialchoice",
+        "pk": "8",
+        "fields": {
+            "text": "ifaqwe",
+            "question": 2,
+            "answer": false
+        }
+    }
+]
