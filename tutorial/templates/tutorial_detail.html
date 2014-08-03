@@ -19,16 +19,22 @@
 
 
         </div>
+
         <div class="col-xs-9"
-             style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
+             style="  background-color:#ffffff; border: solid 1px #888;padding: 10px; margin-top: 20px">
 
             <div class="well1">
 
 
                 <div class="row">
-                    <div class="col-xs-9">
+                    <div class="col-xs-8">
+
                         <h1 style="font-family:Yekan;font-weight: 400;">
+
+
                             {{ tutorial.local_name }}
+
+
                         </h1>
 
                         <div class="row">
@@ -50,15 +56,44 @@
 
 
                     </div>
+
+
+
                     <div class="col-xs-2 pull-left" style="text-align: left;">
-                        <img class="img-responsive img-thumbnail img-rounded" style="border: outset #008AEA"
+
+
+                        <img class="img-responsive img-thumbnail img-rounded" style="border: outset #f2dede"
                              src="{% static tutorial.category.img_address %}"/>
+
                     </div>
+
+
                 </div>
+                    <div class="row" style="padding: 5px;">
+                    <div class=" pull-left img-responsive" style=" padding-left: 15px;">
+                           <a href="https://www.facebook.com/sharer.php?u={{ path }}{{ request.get_full_path }}" target="_blank">
+                                <img class="img-responsive" src="/static/image/facebook_button.png">
+                           </a>
+                    </div>
+                    <div class=" pull-left img-responsive" style=" padding-left: 15px;">
+                           <a href="https://www.facebook.com/sharer.php?u={{ path }}{{ request.get_full_path }}" target="_blank">
+                                <img class="img-responsive" src="/static/image/twitter_button.png">
+                           </a>
+                    </div>
+
+                    </div>
             </div>
             <div class="tutorial-content" style="font-family: tahoma; padding: 30px;">
                 {{ tutorial.content | safe }}
             </div>
+
+
+            {% if user.is_authenticated %}
+                <div style="padding-bottom: 34px; position: inherit;">
+                <a class="btn btn-gentel col-xs-12" href="{% url 'tutorial:tutorial_exam' tutorial.name %}">آزمون</a>
+                </div>
+            {% endif %}
+
             <div class="well1">
                 {% get_comment_count for tutorial as comment_count %}
                 <div class="well1" style="padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این
@@ -108,6 +143,7 @@
                             <a href="{% url 'login' %}">وارد</a>
                             شوید
                         </p>
+
                     {% endif %}
 
                 </div>
