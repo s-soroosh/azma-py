@@ -6,17 +6,33 @@
 {% endblock %}
 
 {% block no_container_content %}
-    <div class="row" style="margin:0px;">
+ <div class="row">
+    <div class="col-sm-3 col-md-2 col-xs-3 sidebar">
+        <ul class="nav nav-sidebar">
+            <li>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a  data-parent="#accordion" style="font-weight: bold">
+                                    گروه های آموزشی
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                           {% include '_category_list.html' with categories=t_categories no_detail='True' no_category='True'%}
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="col-xs-2"  style="margin-right: 50px;margin-left: 20px;padding: 0px;">
+                </div>
+        </ul>
+    </div>
 
-            <div style="background-color: #222222;">
-                <h4 style="font-weight: bold; font-family: Yekan; padding :10px 15px">
-                    گروه های آموزشی
-                </h4>
-                {% include '_category_list.html' with categories=t_categories no_detail='True' no_category='True'%}
-            </div>
-        </div>
+
+
+
 
 
 

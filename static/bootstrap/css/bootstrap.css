@@ -3459,6 +3459,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+
 }
 .nav > li {
   position: relative;
@@ -5649,6 +5650,7 @@ button.close {
 .panel-body:after,
 .modal-footer:after {
   clear: both;
+
 }
 .center-block {
   display: block;
