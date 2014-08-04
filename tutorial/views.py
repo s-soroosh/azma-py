@@ -84,7 +84,7 @@ class TutorialAnswerAnalyze(View):
         if exam_answer_history.score() > exam_answer.score:
             exam_answer.score = exam_answer_history.score()
             exam_answer.save()
-        template = loader.get_template()
+        template = loader.get_template('quiz_answer.html')
         context = RequestContext(request, {'tu_answer': exam_answer_history, })
         return HttpResponse(template.render(context))
 
