@@ -3,6 +3,8 @@ h1, h2, h3 {
         text-shadow: 0 5px 3px rgba(0, 0, 0, .2);
 }
 
+
+
 p {
     font-family: Yekan;
 }
@@ -393,8 +395,9 @@ body {
 
 .tutorial-content {
 
-    background-color: rgba(999, 222, 3, 0.35);
+    background-color: rgba(999, 222, 3, 0.30);
     font-size: 16px;
+    border-radius: 3px;
 }
 
 
@@ -536,12 +539,14 @@ body {
 
 .well1 {
 
-    background-color: #febc53;
+    background-color: #e5e5e5;
     padding: 19px;
     margin-bottom: 20px;
     border: 1px solid rgba(0, 0, 0, .55);
     color: #000000;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 17px;
+    border-radius: 5px;
 }
 
 .well1 blockquote {
@@ -564,6 +569,11 @@ body {
     background-color: rgba(0, 0, 0, .26);
     font-size-adjust: 0.6;
 
+}
+
+.panel-body > div {
+
+    padding-top: 10px;
 }
 
 .panel > .list-group {
@@ -938,7 +948,10 @@ body {
 }
 
 .home-well {
-  color: rgba(0, 0, 0, .56)
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(0, 0, 0, .56)
 }
 
 .page-header {
@@ -954,38 +967,13 @@ hr {
     border-width: 2px;
 }
 
-.well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-
-  color: rgba(0, 0, 0, .35)
-}
-.well blockquote {
-  border-color: #ddd;
-  border-color: rgba(0, 0, 0, .15);
-}
-.well-lg {
-  padding: 24px;
-  border-radius: 6px;
-}
-.well-sm {
-  padding: 9px;
-  border-radius: 3px;
-}
-
 .exam-panel-row {
     border: solid 2px rgba(000,000,000, 0.2);
     margin-top: 15px;
     height: 50px;
     padding: 5px;
     border-radius: 5px 5px;;
-    background-color: rgba(999,222,3,0.35);
+    background-color: #aaaaff;
     color: rgba(000,000,000, 0.8);
     font-size: 17px;
 
@@ -1536,4 +1524,25 @@ hr {
 }
 .nav-top > li > a > img {
   max-width: none;
+}
+
+.well-exam{
+
+
+    background-color: #BBBBBB;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, .55);
+    color: #000000;
+    font-weight: normal;
+    font-size: 17px;
+    border-radius: 5px;
+
+}
+
+.item,
+.active,
+.carousel-inner {
+  height: auto;
+  font-weight: bold;
 }

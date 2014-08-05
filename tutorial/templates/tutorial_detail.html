@@ -8,22 +8,33 @@
 
 {% block no_container_content %}
     <div class="row" style="margin:0px;">
-        <div class="col-xs-2" style="margin-right: 50px;margin-left: 20px;padding: 0px;">
+    <div class=" col-xs-2 sidebar">
+        <ul class="nav nav-sidebar">
+            <li>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a  data-parent="#accordion" style="font-weight: bold">
+                            بخش آموزشی {{ category.local_name }}
+                                </a>
+                            </h3>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                           {% include '_category_list.html' with categories=category.sub_categories.all %}
+                            </div>
+                        </div>
+                    </div>
 
-
-            <div class="nav-side ">
-            <div >
-                {% include '_category_list.html' with categories=category.sub_categories.all %}
-            </div>
-            </div>
-
-
-        </div>
+                </div>
+        </ul>
+    </div>
 
         <div class="col-xs-9"
              style="  background-color:#ffffff; border: solid 1px #888;padding: 10px; margin-top: 20px">
 
-            <div class="well1">
+            <div class="well1" style="margin-bottom: 5px">
 
 
                 <div class="row">
@@ -89,12 +100,12 @@
 
 
             {% if user.is_authenticated %}
-                <div style="padding-bottom: 34px; position: inherit;">
+                <div style=" padding-bottom: 34px; position: inherit;">
                 <a class="btn btn-gentel col-xs-12" href="{% url 'tutorial:tutorial_exam' tutorial.name %}">آزمون</a>
                 </div>
             {% endif %}
-
-            <div class="well1">
+           <div style="padding-top: 2px;">
+            <div class="well1" >
                 {% get_comment_count for tutorial as comment_count %}
                 <div class="well1" style="padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این
                     آموزش داده شده است.
@@ -151,5 +162,5 @@
         </div>
 
     </div>
-
+</div>
 {% endblock %}
