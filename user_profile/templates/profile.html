@@ -272,7 +272,7 @@
             {% for answer in exam_answers %}
                 var element = $('#{{ answer.exam.id }}');
                 element.html('{{ answer.score }}');
-                element.parent().parent().css('backgroundColor', 'green');
+                element.parent().parent().css('backgroundColor', 'rgba(100,100,0,0.25)');
             {% endfor %}
 
             $('.panel-handle').click(function () {
