@@ -62,7 +62,7 @@
 </head>
 
 
-<body style="background-color: rgba(11,22,333,0.45);text-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);font-size: 17px;">
+<body style="background-image: url('{% static 'image/tree_bark.png' %}');">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="">
@@ -73,8 +73,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-            <!-- <a class="navbar-brand" href="index.html">Modern Business</a> -->
             <a style="padding-top: 2px;" class="hidden-sm hidden-xs navbar-brand YekanFont"
                href="{% url 'exam:index' %}">
                 <img src="{% static 'image/logo/logo.png' %}"/>
@@ -115,34 +113,6 @@
                     </ul>
                 </li>
 
-            <!--
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="blog-home-1.html">Blog Home 1</a>
-                        </li>
-                        <li><a href="blog-home-2.html">Blog Home 2</a>
-                        </li>
-                        <li><a href="blog-post.html">Blog Post</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="full-width.html">Full Width Page</a>
-                        </li>
-                        <li><a href="sidebar.html">Sidebar Page</a>
-                        </li>
-                        <li><a href="faq.html">FAQ</a>
-                        </li>
-                        <li><a href="404.html">404</a>
-                        </li>
-                        <li><a href="pricing.html">Pricing Table</a>
-                        </li>
-                    </ul>
-                </li>
-            -->
                 {% if user.is_authenticated %}
                     <li class="navbar-left">
                         <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
@@ -160,7 +130,7 @@
     <!-- /.container -->
 </nav>
 
-<div id="myCarousel" class="carousel slide">
+<div id="myCarousel" class="carousel slide" style="background-color: #888888;">
     <!-- Indicators -->
     <!--
     <ol class="carousel-indicators">
@@ -231,7 +201,7 @@
 </div>
 <!-- /.section -->
 
-<div class="section-colored text-center">
+<div class=" text-center">
 
     <div class="container">
 
@@ -308,68 +278,6 @@
 
 </div>
 <!-- /.section -->
-
-{#    <div class="section-colored">#}
-{##}
-{#        <div class="container">#}
-{##}
-{#            <div class="row">#}
-{#                <div class="col-lg-6 col-md-6 col-sm-6">#}
-{#                    <h2>Modern Business Features Include:</h2>#}
-{#                    <ul>#}
-{#                        <li>Bootstrap 3 Framework</li>#}
-{#                        <li>Mobile Responsive Design</li>#}
-{#                        <li>Predefined File Paths</li>#}
-{#                        <li>Working PHP Contact Page</li>#}
-{#                        <li>Minimal Custom CSS Styles</li>#}
-{#                        <li>Unstyled: Add Your Own Style and Content!</li>#}
-{#                        <li>Font-Awesome fonts come pre-installed!</li>#}
-{#                        <li>100% <strong>Free</strong> to Use</li>#}
-{#                        <li>Open Source: Use for any project, private or commercial!</li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#                <div class="col-lg-6 col-md-6 col-sm-6">#}
-{#                    <img class="img-responsive" src="http://placehold.it/700x450/ffffff/cccccc">#}
-{#                </div>#}
-{#            </div>#}
-{#            <!-- /.row -->#}
-{##}
-{#        </div>#}
-{#        <!-- /.container -->#}
-{##}
-{#    </div>#}
-{#    <!-- /.section-colored -->#}
-{##}
-{#    <div class="section">#}
-{##}
-{#        <div class="container">#}
-{##}
-{#            <div class="row">#}
-{#                <div class="col-lg-6 col-md-6 col-sm-6">#}
-{#                    <img class="img-responsive" src="http://placehold.it/700x450">#}
-{#                </div>#}
-{#                <div class="col-lg-6 col-md-6 col-sm-6">#}
-{#                    <h2>Modern Business Features Include:</h2>#}
-{#                    <ul>#}
-{#                        <li>Bootstrap 3 Framework</li>#}
-{#                        <li>Mobile Responsive Design</li>#}
-{#                        <li>Predefined File Paths</li>#}
-{#                        <li>Working PHP Contact Page</li>#}
-{#                        <li>Minimal Custom CSS Styles</li>#}
-{#                        <li>Unstyled: Add Your Own Style and Content!</li>#}
-{#                        <li>Font-Awesome fonts come pre-installed!</li>#}
-{#                        <li>100% <strong>Free</strong> to Use</li>#}
-{#                        <li>Open Source: Use for any project, private or commercial!</li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#            <!-- /.row -->#}
-{##}
-{#        </div>#}
-{#        <!-- /.container -->#}
-{##}
-{#    </div>#}
-{#    <!-- /.section -->#}
 
 <div class="container">
 

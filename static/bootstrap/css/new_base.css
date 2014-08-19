@@ -9,6 +9,10 @@ p {
     font-family: Yekan;
 }
 
+.well{
+    color:#5588aa;
+}
+
 .btn-gentel {
     color: #fff;
     background-color: dimgray;
@@ -950,8 +954,8 @@ body {
 .home-well {
     margin-bottom: 20px;
     font-weight: normal;
-    font-size: 17px;
-    color: rgba(0, 0, 0, .56)
+    font-size: 19px;
+    color: #eeaa11;
 }
 
 .page-header {
