@@ -7,27 +7,27 @@
 {% endblock %}
 
 {% block no_container_content %}
-<body background="/static/image/Blue-and-Purple-Blur-Background.jpg" class="" style=" background-size: 300%">
-     <div style="overflow-x: hidden">
-  <nav class="navbar1 navbar-default" >
-   <div class="navbar-header">
-      <button type="button" class="navbar-toggle1" data-toggle="collapse"
-         data-target="#example-navbar-collapse">
-         <span class="sr-only">Toggle navigation</span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{% url 'tutorial:home' %}">گروه ها</a>
-   </div>
-   <div class="row collapse navbar-collapse1" id="example-navbar-collapse" >
-      <ul class="nav-top navbar-nav " >
+    <body background="/static/image/Blue-and-Purple-Blur-Background.jpg" class="" style=" background-size: 300%">
+    <div style="overflow-x: hidden">
+        <nav class="navbar1 navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle1" data-toggle="collapse"
+                        data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-                 {% include '_category_list_nav.html' with categories=t_categories no_detail='True' no_category='True'%}
-      </ul>
-   </div>
-</nav>
-     </div>
+            </div>
+            <div class="row collapse navbar-collapse1" id="navbar-collapse">
+                <ul class="nav-top navbar-nav pull-right">
+
+                    {% include '_category_list_nav.html' with categories=t_categories no_detail='True' no_category='True' %}
+                </ul>
+            </div>
+        </nav>
+    </div>
 
 
     <div class="col-xs-3 sidebar" style="margin-top: 0">
@@ -37,14 +37,14 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a  data-parent="#accordion" style="font-weight: bold">
-                            بخش آموزشی {{ category.local_name }}
+                                <a data-parent="#accordion" style="font-weight: bold">
+                                    بخش آموزشی {{ category.local_name }}
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
-                           {% include '_category_list.html' with categories=category.sub_categories.all  %}
+                                {% include '_category_list.html' with categories=category.sub_categories.all %}
                             </div>
                         </div>
                     </div>
@@ -53,52 +53,52 @@
         </ul>
     </div>
 
-        <div class="col-xs-8" style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
+    <div class="col-xs-8" style="  background-color:#ffffff; border: solid 2px #CCCCCC;padding: 10px;">
+        <div class="well1">
+            <div class="row">
+                <div class="col-xs-9">
+                    <h1 style="font-family:Yekan;font-weight: bold;">
+                        {{ t_category.local_name }}
+                    </h1>
+                    {{ t_category.description | safe }}
+
+                </div>
+                <div class="col-xs-2 pull-left">
+                    <img class="img-thumbnail img-rounded" style="border: outset #f2dede" src="{% static t_category.img_address %}"/>
+                </div>
+            </div>
+        </div>
+
+        {% for c in t_category.sub_categories.all %}
             <div class="well1">
                 <div class="row">
-                    <div class="col-xs-9">
-                        <h1 style="font-family:Yekan;font-weight: bold;">
-                            {{ t_category.local_name }}
-                        </h1>
-                        {{ t_category.description | safe }}
-
+                    <div class="col-xs-11">
+                        <h4 style="font-weight: bold;"><a
+                                href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a></h4>
+                        <hr/>
+                        {{ c.description | safe }}
                     </div>
-                    <div class="col-xs-2 pull-left">
-                        <img class="img-thumbnail img-rounded" style="border: outset #f2dede" src="{% static t_category.img_address %}"/>
+                    <div class="col-xs-1 pull-left" style="text-align: left;">
+                        <img style="width:64px;border: outset #f2dede   " class="img-responsive img-thumbnail img-rounded "
+                             src="{% static c.img_address %}"/>
                     </div>
                 </div>
             </div>
+        {% endfor %}
 
-            {% for c in t_category.sub_categories.all %}
-                <div class="well1">
-                    <div class="row">
-                        <div class="col-xs-11">
-                            <h4 style="font-weight: bold;"><a
-                                    href="{% url 'tutorial:category' c.name %}"> {{ c.local_name }}</a></h4>
-                            <hr/>
-                            {{ c.description | safe }}
-                        </div>
-                        <div class="col-xs-1 pull-left" style="text-align: left;">
-                            <img style="width:64px;border: outset #f2dede   " class="img-responsive img-thumbnail img-rounded "
-                                 src="{% static c.img_address %}"/>
-                        </div>
+        {% for t in t_category.tutorials.all %}
+            <div class="well1">
+                <div class="row">
+                    <div class="col-xs-11">
+                        <h4 style="font-weight: bold;"><a
+                                href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a></h4>
+                        <hr/>
+                        {{ t.abstract | safe }}
                     </div>
                 </div>
-            {% endfor %}
-
-            {% for t in t_category.tutorials.all %}
-                <div class="well1">
-                    <div class="row">
-                        <div class="col-xs-11">
-                            <h4 style="font-weight: bold;"><a
-                                    href="{% url 'tutorial:tutorial' t.name %}"> {{ t.local_name }}</a></h4>
-                            <hr/>
-                            {{ t.abstract | safe }}
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
+    </div>
     </div>
     </body>
 

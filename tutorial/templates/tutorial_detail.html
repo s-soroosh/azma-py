@@ -14,16 +14,15 @@
         <nav class="navbar1 navbar-default">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle1" data-toggle="collapse"
-                        data-target="#example-navbar-collapse">
+                        data-target="#navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{% url 'tutorial:home' %}">گروه ها</a>
             </div>
-            <div class="row collapse navbar-collapse1" id="example-navbar-collapse">
-                <ul class="nav-top navbar-nav ">
+            <div class="row collapse navbar-collapse1" id="navbar-collapse">
+                <ul class="nav-top navbar-nav pull-right ">
 
                     {% include '_category_list_nav.html' with categories=t_categories no_detail='True' no_category='True' %}
                 </ul>
