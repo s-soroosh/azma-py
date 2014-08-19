@@ -16,7 +16,7 @@
     font-family: "Yekan";
     font-style: normal;
     font-weight: 400;
-    src: url("BYekan.eot") format("embedded-opentype"), url("BYekan.woff") format("woff"), url("BYekan.ttf") format("truetype");
+    src: url("WebYekan.eot") format("embedded-opentype"), url("WebYekan.woff") format("woff"), url("BYekan.ttf") format("truetype");
 }
 
 @font-face {

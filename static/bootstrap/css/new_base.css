@@ -1,12 +1,13 @@
 h1, h2, h3 {
-    font-family: Yekan;
-        text-shadow: 0 5px 3px rgba(0, 0, 0, .2);
+    /*font-family: Yekan;*/
+        /*text-shadow: 0 5px 3px rgba(0, 0, 0, .2);*/
 }
 
 
 
 p {
-    font-family: Yekan;
+    /*font-family: 'Abel',Verdana,Geneva,sans-serif;*/
+    /*font-size: 12pt;*/
 }
 
 .well{
@@ -399,8 +400,8 @@ body {
 
 .tutorial-content {
 
-    background-color: rgba(999, 222, 3, 0.30);
-    font-size: 16px;
+    background-color: #eeeeee;
+    font-size: 12pt;
     border-radius: 3px;
 }
 
@@ -543,13 +544,13 @@ body {
 
 .well1 {
 
-    background-color: #e5e5e5;
+    background-color: #f5f5f5;
     padding: 19px;
     margin-bottom: 20px;
-    border: 1px solid rgba(0, 0, 0, .55);
-    color: #000000;
+    border: 1px solid rgba(200,200, 200, 0.1);
+    color: #222222;
     font-weight: normal;
-    font-size: 17px;
+    /*font-size: 17px;*/
     border-radius: 5px;
 }
 

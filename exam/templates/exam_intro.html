@@ -44,29 +44,27 @@
     <div style="padding-top: 10px">
     <div class="alertbar">
     </div>
-    <div style="background-color: #808080; height:auto; border-radius: 5px">
+    <div style="background-color: #e0e0ff; height:auto; border-radius: 5px;border: solid 1px #9090ff;">
     <div style="padding: 20px">
-    <div class="container" >
-        <p>
+        <p><b>
             {{ exam.description | safe }}
-
+            </b>
         </p>
-    </div>
     <hr>
-    <div class="container duration">مدت زمان آزمون:
+    <div class="duration"><b>مدت زمان آزمون:</b>
         {{ exam.duration }}
         دقیقه
     </div>
-    <div class="container">
-        تعداد دفعات شرکت شما در این آزمون:
+    <div class="">
+        <b>تعداد دفعات شرکت شما در این آزمون:</b>
         {{ attempts }}
         از
         {{ exam.number_of_attempts }}
     </div>
     <br/>
     <hr>
-    <div class="container">
-        دانش مورد نیاز این آزمون
+    <div class="">
+        <b>دانش مورد نیاز این آزمون </b>
         <ul>
             {% if exam.required_knowledge.exists %}
                 {% for k in exam.required_knowledge.all %}
@@ -80,10 +78,10 @@
     </div>
 
 
-    <div id="timer" class="container form-group timer" style="display: none;"></div>
-    <div id="enter" class="container enter" style="display: none;">
+    <div id="timer" class="form-group timer" style="display: none;"></div>
+    <div id="enter" class="enter" style="display: none; text-align: center;">
         {% if exam.number_of_attempts > attempts %}
-            <a class="btn btn-primary " href="{% url 'exam:start' exam.id %}">
+            <a class="btn btn-primary btn-lg" style="width: 90%;margin-top: 20px;" href="{% url 'exam:start' exam.id %}">
                 ورود به آزمون
             </a>
         {% endif %}
