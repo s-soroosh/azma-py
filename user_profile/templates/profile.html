@@ -4,6 +4,28 @@
 {% load compress %}
 
 {% block title %}صفحه شخصی {% endblock %}
+
+
+{% block css %}
+
+    <style>
+        .profile-item {
+            cursor: pointer;
+            border-right:1pt transparent solid;
+            border-left:1pt transparent solid;
+        }
+
+        .profile-item:hover {
+            opacity: 0.9;
+            border-left:1pt #fff solid;
+            border-right:1pt #fff solid;
+        }
+
+        .profile-item-selected:hover {
+            cursor: auto;
+        }
+    </style>
+{% endblock %}
 {% block no_container_content %}
 
 
@@ -28,23 +50,23 @@
         <div id="profile-menu" class="col-xs-2 well hidden-sm hidden-xs hidden-md hidden-print"
              style="">
 
-{#            <div class="col-xs-12" style="padding-right: 2px; padding-left: 0; padding-top:8px;" id="profile-menu">#}
-                <div class="profile-item profile-item-selected" id="info">
-                    اطلاعات من
-                </div>
-                <div class="profile-item" id="exam">
-                    آزمونها
-                </div>
-                <div class="profile-item" id="password">
-                    تغییر رمز عبور
-                </div>
-{#            </div>#}
+            {#            <div class="col-xs-12" style="padding-right: 2px; padding-left: 0; padding-top:8px;" id="profile-menu">#}
+            <div class="profile-item profile-item-selected" id="info">
+                اطلاعات من
+            </div>
+            <div class="profile-item" id="exam">
+                آزمونها
+            </div>
+            <div class="profile-item" id="password">
+                تغییر رمز عبور
+            </div>
+            {#            </div>#}
         </div>
 
         <div class="col-xs-9 pull-right profile-content"
              style="padding-right: 30px;margin-right: 20px; padding-left: 30px;"
                 >
-            <div class="visible" id="info-container" >
+            <div class="visible" id="info-container">
                 <div class="row">
 
                     <div class="col-lg-2">نام</div>
