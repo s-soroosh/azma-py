@@ -132,7 +132,7 @@ DATABASES = {
         'HOST': '127.0.0.1'
     }
     # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
+    # 'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
 }
@@ -215,7 +215,7 @@ LOGGING = {
 DEFAULT_LOGIN_URL = '/profile'
 DEFAULT_LOGOUT_URL = '/'
 
-#Mail Setting
+# Mail Setting
 DEFAULT_FROM_EMAIL = 'noreply@onlinecademy.com'
 EMAIL_HOST = 'smtp.onlinecademy.com'
 EMAIL_HOST_PASSWORD = 'sorooshMAHDI123'

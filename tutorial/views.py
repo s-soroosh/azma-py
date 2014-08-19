@@ -1,15 +1,12 @@
-from django.http import HttpResponse
 from django.template import loader
 from django.template.context import RequestContext
 from django.views.generic import View
-from django.db.models import Count
-from tutorial.models import TutorialCategory, Tutorial, TutorialExam, TutorialExamAnswer, TutorialExamAnswerHistory, TutorialAnswer
-from django.http.response import HttpResponse, HttpResponseRedirect
-from django.core.urlresolvers import reverse
-from django.core.exceptions import ObjectDoesNotExist
-from django.contrib.sites.models import Site
+from django.http.response import HttpResponse
+
+from tutorial.models import TutorialCategory, Tutorial, TutorialExam, TutorialExamAnswer, TutorialExamAnswerHistory, \
+    TutorialAnswer
 from azma.settings import SERVER_BASE_ADDRESS
-from django.utils.functional import *
+
 
 class TutorialView(View):
     def get(self, request):
@@ -57,7 +54,8 @@ class TutorialDetailView(View):
 class TutorialAnswerAnalyze(View):
     def post(self, request, exam_tu_id):
         tutorial_exam = TutorialExam.objects.get(pk=exam_tu_id)
-        exam_answer, is_new = TutorialExamAnswer.objects.get_or_create(user_id=request.user.id, exam_tutorial_id=exam_tu_id)
+        exam_answer, is_new = TutorialExamAnswer.objects.get_or_create(user_id=request.user.id,
+                                                                       exam_tutorial_id=exam_tu_id)
         exam_answer_history = TutorialExamAnswerHistory()
         exam_answer_history.user_id = request.user.id
         exam_answer_history.exam_answers = tutorial_exam
@@ -92,7 +90,10 @@ class TutorialAnswerAnalyze(View):
 class TutorialExamView(View):
     def get(self, request, tutorial_id):
         tutorial_exam = TutorialExam.objects.get(pk=tutorial_id)
-        exam_answer = TutorialExamAnswer.objects.get(user_id=request.user.id, exam_tutorial_id=tutorial_id)
+        try:
+            exam_answer = TutorialExamAnswer.objects.get(user_id=request.user.id, exam_tutorial_id=tutorial_id)
+        except Exception as e:
+            exam_answer = None
 
         total_score = 0
         for i in tutorial_exam.questions.all():

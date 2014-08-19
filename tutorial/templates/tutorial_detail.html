@@ -9,46 +9,44 @@
 {% block no_container_content %}
 
 
-<body background="/static/image/Blue-and-Purple-Blur-Background.jpg" class="" style=" background-size: 300%">
-         <div style="overflow-x: hidden">
-  <nav class="navbar1 navbar-default" >
-   <div class="navbar-header">
-      <button type="button" class="navbar-toggle1" data-toggle="collapse"
-         data-target="#example-navbar-collapse">
-         <span class="sr-only">Toggle navigation</span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{% url 'tutorial:home' %}">گروه ها</a>
-   </div>
-   <div class="row collapse navbar-collapse1" id="example-navbar-collapse" >
-      <ul class="nav-top navbar-nav " >
+    <body background="/static/image/Blue-and-Purple-Blur-Background.jpg" class="" style=" background-size: 300%">
+    <div style="overflow-x: hidden">
+        <nav class="navbar1 navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle1" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'tutorial:home' %}">گروه ها</a>
+            </div>
+            <div class="row collapse navbar-collapse1" id="example-navbar-collapse">
+                <ul class="nav-top navbar-nav ">
 
-                 {% include '_category_list_nav.html' with categories=t_categories no_detail='True' no_category='True'%}
-      </ul>
-   </div>
-</nav>
-     </div>
-
-
+                    {% include '_category_list_nav.html' with categories=t_categories no_detail='True' no_category='True' %}
+                </ul>
+            </div>
+        </nav>
+    </div>
 
 
-    <div class=" col-xs-2 sidebar" style="margin-top: 0px">
+    <div class="col-xs-3 sidebar" style="margin-top: 0px">
         <ul class="nav nav-sidebar">
             <li>
                 <div class="panel-group" id="accordion">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                <a  data-parent="#accordion" style="font-weight: bold">
-                            بخش آموزشی {{ category.local_name }}
+                                <a data-parent="#accordion" style="font-weight: bold">
+                                    بخش آموزشی {{ category.local_name }}
                                 </a>
                             </h3>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
-                           {% include '_category_list.html' with categories=category.sub_categories.all %}
+                                {% include '_category_list.html' with categories=category.sub_categories.all %}
                             </div>
                         </div>
                     </div>
@@ -57,81 +55,84 @@
         </ul>
     </div>
 
-        <div class="col-xs-9"
-             style="  background-color:#ffffff; border: solid 1px #888;padding: 10px; ">
+    <div class="col-xs-8"
+         style="  background-color:#ffffff; border: solid 1px #888;padding: 10px; ">
 
-            <div class="well1" style="margin-bottom: 5px">
-
-
-                <div class="row">
-                    <div class="col-xs-8">
-
-                        <h1 style="font-family:Yekan;font-weight: 400;">
+        <div class="well1" style="margin-bottom: 5px">
 
 
-                            {{ tutorial.local_name }}
+            <div class="row">
+                <div class="col-xs-8">
+
+                    <h1 style="font-family:Yekan;font-weight: 400;">
 
 
-                        </h1>
+                        {{ tutorial.local_name }}
 
-                        <div class="row">
-                            <div class="col-xs-2">
-                                <img class="img-responsive img-thumbnail "
-                                     src="http://www.gravatar.com/avatar/{{ tutorial.author.profile.email_md5 }}"/>
+
+                    </h1>
+
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <img class="img-responsive img-thumbnail "
+                                 src="http://www.gravatar.com/avatar/{{ tutorial.author.profile.email_md5 }}"/>
+                        </div>
+                        <div class="col-xs-8">
+                            <div>
+                                نویسنده: &nbsp;
+                                {{ tutorial.author.get_full_name }}
                             </div>
-                            <div class="col-xs-8">
-                                <div>
-                                    نویسنده: &nbsp;
-                                    {{ tutorial.author.get_full_name }}
-                                </div>
-                                <div>
-                                    در تاریخ: &nbsp;
-                                    {{ tutorial.get_persian_registered_date }}
-                                </div>
+                            <div>
+                                در تاریخ: &nbsp;
+                                {{ tutorial.get_persian_registered_date }}
                             </div>
                         </div>
-
-
-                    </div>
-
-
-
-                    <div class="col-xs-2 pull-left" style="text-align: left;">
-
-
-                        <img class="img-responsive img-thumbnail img-rounded" style="border: outset #f2dede"
-                             src="{% static tutorial.category.img_address %}"/>
-
                     </div>
 
 
                 </div>
-                    <div class="row" style="padding: 5px;">
-                    <div class=" pull-left img-responsive" style=" padding-left: 15px;">
-                           <a href="https://www.facebook.com/sharer.php?u={{ path }}{{ request.get_full_path }}" target="_blank">
-                                <img class="img-responsive" src="/static/image/facebook_button.png">
-                           </a>
-                    </div>
-                    <div class=" pull-left img-responsive" style=" padding-left: 15px;">
-                           <a href="https://www.facebook.com/sharer.php?u={{ path }}{{ request.get_full_path }}" target="_blank">
-                                <img class="img-responsive" src="/static/image/twitter_button.png">
-                           </a>
-                    </div>
-
-                    </div>
-            </div>
-            <div class="tutorial-content" style="font-family: tahoma; padding: 30px;">
-                {{ tutorial.content | safe }}
-            </div>
 
 
-            {% if user.is_authenticated %}
-                <div style=" padding-bottom: 34px; position: inherit;">
-                <a class="btn btn-gentel col-xs-12" href="{% url 'tutorial:tutorial_exam' tutorial.name %}">آزمون</a>
+                <div class="col-xs-2 pull-left" style="text-align: left;">
+
+
+                    <img class="img-responsive img-thumbnail img-rounded" style="border: outset #f2dede"
+                         src="{% static tutorial.category.img_address %}"/>
+
                 </div>
-            {% endif %}
-           <div style="padding-top: 2px;">
-            <div class="well1" >
+
+
+            </div>
+            <div class="row" style="padding: 5px;">
+                <div class=" pull-left img-responsive" style=" padding-left: 15px;">
+                    <a href="https://www.facebook.com/sharer.php?u={{ path }}{{ request.get_full_path }}" target="_blank">
+                        <img class="img-responsive" src="/static/image/facebook_button.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="tutorial-content" style="font-family: tahoma; padding: 30px;">
+            {{ tutorial.content | safe }}
+        </div>
+
+
+        {% if user.is_authenticated %}
+            <div style=" padding-bottom: 34px; position: inherit;">
+                <a class="btn btn-gentel col-xs-12" href="{% url 'tutorial:tutorial_exam' tutorial.name %}">شرکت در خودآزمایی</a>
+            </div>
+        {% else %}
+            <div>
+                <h2>
+                    با
+                    <a href="{% url 'login' %}">ورود</a>
+                    به سیستم شما می توانید میتوانید در خودآزمایی این آموزش شرکت کنید
+
+                </h2>
+            </div>
+        {% endif %}
+
+        <div style="padding-top: 2px;">
+            <div class="well1">
                 {% get_comment_count for tutorial as comment_count %}
                 <div class="well1" style="padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این
                     آموزش داده شده است.
@@ -188,5 +189,5 @@
         </div>
 
     </div>
-</body>
+    </body>
 {% endblock %}
