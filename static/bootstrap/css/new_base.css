@@ -550,6 +550,7 @@ body {
     border: 1px solid rgba(200,200, 200, 0.1);
     color: #222222;
     font-weight: normal;
+    font-size: 17px;
     /*font-size: 17px;*/
     border-radius: 5px;
 }
