@@ -228,7 +228,7 @@
 
 <div class="section">
 
-    <div class="container">
+    <div class="container ">
 
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -237,7 +237,7 @@
             </div>
             {%tutorial_categories as t_c %}
                 {% for c in t_c %}
-                    <div class="col-lg-1 col-md-1 col-sm-2" style="text-align: center;">
+                    <div class="col-lg-2 col-md-2 col-sm-6" style="margin: 10px; text-align: center;border: solid 1px #bbbbbb; background-color: #eeeeee;">
                         <img align="center" style="text-align: center;" class="img-responsive  center-block" src="{% static c.img_address %}" />
                         <div style="text-align: center;"><h3>{{ c.local_name }}</h3></div>
                     </div>
