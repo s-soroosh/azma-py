@@ -47,7 +47,7 @@
     {% block nocompress_css %} {% endblock %}
 </head>
 
-<body  style="background-image: url('{% static 'image/tree_bark.png' %}'); height: 100%;">
+<body style="background-image: url('{% static 'image/tree_bark.png' %}'); height: 100%;">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="">
@@ -69,64 +69,25 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="{% url 'about' %}">درباره ما</a>
+                    <a class="" href="{% url 'tutorial:home' %}">آموزش</a>
                 </li>
+
+
+                {% if not user.is_authenticated %}
+                    <li><a href="{% url 'login' %}">ورود </a></li>
+                    <li><a href="{% url 'register' %}">ثبت نام </a></li>
+                {% endif %}
                 <li>
                     <a href="{% url 'exam:what' %}">بیشتر بدانید</a>
                 </li>
+                <li>
+                    <a href="{% url 'about' %}">درباره ما</a>
+                </li>
 
-                {% if not user.is_authenticated %}
-                    <li><a class="" href="{% url 'login' %}">ورود </a></li>
-                    <li><a class="" href="{% url 'register' %}">ثبت نام </a></li>
-                {% endif %}
 
                 {% if user.is_authenticated %}
                     <li><a class="hidden-lg hidden-md " href="{% url 'profile:show_profile' %}">پروفایل </a></li>
                     <li><a class="hidden-lg hidden-md" href="{% url 'logout' %}">خروج</a></li>
-                {% endif %}
-
-                <li>
-                    <a href="{% url 'tutorial:home' %}">آموزش</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">آزمون ها <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        {% for category in categories %}
-                            <li>
-                                <a href="{% url 'exam:sub_categories' category.id %}">{% trans category.local_name %}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <!--
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog-home-1.html">Blog Home 1</a>
-                            </li>
-                            <li><a href="blog-home-2.html">Blog Home 2</a>
-                            </li>
-                            <li><a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="full-width.html">Full Width Page</a>
-                            </li>
-                            <li><a href="sidebar.html">Sidebar Page</a>
-                            </li>
-                            <li><a href="faq.html">FAQ</a>
-                            </li>
-                            <li><a href="404.html">404</a>
-                            </li>
-                            <li><a href="pricing.html">Pricing Table</a>
-                            </li>
-                        </ul>
-                    </li> -->
-
-                {% if user.is_authenticated %}
                     <li class="navbar-left">
                         <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
                         </a>
@@ -246,7 +207,7 @@
     {% endblock %}
 
 </div>
-<hr />
+<hr/>
 <div id="footer" style="background-color: rgba(000,000,000,0.5); margin: 0px;">
     <div class="row" style="margin: 0">
 
@@ -287,8 +248,8 @@
                 $('.message').fadeIn('slow');
                 {% if redirect_url %}
                     setTimeout(function () {
-                                window.location = '{{ redirect_url }}';
-                            }
+                                   window.location = '{{ redirect_url }}';
+                               }
                             , 1500);
                 {% endif %}
             {% endif %}
