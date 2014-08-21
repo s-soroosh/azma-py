@@ -1,13 +1,14 @@
-import Postchi.models
-from django.conf import settings as projSetting
-from Postchi import settings as appSetting
-from django.template import Context, Template
-from django.template import loader
-from Postchi.models import ConfirmMail
-from Postchi.exceptions import *
 from datetime import *
 
-from django.core.mail import send_mail, EmailMessage
+from django.conf import settings as projSetting
+from django.template import Context
+from django.template import loader
+from django.core.mail import EmailMessage
+
+from Postchi import settings as appSetting
+from Postchi.models import ConfirmMail
+from Postchi.exceptions import *
+
 
 __author__ = 'Mahdi'
 
@@ -38,7 +39,7 @@ def send_confirm_mail(targetUser):
     mail_vars = Context(# mail body variables
         {
             'username': targetUser.username,
-            'activate_link': projSetting.SERVER_BASE_ADDRESS+'user/confirm/'+str(targetUser.id)+'-'+user_key,
+            'activate_link': projSetting.SERVER_BASE_ADDRESS+'/user/confirm/'+str(targetUser.id)+'-'+user_key,
         }
     )
     confirm_template = loader.get_template('confirm_mail.html')
