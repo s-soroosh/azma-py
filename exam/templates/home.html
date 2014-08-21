@@ -226,7 +226,7 @@
             {% for c in t_c %}
                 <a href={% url 'tutorial:category' c.name %}>
                     <div class="col-lg-2 col-md-2 col-sm-6" style="margin: 10px; text-align: center;border: solid 1px #bbbbbb; background-color: #eeeeee;">
-                        <img align="center" style="text-align: center;" class="img-responsive  center-block" src="{% static c.img_address %}"/>
+                        <img align="center" style="width:140px;height: 140px; text-align: center;" class="img-responsive  center-block" src="{% static c.img_address %}"/>
 
                         <div style="text-align: center;"><h3>{{ c.local_name }}</h3></div>
                     </div>
