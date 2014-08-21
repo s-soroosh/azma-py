@@ -275,3 +275,7 @@ TINYMCE_DEFAULT_CONFIG = {
     # 'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
 }
+
+# SESSION Config
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_COOKIE_AGE = 30 * 60 #

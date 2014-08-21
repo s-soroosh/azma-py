@@ -1,3 +1,4 @@
+__author__ = 'Mahdi'
 from datetime import *
 
 from django.conf import settings as projSetting
@@ -8,9 +9,6 @@ from django.core.mail import EmailMessage
 from Postchi import settings as appSetting
 from Postchi.models import ConfirmMail
 from Postchi.exceptions import *
-
-
-__author__ = 'Mahdi'
 
 
 def send_confirm_mail(targetUser):
