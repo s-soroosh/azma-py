@@ -8,14 +8,12 @@ from tinymce.models import HTMLField
 from django_enumfield import enum
 from django.db.models import Sum, Count
 from django.utils.encoding import force_text, force_str
-from elephantblog.models import Entry
-
-
 
 
 class TutorialCategory(models.Model):
     class Meta:
         ordering = ['order']
+
     name = models.CharField(max_length=120, primary_key=True)
     local_name = models.CharField(max_length=120, )
     parent = models.ForeignKey("self", null=True, blank=True, related_name='sub_categories')
@@ -59,8 +57,7 @@ class TutorialExamState(enum.Enum):
 
 
 class TutorialExam(models.Model):
-    category = models.ForeignKey(TutorialCategory, related_name='cat_exam')
-    name = models.CharField(max_length=120, primary_key=True)
+    tutorial = models.OneToOneField(Tutorial, related_name='exam', primary_key=True)
     local_name = models.CharField(max_length=150)
     content = HTMLField()
     max_score = models.IntegerField(default=0)
