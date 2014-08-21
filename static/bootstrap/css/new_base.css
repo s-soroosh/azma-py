@@ -4,7 +4,7 @@ h1, h2, h3 {
 }
 
 p {
-    /*font-family: 'Abel',Verdana,Geneva,sans-serif;*/
+    font-family: tahoma, yekan, 'Abel',Verdana,Geneva,sans-serif;
     font-size: 12pt;
     font-weight: 400;
 }
