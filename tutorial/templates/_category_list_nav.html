@@ -1,7 +1,7 @@
 
     {% for c in categories %}
 <li >
-            <a style="padding-right: {{ base }}5px; font-weight: bold;" href="{% url 'tutorial:category' c.name %}">
+            <a style="font-weight: bold;" href="{% url 'tutorial:category' c.name %}">
                 {{ c.local_name }}
 
             </a>
