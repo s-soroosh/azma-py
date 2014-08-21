@@ -249,7 +249,7 @@ MEDIA_URL = '/static/upload/'
 # weblog config
 SITE_ID = 1
 
-#cms
+# cms
 
 # FEINCMS_RICHTEXT_INIT_CONTEXT = {
 #
@@ -272,3 +272,7 @@ TINYMCE_DEFAULT_CONFIG = {
     # 'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
 }
+
+# SESSION Config
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_COOKIE_AGE = 30 * 60  #

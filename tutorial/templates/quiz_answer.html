@@ -4,19 +4,26 @@
 <!-- sajad -->
 
 {% block content %}
-    <div style="padding-right: 10px; margin-top: 20px" class="row alert-success">
-user.id
-        <br/>
-    </div>
 
-    <div class="row table-bordered" style="margin-top: 20px;">
+    <br>
+
+
+    <h2>تحلیل پاسخ شما به آزمون</h2>
+
+
+    <hr>
+
+
+
+    <div class="row table-bordered" style="margin-top: 20px; font-size: 20px; ">
         <div class="col-md-12 " style="padding-bottom: 20px;padding-top: 20px;">
         {{ quiz.score }}
             {% for a in tu_answer.answers.all %}
-                <div class="well" style="margin-bottom: 25px;box-shadow:3px 3px #F3F3F3;">
+                <div class="well1" style="margin-bottom: 25px;box-shadow:3px 3px #F3F3F3;">
                     <div class="row">
                         <div class="col-md-5">
                             {{ a.tutorial_question.text |safe }}
+
 
                         </div>
                         <div class="col-md-1">
@@ -37,5 +44,7 @@ user.id
                 </div>
             {% endfor %}
         </div>
+
     </div>
+
 {% endblock %}

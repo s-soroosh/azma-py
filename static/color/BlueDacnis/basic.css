@@ -1,0 +1,63 @@
+.primary {
+    background-color: #5269A4;
+    color: #ADBCDF;
+    border-color: #213B76;
+}
+
+.primary_h {
+    background-color: #5269A4;
+    color: #ADBCDF;
+    border-color: #213B76;
+}
+
+.primary_h:hover {
+    background-color: #5269B9;
+    color: #ADBCDF;
+    border-color: #213B76;
+}
+
+.secondary {
+    background-color: #798FC1;
+    color: #213B76;
+    border-color: #213B76;
+}
+
+.secondary_h {
+    background-color: #798FC1;
+    color: #213B76;
+    border-color: #213B76;
+}
+
+.secondary_h:hover {
+    background-color: #798FA1;
+    color: #213B76;
+    border-color: #213B76;
+}
+
+.tertiary {
+    background-color: #ADBCDF;
+    color: #26417A;
+    border-color: #213B76;
+}
+
+.tertiary_h {
+    background-color: #ADBCDF;
+    color: #26417A;
+    border-color: #213B76;
+}
+
+.tertiary_h:hover {
+    background-color: #ADBCFF;
+    color: #26417A;
+    border-color: #213B76;
+}
+
+.bg_light{
+    background-color: #ADBCFF;
+    color: #000000;
+}
+.bg_dark{
+    background-color: #3e56a4;
+    color: #ffffff;
+}
+
