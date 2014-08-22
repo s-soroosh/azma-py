@@ -165,7 +165,9 @@
             <div class="col-lg-5 col-md-5">
                 <h3><i class="fa fa-check-circle"></i>آموزشهای رایگان</h3>
 
-                <p style="text-align: justify;">در آزماوب ما تمام تلاش خود را کرده ایم تا بتوانیم تمام <a class="" href="{% url 'tutorial:home' %}">آموزش</a> های موجود را
+                <p style="text-align: justify;">در آزماوب ما تمام تلاش خود را کرده ایم تا بتوانیم تمام <a class=""
+                                                                                                          href="{% url 'tutorial:home' %}">آموزش</a>
+                    های موجود را
                     به زبانی ساده و روان برایتان بیان کنیم تا شما بتوانید در طول یادگیری , از آموزش ها لذت ببرید.
                 </p>
             </div>
@@ -173,7 +175,8 @@
             <div class="col-lg-5 col-md-5">
                 <h3><i class="fa fa-pencil"></i>آزمونهای کاربردی</h3>
 
-                <p style="text-align: justify;"> چندی پیش تیم ما بر آن شد تا گره ای از مشکلات دانشجویان مبنی بر یادگیری برنامه نویسی و فهم موضوعات بنیادین را با استفاده از آزمون های هدف دار و با سختی
+                <p style="text-align: justify;"> چندی پیش تیم ما بر آن شد تا گره ای از مشکلات دانشجویان مبنی بر یادگیری
+                    برنامه نویسی و فهم موضوعات بنیادین را با استفاده از آزمون های هدف دار و با سختی
                     صعودی و با شیب ملایم باز کند</p>
             </div>
             {#                <div class="col-lg-4 col-md-4">#}
@@ -182,7 +185,7 @@
             {#                </div>#}
         </div>
         <!-- /.row -->
-{#        <hr>#}
+        {#        <hr>#}
     </div>
     <!-- /.container -->
 
@@ -199,9 +202,10 @@
             <div class="col-lg-12">
                 <h2>آزما وب: یک سایت آموزشی و پلی میان برنامه نویسان برای به اشتراک گذاری و یادگیری است</h2>
 
-                <p>جایی که می توانید در آن به علاقه مندی های خود بپردازید و در هر جای دنیا برنامه نویسی را به صورت آنلاین بیاموزید</p>
+                <p>جایی که می توانید در آن به علاقه مندی های خود بپردازید و در هر جای دنیا برنامه نویسی را به صورت
+                    آنلاین بیاموزید</p>
 
-{#                <hr>#}
+                {#                <hr>#}
             </div>
         </div>
         <!-- /.row -->
@@ -225,10 +229,13 @@
             {% tutorial_categories as t_c %}
             {% for c in t_c %}
                 <a href={% url 'tutorial:category' c.name %}>
-                    <div class="col-lg-2 col-md-2 col-sm-6" style="margin: 10px; text-align: center;border: solid 1px #bbbbbb; background-color: #eeeeee;">
-                        <img align="center" style="width:140px;height: 140px; text-align: center;" class="img-responsive  center-block" src="{% static c.img_address %}"/>
+                    <div class="col-lg-2 col-md-2 col-sm-6"
+                         style="margin: 10px; text-align: center;border: solid 1px #bbbbbb; background-color: #eeeeee;">
+                        <img align="center" style="width:140px;height: 140px; text-align: center;"
+                             class="img-responsive  center-block" src="{% static c.img_address %}"/>
 
-                        <div style="padding-top: 10px; text-align: center;"><h3 style="font-weight: 700;font-size: 13pt;">{{ c.local_name }}</h3></div>
+                        <div style="padding-top: 10px; text-align: center;"><h3
+                                style="font-weight: 700;font-size: 13pt;">{{ c.local_name }}</h3></div>
                     </div>
                 </a>
             {% endfor %}
@@ -277,12 +284,14 @@
 
     <div class="row well">
         <div class="col-lg-8 col-md-8">
-            <h4 style="text-align: center; font-weight: bold;">حالا برای اولین بار این فرصت در ایران فراهم آمده تا برنامه نویسی را اصولی بیاموزیم</h4>
+            <h4 style="text-align: center; font-weight: bold;">حالا برای اولین بار این فرصت در ایران فراهم آمده تا
+                برنامه نویسی را اصولی بیاموزیم</h4>
 
             <p style="text-align: center">برای پیوستن به جامعه ی برنامه نویسان آزماوبی همین حالا اقدام نمایید!</p>
         </div>
         <div class="col-lg-4 col-md-4">
-            <a style="font-weight: bold; " class="btn btn-lg btn-gentel pull-right" href="{% url 'register' %}">همین حالا ثبت نام کنید</a>
+            <a style="font-weight: bold; " class="btn btn-lg btn-gentel pull-right" href="{% url 'register' %}">همین
+                حالا ثبت نام کنید</a>
         </div>
     </div>
     <!-- /.row -->
@@ -293,23 +302,22 @@
 <br>
 
 <div class="row" style="background-color: rgba(000,000,000,0.5); margin: 0px;">
-    <div class="container">
-        <footer>
-            <div class="col-xs-3"></div>
-            <div class="col-xs-7">
-                <p style="text-align: center;">تمامی حقوق مادی و معنوی این پروژه متعلق به گروه آزما وب می باشد</p>
-            </div>
-            <div class="col-xs-3 pull-left" style="padding-top: 10px; text-align: left;margin-left: 20px;">
-                <iframe style="border: 0; margin:0; padding: 0;  width: 150px; height: 30px;"
-                        src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fonlinecademy&width=40&layout=button_count&action=like&show_faces=true&share=true&height=21">
-                </iframe>
+    <footer>
+        <div class="col-xs-3"></div>
+        <div class="col-xs-7">
+            <p style="text-align: center;">تمامی حقوق مادی و معنوی این پروژه متعلق به گروه آزما وب می باشد</p>
+        </div>
+        <div class="col-xs-3 pull-left" style="padding-top: 10px; text-align: left;margin-left: 20px;">
+            <iframe style="border: 0; margin:0; padding: 0;  width: 150px; height: 30px;"
+                    src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fonlinecademy&width=40&layout=button_count&action=like&show_faces=true&share=true&height=21">
+            </iframe>
 
 
-                <div class="fb-like pull-left" data-href="https://www.facebook.com/onlinecademy" data-width="40"
-                     data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-            </div>
-        </footer>
-    </div>
+            <div class="fb-like pull-left" data-href="https://www.facebook.com/onlinecademy" data-width="40"
+                 data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
+    </footer>
+
 </div>
 <!-- /.container -->
 
