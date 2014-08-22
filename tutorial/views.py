@@ -6,6 +6,7 @@ from django.http.response import HttpResponse
 from tutorial.models import TutorialCategory, Tutorial, TutorialExam, TutorialExamAnswer, TutorialExamAnswerHistory, \
     TutorialAnswer
 from azma.settings import SERVER_BASE_ADDRESS
+from django.shortcuts import get_object_or_404
 
 
 class TutorialView(View):
@@ -37,6 +38,12 @@ class TutorialWithCategoryView(View):
 
 class TutorialDetailView(View):
     def get(self, request, tutorial_name):
+
+        try:
+            tutorial_exam = TutorialExam.objects.get(pk=tutorial_name)
+        except TutorialExam.DoesNotExist:
+            tutorial_exam = None
+
         categories = TutorialCategory.objects.filter(parent_id=None)
         tutorial = Tutorial.objects.get(name=tutorial_name.upper())
         latest_tutorials = Tutorial.objects.all().order_by('-registered_date').all()[:5]
@@ -47,7 +54,7 @@ class TutorialDetailView(View):
         template = loader.get_template('tutorial_detail.html')
         context = RequestContext(request,
                                  {'latest_tutorials': latest_tutorials, 'category': category, 'tutorial': tutorial,
-                                  't_categories': categories, 'path': path, })
+                                  't_categories': categories, 'path': path, 'exam': tutorial_exam, })
         return HttpResponse(template.render(context))
 
 
