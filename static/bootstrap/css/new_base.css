@@ -389,7 +389,7 @@ html {
 }
 
 body {
-    font-family: yekan, tahoma;
+    font-family: tahoma, yekan;
     color: #444444;
     background-color: rgba(000, 0, 0, 0.1);
 }
