@@ -2,11 +2,10 @@ from django.template import loader
 from django.template.context import RequestContext
 from django.views.generic import View
 from django.http.response import HttpResponse
+from django.conf import settings
 
 from tutorial.models import TutorialCategory, Tutorial, TutorialExam, TutorialExamAnswer, TutorialExamAnswerHistory, \
     TutorialAnswer
-from azma.settings import SERVER_BASE_ADDRESS
-from django.shortcuts import get_object_or_404
 
 
 class TutorialView(View):
@@ -47,7 +46,7 @@ class TutorialDetailView(View):
         categories = TutorialCategory.objects.filter(parent_id=None)
         tutorial = Tutorial.objects.get(name=tutorial_name.upper())
         latest_tutorials = Tutorial.objects.all().order_by('-registered_date').all()[:5]
-        path = SERVER_BASE_ADDRESS
+        path = settings.SERVER_BASE_ADDRESS
         category = tutorial.category
         while category.parent is not None:
             category = category.parent
