@@ -45,14 +45,11 @@
         {% block css %}{% endblock %}
     {% endcompress %}
     {% block nocompress_css %} {% endblock %}
-
-    <link href="{% static 'color/BlueDacnis/basic.css' %}" rel="stylesheet"/>
-    <link href="{% static 'color/BlueDacnis/nav.css' %}" rel="stylesheet"/>
 </head>
 
-<body style="background-image: url('{% static 'image/pattern-bu74.png' %}'); height: 100%;">
+<body style="background-image: url('{% static 'image/pixel_weave.png' %}'); height: 100%;">
 
-<nav class="navbar navigation navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -70,7 +67,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav navbar-right navigation_ul">
+            <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a class="" href="{% url 'tutorial:home' %}">آموزش</a>
                 </li>
@@ -211,10 +208,10 @@
 
 </div>
 <hr/>
-<div id="footer" class="secondary" style="  margin: 0px;">
+<div id="footer" style="background-color: rgba(000,000,000,0.5); margin: 0px;">
     <div class="row" style="margin: 0">
 
-        <footer c>
+        <footer>
             <div class="col-xs-3"></div>
             <div class="col-xs-7">
                 <p style="text-align: center;">تمامی حقوق مادی و معنوی این پروژه متعلق به گروه آزما وب می باشد</p>
