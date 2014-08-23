@@ -59,11 +59,13 @@
                 <span class="icon-bar"></span>
             </button>
             <!-- <a class="navbar-brand" href="index.html">Modern Business</a> -->
-            <a style="padding-top: 6px;" class="hidden-sm hidden-xs navbar-brand YekanFont"
+
+        </div>
+
+                <a style="padding-top: 6px;" class="pull-right hidden-sm hidden-xs navbar-brand YekanFont"
                href="{% url 'exam:index' %}">
                 <img src="{% static 'image/logo/logo.png' %}"/>
             </a>
-        </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -85,15 +87,19 @@
                 </li>
 
 
+
+
+            </ul>
+            <ul style="display: inline-block;" class="pull-left nav navbar-nav">
                 {% if user.is_authenticated %}
-                    <li><a class="hidden-lg hidden-md " href="{% url 'profile:show_profile' %}">پروفایل </a></li>
-                    <li><a class="hidden-lg hidden-md" href="{% url 'logout' %}">خروج</a></li>
+                    <li><a class="hidden-lg hidden-md pull-left" href="{% url 'profile:show_profile' %}">پروفایل </a></li>
+                    <li><a class="hidden-lg hidden-md pull-left" href="{% url 'logout' %}">خروج</a></li>
                     <li class="navbar-left">
-                        <a class="glyphicon glyphicon-user" href="{% url 'profile:show_profile' %}">
+                        <a class="glyphicon glyphicon-user pull-left" href="{% url 'profile:show_profile' %}">
                         </a>
                     </li>
                     <li>
-                        <a class="glyphicon glyphicon-log-out" href="{% url 'logout' %}">
+                        <a class="glyphicon glyphicon-log-out pull-left" href="{% url 'logout' %}">
                         </a>
                     </li>
                 {% endif %}
