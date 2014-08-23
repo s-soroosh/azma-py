@@ -116,12 +116,12 @@
 
 
         {% if user.is_authenticated and exam != None %}
-            <div style=" padding-bottom: 34px; position: inherit;">
+            <div class="row" style="margin: 20px;">
                 <a class="btn btn-gentel col-xs-12" href="{% url 'tutorial:tutorial_exam' tutorial.name %}">شرکت در خودآزمایی</a>
             </div>
         {% elif  user.is_authenticated and exam == None %}
-            <div >
-                    <span class="btn btn-gentel col-xs-12">متاسفانه این بخش آزمون ندارد</span>
+            <div class="row" style="margin: 20px;">
+                <div class="btn btn-gentel col-xs-12">متاسفانه این بخش آزمون ندارد</div>
 
             </div>
         {% else %}
@@ -133,9 +133,9 @@
         {% endif %}
 
         <div style="padding-top: 2px;">
-            <div class="well1">
+            <div class="well1" style="border: solid 1px #bbbbbb;">
                 {% get_comment_count for tutorial as comment_count %}
-                <div class="well1" style="padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این
+                <div class="well1" style="border: solid 1px #bbbbbb;padding: 5px; padding-right: 20px;"> تا به حال {{ comment_count }} نظر برای این
                     آموزش داده شده است.
                 </div>
                 <div class="well1">
