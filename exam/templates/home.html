@@ -242,8 +242,8 @@
             {% tutorial_categories as t_c %}
             {% for c in t_c %}
                 <a href={% url 'tutorial:category' c.name %}>
-                    <div class="col-xs-2"
-                         style="margin: 10px; text-align: center;">
+                    <div class="col-lg-2 col-md-2 col-xs-6"
+                         style="margin: 10px; text-align: center;border: solid 1px #bbbbbb;">
                         <img align="center " style=" width:140px;height: 140px; text-align: center;"
                              class="img-responsive  center-block" src="{% static c.img_address %}"/>
 
