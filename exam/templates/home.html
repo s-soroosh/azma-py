@@ -63,45 +63,47 @@
 
 
 <body style="background-image: url('{% static 'image/pixel_weave.png' %}');">
-
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar">sajad</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
+    <div class="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="index.html">Modern Business</a> -->
 
-    </div>
+        </div>
 
                 <a style="padding-top: 6px;" class="pull-right hidden-sm hidden-xs navbar-brand YekanFont"
                href="{% url 'exam:index' %}">
                 <img src="{% static 'image/logo/logo.png' %}"/>
             </a>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse pull-right">
-        <ul class="nav navbar-nav" style="direction: ltr;">
-            <li>
-                <a class="" href="{% url 'tutorial:home' %}">آموزش</a>
-            </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="" href="{% url 'tutorial:home' %}">آموزش</a>
+                </li>
 
 
-            {% if not user.is_authenticated %}
-                <li><a href="{% url 'login' %}">ورود </a></li>
-                <li><a href="{% url 'register' %}">ثبت نام </a></li>
-            {% endif %}
-            <li>
-                <a href="{% url 'exam:what' %}">بیشتر بدانید</a>
-            </li>
-            <li>
-                <a href="{% url 'about' %}">درباره ما</a>
-            </li>
+                {% if not user.is_authenticated %}
+                    <li><a href="{% url 'login' %}">ورود </a></li>
+                    <li><a href="{% url 'register' %}">ثبت نام </a></li>
+                {% endif %}
+                <li>
+                    <a href="{% url 'exam:what' %}">بیشتر بدانید</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">درباره ما</a>
+                </li>
 
 
 
-        </ul>
+
+            </ul>
             <ul style="display: inline-block;" class="pull-left nav navbar-nav">
                 {% if user.is_authenticated %}
                     <li><a class="hidden-lg hidden-md pull-left" href="{% url 'profile:show_profile' %}">پروفایل </a></li>
@@ -116,7 +118,13 @@
                     </li>
                 {% endif %}
             </ul>
+        </div>
+
     </div>
+    <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
     <!-- /.navbar-collapse -->
     <!-- /.container -->
