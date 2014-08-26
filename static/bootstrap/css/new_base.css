@@ -1672,3 +1672,10 @@ hr {
 .category a:active {
     color: #008AEA;
 }
+
+.code {
+    padding: 7px;
+    background: #bbbbbb;
+    font-size: 11pt;
+    border: solid 3px #aaaaaa;
+}
