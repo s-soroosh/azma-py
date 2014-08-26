@@ -2,12 +2,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: yekan, "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+
+
 p {
     font-family: yekan, 'Abel',Verdana,Geneva,sans-serif;
     font-size: 12pt;
     font-weight: 400;
 }
 
+.tutorial-content p {
+    font-family: tahoma, yekan, 'Abel',Verdana,Geneva,sans-serif;
+}
 .well {
     color: #5588aa;
 }
