@@ -1,5 +1,13 @@
 __author__ = 'mahdi'
 from django.forms.widgets import Textarea
+from azma.settings import DEBUG
+
+
+# changing directory for debug mode and product mode
+if DEBUG:
+    d = 'ckeditor_d'
+else:
+    d = 'ckeditor_p'
 
 
 class CKeditorWidgetBase(Textarea):
@@ -8,13 +16,13 @@ class CKeditorWidgetBase(Textarea):
             pass
 
         css = {
-            'all': ('ckeditor/contents.css',)
+            'all': (d + '/contents.css',)
         }
         js = (
-            'ckeditor/highlight.min.js',
-            'ckeditor/ckeditor.js',  # Ckeditor core script .
-            'ckeditor/styles.js',  # Ckeditor styling script .
-            'ckeditor/run.js',
+            d + '/highlight.min.js',
+            d + '/ckeditor.js',  # Ckeditor core script .
+            d + '/styles.js',  # Ckeditor styling script .
+            d + '/run.js',
 
         )
 
@@ -25,8 +33,8 @@ class ArticleWidget(CKeditorWidgetBase):
             pass
 
         js = (
-            'ckeditor/ArticleConfig/build-config.js',  # Article Editor Preconfigurations
-            'ckeditor/ArticleConfig/config.js',  # Article Editor Main Configurations
+            d + '/ArticleConfig/build-config.js',  # Article Editor Preconfigurations
+            d + '/ArticleConfig/config.js',  # Article Editor Main Configurations
         )
 
 
@@ -36,6 +44,6 @@ class CommentWidget(CKeditorWidgetBase):
             pass
 
         js = (
-            'ckeditor/CommentConfig/build-config.js',  # Article Editor Preconfigurations
-            'ckeditor/CommentConfig/config.js',  # Article Editor Main Configurations
+            d + '/CommentConfig/build-config.js',  # Article Editor Preconfigurations
+            d + '/CommentConfig/config.js',  # Article Editor Main Configurations
         )
