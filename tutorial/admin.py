@@ -33,18 +33,7 @@ class ChoAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline]
     form = ChoiceForm
 
-
-class TutorialAdmin(admin.ModelAdmin):
-    class Media:
-        css = {'ckeditor' : 'ckeditor/contents.css'}
-        js = ('ckeditor/ckeditor.js',
-              'ckeditor/build-config.js',
-              'ckeditor/config.js',
-              'ckeditor/styles.js',
-              'ckeditor/run.js')
-
-
 admin.site.register(TutorialCategory)
 admin.site.register(TutorialQuestion, ChoAdmin)
-admin.site.register(Tutorial,TutorialAdmin)
+admin.site.register(Tutorial)
 admin.site.register(TutorialExam, QueAdmin)
