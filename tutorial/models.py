@@ -31,11 +31,11 @@ class Tutorial(models.Model):
 
     category = models.ForeignKey(TutorialCategory, related_name='tutorials')
     keyword = models.CharField(max_length=200)  # comma separated
-    abstract = HTMLField()  # ?
+    abstract = models.TextField()
     name = models.CharField(max_length=120, primary_key=True)
     local_name = models.CharField(max_length=150)
     author = models.ForeignKey(User)
-    content = HTMLField()
+    content = models.TextField()
     registered_date = models.DateTimeField()
 
     def get_persian_registered_date(self):
