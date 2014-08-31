@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django import forms
-from feincms.contrib.richtext import RichTextFormField
 from tutorial.models import *
+from tutorial.forms.TutorialForm import TutorialForm
 
 
 class ChoiceForm(forms.ModelForm):
@@ -33,7 +33,12 @@ class ChoAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline]
     form = ChoiceForm
 
+
+class TutorialAdmin(admin.ModelAdmin):
+    form = TutorialForm
+
+
 admin.site.register(TutorialCategory)
 admin.site.register(TutorialQuestion, ChoAdmin)
-admin.site.register(Tutorial)
+admin.site.register(Tutorial, TutorialAdmin)
 admin.site.register(TutorialExam, QueAdmin)
