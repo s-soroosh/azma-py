@@ -58,6 +58,7 @@ def start(request, exam_id):
 
 
 def index(request):
+
     latest_tutorials = Tutorial.objects.all().order_by('-registered_date').all()[:5]
 
     template = loader.get_template('home.html')
