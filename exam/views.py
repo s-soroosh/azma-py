@@ -8,7 +8,7 @@ from answer.models import ExamAnswerHistory
 from django.core.urlresolvers import reverse
 from django.views import generic
 from exam.models import Exam, ExamCategory
-
+from tutorial.models import Tutorial;
 
 def what(request):
     template = loader.get_template('intro.html')
@@ -58,7 +58,9 @@ def start(request, exam_id):
 
 
 def index(request):
+    latest_tutorials = Tutorial.objects.all().order_by('-registered_date').all()[:5]
+
     template = loader.get_template('home.html')
-    context = RequestContext(request)
+    context = RequestContext(request, {'latest_tu': latest_tutorials, })
     return HttpResponse(template.render(context))
 

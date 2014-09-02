@@ -228,6 +228,29 @@
 
 </div>
 <!-- /.section-colored -->
+<div class="section" >
+    <div class="container">
+        <div class=" row" >
+            <div class="col-lg-12 text-center">
+                <h2>آخرین آموزش های موجود در آزماوب تا به این لحظه</h2>
+                <hr>
+            </div>
+            {% for t in latest_tu %}
+                <a  href="{% url 'tutorial:tutorial' t.name %}">
+                    <div class="col-xs-2" >
+
+                        <img align="center" style="width:180px; height: 180px;border-radius: 10px;background-color: rgba(0,0,0,0.2)"
+                             class="img-responsive center-block" src="{% static t.category.img_address %}"/>
+                        <div class="center-block" style="font-weight: bold; text-align: center; color: #666666;">
+                        {{ t.local_name }}
+                        </div>
+
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 
 <div class="section">
